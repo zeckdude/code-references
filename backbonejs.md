@@ -22,6 +22,19 @@ var Song = Backbone.Model.extend({
         console.log("Song is playing");
     }
 });
+
+// Instantiate the Model
+var song = new Song();
+
+// Inherit the functions and default attributes of another model
+var Mp3 = Song.extend();
+var mp3 = new Mp3();
+mp3.play(); // This will run the play() function that was inherited from the Song model
+var Mp3 = Song.extend({
+    play: function() { // Custom function that will override the "play" function that was inherited from the Song model
+        console.log("MP3 is playing");
+    }
+});
 ```
 
 
