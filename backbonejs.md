@@ -76,6 +76,8 @@ var isValid = song.isValid(); // Checks if the song instance is valid according 
 var lastError = song.validationError; // Returns the last validation error message
 ```
 
+##### Syncing with the Server
+```js
 
 
 
@@ -83,6 +85,4 @@ var lastError = song.validationError; // Returns the last validation error messa
 
 
 
-
-
-
+```
