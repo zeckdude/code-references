@@ -106,3 +106,53 @@ song.destroy({ // Remove a record from the database
     error: function() {...}
 }); // DELETE /api/songs/1
 ```
+
+
+### Collections
+
+##### Creating Collections
+```js 
+// Create a Collection
+var Songs = Backbone.Collection.extend({
+    model: Song // Specify the model that will be in the collection
+});
+
+// Instantiating the Collection
+var songs = new Songs([ // Adding initial model instances to the collection
+    new Song({ title: "Song 1" }),
+    new Song({ title: "Song 2" }),
+    new Song({ title: "Song 3" })
+]);
+
+// Adding model instance to the collection
+songs.add(new Song({ title: "Song 4" }));
+
+// Get the model instance at the specified index position in the collection
+var firstSong = songs.at(0);
+
+// Get the model instance with the specified client id in the collection
+var songWithIdC1 = songs.get("c1");
+
+// Remove a model instance from a collection
+songs.remove(firstSong);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
