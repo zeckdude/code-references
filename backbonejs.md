@@ -82,11 +82,24 @@ var lastError = song.validationError; // Returns the last validation error messa
 var song = new Song({ id: 1 });
 song.fetch({ // Gets the "Song" with the id of 1 from the database
 
-});
+}); // GET /api/songs/1
 
+// Updating a Model
+var song = new Song({ id: 1 });
+song.fetch();
+song.set("title", "Over the Rainbow");
+song.save({}, { // Saves the song to the database
 
+}); // PUT /api/songs/1
 
+// Inserting a Model
+var song = new Song();
+song.set("title", "Over the Rainbow");
+song.save(); // POST /api/songs/1
 
+// Deleting a Model
+var song = new Song({ id: 1 });
+song.destroy({ // Remove a record from the database
 
-
+}); // DELETE /api/songs/1
 ```
