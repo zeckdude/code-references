@@ -37,6 +37,38 @@ var Mp3 = Song.extend({
 });
 ```
 
+##### Working with the Attributes
+```js 
+// Set a single attribute
+song.set("title", "Thriller");
+
+// Set multiple attributes
+song.set({
+    artist: "Michael Jackson",
+    title: "Thriller"
+});
+
+// Setting attributes when initializing a model object
+var song = new Song({
+    artist: "Michael Jackson",
+    title: "Thriller"
+});
+
+// Get a JSON-representation of model
+song.toJSON(); // Object { artist: "Michael Jackson", title: "Thriller" }
+
+// Get an attribute
+var title = song.get("title");
+
+// Remove a single attribute
+song.unset("title");
+
+// Remove all attributes
+song.clear();
+
+// Check if a model has a specified attribute
+var hasTitle = song.has("title");
+```
 
 
 
