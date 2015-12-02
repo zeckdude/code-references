@@ -70,6 +70,11 @@ song.clear();
 var hasTitle = song.has("title");
 ```
 
+##### Validation
+```js
+var isValid = song.isValid(); // Checks if the song instance is valid according to the validation rules that was set in the model
+var lastError = song.validationError; // Returns the last validation error message
+```
 
 
 
