@@ -78,7 +78,11 @@ var lastError = song.validationError; // Returns the last validation error messa
 
 ##### Syncing with the Server
 ```js
+// Fetching a Model
+var song = new Song({ id: 1 });
+song.fetch({ // Gets the "Song" with the id of 1 from the database
 
+});
 
 
 
