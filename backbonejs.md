@@ -230,7 +230,41 @@ var song = new Song({ title: "Blue in Green" });
 var songView = new SongView({ el: "#container", model: song }); // Specifying which dom element the view should attach to, and which model is assigned to the view
 songView.render();
 
+// Passing a Collection to a View
+var SongView = Backbone.View.extend({ // This first view is for each list item
+  tagName: "li",
 
+  render: function() {
+    this.$el.html(this.model.get("title"));
+
+    return this;
+  }
+});
+
+var SongsView = Backbone.View.extend({
+  render: function() {
+    var self = this; // Assign the "this" value to another variable so we can access it inside the loop which has its own this value
+
+    this.model.each(function(song){ // Loop through each of the songs in the collection
+      var songView = new SongView({ model: song }); // Create an instance of the View for each song that will be assigned the model data for that song and will be eventually added to an "li" tag
+      self.$el.append(songView.render().$el); // Append the jquery object that is created, with it's song name, to the current jquery object which will eventually be inserted into the dom element specified in the instantiation (which in this case is "#songs")
+    });
+  }
+});
+
+var Song = Backbone.Model.extend();
+var Songs = Backbone.Collection.extend({
+  model: Song
+});
+
+var songs = new Songs([
+  new Song({ title: "Blue in Green" }),
+  new Song({ title: "So What" }),
+  new Song({ title: "All Blues" })
+]);
+
+var songsView = new SongsView({ el: "#songs", model: songs }); // Associating the collection of model instances(songs) to this view, which will loop through each model(song), grab the title and place it into the "li" that it creates, before appending each of those "li's" to the end of the jquery object of which its contents will be placed within the dom element specified in the instantiation(#songs)
+songsView.render();
 ```
 
 
