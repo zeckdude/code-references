@@ -267,7 +267,38 @@ var songsView = new SongsView({ el: "#songs", model: songs }); // Associating th
 songsView.render();
 ```
 
+##### Handling event in a View
+```js
+// Handling DOM events in a View
+var SongView = Backbone.View.extend({
+  events: {
+    "click button": "onClick", // Run the "onClick" function when the any button is clicked
+    "click button.bookmark": "onClickBookmark", // Run the "onClickBookmark" function when the a button with the class "bookmark" is clicked
+    "click input[type=button]": "doSomething" // Shows that you can include the same types of selectors as in jQuery
+  },
 
+  onClick: function() {
+    console.log("Listen clicked");
+  },
+
+  onClickBookmark: function(e) {
+    e.stopPropagation(); // Stops the click event on the clicked element to propogate(or move on) to any other handlers that apply to it, so it only runs this function
+
+    console.log("Bookmark Clicked");
+  },
+
+  render: function() {
+    this.$el.html(this.model.get("title") + " <button>Listen</button> <button class='bookmark'>Bookmark</button>");
+
+    return this;
+  }
+});
+
+var Song = Backbone.Model.extend();
+var song = new Song({ title: "Blue in Green" });
+var songView = new SongView({ el: "body", model: song });
+songView.render();
+```
 
 
 
