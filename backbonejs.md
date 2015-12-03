@@ -310,7 +310,6 @@ var Song = Backbone.Model.extend({
   }
 });
 
-
 var SongView = Backbone.View.extend({
   initialize: function() {
     this.render();
@@ -328,7 +327,6 @@ var SongView = Backbone.View.extend({
     return this;
   }
 });
-
 
 var song = new Song({ title: "Blue in Green" });
 var songView = new SongView({ el: "#container", model: song });
