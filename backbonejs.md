@@ -212,6 +212,27 @@ $("body").append(songView.$el); // This is appending the entire view jquery obje
 var songView2 = new SongView({ el: "#container" }); // Specifying which dom element the view should attach to
 ```
 
+##### Passing data to Views
+```js
+// Passing a Model to a View
+var Song = Backbone.Model.extend();
+
+var SongView = Backbone.View.extend({
+  render: function() {
+    this.$el.html(this.model.get("title")); // An example of how we can access an attribute value of the model that is assigned to the view
+
+    return this;
+  }
+});
+
+var song = new Song({ title: "Blue in Green" });
+
+var songView = new SongView({ el: "#container", model: song }); // Specifying which dom element the view should attach to, and which model is assigned to the view
+songView.render();
+
+
+```
+
 
 
 
