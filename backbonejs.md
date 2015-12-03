@@ -118,6 +118,7 @@ var Songs = Backbone.Collection.extend({
     url: "/api/songs" // Specify the url path where to retrieve the collection from
 });
 
+
 // Instantiating the Collection
 var songs = new Songs([ // Adding initial model instances to the collection
     new Song({ title: "Song 1" }),
@@ -204,6 +205,7 @@ var SongView = Backbone.View.extend({
   }
 });
 
+
 // Instantiating the View
 var songView = new SongView(); // Specifying which dom element the view should attach to
 $("body").append(songView.$el); // This is appending the entire view jquery object to the specified selector. When it creates the jquery object, since we did not specify a selector on the page when instantiating the view, it will create an element with the options specified in the model above
@@ -229,6 +231,7 @@ var song = new Song({ title: "Blue in Green" });
 
 var songView = new SongView({ el: "#container", model: song }); // Specifying which dom element the view should attach to, and which model is assigned to the view
 songView.render();
+
 
 // Passing a Collection to a View
 var SongView = Backbone.View.extend({ // This first view is for each list item
@@ -298,6 +301,37 @@ var Song = Backbone.Model.extend();
 var song = new Song({ title: "Blue in Green" });
 var songView = new SongView({ el: "body", model: song });
 songView.render();
+
+
+// Handling Model events in a View
+var Song = Backbone.Model.extend({
+  defaults: {
+    listeners: 0
+  }
+});
+
+
+var SongView = Backbone.View.extend({
+  initialize: function() {
+    this.render();
+    this.model.on("change", this.onModelChange, this); // Model event that listens if any attribute is changed. If it is, it will run the onModelChange() function and pass the "this" value as it relates to the View, since this is looking at any changes in the model and the default "this" would be related to the model, which we don't want in this case
+  },
+
+  onModelChange: function() {
+    this.render();
+    this.$el.addClass("example-class"); // Adds a class to the dom element that is associated with the model
+  },
+
+  render: function() {
+    this.$el.html(this.model.get("title") + " - Listeners: " + this.model.get("listeners"));
+
+    return this;
+  }
+});
+
+
+var song = new Song({ title: "Blue in Green" });
+var songView = new SongView({ el: "#container", model: song });
 ```
 
 
