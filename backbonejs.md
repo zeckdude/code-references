@@ -177,14 +177,40 @@ songs.fetch({
     success: function(){},
     error: function(){}
 }); // GET /api/songs?page=2
-
-
-
 ```
 
 
+### Views
 
+##### Creating Views
+```js 
+// Creating a View
+var SongView = Backbone.View.extend({
+  tagName: "span", // Tag which is created by Backbone, which the View attaches itself to, if no selector is specified when instantiating the view
+  className: "song music", // Classes that are placed on the tag which is created by Backbone, which the View attaches itself to, if no selector is specified when instantiating the view
+  id: "1234", // ID which is placed on the tag which is created by Backbone, which the View attaches itself to, if no selector is specified when instantiating the view
+  attributes: { // Data attributes that are placed on the tag which is created by Backbone, which the View attaches itself to, if no selector is specified when instantiating the view
+    "data-genre": "Jazz"
+  },
 
+  initialize: function() {
+    this.render();
+  },
+
+  render: function() {
+    this.$el.html("Hello World"); // The "this.$el" is an easy way to access the jQuery object of the element that the view is attached to
+
+    return this; // This is necessary for chaining methods
+  }
+});
+
+// Instantiating the View
+var songView = new SongView(); // Specifying which dom element the view should attach to
+$("body").append(songView.$el); // This is appending the entire view jquery object to the specified selector. When it creates the jquery object, since we did not specify a selector on the page when instantiating the view, it will create an element with the options specified in the model above
+
+// This way the jquery object, that the view is attached to, becomes the specified element and it ignores the options specified above (tagName, className, id, attributes)
+var songView2 = new SongView({ el: "#container" }); // Specifying which dom element the view should attach to
+```
 
 
 
