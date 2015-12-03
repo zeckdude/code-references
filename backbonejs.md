@@ -114,7 +114,8 @@ song.destroy({ // Remove a record from the database
 ```js 
 // Create a Collection
 var Songs = Backbone.Collection.extend({
-    model: Song // Specify the model that will be in the collection
+    model: Song, // Specify the model that will be in the collection
+    url: "/api/songs" // Specify the url path where to retrieve the collection from
 });
 
 // Instantiating the Collection
@@ -123,9 +124,14 @@ var songs = new Songs([ // Adding initial model instances to the collection
     new Song({ title: "Song 2" }),
     new Song({ title: "Song 3" })
 ]);
+```
 
-// Adding model instance to the collection
-songs.add(new Song({ title: "Song 4" }));
+##### Modifying Collections
+```js 
+// Adding model instance(s) to the collection
+songs.add(new Song({ title: "Song 4" }), { at: 0 }); // The model instance will be added to the end of the collection unless the 2nd optional argument is provided, which specifies at which index position to add the model instance.
+
+songs.push(new Song({ title: "Song 4" })); // This will do the same thing, but does not support an argument to add the model instance to a specified index position.
 
 // Get the model instance at the specified index position in the collection
 var firstSong = songs.at(0);
@@ -135,8 +141,46 @@ var songWithIdC1 = songs.get("c1");
 
 // Remove a model instance from a collection
 songs.remove(firstSong);
+
+songs.pop(new Song({ title: "Song 4" })); // This will do the same thing, but does not support an argument to add the model instance to a specified index position.
+
+// Get the number of model instances inside the collection
+var numModelsInCollection = songs.length;
 ```
 
+##### Search in Collections
+```js
+// Get an array of model instances, in a collection, where a specified attribute is equal to specified value
+var jazzSongs = songs.where({ genre: "Jazz", title: "Song 2" });
+
+// Get the first model instance, in a collection, where a specified attribute is equal to specified value
+var firstJazzSong = songs.findWhere({ genre: "Jazz" });
+
+// Get an array of model instances, in a collection, that meet a custom conditional logic
+var topDownloads = songs.filter(function(song) {
+    return song.get("downloads") > 100; // This example will return all model instances where the "downloads" attribute is greater than 100
+});
+
+// Loop through each model instance in a collection
+songs.each(function(song) {
+    console.log(song);
+});
+```
+
+##### Connecting to the Server
+```js
+var songs = new Songs();
+songs.fetch({
+    data: {
+        page: 2 // Any attributes in the data property are added as GET variables to the end of the URL string
+    },
+    success: function(){},
+    error: function(){}
+}); // GET /api/songs?page=2
+
+
+
+```
 
 
 
