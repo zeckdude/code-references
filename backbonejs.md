@@ -386,6 +386,65 @@ var songsView = new SongsView({ el: "#songs", model: songs });
 songsView.render();
 ```
 
+##### Using Templates - Underscore.js
+**In JS:**
+```js
+// Using Templates - Underscore.js
+var Song = Backbone.Model.extend();
+
+var SongView = Backbone.View.extend({
+  render: function() {
+    var template = _.template($("#songTemplate").html()); // Finds the Underscore.js template on the page that is specified by the ID attribute, saves the html, and puts it into a variable that is using the _.template() function
+    var html = template(this.model.toJSON()); // Grabs the model attributes, converts them to JSON, and runs them through a function which converts it to HTML. The function name is whatever the var from the last step is called.
+    this.$el.html(html); // The generated HTML is made to be the contents of the DOM element associated with the view, which in this case is "#container"
+
+    return this;
+  }
+});
+
+var song = new Song({ id: 1, title: "Blue in Green", plays: 1500 });
+
+var songView = new SongView({ el: "#container", model: song });
+songView.render();
+```
+
+**In HTML:**
+```html
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Code Example</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/lib/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script src="js/lib/jquery-min.js"></script>
+  <script src="js/lib/underscore-min.js"></script>
+  <script src="js/lib/backbone-min.js"></script>
+
+  <script id="songTemplate" type="text/html">
+    <%= title %> <!-- When the "=" sign is used at the beginning of the opening Underscore.js tag, it will display the variable -->
+    <button>Listen</button>
+
+    <% if (plays > 1000) { %>  <!-- When the "=" is not present, it will evaluated as normal JavaScript -->
+      <span class="popular">Popular</span>
+    <% } %>
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+```
 
 
 
