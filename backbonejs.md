@@ -270,7 +270,7 @@ var songsView = new SongsView({ el: "#songs", model: songs }); // Associating th
 songsView.render();
 ```
 
-##### Handling event in a View
+##### Handling events in a View
 ```js
 // Handling DOM events in a View
 var SongView = Backbone.View.extend({
@@ -330,6 +330,60 @@ var SongView = Backbone.View.extend({
 
 var song = new Song({ title: "Blue in Green" });
 var songView = new SongView({ el: "#container", model: song });
+
+
+// Handling Collection events in a View
+var Song = Backbone.Model.extend();
+var Songs = Backbone.Collection.extend({
+  model: Song
+});
+
+var SongView = Backbone.View.extend({
+  tagName: "li",
+
+  render: function() {
+    this.$el.html(this.model.get("title"));
+    this.$el.attr("id", this.model.id); // Adding an ID attribute so we can refer to a specific selector when we need to remove it from the DOM
+
+    return this;
+  }
+});
+
+var SongsView = Backbone.View.extend({
+  tagName: "ul",
+
+  initialize: function() {
+    this.model.on("add", this.onSongAdded, this); // Model event that listens if a model is added to a collection
+    this.model.on("remove", this.onSongRemoved, this); // Model event that listens if a model is removed from a collection
+  },
+
+  onSongAdded: function(song) {
+    var songView = new SongView({ model: song }); // When a model is added, we grab that model and create a new model view
+    this.$el.append(songView.render().$el); // Render the new model view and append it to the end of the collection view's DOM element
+  },
+
+  onSongRemoved: function(song) {
+    this.$("li#" + song.id).remove(); // Remove the DOM element on the page that has the ID attribute of the song that was removed
+  },
+
+  render: function() {
+    var self = this;
+
+    this.model.each(function(song){
+      var songView = new SongView({ model: song });
+      self.$el.append(songView.render().$el);
+    });
+  }
+});
+
+var songs = new Songs([
+  new Song({ id: 1, title: "Blue in Green" }),
+  new Song({ id: 2, title: "So What" }),
+  new Song({ id: 3, title: "All Blues" })
+]);
+
+var songsView = new SongsView({ el: "#songs", model: songs });
+songsView.render();
 ```
 
 
