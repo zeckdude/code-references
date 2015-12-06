@@ -384,10 +384,26 @@ var songs = new Songs([
 
 var songsView = new SongsView({ el: "#songs", model: songs });
 songsView.render();
+
+
+// Binding and Triggering Custom Events
+var person = {
+    walk: function(){
+        this.trigger("walking", { speed: 10 }); // Trigger a custom event and pass properties with it
+    }
+};
+
+_.extend(person, Backbone.Events); // Give all the properties and methods of the "Backbone.Events" object to the object "person"
+
+person.on("walking", function(e) { // Listen for any time that the object triggers the custom event and then run the callback function
+    console.log(e.speed);
+});
+
+person.off("walking"); // Remove the listener for the custom event 
 ```
 
 ##### Using Templates - Underscore.js
-**In JS:**
+*In JS:*
 ```js
 // Using Templates - Underscore.js
 var Song = Backbone.Model.extend();
@@ -408,7 +424,7 @@ var songView = new SongView({ el: "#container", model: song });
 songView.render();
 ```
 
-**In HTML:**
+*In HTML:*
 ```html
 <!DOCTYPE html>
 <html class="no-js">
