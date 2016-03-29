@@ -24,6 +24,7 @@ return !!(varA & varB)
 return (varA & varB) ? true : false;
 ```
 
+<br>
 ##### Different Ways to check if a variable has a truthy value(not undefined, null, 0, NaN, "" or false) and return a value based on the result
 
 *Using an if statement*
