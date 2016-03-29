@@ -12,13 +12,14 @@ if(varA & varB) {
 }
 ```
 
-*Using the not-not operator* 
+*Using the not-not operator* <br>
 (http://www.sitepoint.com/javascript-double-negation-trick-trouble/)
 ```
 return !!(varA & varB)
 ```
 
-*Using the ternary operator (http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)*
+*Using the ternary operator* <br>
+(http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
 ```
 return (varA & varB) ? true : false;
 ```
@@ -35,7 +36,8 @@ if(detailedMessage) {
 }
 ```
 
-*Using a switch statement (http://www.w3schools.com/js/js_switch.asp)*
+*Using a switch statement* <br>
+(http://www.w3schools.com/js/js_switch.asp)
 ```
 var message;
 switch(detailedMessage) {
@@ -48,12 +50,14 @@ switch(detailedMessage) {
 }
 ```
 
-*Using the ternary operator (http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)*
+*Using the ternary operator* <br>
+(http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
 ```
 var message = detailedMessage ? detailedMessage : genericMessage;
 ```
 
-*Using the logical OR operator (https://addyosmani.com/blog/exploring-javascripts-logical-or-operator/)*
+*Using the logical OR operator* <br>
+(https://addyosmani.com/blog/exploring-javascripts-logical-or-operator/)
 ```
 var message = detailedMessage || genericMessage;
 ```
