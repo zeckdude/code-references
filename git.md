@@ -67,3 +67,16 @@ View the latest commits in the repo
 | `git log`  | None  | None       |
 | `git log --stat`  | The _--stat_ parameter specifies that each commit should display the names of the files that were changed  | None       |
 | `git log -p`  | The _-p_ parameter specifies that each commit should display the full diff  | None       |
+
+
+Add files to the staging area
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git add <filename with extension>`  | By specifying the specific filename, only that file will be added to the staging area  | None       |
+| `git add -A`  | The _-A_ parameter specifies that all tracked files will be added to the staging area	  | None       |
+| `git add "*.txt"`  | The wildcard(*) character specifies that any file matching anything before the file 
+extension will be added to the staging area  | None       |
+
+
+
