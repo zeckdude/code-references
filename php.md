@@ -35,15 +35,22 @@ $number--;
 #### Creating Arrays
 Declaring an array (two ways)
 ```php
-$car_­makes = array(­"­For­d", "­VW", "­Saa­b"); $car_­models = ["Fo­cus­", "­Jet­ta", "­Mia­ta"];
+$car_makes = array("Ford", "VW", "Saab"); $car_models = ["Focus", "Jetta", "Miata"];
 ```
 
-Increment the variable value by 1
+Indexed array
 ```php
-$number++;
+$car_models = ["Focus", "Jetta", "Miata"];
+$car_models[1] // returns "Jetta"
 ```
 
-Decrement the variable value by 1
+Associate array
 ```php
-$number--;
+$car_models = [
+  "model" => "Volkswagen", 
+  "make" => "Passat", 
+  "year" => 2013
+];
+
+$car_models["make"] // returns "Passat"
 ```
