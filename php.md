@@ -121,7 +121,7 @@ switch ($num_pizzas) {
 }
 ```
 
-<br><br>
+<br>
 #### Ternary Operator - http://www.phptherightway.com/pages/The-Basics.html#ternary-operators
 Ternary operators can be used to reduce code but can get confusing if too complex. Use sparingly.
 ```php
