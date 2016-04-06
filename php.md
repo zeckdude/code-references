@@ -130,7 +130,7 @@ echo ($num_pizzas === 1 ? "Give me more!")
 : "What does it matter? I'm unhealthy anyways.";
 }
 ```
-A better implementation is for short if/then statements only that are easy to read
+A better implementation is for short if/then statements that are easy to read.
 ```php
 echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
 ```
