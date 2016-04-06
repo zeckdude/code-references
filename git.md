@@ -14,3 +14,11 @@
 | Working Directory    | Files that are currently being worked on (or checked out)                                                  |
 | Index (staging area) | Files that have been prepped for a commit                                                                  |
 | Commit               | A group of files, accompanied by a descriptive message, that are going to be pushed to the repo eventually |
+
+
+## Common Git Commands
+
+Create a new local branch based off the current branch
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| git checkout -b _<branch-name>_  | None  | None       |
