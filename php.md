@@ -39,13 +39,21 @@ $car_makes = array("Ford", "VW", "Saab");
 $car_models = ["Focus", "Jetta", "Miata"];
 ```
 
-Indexed array
+##### Indexed array
 ```php
 $car_models = ["Focus", "Jetta", "Miata"];
 $car_models[1] // returns "Jetta"
 ```
 
-Associate array
+##### Associate array
+```php
+$car_models = [
+  "model" => "Volkswagen", 
+  "make" => "Passat", 
+  "year" => 2013
+];
+
+##### Multidimensional array
 ```php
 $car_models = [
   "model" => "Volkswagen", 
