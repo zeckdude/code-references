@@ -30,6 +30,25 @@ Decrement the variable value by 1
 ```php
 $number--;
 ```
+<br /><br />
+#### Casting Variables
+The process of casting is forcing a variable to be another datatype.
+```php
+$number_string = "3";
+
+// Cast to integer
+$number_int = (int) $number_string; // int(3)
+
+// Cast to float
+$number_float = (float) $number_string // float(3)
+
+// Cast to string
+$number_string = (string) $number_int; // string(1) "3"
+
+// Cast to array
+$number_string_array = (array) $number_string; // array(1) { [0] => string(1) "3" }
+```
+
 <br><br>
 ## Arrays
 #### Creating Arrays
