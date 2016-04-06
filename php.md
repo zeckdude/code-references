@@ -87,7 +87,7 @@ $car_parts["wheels"][3] // returns "lugnut"
 
 <br><br>
 ## Conditional Logic
-#### If statement (http://www.phptherightway.com/pages/The-Basics.html#if-statements)
+#### If statement ##### (http://www.phptherightway.com/pages/The-Basics.html#if-statements)
 ```php
 if ($num_pizzas === 1) {
   echo "Give me more!";
