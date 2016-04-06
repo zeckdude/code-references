@@ -15,7 +15,7 @@
 **Naming:** Variables can only contain numbers, letters, and underscores, although they must begin with a letter or underscore. They are case sensitive.
 
 **Types:** Variables can store the data types string, number, float, boolean, array, and null.
-<br />
+<br /><br />
 #### Modifying Variables
 Set the value of the variable to its current value plus 5
 ```
