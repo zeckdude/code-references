@@ -141,4 +141,4 @@ echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
 | ------------- |:-------------:|
 | String Interpolation      | Embedding variable value in a string. It is best practice to wrap the variable in curly braces. <br>Example: `echo "My name is {$name};"` |
 | Concatenation      | Joining two strings end to end. <br>Example: `"Jim" + "Bob" // "JimBob"`      |
-| Casting | the process of transforming a variable from one data type to another      |
+| Casting | The process of transforming a variable from one data type to another      |
