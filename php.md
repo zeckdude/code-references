@@ -1,7 +1,6 @@
 # PHP
 
 ## Variables
-<br />
 #### Naming Variables
 | Name & Example | Type   |
 |----------------|--------|
@@ -20,6 +19,23 @@
 Set the value of the variable to its current value plus 5
 ```php
 $number += 5
+```
+
+Increment the variable value by 1
+```php
+$number++;
+```
+
+Decrement the variable value by 1
+```php
+$number--;
+```
+
+## Arrays
+#### Creating Arrays
+Declaring an array (two ways)
+```php
+$car_­makes = array(­"­For­d", "­VW", "­Saa­b"); $car_­models = ["Fo­cus­", "­Jet­ta", "­Mia­ta"];
 ```
 
 Increment the variable value by 1
