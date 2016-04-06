@@ -75,8 +75,7 @@ Add files to the staging area
 |------------------|-------|------------|
 | `git add <filename with extension>`  | By specifying the specific filename, only that file will be added to the staging area  | None       |
 | `git add -A`  | The _-A_ parameter specifies that all tracked files will be added to the staging area	  | None       |
-| `git add "*.txt"`  | The wildcard(*) character specifies that any file matching anything before the file 
-extension will be added to the staging area  | None       |
+| `git add "*.txt"`  | The wildcard(*) character specifies that any file matching anything before the file extension will be added to the staging area  | None       |
 
 
 
