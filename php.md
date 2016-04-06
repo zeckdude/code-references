@@ -18,7 +18,7 @@
 <br /><br />
 #### Modifying Variables
 Set the value of the variable to its current value plus 5
-```
+```php
 $number += 5
 ```
 
