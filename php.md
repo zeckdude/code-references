@@ -110,7 +110,14 @@ else
 Switch statements can only check for equality, so if a more advanced condition needs to be evaluated, then an if statement is preferred.
 ```php
 switch ($num_pizzas) {
-
+  case 1:
+    echo "Give me more!";
+    break;
+  case 3:
+    echo "I'm stuffed";
+    break;
+  default:
+    echo "What does it matter? I'm unhealthy anyways.";
 }
 ```
 
