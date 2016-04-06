@@ -121,6 +121,19 @@ switch ($num_pizzas) {
 }
 ```
 
+<br><br>
+#### Ternary Operator - http://www.phptherightway.com/pages/The-Basics.html#ternary-operators
+Ternary operators can be used to reduce code but can get confusing if too complex. Use sparingly.
+```php
+echo ($num_pizzas === 1 ? "Give me more!") 
+: ($num_pizzas === 3 ? "I'm stuffed")
+: "What does it matter? I'm unhealthy anyways.";
+}
+```
+A better implementation is for short if/then statements only that are easy to read
+```php
+echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
+```
 
 <br><br>
 ## Glossary
