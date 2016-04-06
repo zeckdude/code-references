@@ -1,3 +1,7 @@
+# code-references
+Helpful Code Snippets for the programming languages I use often
+<br><br>
+
 ### Welcome to my Code References.
 This a personal collection of notes for various programming languages that I use often. It is meant as a reference library for myself, but if you find any use in it, I am happy.
 
