@@ -30,7 +30,7 @@ Decrement the variable value by 1
 ```php
 $number--;
 ```
-
+<br><br>
 ## Arrays
 #### Creating Arrays
 Declaring an array (two ways)
