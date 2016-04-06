@@ -119,8 +119,8 @@ Get help
 
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
-| `git help`  | Displays a list of common git commands  | None       |
-| `git help <command name>`  | Displays detailed information about a specific git command and its parameters  | None       |
+| `git help`  | Displays a list of common git commands  | ![Example - git help] (https://github.com/zeckdude/code-references/blob/master/img/git_help_1.png)       |
+| `git help <command name>`  | Displays detailed information about a specific git command and its parameters  | ![Example - git help <command name>] (https://github.com/zeckdude/code-references/blob/master/img/git_help_2.png)       |
 
 <br>
 Configure Git Settings
