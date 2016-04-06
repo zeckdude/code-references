@@ -61,6 +61,8 @@ $car_models["make"] // returns "Passat"
 ## Glossary
 | Term        | Definition           |
 | ------------- |:-------------:|
-| String Interpolation      | Embedding variable value in a string. It is best practice to wrap the variable in curly braces. <br>Example: ```php echo "My name is {$name};"``` |
+| String Interpolation      | Embedding variable value in a string. It is best practice to wrap the variable in curly braces. <br>Example: ```php 
+echo "My name is {$name};"
+``` |
 | Concatenation      | Joining two strings end to end. <br>Example: `"Jim" + "Bob" // "JimBob"`      |
 | Casting | the process of transforming a variable from one data type to another      |
