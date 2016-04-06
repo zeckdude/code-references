@@ -1,8 +1,8 @@
 # PHP
 
-### Variables
-
-##### Naming Variables
+## Variables
+<br />
+#### Naming Variables
 | Name & Example | Type   |
 |----------------|--------|
 | `$name = "Jim";` | string |
@@ -16,7 +16,7 @@
 
 **Types:** Variables can store the data types string, number, float, boolean, array, and null.
 
-##### Modifying Variables
+#### Modifying Variables
 Set the value of the variable to its current value plus 5
 ```
 $number += 5
