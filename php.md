@@ -105,7 +105,7 @@ elseif ($num_pizzas === 3)
 else
   echo "What does it matter? I'm unhealthy anyways.";
 ```
-<br><br>
+<br>
 #### Switch statement - http://www.phptherightway.com/pages/The-Basics.html#switch-statements
 Switch statements can only check for equality, so if a more advanced condition needs to be evaluated, then an if statement is preferred.
 ```php
