@@ -61,9 +61,9 @@ $car_models["make"] // returns "Passat"
 ```php
 $car_parts = [
   "wheels" => ["hubcap", "rim", "tire", "lugnut"];
-  
-$car_parts["wheels"][3] // returns "lugnut"
 ];
+
+$car_parts["wheels"][3] // returns "lugnut"
 ```
 
 
