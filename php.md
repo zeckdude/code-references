@@ -23,11 +23,11 @@ $number += 5
 ```
 
 Increment the variable value by 1
-```
+```php
 $number++;
 ```
 
 Decrement the variable value by 1
-```
+```php
 $number--;
 ```
