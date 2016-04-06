@@ -42,6 +42,7 @@ $car_models = ["Focus", "Jetta", "Miata"];
 ##### Indexed array
 ```php
 $car_models = ["Focus", "Jetta", "Miata"];
+
 $car_models[1] // returns "Jetta"
 ```
 
@@ -52,6 +53,7 @@ $car_models = [
   "make" => "Passat", 
   "year" => 2013
 ];
+
 $car_models["make"] // returns "Passat"
 ```
 
@@ -59,6 +61,7 @@ $car_models["make"] // returns "Passat"
 ```php
 $car_parts = [
   "wheels" => ["hubcap", "rim", "tire", "lugnut"];
+  
 $car_parts["wheels"][3] // returns "lugnut"
 ];
 ```
