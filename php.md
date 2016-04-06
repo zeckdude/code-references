@@ -106,7 +106,7 @@ else
   echo "What does it matter? I'm unhealthy anyways.";
 ```
 <br><br>
-#### Switch statement
+#### Switch statement - http://www.phptherightway.com/pages/The-Basics.html#switch-statements
 Switch statements can only check for equality, so if a more advanced condition needs to be evaluated, then an if statement is preferred.
 ```php
 switch ($num_pizzas) {
