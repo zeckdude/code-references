@@ -19,6 +19,7 @@
 ## Common Git Commands
 
 Create a new local branch based off the current branch
+
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
-| git checkout -b _<branch-name>_  | None  | None       |
+| git checkout -b <branch-name>  | None  | None       |
