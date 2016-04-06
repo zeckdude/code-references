@@ -23,3 +23,47 @@ Create a new local branch based off the current branch
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
 | `git checkout -b <branch-name>`  | None  | None       |
+
+
+Create a remote branch based on the current branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git push <remote-name> <branch-name>`  | None  | None       |
+
+
+Delete a local branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git branch -d <branch-name>`  | None  | None       |
+
+
+Delete a remote branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git push origin :<branch-name>`  | None  | None       |
+
+
+Show all local branches and their tracking information
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git branch -vv`  | None  | None       |
+
+
+Pull a remote branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git fetch && git checkout <branch-name>`  | None  | None       |
+
+
+View the latest commits in the repo
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git log`  | None  | None       |
+| `git log --stat`  | The _--stat_ parameter specifies that each commit should display the names of the files that were changed  | None       |
+| `git log -p`  | The _-p_ parameter specifies that each commit should display the full diff  | None       |
