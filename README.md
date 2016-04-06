@@ -1,4 +1,4 @@
-# code-references
+# [code-references] (http://zeckdude.github.io/code-references)
 Helpful Code Snippets for the programming languages I use often
 <br><br>
 
