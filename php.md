@@ -88,6 +88,7 @@ $car_parts["wheels"][3] // returns "lugnut"
 <br><br>
 ## Conditional Logic
 #### If statement
+http://www.phptherightway.com/pages/The-Basics.html#if-statements
 ```php
 if ($num_pizzas === 1) {
   echo "Give me more!";
@@ -104,6 +105,14 @@ elseif ($num_pizzas === 3)
   echo "I'm stuffed";
 else
   echo "What does it matter? I'm unhealthy anyways.";
+```
+<br><br>
+#### Switch statement
+Switch statements can only check for equality, so if a more advanced condition needs to be evaluated, then an if statement is preferred.
+```php
+switch ($num_pizzas) {
+
+}
 ```
 
 
