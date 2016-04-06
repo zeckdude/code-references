@@ -22,4 +22,4 @@ Create a new local branch based off the current branch
 
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
-| git checkout -b <branch-name>  | None  | None       |
+| `git checkout -b <branch-name>`  | None  | None       |
