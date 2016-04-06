@@ -35,7 +35,8 @@ $number--;
 #### Creating Arrays
 Declaring an array (two ways)
 ```php
-$car_makes = array("Ford", "VW", "Saab"); $car_models = ["Focus", "Jetta", "Miata"];
+$car_makes = array("Ford", "VW", "Saab");
+$car_models = ["Focus", "Jetta", "Miata"];
 ```
 
 Indexed array
