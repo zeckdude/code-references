@@ -59,8 +59,8 @@ $car_models["make"] // returns "Passat"
 
 <br><br>
 ## Glossary
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Term        | Definition           |
+| ------------- |:-------------:|
+| String Interpolation      | Embedding variable value in a string. It is best practice to wrap the variable in curly braces. Example: `echo "My name is {$name};"` |
+| Concatenation      | Joining two strings end to end. Example: `"Jim" + "Bob" // "JimBob"`      |
+| Casting | the process of transforming a variable from one data type to another      |
