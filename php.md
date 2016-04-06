@@ -85,6 +85,27 @@ $car_parts = [
 $car_parts["wheels"][3] // returns "lugnut"
 ```
 
+<br><br>
+## Conditional Logic
+#### If statement
+```php
+if ($num_pizzas === 1) {
+  echo "Give me more!";
+} elseif ($num_pizzas === 3) {
+  echo "I'm stuffed";
+} else {
+  echo "What does it matter? I'm unhealthy anyways.";
+}
+
+// If statements can also be written without curly braces if the statement within the condition is only one line
+if ($num_pizzas === 1)
+  echo "Give me more!";
+elseif ($num_pizzas === 3)
+  echo "I'm stuffed";
+else
+  echo "What does it matter? I'm unhealthy anyways.";
+```
+
 
 <br><br>
 ## Glossary
