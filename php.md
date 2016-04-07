@@ -135,6 +135,34 @@ A better implementation is for short if/then statements that are easy to read.
 echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
 ```
 
+## Loops
+#### While loop
+A loop that will continue to run while a condition evaluates to true
+```php
+$mph = 45;
+
+while ($mph < 65) {
+  echo "Get off the highway slow-poke!";
+  $mph++;
+}
+```
+
+A while loop is often used to loop through the results set returned from a database
+```php
+// Provide example here
+```
+
+<br>
+#### Do While loop
+A do while loop will will _always_ execute the code block at least once, before it checks the condition to determine if it should execute any longer.
+```php
+do {
+
+
+} while ($hunger_level < 80);
+```
+
+
 <br><br>
 ## Glossary
 | Term        | Definition           |
