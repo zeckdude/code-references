@@ -142,7 +142,7 @@ A loop that will continue to run while a condition evaluates to true
 $mph = 45;
 
 while ($mph < 65) {
-  echo "Get off the highway slow-poke!";
+  echo "Get off the highway slow-poke! \n";
   $mph++;
 }
 ```
@@ -156,10 +156,25 @@ A while loop is often used to loop through the results set returned from a datab
 #### Do While loop
 A do while loop will will _always_ execute the code block at least once, before it checks the condition to determine if it should execute any longer.
 ```php
+$hunger_level = 100;
+$chips = 5;
+
 do {
+  echo "Still hungry! Need chips now! \n";
+  $hunger_level += $chips;
+} while ($hunger_level > 30);
+```
 
-
-} while ($hunger_level < 80);
+<br>
+#### For loop
+A for loop loops through a block of code a specified number of times. You specify the initial counter variable, the condition, and the incrementer all within the arguments.
+<br>The first section, the counter, is executed *before* the loop is executed.
+<br>The second statement, the condition, is evaluated *every time* the loop is executed.
+<br>The third statement is executed *after* the loop is executed.
+```php
+for ($i = 0; $i <= 24; $i++) {
+  echo "Hours finished for this day: {$i} \n";
+}
 ```
 
 
