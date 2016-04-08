@@ -204,3 +204,8 @@ A way to specify the data type accepted for the parameter of a function or metho
 | String Interpolation      | Embedding variable value in a string. It is best practice to wrap the variable in curly braces. <br>Example: `echo "My name is {$name};"` |
 | Concatenation      | Joining two strings end to end. <br>Example: `"Jim" + "Bob" // "JimBob"`      |
 | Casting | The process of transforming a variable from one data type to another      |
+
+<br><br>
+## Links
+#### Test Environments
+http://sandbox.onlinephpfunctions.com/
