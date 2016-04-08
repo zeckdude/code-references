@@ -213,3 +213,6 @@ http://sandbox.onlinephpfunctions.com/
 #### Reference
 PHP Pandas: http://daylerees.com/php-pandas/<br>
 PHP: The Right Way: http://www.phptherightway.com/
+
+#### Syntax Documentation
+OnlinePHPFunctions: http://onlinephpfunctions.com/
