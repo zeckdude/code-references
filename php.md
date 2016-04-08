@@ -209,3 +209,7 @@ A way to specify the data type accepted for the parameter of a function or metho
 ## Links
 #### Test Environments
 http://sandbox.onlinephpfunctions.com/
+
+#### Reference
+PHP Pandas: http://daylerees.com/php-pandas/<br>
+PHP: The Right Way: http://www.phptherightway.com/
