@@ -242,7 +242,7 @@ class Book
     return "Viewing page {$page_num}";
   }
   
-  // Access values for the current instance from inside a class method using the $this property
+  // Access values of the current instance from inside a class method by using the $this property
   function summary()
   {
     echo 'Title: '      . $this->title        . PHP_EOL;
