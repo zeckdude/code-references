@@ -141,6 +141,12 @@ A function is a collection of statements that execute together.
 // Provide example here using parameters, return, func_get_args()
 ```
 
+<br>
+#### Useful internal functions
+| Function Name | Action   | Demo |
+|----------------|--------|-------|
+| `gettype()` | Returns the data type of the provided argument variable | `// Add example here` |
+
 
 ## Loops
 #### While loop
@@ -195,6 +201,7 @@ A foreach loop is used to loop through the items in an array. The number of iter
 A way to specify the data type accepted for the parameter of a function or method. If the correct data type is not provided when the function gets called, PHP will display an error.
 ```php
 // Provide example here (From functions chapter and later on)
+// Show examples of type hinting for array, Closure, 
 ```
 
 <br><br>
@@ -216,3 +223,4 @@ PHP: The Right Way: http://www.phptherightway.com/
 
 #### Syntax Documentation
 OnlinePHPFunctions: http://onlinephpfunctions.com/
+W3Resource: http://www.w3resource.com/php/function-reference/function-reference.php
