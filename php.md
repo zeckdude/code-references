@@ -135,6 +135,13 @@ A better implementation is for short if/then statements that are easy to read.
 echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
 ```
 
+## Functions
+A function is a collection of statements that execute together.
+```php
+// Provide example here using parameters, return, func_get_args()
+```
+
+
 ## Loops
 #### While loop
 A loop that will continue to run while a condition evaluates to true
@@ -177,6 +184,18 @@ for ($i = 0; $i <= 24; $i++) {
 }
 ```
 
+<br>
+#### Foreach loop
+A foreach loop is used to loop through the items in an array. The number of iterations of the loop are, therefore, determined by the number of items in the array.
+```php
+// Provide example here using return, break, and continue
+```
+
+## Type Hinting
+A way to specify the data type accepted for the parameter of a function or method. If the correct data type is not provided when the function gets called, PHP will display an error.
+```php
+// Provide example here (From functions chapter and later on)
+```
 
 <br><br>
 ## Glossary
