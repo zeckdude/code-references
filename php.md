@@ -204,6 +204,48 @@ A way to specify the data type accepted for the parameter of a function or metho
 // Show examples of type hinting for array, Closure, 
 ```
 
+## Partials
+There are several ways to include the code from another file within the current file, thereby eliminating the need to repeat code on several pages for repetitive functionality or markup.
+
+#### Include
+Include a file's contents on the current page. If it can't be found, it will continue to load the rest of the page without emitting an error.
+```php
+  include 'includes/vendor/classes.php';
+```
+
+#### Require
+Include a file's contents on the current page. If it can't be found, it will throw a fatal error.
+```php
+  require 'includes/vendor/classes.php';
+  
+  // Use require_once if there's a possiblity it may be required multiple times
+  require_once 'includes/vendor/classes.php';
+```
+
+<br>
+## Classes
+A class is a collection of variables and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
+```php
+// Define the Book class.
+class Book
+{
+  // Declare properties.
+  public $title;
+  public $author;
+  public $publisher;
+  public $yearOfPublication;
+}
+
+// Create a new book instance.
+$book = new Book;
+
+// Set properties.
+$book->title                = 'Game of Thrones';
+$book->author               = 'George R R Martin';
+$book->publisher            = 'Voyager Books';
+$book->yearOfPublication    = 1996;
+```
+
 <br><br>
 ## Glossary
 | Term        | Definition           |
