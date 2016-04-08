@@ -168,7 +168,7 @@ do {
 <br>
 #### For loop
 A for loop loops through a block of code a specified number of times. You specify the initial counter variable, the condition, and the incrementer all within the arguments.
-<br>The first section, the counter, is executed **before** the loop is executed.
+<br><br>The first section, the counter, is executed **before** the loop is executed.
 <br>The second statement, the condition, is evaluated **every time** the loop is executed.
 <br>The third statement is executed **after** the loop is executed.
 ```php
