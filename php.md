@@ -222,5 +222,5 @@ PHP Pandas: http://daylerees.com/php-pandas/<br>
 PHP: The Right Way: http://www.phptherightway.com/
 
 #### Syntax Documentation
-OnlinePHPFunctions: http://onlinephpfunctions.com/
+OnlinePHPFunctions: http://onlinephpfunctions.com/<br>
 W3Resource: http://www.w3resource.com/php/function-reference/function-reference.php
