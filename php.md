@@ -224,7 +224,7 @@ Include a file's contents on the current page. If it can't be found, it will thr
 
 <br>
 ## Classes
-A class is a collection of variables and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
+A class is a collection of variables (called properties) and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
 ```php
 // Define the Book class.
 class Book
@@ -234,16 +234,40 @@ class Book
   public $author;
   public $publisher;
   public $yearOfPublication;
+  public $format = "paperback";
+  
+  // Declare a method.
+  function go_to_page(int $page_num)
+  {
+    return "Viewing page {$page_num}";
+  }
+  
+  // Access values for the current instance from inside a class method using the $this property
+  function summary()
+  {
+    echo 'Title: '      . $this->title        . PHP_EOL;
+    echo 'Author: '     . $this->author       . PHP_EOL;
+    echo 'Publisher: '  . $this->publisher    . PHP_EOL;
+  }
 }
 
 // Create a new book instance.
 $book = new Book;
 
-// Set properties.
+// Set properties for this object.
 $book->title                = 'Game of Thrones';
 $book->author               = 'George R R Martin';
 $book->publisher            = 'Voyager Books';
 $book->yearOfPublication    = 1996;
+
+// Echo out the property
+echo $book->title . PHP_EOL;
+
+// Execute the go_to_page() method.
+echo $book->go_to_page(44) . PHP_EOL;
+
+// Execute the summary() method.
+$book->summary();
 ```
 
 <br><br>
