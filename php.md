@@ -138,7 +138,6 @@ echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
 ## Functions
 A function is a collection of statements that execute together.
 ```php
-// Provide example here using parameters, return, func_get_args()
 function welcome($name, $location) {
   // Return a value (in this case a string) from the function
   return "Welcome to {$location}, {$name}!";
