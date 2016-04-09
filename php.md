@@ -139,6 +139,27 @@ echo ($num_pizzas === 0) ? "Rage growing!" : "Mmm, love me some pie's";
 A function is a collection of statements that execute together.
 ```php
 // Provide example here using parameters, return, func_get_args()
+function welcome($name, $location) {
+  // Return a value (in this case a string) from the function
+  return "Welcome to {$location}, {$name}!";
+}
+
+echo welcome("David", "Downtown"); // Displays: Welcome to Downtown, David!
+
+// If there are multiple values you want to pass into a function and they don't need to be accessed in any specific order, you can use the func_get_args() function which will return an array of all the values that have been passed as parameters to the function. You could, ofcourse, also just pass them as an array in the first place, but this is another way.
+function add_numbers() {
+  $numbers = func_get_args();
+
+  $total = 0;
+  foreach ($numbers as $number) {
+    $total += $number;
+  }
+  
+  return $total;
+}
+
+echo add_numbers(1, 5, 10, 20); // Displays: 36
+
 ```
 
 <br>
