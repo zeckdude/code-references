@@ -49,6 +49,12 @@ $number_string = (string) $number_int; // string(1) "3"
 $number_string_array = (array) $number_string; // array(1) { [0] => string(1) "3" }
 ```
 
+<br>
+#### Useful internal constants
+| Constant Name | Purpose   | Demo |
+|----------------|--------|-------|
+| [`PHP_EOL`](http://phppot.com/php/php-line-breaks/) | Outputs end of line character that is compatible with any system | `echo "End of Line" . PHP_EOL; // Displays: "End of Line" followed by a new-line character` |
+
 <br><br>
 ## Arrays
 #### Creating Arrays
@@ -165,7 +171,7 @@ echo add_numbers(1, 5, 10, 20); // Displays: 36
 #### Useful internal functions
 | Function Name | Action   | Demo |
 |----------------|--------|-------|
-| `gettype()` | Returns the data type of the provided argument variable | `echo gettype(102) // Returns: "integer"` |
+| [`gettype()`](http://www.w3resource.com/php/function-reference/gettype.php) | Returns the data type of the provided argument | `echo gettype(102) // Returns: "integer"` |
 
 
 ## Loops
