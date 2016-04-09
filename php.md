@@ -165,7 +165,7 @@ echo add_numbers(1, 5, 10, 20); // Displays: 36
 #### Useful internal functions
 | Function Name | Action   | Demo |
 |----------------|--------|-------|
-| `gettype()` | Returns the data type of the provided argument variable | `// Add example here` |
+| `gettype()` | Returns the data type of the provided argument variable | `echo gettype(102) // Returns: "integer"` |
 
 
 ## Loops
