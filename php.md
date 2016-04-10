@@ -236,7 +236,7 @@ foreach ($numbers as $number) {
   echo "The number {$number} made the cut! Phew!" . PHP_EOL;
 }
 
-// Foreach loops can access the key name as well as the value
+// Foreach loops can also access key => value pairs
 $employee_ages = [
   "John" => 14,
   "Nelson" => 25,
