@@ -220,7 +220,6 @@ for ($i = 0; $i <= 24; $i++) {
 #### Foreach loop
 A foreach loop is used to loop through the items in an array. The number of iterations of the loop are, therefore, determined by the number of items in the array.
 ```php
-// Provide example here using return, break, and continue
 $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 foreach ($numbers as $number) {
@@ -229,12 +228,12 @@ foreach ($numbers as $number) {
     continue;
   }
   
-  // If the number is equal to 7, break out of the loop completely
-  if ($number === 7) {
+  // If the number is equal to 8, break out of the loop completely
+  if ($number === 8) {
     break;
   }
   
-  echo "The number {$number} made the cut! Phew!";
+  echo "The number {$number} made the cut! Phew!" . PHP_EOL;
 }
 ```
 
