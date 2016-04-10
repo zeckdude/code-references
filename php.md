@@ -235,6 +235,18 @@ foreach ($numbers as $number) {
   
   echo "The number {$number} made the cut! Phew!" . PHP_EOL;
 }
+
+// Foreach loops can access the key name as well as the value
+$employee_ages = [
+  "John" => 14,
+  "Nelson" => 25,
+  "Eric" => 51,
+];
+
+// It is common to use $key and $value as the variables representing the key and value for the current iteration, but $name and $age is better this case as it provides context within the loop iteration
+foreach ($employee_ages as $name => $age) {
+  echo "{$name} is {$age} years old";
+}
 ```
 
 ## Type Hinting
