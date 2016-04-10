@@ -175,7 +175,7 @@ echo add_numbers(1, 5, 10, 20); // Displays: 36
 
 
 ## Loops
-<br>That are several control statements that can be used within loops:
+That are several control statements that can be used within loops:
 <br>**break** - break out of the loop entirely
 <br>**continue** - break out of the loop iteration and continue with the next iteration
 
