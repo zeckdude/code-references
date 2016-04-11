@@ -253,11 +253,21 @@ foreach ($employee_ages as $name => $age) {
 }
 ```
 
-## Type Hinting
+## Type Hinting (a.k.a. type declarations)
+http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration
 A way to specify the data type accepted for the parameter of a function or method. If the correct data type is not provided when the function gets called, PHP will display an error.
 ```php
 // Provide example here (From functions chapter and later on)
 // Show examples of type hinting for array, Closure, 
+// Say hello to an array of people.
+function sayHello(array $names) {
+  foreach ($names as $name) {
+    echo "Hello, {$name}!\n";
+  }
+}
+
+sayHello(['Katie', 'Corissa', 'Lucy']); // Runs the function as expected
+sayHello('Jeffrey'); // Displays error: Uncaught TypeError: Argument 1 passed to sayHello() must be of the type array, string given
 ```
 
 ## Partials
