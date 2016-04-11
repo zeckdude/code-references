@@ -253,8 +253,7 @@ foreach ($employee_ages as $name => $age) {
 }
 ```
 
-## Type Hinting (a.k.a. type declarations)
-http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration
+## [Type Hinting (a.k.a. type declarations)](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
 A way to specify the data type accepted for the parameter of a function or method. If the correct data type is not provided when the function gets called, PHP will display an error.
 ```php
 // Provide example here (From functions chapter and later on)
