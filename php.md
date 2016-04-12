@@ -319,6 +319,9 @@ Include a file's contents on the current page. If it can't be found, it will thr
 <br>
 ## Classes
 A class is a collection of variables (called properties) and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
+
+Within the class each property and method should have their scope declared. The scope defines the access available to the specified property or method.
+**public** - Gives access to the property/method outside of 
 ```php
 // Define the Book class.
 class Book
@@ -331,7 +334,7 @@ class Book
   public $format = "paperback";
   private $book_identifier;
   
-  // The constructor method is run anytime a class is instantiated. Any variables that need have functions performed on them at instantiation must be be performed here. 
+  // The constructor method is run anytime a class is instantiated. Any variables that need to have functions performed on them at instantiation must be be performed here. 
   function __construct($name)
     {
       $this->book_identifier = rand(5,999);
