@@ -167,6 +167,35 @@ echo add_numbers(1, 5, 10, 20); // Displays: 36
 
 ```
 
+#### [Anonymous Functions (a.k.a. Lambda functions)](http://culttt.com/2013/03/25/what-are-php-lambdas-and-closures/)
+Anyonymous functions provide a way to use a function (often as a parameter for another function) that will only be used once and serves no other purpose as a function to be called elsewhere.
+```php
+// A function that runs a callback function
+function speech ($message){
+  echo "Let me clear my throat...Ok, I'm ready" . PHP_EOL;
+  
+  // Run callback
+  echo $message();
+}
+
+// Call function using pre-defined function
+function jfk() {
+  return "Ich bin ein Berliner!";
+};
+speech("jfk");
+// Returns
+// -> Let me clear my throat...Ok, I'm ready
+// -> Ich bin ein Berliner!
+ 
+// Call function using anonymous function
+speech(function(){
+  return "Ich bin ein Berliner!";
+});
+// Returns
+// -> Let me clear my throat...Ok, I'm ready
+// -> Ich bin ein Berliner!
+```
+
 <br>
 #### Useful internal functions
 | Function Name | Action   | Demo |
