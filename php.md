@@ -334,7 +334,7 @@ class Book
   // The constructor method is run anytime a class is instantiated. Any variables that need have functions performed on them at instantiation must be be performed here. 
   function __construct($name)
     {
-      $this->book_identifier = ucfirst($this->title + $this->yearOfPublication);
+      $this->book_identifier = rand(5,999);
       $this->loading_message($name);
       $this->go_to_page(1);
     }
@@ -342,7 +342,7 @@ class Book
   // Declare a method.
   private function loading_message($name)
   {
-    echo "Welcome {$name}. Loading your book \"{$this->title}\"." . PHP_EOL;
+    echo "Welcome {$name}" . PHP_EOL;
   }
   
   public function go_to_page(int $page_num)
@@ -360,7 +360,7 @@ class Book
 }
 
 // Create a new book instance.
-$book = new Book;
+$book = new Book("Jimmy");
 
 // Set properties for this object.
 $book->title                = 'Game of Thrones';
