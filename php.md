@@ -356,12 +356,20 @@ $book->yearOfPublication    = 1996;
 
 // Echo out the property
 echo $book->title . PHP_EOL;
+// Displays
+// -> Game of Thrones
 
 // Execute the go_to_page() method.
 echo $book->go_to_page(44) . PHP_EOL;
+// Displays
+// -> Viewing page 44
 
 // Execute the summary() method.
 $book->summary();
+// Displays
+// -> Title: Game of Thrones
+// -> Author: George R R Martin
+// -> Publisher: Voyager Books
 ```
 
 <br><br>
