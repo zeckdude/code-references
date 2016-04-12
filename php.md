@@ -342,7 +342,7 @@ class Book
   // Declare a method.
   private function loading_message($name)
   {
-    echo "Welcome {$name}. Loading your book \"{$this->title}\".";
+    echo "Welcome {$name}. Loading your book \"{$this->title}\"." . PHP_EOL;
   }
   
   public function go_to_page(int $page_num)
