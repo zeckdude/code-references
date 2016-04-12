@@ -329,15 +329,29 @@ class Book
   public $publisher;
   public $yearOfPublication;
   public $format = "paperback";
+  private $book_identifier;
+  
+  // The constructor method is run anytime a class is instantiated. Any variables that need have functions performed on them at instantiation must be be performed here. 
+  function __construct($name)
+    {
+      $this->book_identifier = ucfirst($this->title + $this->yearOfPublication);
+      $this->loading_message($name);
+      $this->go_to_page(1);
+    }
   
   // Declare a method.
-  function go_to_page(int $page_num)
+  private function loading_message($name)
+  {
+    echo "Welcome {$name}. Loading your book \"{$this->title}\".";
+  }
+  
+  public function go_to_page(int $page_num)
   {
     return "Viewing page {$page_num}";
   }
   
   // Access values of the current instance from inside a class method by using the $this property
-  function summary()
+  public function summary()
   {
     echo 'Title: '      . $this->title        . PHP_EOL;
     echo 'Author: '     . $this->author       . PHP_EOL;
