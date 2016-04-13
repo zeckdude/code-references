@@ -320,8 +320,10 @@ Include a file's contents on the current page. If it can't be found, it will thr
 ## Classes
 A class is a collection of variables (called properties) and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
 
-Within the class each property and method should have their scope declared. The scope defines the access available to the specified property or method.
-**public** - Gives access to the property/method outside of 
+Within the class each property/method should have their scope declared. The scope defines the access available to the specified property or method.
+**public** - Can be accessed from inside or outside a class<br> 
+**private** - Can only be accessed from inside the class<br>
+**protected** - Can only be accessed from inside the class or its children
 ```php
 // Define the Book class.
 class Book
@@ -404,7 +406,8 @@ http://sandbox.onlinephpfunctions.com/
 
 #### Reference
 PHP Pandas: http://daylerees.com/php-pandas/<br>
-PHP: The Right Way: http://www.phptherightway.com/
+PHP: The Right Way: http://www.phptherightway.com/<br>
+PHP Manual: Classes & Objects: http://php.net/manual/en/language.oop5.php
 
 #### Syntax Documentation
 OnlinePHPFunctions: http://onlinephpfunctions.com/<br>
