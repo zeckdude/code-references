@@ -324,6 +324,7 @@ Within a class each property/method should have their [scope, or visibility,](ht
 **public** - Can be accessed from inside or outside a class<br> 
 **private** - Can only be accessed from inside the class<br>
 **protected** - Can only be accessed from inside the class or its children<br>
+**static** - Add description here<br>
 ```php
 // Define the Book class.
 class Book
