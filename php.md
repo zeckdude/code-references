@@ -320,11 +320,10 @@ Include a file's contents on the current page. If it can't be found, it will thr
 ## Classes
 A class is a collection of variables (called properties) and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
 
-Within a class each property/method should have their [scope, or visbility,](http://stackoverflow.com/a/21902271) declared. The scope defines the access available to the specified property or method.<br>
+Within a class each property/method should have their [scope, or visibility,](http://stackoverflow.com/a/21902271) declared. The scope defines the access available to the specified property or method.<br>
 **public** - Can be accessed from inside or outside a class<br> 
 **private** - Can only be accessed from inside the class<br>
 **protected** - Can only be accessed from inside the class or its children<br>
-Detailed explanation of property/method visibility in OOP - http://stackoverflow.com/a/21902271
 ```php
 // Define the Book class.
 class Book
