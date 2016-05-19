@@ -53,6 +53,13 @@ Show all local branches and their tracking information
 | `git branch -vv`  | None  | None       |
 
 <br>
+Stop tracking a remote branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git branch --unset-upstream`  | None  | None       |
+
+<br>
 Pull a remote branch
 
 | Command          | Notes | Screenshot |
