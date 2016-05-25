@@ -32,6 +32,14 @@ Create a remote branch based on the current branch
 | `git push <remote-name> <branch-name>`  | None  | None       |
 
 <br>
+Rename a local branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git branch -m <oldname> <newname>`  | Use if you're renaming a branch you're not on  | None       |
+| `git branch -m <newname>`  | Use if you're on the branch  | None       |
+
+<br>
 Delete a local branch
 
 | Command          | Notes | Screenshot |
