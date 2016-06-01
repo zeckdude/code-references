@@ -8,7 +8,7 @@
 | Ditching jQuery              |    http://gomakethings.com/ditching-jquery/                                                                                               |
 | You might not need jQuery              |  http://youmightnotneedjquery.com/                                                                                                 |
 | Moving from jQuery              |   https://gist.github.com/harmstyler/7468978                                                                                                |
-|               |                                                                                                   |
+| 10 Tips for Writing JavaScript without jQuery              |  http://tutorialzine.com/2014/06/10-tips-for-writing-javascript-without-jquery/                                                                                                 |
 |               |                                                                                                   |
 |               |                                                                                                   |
 |               |                                                                                                   |
