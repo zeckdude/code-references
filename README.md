@@ -10,6 +10,7 @@ If you find any errors, or an area where you would like to contribute, I am eage
 
 ### The Motherload
 1. [JavaScript](https://github.com/zeckdude/code-references/blob/master/javascript.md)
+  * [JavaScript vs jQuery] (https://github.com/zeckdude/code-references/blob/master/javascript-vs-jquery.md)
   * [Backbone](https://github.com/zeckdude/code-references/blob/master/backbonejs.md)
 2. [PHP](https://github.com/zeckdude/code-references/blob/master/php.md)
 3. [Git](https://github.com/zeckdude/code-references/blob/master/git.md)
