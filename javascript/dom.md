@@ -1,4 +1,4 @@
-### DOM Manipulation
+### DOM
 
 ##### Selecting an element and saving it into a variable
 *Select the element with the matching ID*
