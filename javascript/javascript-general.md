@@ -1,26 +1,12 @@
 # JavaScript
 
-Logging and Debugging
-Numbers
-Strings
-Arrays
-Objects
-DOM Manipulation
-Glossary
-
-
-### Glossary
-| Term          | Definition                                                                                        |
-|---------------|---------------------------------------------------------------------------------------------------|
-| lexical scope | the regions in the source where we can refer to a variable by name without getting access errors  |
-|               |                                                                                                   |
-|               |                                                                                                   |
-|               |                                                                                                   |
-|               |                                                                                                   |
-|               |                                                                                                   |
-|               |                                                                                                   |
-|               |                                                                                                   |
-|               |                                                                                                   |
+[Logging and Debugging](logging-debugging.md)<br>
+[Numbers](numbers.md)<br>
+[Strings](strings.md)<br>
+[Arrays](arrays.md)<br>
+[Objects](objects.md)<br>
+[DOM Manipulation](dom-manipulation.md)<br>
+[Glossary](glossary.md)
 
 ### Common Scenarios
 
