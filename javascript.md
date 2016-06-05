@@ -1,5 +1,14 @@
 # JavaScript
 
+Logging and Debugging
+Numbers
+Strings
+Arrays
+Objects
+DOM Manipulation
+Glossary
+
+
 ### Glossary
 | Term          | Definition                                                                                        |
 |---------------|---------------------------------------------------------------------------------------------------|
