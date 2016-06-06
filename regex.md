@@ -138,3 +138,13 @@ https://regex101.com/r/nU7jN6/1<br>
 [\(1]?\s?(\d{3})\)?[-\s]?([\d]{3})[-\s]?([\d]{4})
 ```
 
+<br>
+
+*Find a match where the given substring is found anywhere within another string, and then capture the whole string*<br>
+https://regex101.com/r/fX2dO2/1<br>
+```js
+((?:.*)(ling)(?:.*))
+// Matches: linguist OR klingon OR sailing
+// Doesn't Match: linting
+```
+
