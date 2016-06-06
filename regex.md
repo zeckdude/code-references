@@ -1,8 +1,9 @@
 ### RegEx
 
-**Test Regular Expression Patterns:** [https://regex101.com](https://regex101.com)<br>
-**Learn and find documentation:** [http://regexone.com](http://regexone.com)
-**Using Regex in JavaScript:** [http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869](http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869)
+**Test Regular Expression Patterns:** https://regex101.com<br>
+**Learn and find documentation:** http://regexone.com<br>
+**Detailed Documentation:** https://msdn.microsoft.com/en-us/library/az24scfc%28v=vs.110%29.aspx<br>
+**Using Regex in JavaScript:** http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869
 
 **Flags**<br>
 
@@ -117,5 +118,23 @@ https://regex101.com/r/nA7pY9/2<br>
 ^(.+).pdf$
 // Matches: file_07241999.pdf
 // Doesn't Match: testfile_fake.pdf.tmp
+```
+
+<br>
+
+*Capture any characters that match either option*<br>
+https://regex101.com/r/zL9rT6/1<br>
+```js
+I love (cats|dogs)
+// Matches: I love cats OR I love dogs
+// Doesn't Match: I love logs OR I love cogs
+```
+
+<br>
+
+*Match various ways to enter a US phone number and capture the area code, first 3 numbers, and the last 4 numbers*<br>
+https://regex101.com/r/nU7jN6/1<br>
+```js
+[\(1]?\s?(\d{3})\)?[-\s]?([\d]{3})[-\s]?([\d]{4})
 ```
 
