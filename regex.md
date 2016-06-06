@@ -90,4 +90,32 @@ files?
 // Matches: file OR files
 ```
 
+<br>
+
+*Match any characters that start with the given characters*<br>
+https://regex101.com/r/sX0dS4/1
+```js
+^Why hello there
+```
+
+<br>
+
+*Match any characters that start with the given characters and end after the given characters*<br>
+https://regex101.com/r/qA3uQ6/1<br>
+Needs to be an exact match for the entire string
+```js
+^Why hello there$
+// Matches: Why hello there
+// Doesn't Match: Why hello there Bob
+```
+
+<br>
+
+*Capture any characters that are surrounded by parantheses*<br>
+https://regex101.com/r/nA7pY9/2<br>
+```js
+^(.+).pdf$
+// Matches: file_07241999.pdf
+// Doesn't Match: testfile_fake.pdf.tmp
+```
 
