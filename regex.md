@@ -148,3 +148,11 @@ https://regex101.com/r/fX2dO2/1<br>
 // Doesn't Match: linting
 ```
 
+<br>
+
+*Match various ways to enter an email address and capture the username, domain name with domain type, and the domain type by itself*<br>
+https://regex101.com/r/sX5oW9/1<br>
+```js
+([\w\.\+\d]+)@([\w\.]+(?:\.([\w]{2,3})))
+```
+
