@@ -7,7 +7,7 @@
 
 [Return all rows where the specified column value is between two numbers](#anchors-in-markdown)
 
-##### Return all rows where the specified column value is between two numbers
+#### Return all rows where the specified column value is between two numbers
 > Using BETWEEN condition - http://www.techonthenet.com/mysql/between.php
 ```sql
 SELECT *
