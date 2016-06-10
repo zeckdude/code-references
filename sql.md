@@ -28,6 +28,10 @@ WHERE col_name NOT BETWEEN 3 AND 6
 SELECT *
 FROM tbl_name
 WHERE col_name IN (2, 4, 6)
+
+SELECT *
+FROM tbl_name
+WHERE col_name IN ("active", "waiting_approval", "in_progress")
 ```
 
 ```sql
