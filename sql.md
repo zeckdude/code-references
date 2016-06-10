@@ -14,6 +14,7 @@ FROM tbl_name
 WHERE col_name BETWEEN 3 AND 6
 ```
 
+> Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
 ```sql
 SELECT *
 FROM tbl_name
@@ -23,13 +24,14 @@ WHERE col_name >= 3 AND col_name <= 6
 <br>
 
 *Return all rows where the specified column value is not between two numbers*
-http://www.techonthenet.com/mysql/between.php
+> Using NOT BETWEEN condition - http://www.techonthenet.com/mysql/between.php
 ```sql
 SELECT *
 FROM tbl_name
 WHERE col_name NOT BETWEEN 3 AND 6
 ```
 
+> Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
 ```sql
 SELECT *
 FROM tbl_name
