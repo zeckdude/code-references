@@ -6,18 +6,20 @@
 <br>
 
 #### Table of Contents
-1. [Return all rows where the specified column value is between two numbers](#BBBB)
-2. [Return all rows where the specified column value is not between two numbers](#BBBB)
-3. [Return all rows where the specified column value is equal to one of several possible values](#BBBB)
-4. [Return all rows where the specified column value is not equal to one of several possible values](#BBBB)
-5. [Return all rows where the specified column value is equal to a specific value (case-sensitive)](#BBBB)
-6. [Return all rows where the specified column value is not equal to a specific value (case-sensitive)](#BBBB)
-7. [Return all rows where the specified column value is equal to a specific value (case-insensitive)](#BBBB)
-8. [Return all rows where the specified column value is not equal to a specific value (case-insensitive)](#BBBB)
-9. [Return all rows where the specified column value begins with a specific value (case-insensitive)](#BBBB)
-10. [Return all rows where the specified column value ends with a specific value (case-insensitive)](#BBBB)
-11. [Return all rows where the specified column value matches a specified pattern (case-sensitive)](#BBBB)
-12. [Return all rows where the specified column value contains a specific value (case-insensitive)](#BBBB)
+1. [Return all rows where the specified column value is between two numbers](#return-all-rows-where-the-specified-column-value-is-between-two-numbers)
+2. [Return all rows where the specified column value is not between two numbers](#return-all-rows-where-the-specified-column-value-is-not-between-two-numbers)
+3. [Return all rows where the specified column value is equal to one of several possible values](#return-all-rows-where-the-specified-column-value-is-equal-to-one-of-several-possible-values)
+4. [Return all rows where the specified column value is not equal to one of several possible values](#return-all-rows-where-the-specified-column-value-is-not-equal-to-one-of-several-possible-values)
+5. [Return all rows where the specified column value is equal to a specific value (case-sensitive)](#return-all-rows-where-the-specified-column-value-is-equal-to-a-specific-value-case-sensitive)
+6. [Return all rows where the specified column value is not equal to a specific value (case-sensitive)](#return-all-rows-where-the-specified-column-value-is-not-equal-to-a-specific-value-case-sensitive)
+7. [Return all rows where the specified column value is equal to a specific value (case-insensitive)](#return-all-rows-where-the-specified-column-value-is-equal-to-a-specific-value-case-insensitive)
+8. [Return all rows where the specified column value is not equal to a specific value (case-insensitive)](#return-all-rows-where-the-specified-column-value-is-not-equal-to-a-specific-value-case-insensitive)
+9. [Return all rows where the specified column value begins with a specific value (case-insensitive)](#return-all-rows-where-the-specified-column-value-begins-with-a-specific-value-case-insensitive)
+10. [Return all rows where the specified column value ends with a specific value (case-insensitive)](#return-all-rows-where-the-specified-column-value-ends-with-a-specific-value-case-insensitive)
+11. [Return all rows where the specified column value matches a specified pattern (case-sensitive)](#return-all-rows-where-the-specified-column-value-matches-a-specified-pattern-case-sensitive)
+12. [Return all rows where the specified column value contains a specific value (case-insensitive)](#return-all-rows-where-the-specified-column-value-contains-a-specific-value-case-insensitive)
+
+<br>
 
 #### Return all rows where the specified column value is between two numbers
 > Using BETWEEN condition - http://www.techonthenet.com/mysql/between.php
