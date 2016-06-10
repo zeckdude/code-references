@@ -174,11 +174,41 @@ WHERE col_name NOT LIKE "Active";
 <br>
 
 *Return all rows where the specified column value begins with a specific value (case-insensitive)*
-> Using LIKE condition - http://www.techonthenet.com/mysql/like.php<br>
-> Demo: http://sqlfiddle.com/#!9/dcb16/40704
+> Using LIKE condition - http://www.mysqltutorial.org/mysql-like/<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-like/#1
 ```sql
 # Examples of accepted values for col_name: "active", "Action", "Act One", etc.
 SELECT *
 FROM tbl_name
-WHERE col_name LIKE "%act";
+WHERE col_name LIKE "act%";
+```
+
+> Using REGEXP condition - http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-regular-expression/#2
+```sql
+# Examples of accepted values for col_name: "active", "Action", "Act One", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name REGEXP "^act";
+```
+
+<br>
+
+*Return all rows where the specified column value ends with a specific value (case-insensitive)*
+> Using LIKE condition - http://www.mysqltutorial.org/mysql-like/<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-like/#2
+```sql
+# Examples of accepted values for col_name: "Right On", "won", "action", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name LIKE "%on";
+```
+
+> Using REGEXP condition - http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-regular-expression/#4
+```sql
+# Examples of accepted values for col_name: "Right On", "won", "action", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name REGEXP "on$";
 ```
