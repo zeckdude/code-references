@@ -13,7 +13,7 @@ SELECT *
 FROM tbl_name
 WHERE col_name BETWEEN 3 AND 6
 ```
-
+<br>
 > Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
 ```sql
 SELECT *
