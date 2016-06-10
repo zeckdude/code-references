@@ -6,9 +6,8 @@
 <br>
 
 [Return all rows where the specified column value is between two numbers](#anchors-in-markdown)
-##### Return all rows where the specified column value is between two numbers
 
-*Return all rows where the specified column value is between two numbers*
+##### Return all rows where the specified column value is between two numbers
 > Using BETWEEN condition - http://www.techonthenet.com/mysql/between.php
 ```sql
 SELECT *
@@ -25,7 +24,7 @@ WHERE col_name >= 3 AND col_name <= 6;
 
 <br>
 
-*Return all rows where the specified column value is not between two numbers*
+##### Return all rows where the specified column value is not between two numbers
 > Using NOT BETWEEN condition - http://www.techonthenet.com/mysql/between.php
 ```sql
 SELECT *
@@ -42,7 +41,7 @@ WHERE col_name < 3 AND col_name > 6;
 
 <br>
 
-*Return all rows where the specified column value is equal to one of several possible values*
+##### Return all rows where the specified column value is equal to one of several possible values
 > Using IN condition - http://www.techonthenet.com/mysql/in.php
 ```sql
 SELECT *
@@ -75,7 +74,7 @@ OR col_name = "in_progress";
 
 <br>
 
-*Return all rows where the specified column value is not equal to one of several possible values*
+##### Return all rows where the specified column value is not equal to one of several possible values
 > Using NOT IN condition - http://www.techonthenet.com/mysql/in.php
 ```sql
 SELECT *
@@ -108,7 +107,7 @@ AND col_name != "in_progress"
 
 <br>
 
-*Return all rows where the specified column value is equal to a specific value (case-sensitive)*
+##### Return all rows where the specified column value is equal to a specific value (case-sensitive)
 > Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
 ```sql
 SELECT *
@@ -124,7 +123,7 @@ WHERE col_name = "active";
 
 <br>
 
-*Return all rows where the specified column value is not equal to a specific value (case-sensitive)*
+##### Return all rows where the specified column value is not equal to a specific value (case-sensitive)
 > Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
 ```sql
 SELECT *
@@ -152,7 +151,7 @@ WHERE col_name <> "active";
 
 <br>
 
-*Return all rows where the specified column value is equal to a specific value (case-insensitive)*
+##### Return all rows where the specified column value is equal to a specific value (case-insensitive)
 > Using LIKE condition - http://sqlbolt.com/lesson/select_queries_with_constraints_pt_2
 ```sql
 # Examples of accepted values for col_name: Active, active, AcTiVe, etc.
@@ -163,7 +162,7 @@ WHERE col_name LIKE "active";
 
 <br>
 
-*Return all rows where the specified column value is not equal to a specific value (case-insensitive)*
+##### Return all rows where the specified column value is not equal to a specific value (case-insensitive)
 > Using LIKE condition - http://sqlbolt.com/lesson/select_queries_with_constraints_pt_2
 ```sql
 # Examples of accepted values for col_name: "approved", "Waiting_Approval", "DiSabLeD", etc.
@@ -175,7 +174,7 @@ WHERE col_name NOT LIKE "Active";
 
 <br>
 
-*Return all rows where the specified column value begins with a specific value (case-insensitive)*
+##### Return all rows where the specified column value begins with a specific value (case-insensitive)
 > Using LIKE condition - http://www.mysqltutorial.org/mysql-like/<br>
 > Demo: http://www.mysqltutorial.org/tryit/query/mysql-like/#1
 ```sql
@@ -196,7 +195,7 @@ WHERE col_name REGEXP "^act";
 
 <br>
 
-*Return all rows where the specified column value ends with a specific value (case-insensitive)*
+##### Return all rows where the specified column value ends with a specific value (case-insensitive)
 > Using LIKE condition - http://www.mysqltutorial.org/mysql-like/<br>
 > Demo: http://www.mysqltutorial.org/tryit/query/mysql-like/#2
 ```sql
@@ -217,7 +216,7 @@ WHERE col_name REGEXP "on$";
 
 <br>
 
-*Return all rows where the specified column value matches a specified pattern (case-sensitive)*
+##### Return all rows where the specified column value matches a specified pattern (case-sensitive)
 > Using REGEXP condition - http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx<br>
 > Demo: http://www.mysqltutorial.org/tryit/query/mysql-regular-expression/#3<br>
 > Notes: The BINARY keyword forces the case-sensitive match. This example is looking for any values that begin with "act", but any regular expression pattern is valid.
@@ -230,7 +229,7 @@ WHERE col_name REGEXP BINARY "^act";
 
 <br>
 
-*Return all rows where the specified column value contains a specific value (case-insensitive)*
+##### Return all rows where the specified column value contains a specific value (case-insensitive)
 > Using LIKE condition - http://www.mysqltutorial.org/mysql-like/<br>
 > Demo: http://www.mysqltutorial.org/tryit/query/mysql-like/#3
 ```sql
