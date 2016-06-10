@@ -212,3 +212,37 @@ SELECT *
 FROM tbl_name
 WHERE col_name REGEXP "on$";
 ```
+
+<br>
+
+*Return all rows where the specified column value matches a specified pattern (case-sensitive)*
+> Using REGEXP condition - http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-regular-expression/#3<br>
+> Notes: The BINARY keyword forces the case-sensitive match. This example is looking for any values that begin with "act", but any regular expression pattern is valid.
+```sql
+# Examples of accepted values for col_name: "active", "action", "act One", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name REGEXP BINARY "^act";
+```
+
+<br>
+
+*Return all rows where the specified column value contains a specific value (case-insensitive)*
+> Using LIKE condition - http://www.mysqltutorial.org/mysql-like/<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-like/#3
+```sql
+# Examples of accepted values for col_name: "Patterson", "Jones", "Only", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name LIKE "%on%";
+```
+
+> Using REGEXP condition - http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx<br>
+> Demo: http://www.mysqltutorial.org/tryit/query/mysql-regular-expression/#5
+```sql
+# Examples of accepted values for col_name: "Patterson", "Jones", "Only", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name REGEXP "on";
+```
