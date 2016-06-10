@@ -105,3 +105,45 @@ AND col_name != "in_progress"
 ```
 
 <br>
+
+*Return all rows where the specified column value is equal to a specific value (case-sensitive)*
+> Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
+```sql
+SELECT *
+FROM tbl_name
+WHERE col_name = 5;
+```
+
+> ```sql
+SELECT *
+FROM tbl_name
+WHERE col_name = "active";
+```
+
+<br>
+
+*Return all rows where the specified column value is not equal to a specific value (case-sensitive)*
+> Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
+```sql
+SELECT *
+FROM tbl_name
+WHERE col_name != 5;
+```
+
+> ```sql
+SELECT *
+FROM tbl_name
+WHERE col_name <> 5;
+```
+
+> ```sql
+SELECT *
+FROM tbl_name
+WHERE col_name != "active";
+```
+
+> ```sql
+SELECT *
+FROM tbl_name
+WHERE col_name <> "active";
+```
