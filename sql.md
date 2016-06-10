@@ -147,3 +147,38 @@ SELECT *
 FROM tbl_name
 WHERE col_name <> "active";
 ```
+
+<br>
+
+*Return all rows where the specified column value is equal to a specific value (case-insensitive)*
+> Using LIKE condition - http://sqlbolt.com/lesson/select_queries_with_constraints_pt_2
+```sql
+# Examples of accepted values for col_name: Active, active, AcTiVe, etc.
+SELECT *
+FROM tbl_name
+WHERE col_name LIKE "active";
+```
+
+<br>
+
+*Return all rows where the specified column value is not equal to a specific value (case-insensitive)*
+> Using LIKE condition - http://sqlbolt.com/lesson/select_queries_with_constraints_pt_2
+```sql
+# Examples of accepted values for col_name: "approved", "Waiting_Approval", "DiSabLeD", etc.
+# Not accepted values for col_name: "Active", "active"
+SELECT *
+FROM tbl_name
+WHERE col_name NOT LIKE "Active";
+```
+
+<br>
+
+*Return all rows where the specified column value begins with a specific value (case-insensitive)*
+> Using LIKE condition - http://www.techonthenet.com/mysql/like.php<br>
+> Demo: http://sqlfiddle.com/#!9/dcb16/40704
+```sql
+# Examples of accepted values for col_name: "active", "Action", "Act One", etc.
+SELECT *
+FROM tbl_name
+WHERE col_name LIKE "%act";
+```
