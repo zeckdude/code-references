@@ -48,7 +48,7 @@ FROM tbl_name
 WHERE col_name IN (2, 4, 6)
 ```
 
-```sql
+> ```sql
 SELECT *
 FROM tbl_name
 WHERE col_name IN ("active", "waitingapproval", "inprogress");
