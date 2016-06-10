@@ -45,11 +45,13 @@ WHERE col_name < 3 AND col_name > 6;
 ```sql
 SELECT *
 FROM tbl_name
-WHERE col_name IN (2, 4, 6);
+WHERE col_name IN (2, 4, 6)
+```
 
+```sql
 SELECT *
 FROM tbl_name
-WHERE col_name IN ("active", "waiting_approval", "in_progress");
+WHERE col_name IN ("active", "waitingapproval", "inprogress");
 ```
 
 > Using Comparison Operators - http://www.techonthenet.com/mysql/comparison_operators.php
