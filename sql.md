@@ -8,7 +8,6 @@
 *Return all rows where the specified column value is between two numbers*
 
 > Using BETWEEN condition - http://www.techonthenet.com/mysql/between.php
-
 ```sql
 SELECT *
 FROM tbl_name
