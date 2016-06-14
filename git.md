@@ -6,6 +6,7 @@
 | Cache Git Password for easy pushing                        | https://help.github.com/articles/set-up-git/#next-steps-authenticating-with-github-from-git |
 | Checkout local copies of pull requests from GitHub remotes | https://gist.github.com/gnarf/5406589                                                       |
 | Checkout branch on a fork                                  | https://help.github.com/articles/configuring-a-remote-for-a-fork/                           |
+| Commonly used commands                                  | https://github.com/git-tips/tips                           |
 
 
 ## Git Glossary
