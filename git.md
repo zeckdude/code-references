@@ -143,5 +143,5 @@ Configure Git Settings
 
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
-| `git config --global user.name "Chris Seckler"`  | Sets the name to record when committing changes  | None       |
-| `git config --global user.email chris.seckler@hotmail.com`  | Sets the email to record when comitting changes  | None       |
+| `git config --global user.name "Jim Bob"`  | Sets the name to record when committing changes  | None       |
+| `git config --global user.email jim.bob@hotmail.com`  | Sets the email to record when comitting changes  | None       |
