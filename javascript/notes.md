@@ -11,9 +11,7 @@ for (var n = 0; n < maxCount; n++) {
 var elapsed = new Date().getTime() - start;
 console.log("Measured Time:", elapsed + " milliseconds");
 ```
-
 <br>
-
 Using [`performance.now()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now) (more accurate count):
 ```js
 var maxCount = 100000;
