@@ -22,16 +22,14 @@ for (var n = 0; n < maxCount; n++) {
 var elapsed = (performance.now() - start).toFixed(4);
 console.log("Measured Time:", elapsed + " milliseconds");
 ```
-
+<br>
 #### Testing
 ##### Good tests exhibit three important charisteristics:
 
 1. *Repeatability* - Test results should be highly reproducible. They should always produce the exact same results.
 2. *Simplicity* - Tests should strive to remove as much HTML markup, CSS, or JavaScript as possible without interrupting the intent of the test case.
 3. *Independence* - Avoid making the results from one test dependant upon another.
-
 <br>
-
 ##### The assertion
 The most important part of a unit-testing framework is its assertion method, usually named `assert()`, which takes a value - an expression whose premise is *asserted* (checked if it is `true`) - and a description that describes the purpose of the assertion. If the value evaluates to `true`, the assertion passes; otherwise it's considered a failure. The associated message is usually logged with an appropriate pass/fail indicator.
 <br>
