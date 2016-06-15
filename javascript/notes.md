@@ -83,6 +83,31 @@ The capabilities listed below are common to all objects in JavaScript and functi
 5. Can possess properties that can be dynamically created and assigned.
 
 #### Declaring Functions
+Some things to keep in mind when declaring functions:
+
 1. Declaring a function at the top-level makes it a method of the global (`window`) object.
 2. Declaring a function within an object makes it a method of the object within which it was declared.
 3. Declaring a function within a constructor makes it a method of the object that is invoked when calling the `new` keyword with the constructor function name, i.e. `var toyota = new Car()`.
+4. All functions have a property named `name` that stores the function's name as a string. Functions with no name possess this property as an empty string.
+
+```js
+// Named function created on the window object (top-level)
+function firstFunction() { return true; }
+
+// The name property is the name of the function
+console.log(firstFunction.name); // "firstFunction"
+
+
+// Anonymous function that is assigned to a variable
+var secondFunction = function() { return true; }
+
+// Since it is an anonymous function, the name property is an empty string
+console.log(secondFunction.name); // ""
+
+
+// Named function assigned to a window property
+window.thirdFunction = function fourthFunction() { return true; }
+
+// The name comes from the function literal and not from the name of the variable to which it is assigned
+console.log(thirdFunction.name); // "fourthFunction"
+```
