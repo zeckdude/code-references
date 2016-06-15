@@ -29,6 +29,7 @@ console.log("Measured Time:", elapsed + " milliseconds");
 1. *Repeatability* - Test results should be highly reproducible. They should always produce the exact same results.
 2. *Simplicity* - Tests should strive to remove as much HTML markup, CSS, or JavaScript as possible without interrupting the intent of the test case.
 3. *Independence* - Avoid making the results from one test dependant upon another.
+
 <br>
 
 ##### The assertion
