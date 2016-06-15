@@ -119,6 +119,7 @@ Some things to keep in mind when declaring variables and functions within a func
 
 1. Variables within a function are accessible (in scope) from their point of declaration until the end of the function
 2. Inner named functions are accessible (in scope) anywhere within the enclosing function. This is known as *hoisting*.
+  * Function hoisting only applies to function declarations (named functions) and not for function expressions. For a detailed explanation, visit: http://adripofjavascript.com/blog/drips/variable-and-function-hoisting
 
 <br>
 ##### Native function parameters
