@@ -129,6 +129,23 @@ There are a few native function parameters which are useful:
 2. `this` - The reference to the object upon which the function is invoked, a.k.a. the *function context*
 
 <br>
+##### Creating a constructor
+A constructor function makes it much easier to create multiple objects that conform to the same pattern. Follow these guidelines when creating a constructor function:
+
+1. The constructor function is named as a noun and describes the object that gets created when the constructor is invoked. it should begin with an uppercase character, i.e. `Car()`
+2. Methods within the constructor function start with a verb that describes what they do and are camelCase, i.e. `accelerate()` or `openDoor()`
+
+##### Example of a constructor function
+```js
+function Car() {
+  this.accelerate = function() { console.log("Driving faster"); };
+  this.openDoor = function() { console.log("Opening door"); };
+}
+
+var passat = new Car();
+```
+
+<br>
 ##### Invoking Functions
 There are several different ways to invoke a function. Depending on which way the function is invoked, the *function context* is determined.
 
@@ -137,6 +154,6 @@ There are several different ways to invoke a function. Depending on which way th
 2. As a method of an object
   * The context is the object owning the method
 3. As a method of a constructor
-  * The context is the newly created object, made via the constructor function.
+  * The context is the newly created object instance, made via the constructor function.
 4. Via `apply()` or `call()`
   * The context is whatever object we supply to the `apply()` or `call()` methods as the first argument.
