@@ -33,6 +33,7 @@ console.log("Measured Time:", elapsed + " milliseconds");
 <br>
 ##### The assertion
 The most important part of a unit-testing framework is its assertion method, usually named `assert()`, which takes a value - an expression whose premise is *asserted* (checked if it is `true`) - and a description that describes the purpose of the assertion. If the value evaluates to `true`, the assertion passes; otherwise it's considered a failure. The associated message is usually logged with an appropriate pass/fail indicator.
+
 <br>
 ##### Example `assert()` function
 **JS:**
@@ -71,7 +72,6 @@ window.onload = function(){
 <br>
 
 #### Functions
-
 ##### Functions as first-class objects
 The capabilities listed below are common to all objects in JavaScript and functions are no exception. Any object that shares these is known as a *first-class object*.
 
@@ -81,6 +81,7 @@ The capabilities listed below are common to all objects in JavaScript and functi
 4. Can be returned as function results
 5. Can possess properties that can be dynamically created and assigned.
 
+<br>
 ##### Declaring Functions
 Some things to keep in mind when declaring functions:
 
@@ -112,20 +113,21 @@ window.thirdFunction = function fourthFunction() { return true; }
 console.log(thirdFunction.name); // "fourthFunction"
 ```
 
+<br>
 ##### Scope within a function
 Some things to keep in mind when declaring variables and functions within a function:
 
 1. Variables within a function are accessible (in scope) from their point of declaration until the end of the function
 2. Inner named functions are accessible (in scope) anywhere within the enclosing function. This is known as *hoisting*.
 
-
+<br>
 ##### Native function parameters
 There are a few native function parameters which are useful:
 
 1. `arguments` - A collection of all passed arguments to the function
 2. `this` - The reference to the object upon which the function is invoked, a.k.a. the *function context*
 
-
+<br>
 ##### Invoking Functions
 There are several different ways to invoke a function. Depending on which way the function is invoked, the *function context* is determined.
 
