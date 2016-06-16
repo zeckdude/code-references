@@ -157,3 +157,34 @@ There are several different ways to invoke a function. Depending on which way th
   * The context is the newly created object instance, made via the constructor function.
 4. Via `apply()` or `call()`
   * The context is whatever object we supply to the `apply()` or `call()` methods as the first argument.
+
+```js
+// Named function created on the window object (top-level)
+function firstFunction() { return this; }
+
+// Since the function is that the top-level, it is a method of the window object, so therefore the function context is the window object
+console.log(firstFunction() === window); // true
+
+
+// Object method 
+var firstObject = {
+  secondFunction: function() { return this; }
+};
+
+// Since the method belongs to the firstObject object, the function context is firstObject
+console.log(firstObject.secondFunction() === firstObject); // true
+
+
+// Method on a constructor
+function Constructor() {
+  this.thirdFunction = function() { return this; };
+}
+var instance = new Constructor();
+
+// Since the method is created using a constructor, function context is the object instance that was created
+console.log(instance.thirdFunction() === instance); // true
+
+
+// Defining the context using apply() or call()
+// Example here
+```
