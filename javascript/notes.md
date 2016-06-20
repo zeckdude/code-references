@@ -71,11 +71,18 @@ window.onload = function(){
 
 <br>
 
-##### Example `assert()` function - Results displayed in console
+##### Example `assert()` functions - Results displayed in console
 ```js
 function assert(val, desc) {
   return val ? console.log(desc) : console.log(false);
 }
+```
+
+```js
+function assert(value, description) {
+  var result = value ? "pass" : "fail";
+  console.log(result + ' - ' +  description); 
+};
 ```
 
 <br>
