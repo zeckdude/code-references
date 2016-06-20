@@ -35,7 +35,7 @@ console.log("Measured Time:", elapsed + " milliseconds");
 The most important part of a unit-testing framework is its assertion method, usually named `assert()`, which takes a value - an expression whose premise is *asserted* (checked if it is `true`) - and a description that describes the purpose of the assertion. If the value evaluates to `true`, the assertion passes; otherwise it's considered a failure. The associated message is usually logged with an appropriate pass/fail indicator.
 
 <br>
-##### Example `assert()` function - Results displayed in browser
+##### Example `assert()` function
 **JS:**
 ```js
 function assert(value, desc) {
@@ -67,22 +67,6 @@ window.onload = function(){
 **HTML:**
 ```html
 <ul id="results"></ul>
-```
-
-<br>
-
-##### Example `assert()` functions - Results displayed in console
-```js
-function assert(val, desc) {
-  return val ? console.log(desc) : console.log(false);
-}
-```
-
-```js
-function assert(value, description) {
-  var result = value ? "pass" : "fail";
-  console.log(result + ' - ' +  description); 
-};
 ```
 
 <br>
@@ -136,6 +120,16 @@ Some things to keep in mind when declaring variables and functions within a func
 1. Variables within a function are accessible (in scope) from their point of declaration until the end of the function
 2. Inner named functions are accessible (in scope) anywhere within the enclosing function. This is known as *hoisting*.
   * Function hoisting only applies to function declarations (named functions) and not for function expressions. For a detailed explanation, visit: http://adripofjavascript.com/blog/drips/variable-and-function-hoisting
+  
+<br>
+
+In order to avoid clashing with other variables in the global scope that are defined elsewhere, wrap all code in an anonymous self-executing function. This will keep all variables declared within it in the function's scope as opposed to the global scope.
+
+```js
+(function() {
+	// Put code here
+})();
+```
 
 <br>
 ##### Native function parameters
