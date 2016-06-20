@@ -35,7 +35,7 @@ console.log("Measured Time:", elapsed + " milliseconds");
 The most important part of a unit-testing framework is its assertion method, usually named `assert()`, which takes a value - an expression whose premise is *asserted* (checked if it is `true`) - and a description that describes the purpose of the assertion. If the value evaluates to `true`, the assertion passes; otherwise it's considered a failure. The associated message is usually logged with an appropriate pass/fail indicator.
 
 <br>
-##### Example `assert()` function
+##### Example `assert()` function - Results displayed in browser
 **JS:**
 ```js
 function assert(value, desc) {
@@ -67,6 +67,23 @@ window.onload = function(){
 **HTML:**
 ```html
 <ul id="results"></ul>
+```
+
+<br>
+
+##### Example assert() functions - Results displayed in console
+
+```js
+function assert(val, desc) {
+  return val ? console.log(desc) : console.log(false);
+}
+```
+
+```js
+function assert(value, description) {
+  var result = value ? "pass" : "fail";
+  console.log(result + ' - ' +  description); 
+};
 ```
 
 <br>
