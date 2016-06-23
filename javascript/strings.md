@@ -1,7 +1,7 @@
 ### Strings
 
 ##### Return the number of characters in a specified string
-##### [lastIndexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 ```js
 var str = 'Blue Whale';
 str.length; 
