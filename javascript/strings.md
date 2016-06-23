@@ -122,3 +122,27 @@ str.toLowerCase();
 // Returns: "george wallace"
 ```
 
+<br>
+#### Replace a a part of a string with another string 
+##### [replace() - Basic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+```js
+var str = "Martin Jeffrey King";
+str.replace("Jeffrey", "Luther");
+// Returns: "Martin Luther King"
+```
+
+##### [replace() - Using a function to rearrange the captured parts of the matched string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+```js
+var str = "310-456-4468";
+str.replace(/[- ]/g, "."); // Look for dashes or spaces and replace with periods
+// Returns: "310.456.4468"
+```
+
+```js
+var str = "Jeff Jeromy Jackson";
+str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastName){
+  return firstName + " Jebediah " + lastName;
+});
+// Returns: "Jeff Jebediah Jackson"
+```
+
