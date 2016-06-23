@@ -26,6 +26,13 @@ Create a new local branch based off the current branch
 | `git checkout -b <branch-name>`  | None  | None       |
 
 <br>
+Create a new local branch based off another branch
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git branch <new-branch> <old-branch>`  | None  | None       |
+
+<br>
 Create a remote branch based on the current branch
 
 | Command          | Notes | Screenshot |
