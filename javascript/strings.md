@@ -81,7 +81,44 @@ str.lastIndexOf('l');
 // Returns:  8
 ```
 
+<br>
+#### Return a substring of another string
+##### [substring()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
+```js
+var str = "There are four words";
+str.substring(10, 14);
+// Returns: "four"
+```
 
+##### [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
+```js
+var str = "There are four words";
+str.slice(10, 14);
+// Returns: "four"
+```
 
+##### [substr()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr)
+```js
+var str = "There are four words";
+str.substr(10, 4);
+// Returns: "four"
+```
 
+<br>
+#### Convert a string to uppercase
+##### [toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
+```js
+var str = "George Wallace";
+str.toUpperCase();
+// Returns: "GEORGE WALLACE"
+```
+
+<br>
+#### Convert a string to lowercase
+##### [toLowerCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
+```js
+var str = "George Wallace";
+str.toLowerCase();
+// Returns: "george wallace"
+```
 
