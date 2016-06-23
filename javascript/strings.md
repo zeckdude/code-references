@@ -123,7 +123,7 @@ str.toLowerCase();
 ```
 
 <br>
-#### Replace a a part of a string with another string 
+#### Replace a part of a string with another string 
 ##### [replace() - Basic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 ```js
 var str = "Martin Jeffrey King";
@@ -131,7 +131,7 @@ str.replace("Jeffrey", "Luther");
 // Returns: "Martin Luther King"
 ```
 
-##### [replace() - Using a function to rearrange the captured parts of the matched string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+##### [replace() - Using a regular expression to match a pattern and function to alter the string string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 ```js
 var str = "310-456-4468";
 str.replace(/[- ]/g, "."); // Look for dashes or spaces and replace with periods
@@ -140,7 +140,7 @@ str.replace(/[- ]/g, "."); // Look for dashes or spaces and replace with periods
 
 ```js
 var str = "Jeff Jeromy Jackson";
-str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastName){
+str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastName) { // Look for three words separated by spaces between the words and capture each of the words to use in the function.
   return firstName + " Jebediah " + lastName;
 });
 // Returns: "Jeff Jebediah Jackson"
