@@ -1,4 +1,4 @@
-# JavaScript
+## JavaScript - General
 
 [Logging and Debugging](logging-debugging.md)<br>
 [Numbers](numbers.md)<br>
