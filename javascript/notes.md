@@ -1,4 +1,4 @@
-### JavaScript Theory
+## JavaScript Theory
 
 #### Collecting performance information
 Using [`Date().getTime()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime):
@@ -70,7 +70,6 @@ window.onload = function(){
 ```
 
 <br>
-
 ##### Example `assert()` functions - Results displayed in console
 
 ```js
@@ -87,7 +86,6 @@ function assert(value, description) {
 ```
 
 <br>
-
 #### Functions
 ##### Functions as first-class objects
 The capabilities listed below are common to all objects in JavaScript and functions are no exception. Any object that shares these is known as a *first-class object*.
@@ -121,7 +119,6 @@ var secondFunction = function() { return true; }
 
 // Since it is an anonymous function, the name property is an empty string
 console.log(secondFunction.name); // ""
-
 
 // Named function assigned to a window property
 window.thirdFunction = function fourthFunction() { return true; }
