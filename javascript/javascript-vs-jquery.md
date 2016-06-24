@@ -1,6 +1,6 @@
 ## JavaScript vs jQuery
 
-### Helpful Articles
+#### Helpful Articles
 | Page Name          | URL                                                                                        |
 |---------------|---------------------------------------------------------------------------------------------------|
 | Some jQuery Functions And Their JavaScript Equivalents | http://callmenick.com/post/jquery-functions-javascript-equivalents  |
@@ -13,5 +13,5 @@
 |               |                                                                                                   |
 |               |                                                                                                   |
 
-### Playground
+#### Playground
 http://codepen.io/zeckdude/pen/LZEQjM
