@@ -48,6 +48,13 @@ str.endsWith('question.');
 // Returns: true
 ```
 
+##### [test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+```js
+var str = 'To be, or not to be, that is the question.';
+/question.$/.test(str);
+// Returns: true
+```
+
 <br>
 #### Determine whether one string may be found within another string
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
