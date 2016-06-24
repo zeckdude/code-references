@@ -1,6 +1,7 @@
-### Data Types
+## Data Types
 
-##### Get the datatype for the specified value or variable
+#### Get the datatype for the specified value or variable
+##### [List of data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types)
 ```js
 typeof { course: "daytona" }
 // Returns: "object"
