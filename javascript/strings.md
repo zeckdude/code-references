@@ -27,15 +27,15 @@ str[4];
 #### Combine the text of two or more strings and return a new string
 ##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
 ```js
-var hello = 'Hello, ';
-var greeting = hello.concat('Kevin', ' have a nice day.');
+var str = 'Hello, ';
+str.concat('Kevin', ' have a nice day.');
 // Returns: "Hello, Kevin have a nice day."
 ```
 
 ##### [Using the addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Operators)
 ```js
-var hello = 'Hello, ';
-var greeting = hello + 'Kevin' + ' have a nice day.';
+var str = 'Hello, ';
+str + 'Kevin' + ' have a nice day.';
 // Returns: "Hello, Kevin have a nice day."
 ```
 
