@@ -8,6 +8,7 @@ console.log("The value of num is", num);
 // Logs to the console: The value of num is 2
 ```
 
+<br>
 #### Log the properties of a specified object to the console
 ##### [console.dir()](https://developer.mozilla.org/en-US/docs/Web/API/Console/dir) 
 ```js
