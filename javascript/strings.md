@@ -57,6 +57,13 @@ str.includes('To be');
 // Returns: true
 ```
 
+##### [test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+```js
+var str = 'To be, or not to be, that is the question.';
+/^To be[\w\s,]+question.$/.test(str);
+// Returns: true
+```
+
 <br>
 #### Return the index of the first occurrence of the specified substring within another string
 ##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexof)
@@ -161,7 +168,7 @@ str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastNam
 
 <br>
 #### Convert a number to a string 
-##### [String()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)
+##### [String()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion)
 ```js
 var num = 5;
 window.String(num);
