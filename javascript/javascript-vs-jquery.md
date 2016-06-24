@@ -1,4 +1,4 @@
-# JavaScript vs jQuery
+## JavaScript vs jQuery
 
 ### Helpful Articles
 | Page Name          | URL                                                                                        |
