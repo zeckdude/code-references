@@ -7,6 +7,7 @@ document.getElementById("button-container");
 // Returns reference to a matching Element object
 ```
 
+<br>
 #### Create an anchor tag string with the specified string as its name attribute
 ##### [anchor()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) 
 ```js
@@ -15,6 +16,7 @@ linkText.anchor('table-contents');
 // Returns: "<a name="table-contents">Table of Contents</a>"
 ```
 
+<br>
 #### Create an anchor tag string with the specified string as its href attribute
 ##### [link()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) 
 ```js
