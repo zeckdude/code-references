@@ -72,6 +72,19 @@ str.indexOf('Whale');
 // Returns:  5
 ```
 
+##### [search()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)
+```js
+var str = 'Blue Whale';
+str.search('Blue'); 
+// Returns:  0
+
+str.search('Blute'); 
+// Returns: -1
+
+str.search('Whale'); 
+// Returns:  5
+```
+
 <br>
 #### Return the index of the last occurrence of the specified substring within another string
 ##### [lastIndexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastindexof)
@@ -144,5 +157,33 @@ str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastNam
   return firstName + " Jebediah " + lastName;
 });
 // Returns: "Jeff Jebediah Jackson"
+```
+
+<br>
+#### Convert a number to a string 
+##### [String()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)
+```js
+var num = 5;
+window.String(num);
+// Returns: "5"
+```
+
+##### [toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)
+```js
+var num = 5;
+num.toString();
+// Returns: "5"
+```
+
+##### [Using the addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Operators)
+```js
+var num = 5;
+"" + num;
+// Returns: "5"
+```
+```js
+var num = 5;
+num + "";
+// Returns: "5"
 ```
 
