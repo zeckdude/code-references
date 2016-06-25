@@ -29,6 +29,18 @@ for(var index = 0; index < arr.length; index++) {
 ```
 
 <br>
+#### Return the first index of a specified value in an Array
+##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+```js
+var arr = [3, 7, 2, 7];
+arr.indexOf(7);
+// Returns:  1
+
+arr.indexOf("George"); 
+// Returns:  -1
+```
+
+<br>
 #### Add one or more elements to the beginning of an array
 ##### [unshift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 ```js
@@ -90,6 +102,21 @@ arr.pop();
 // Contains: ["Jim", "George"]
 ```
 
+<br>
+#### Determine whether a value is in an array
+##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+```js
+var arr = ["Jim", "George", "Bob"];
+arr.includes("George");
+// Returns: true
+```
+
+##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+```js
+var arr = ["Jim", "George", "Bob"];
+arr.indexOf("George") >= 0;
+// Returns: true
+```
 
 
 
