@@ -27,15 +27,15 @@ str[4];
 #### Combine the text of two or more strings and return a new string
 ##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
 ```js
-var str = 'Hello, ';
-str.concat('Kevin', ' have a nice day.');
+var str = "Hello, ";
+str.concat("Kevin", " have a nice day.");
 // Returns: "Hello, Kevin have a nice day."
 ```
 
 ##### [Using the addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Operators)
 ```js
-var str = 'Hello, ';
-str + 'Kevin' + ' have a nice day.';
+var str = "Hello, ";
+str + "Kevin" + " have a nice day.";
 // Returns: "Hello, Kevin have a nice day."
 ```
 
@@ -43,14 +43,14 @@ str + 'Kevin' + ' have a nice day.';
 #### Determine whether a string ends with the characters of another string
 ##### [endsWith() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith)
 ```js
-var str = 'To be, or not to be, that is the question.';
-str.endsWith('question.');
+var str = "To be, or not to be, that is the question.";
+str.endsWith("question.");
 // Returns: true
 ```
 
 ##### [test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 ```js
-var str = 'To be, or not to be, that is the question.';
+var str = "To be, or not to be, that is the question.";
 /question.$/.test(str);
 // Returns: true
 ```
@@ -59,8 +59,8 @@ var str = 'To be, or not to be, that is the question.';
 #### Determine whether one string may be found within another string
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 ```js
-var str = 'To be, or not to be, that is the question.';
-str.includes('To be');
+var str = "To be, or not to be, that is the question.";
+str.includes("To be");
 // Returns: true
 ```
 
@@ -68,6 +68,13 @@ str.includes('To be');
 ```js
 var str = 'To be, or not to be, that is the question.';
 /^To be[\w\s,]+question.$/.test(str);
+// Returns: true
+```
+
+##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
+```js
+var str = 'To be, or not to be, that is the question.';
+str.indexOf("not to be") >= 0;
 // Returns: true
 ```
 
