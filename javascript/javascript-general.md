@@ -71,3 +71,22 @@ var message = detailedMessage ? detailedMessage : genericMessage;
 var message = detailedMessage || genericMessage;
 ```
 
+<br>
+##### Different Ways call different functions based on a condition
+
+*Using an if statement*
+```js
+if(age > 18) {
+  drinkUp();
+} else {
+  goHome();
+}
+```
+
+*Using the ternary operator* <br>
+(http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
+```js
+(age >= 21 ? drinkUp : goHome)();
+// OR
+age >= 21 ? drinkUp() : goHome();
+```
