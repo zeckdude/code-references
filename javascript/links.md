@@ -31,7 +31,7 @@
 |---------------|-----------------------------------------------------------------|
 | Nettuts - JavaScript Fundamentals 101  | https://www.youtube.com/playlist?list=PLOxOmO43E6JvLzUBTbc9dkNw7xv9BMTnW |
 | Nettuts - Advanced JavaScript Fundamentals  | https://www.youtube.com/playlist?list=PLOxOmO43E6Jt4GfZtF8yR6KghIdmc7715 |
-| funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
+| funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
 
 
 <br>
@@ -55,6 +55,6 @@
 | Name          | Link                                                            |
 |---------------|-----------------------------------------------------------------|
 | Sitepoint - Intro to Functional Programming | https://www.sitepoint.com/series/introduction-functional-javascript/ |
-| funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
+| funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
 
 
