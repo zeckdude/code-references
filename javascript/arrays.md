@@ -187,6 +187,12 @@ var adultCheck = people.map(function(person){
 
 ##### [map() using arrow functions - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 ```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
 var personAges = people.map((person) => person.age);
 // Equivalent to:
 var personAges = people.map(function(person){
