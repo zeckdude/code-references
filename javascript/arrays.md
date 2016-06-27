@@ -10,7 +10,7 @@ arr.length;
 
 <br>
 #### Loop through an array
-##### [foreach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 ```js
 var arr = [2, "George Rose", true];
 arr.forEach(function (item, index) {
@@ -19,7 +19,7 @@ arr.forEach(function (item, index) {
 // Displays in the console (only first loop iteration shown):  "The element in position 0 is 2"
 ```
 
-##### [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 ```js
 var arr = [2, "George Rose", true];
 for(var index = 0; index < arr.length; index++) {
@@ -30,7 +30,7 @@ for(var index = 0; index < arr.length; index++) {
 
 <br>
 #### Return the first index of a specified value in an Array
-##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 ```js
 var arr = [3, 7, 2, 7];
 arr.indexOf(7);
@@ -42,7 +42,7 @@ arr.indexOf("George");
 
 <br>
 #### Add one or more elements to the beginning of an array
-##### [unshift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+##### [unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 ```js
 var arr = [2, "George Rose", true];
 arr.unshift(42, "Harley Quinn");
@@ -52,7 +52,7 @@ arr.unshift(42, "Harley Quinn");
 
 <br>
 #### Add one or more elements at a specified position of an array
-##### [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+##### [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 ```js
 var arr = [2, "George Rose", true];
 arr.splice(2, 0, "Taylor", "Harley");
@@ -62,7 +62,7 @@ arr.splice(2, 0, "Taylor", "Harley");
 
 <br>
 #### Add one or more elements to the end of an array
-##### [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+##### [push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 ```js
 var arr = [2, "George Rose", true];
 arr.push(42, "Harley Quinn");
@@ -74,7 +74,7 @@ arr.push(42, "Harley Quinn");
 
 <br>
 #### Remove the first element of an array
-##### [shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+##### [shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 ```js
 var arr = ["Jim", "George", "Bob"];
 arr.shift();
@@ -84,7 +84,7 @@ arr.shift();
 
 <br>
 #### Remove one or more elements at a specified position of an array
-##### [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+##### [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 ```js
 var arr = [2, "George Rose", true, "Jet"];
 arr.splice(1, 2);
@@ -94,7 +94,7 @@ arr.splice(1, 2);
 
 <br>
 #### Remove the last element of an array
-##### [pop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+##### [pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 ```js
 var arr = ["Jim", "George", "Bob"];
 arr.pop();
@@ -116,6 +116,105 @@ arr.includes("George");
 var arr = ["Jim", "George", "Bob"];
 arr.indexOf("George") >= 0;
 // Returns: true
+```
+
+<br>
+#### Filter a set of elements out of an array and into its own array
+##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) - [video](https://www.youtube.com/watch?v=BMUiFMZr7vk)
+```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
+var adults = people.filter(function(people){
+  return people.age >= 18;
+});
+// Returns: [ { name: "George", age: 32 }, { name: "Lindsay", age: 24 } ]
+```
+
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
+var adults = [];
+for (var i = 0; i < people.length; i++) {
+  if (people[i].age > 18) {
+    adults.push(people[i]);
+  }
+}
+// Returns: [ { name: "George", age: 32 }, { name: "Lindsay", age: 24 } ]
+```
+
+##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
+var adults = [];
+people.forEach(function (person) {
+  if (person.age > 18) {
+    adults.push(person);
+  }
+});
+// Returns: [ { name: "George", age: 32 }, { name: "Lindsay", age: 24 } ]
+```
+
+<br>
+#### Transform array elements and save them into a new array
+##### [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - [video](https://www.youtube.com/watch?v=bCqtb-Z5YGQ)
+```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
+var adultCheck = people.map(function(person){
+  var continuation = (person.age >= 18) ? "of age" : "under-age";
+  return person.name + " is " + continuation;
+});
+// Returns: [ "George is of age", "Lindsay is of age", "Mike is under-age" ]
+```
+
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
+var adultCheck = [];
+for (var i = 0; i < people.length; i++) {
+  var continuation = (people[i].age >= 18) ? "of age" : "under-age";
+  adultCheck.push(people[i].name + " is " + continuation);
+}
+// Returns: [ "George is of age", "Lindsay is of age", "Mike is under-age" ]
+```
+
+##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+```js
+var people = [
+  { name: "George", age: 32 },
+  { name: "Lindsay", age: 24 },
+  { name: "Mike", age: 15 },
+];
+
+var adultCheck = [];
+people.forEach(function (person) {
+  var continuation = (person.age >= 18) ? "of age" : "under-age";
+  adultCheck.push(person.name + " is " + continuation);
+});
+// Returns: [ "George is of age", "Lindsay is of age", "Mike is under-age" ]
 ```
 
 
