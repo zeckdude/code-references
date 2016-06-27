@@ -131,7 +131,7 @@ var people = [
 var adults = people.filter(function(people){
   return people.age >= 18;
 });
-// Returns: [ { name: "George", age: 32 }, { name: "Lindsay", age: 24 } ]
+// Returns: [{ name: "George", age: 32 }, { name: "Lindsay", age: 24 }]
 ```
 
 ##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
@@ -148,7 +148,7 @@ for (var i = 0; i < people.length; i++) {
     adults.push(people[i]);
   }
 }
-// Returns: [ { name: "George", age: 32 }, { name: "Lindsay", age: 24 } ]
+// Returns: [{ name: "George", age: 32 }, { name: "Lindsay", age: 24 }]
 ```
 
 ##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -165,7 +165,7 @@ people.forEach(function (person) {
     adults.push(person);
   }
 });
-// Returns: [ { name: "George", age: 32 }, { name: "Lindsay", age: 24 } ]
+// Returns: [{ name: "George", age: 32 }, { name: "Lindsay", age: 24 }]
 ```
 
 <br>
@@ -182,7 +182,15 @@ var adultCheck = people.map(function(person){
   var continuation = (person.age >= 18) ? "of age" : "under-age";
   return person.name + " is " + continuation;
 });
-// Returns: [ "George is of age", "Lindsay is of age", "Mike is under-age" ]
+// Returns: ["George is of age", "Lindsay is of age", "Mike is under-age"]
+
+// ES6 approach using arrow functions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+var personAges = people.map((person) => person.age);
+// Equivalent to:
+var personAges = people.map(function(person){
+  return person.age;
+});
+// Returns: [32, 24, 15]
 ```
 
 ##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
@@ -198,7 +206,7 @@ for (var i = 0; i < people.length; i++) {
   var continuation = (people[i].age >= 18) ? "of age" : "under-age";
   adultCheck.push(people[i].name + " is " + continuation);
 }
-// Returns: [ "George is of age", "Lindsay is of age", "Mike is under-age" ]
+// Returns: ["George is of age", "Lindsay is of age", "Mike is under-age"]
 ```
 
 ##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -214,7 +222,7 @@ people.forEach(function (person) {
   var continuation = (person.age >= 18) ? "of age" : "under-age";
   adultCheck.push(person.name + " is " + continuation);
 });
-// Returns: [ "George is of age", "Lindsay is of age", "Mike is under-age" ]
+// Returns: ["George is of age", "Lindsay is of age", "Mike is under-age"]
 ```
 
 
