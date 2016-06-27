@@ -13,7 +13,7 @@
 | CodeQuizzes | http://www.codequizzes.com/ |
 | Ten JS Exercises | http://www.ling.gu.se/~lager/teaching/dialogue_systems%20II/labs/javascript.html <br>Solutions: http://rmion.com/javascript-functional-programming-free-beginner-exercises/ |
 | NodeSchool | http://nodeschool.io/ |
-| 
+
 
 <br>
 
@@ -21,6 +21,8 @@
 | Name          | Link                                                            |
 |---------------|-----------------------------------------------------------------|
 | British Code  | https://www.youtube.com/channel/UCRmiRmPZ7N5Gaz900LDwrfA/videos |
+| Kyle Robinson Young | https://www.youtube.com/user/kylerobinsonyoung/videos |
+
 
 <br>
 
@@ -29,11 +31,30 @@
 |---------------|-----------------------------------------------------------------|
 | Nettuts - JavaScript Fundamentals 101  | https://www.youtube.com/playlist?list=PLOxOmO43E6JvLzUBTbc9dkNw7xv9BMTnW |
 | Nettuts - Advanced JavaScript Fundamentals  | https://www.youtube.com/playlist?list=PLOxOmO43E6Jt4GfZtF8yR6KghIdmc7715 |
+| funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
+
+
+<br>
 
 #### JS Documentation Reference
 | Name          | Link                                                            |
 |---------------|-----------------------------------------------------------------|
 | W3schools  | http://www.w3schools.com/js/default.asp |
 | MDN | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference |
+
+<br>
+
+#### JS Instruction - Object Oriented JavaScript
+| Name          | Link                                                            |
+|---------------|-----------------------------------------------------------------|
+| Youtube - The Definitive Guide to Object-Oriented JavaScript | https://www.youtube.com/watch?v=PMfcsYzj-9M |
+
+<br>
+
+#### JS Instruction - Functional JavaScript
+| Name          | Link                                                            |
+|---------------|-----------------------------------------------------------------|
+| Sitepoint - Intro to Functional Programming | https://www.sitepoint.com/series/introduction-functional-javascript/ |
+| funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
 
 
