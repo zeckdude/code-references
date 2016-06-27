@@ -183,8 +183,10 @@ var adultCheck = people.map(function(person){
   return person.name + " is " + continuation;
 });
 // Returns: ["George is of age", "Lindsay is of age", "Mike is under-age"]
+```
 
-// ES6 approach using arrow functions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+##### [map() using arrow functions - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+```js
 var personAges = people.map((person) => person.age);
 // Equivalent to:
 var personAges = people.map(function(person){
