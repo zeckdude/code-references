@@ -85,7 +85,7 @@ age >= 21 ? drinkUp() : goHome();
 
 
 <br>
-#### Defining function context using various methods
+#### Define function context using various methods
 ##### Common code for examples
 ```js
 var utility = {
@@ -108,7 +108,7 @@ function otherFunction() {
 ```
 
 ##### [call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
-*Calling the getContext() method from the utility object and passing it varying contexts and variables(optional)*
+*Call the getContext() method from the `utility` object and pass it varying contexts and variables(optional)*
 ```js
 // When `this` gets used within the function, it refers to: 
 
@@ -122,7 +122,32 @@ utility.getContext.call(otherObject, "ccc", "ddd");
 utility.getContext.call(otherFunction, "eee", "fff");
 ```
 
-##### [apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+##### [apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+*Call the getContext() method from the `utility` object and pass it varying contexts and variables(optional)*
 ```js
+// When `this` gets used within the function, it refers to: 
 
+// The `window` object
+utility.getContext.apply(this, ["aaa", "bbb"]);
+
+// The `otherObject` object
+utility.getContext.apply(otherObject, ["ccc", "ddd"]);
+
+// The `otherFunction` function object
+utility.getContext.apply(otherFunction, ["eee", "fff"]);
+```
+
+##### [bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+*Copy a reference to the method into a variable and set the context for it as specified*
+```js
+// When `this` gets used within the function, it refers to: 
+
+// The `window` object
+utility.getContext.bind(this, "ggg", "hhh")();
+
+// The `otherObject` object
+utility.getContext.bind(otherObject, "ccc", "ddd")();
+
+// The `otherFunction` function object
+utility.getContext.bind(otherFunction, "eee", "fff")();
 ```
