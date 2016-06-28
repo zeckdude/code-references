@@ -33,6 +33,7 @@
 | Nettuts - JavaScript Fundamentals 101  | https://www.youtube.com/playlist?list=PLOxOmO43E6JvLzUBTbc9dkNw7xv9BMTnW |
 | Nettuts - Advanced JavaScript Fundamentals  | https://www.youtube.com/playlist?list=PLOxOmO43E6Jt4GfZtF8yR6KghIdmc7715 |
 | funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
+| LearnCode.academy - What Makes Javascript Weird...and AWESOME | https://www.youtube.com/playlist?list=PLoYCgNOIyGABI011EYc-avPOsk1YsMUe_ |
 
 
 <br>
