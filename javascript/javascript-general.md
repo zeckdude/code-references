@@ -10,8 +10,8 @@
 
 ### Common Scenarios
 
-##### Short-hand Ways to check for a condition
-*Using an if statement*
+#### Short-hand Ways to check for a condition
+##### [IF statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
 if(varA & varB) {
   return true;
@@ -20,22 +20,19 @@ if(varA & varB) {
 }
 ```
 
-*Using the not-not operator* <br>
-(http://www.sitepoint.com/javascript-double-negation-trick-trouble/)
+##### [not-not operator](http://www.sitepoint.com/javascript-double-negation-trick-trouble/)
 ```js
 return !!(varA & varB)
 ```
 
-*Using the ternary operator* <br>
-(http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
+##### [ternary operator](http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
 ```js
 return (varA & varB) ? true : false;
 ```
 
 <br>
-##### Different Ways to check if a variable has a truthy value(not undefined, null, 0, NaN, "" or false) and return a value based on the result
-
-*Using an if statement*
+#### Different Ways to check if a variable has a truthy value(not undefined, null, 0, NaN, "" or false) and return a value based on the result
+##### [IF statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
 var message;
 if(detailedMessage) {
@@ -45,8 +42,7 @@ if(detailedMessage) {
 }
 ```
 
-*Using a switch statement* <br>
-(http://www.w3schools.com/js/js_switch.asp)
+##### [switch()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 ```js
 var message;
 switch(detailedMessage) {
@@ -59,22 +55,19 @@ switch(detailedMessage) {
 }
 ```
 
-*Using the ternary operator* <br>
-(http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
+##### [ternary operator](http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
 ```js
 var message = detailedMessage ? detailedMessage : genericMessage;
 ```
 
-*Using the logical OR operator* <br>
-(https://addyosmani.com/blog/exploring-javascripts-logical-or-operator/)
+##### [OR operator](https://addyosmani.com/blog/exploring-javascripts-logical-or-operator/)
 ```js
 var message = detailedMessage || genericMessage;
 ```
 
 <br>
-##### Different Ways call different functions based on a condition
-
-*Using an if statement*
+#### Different Ways call different functions based on a condition
+##### [IF statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
 if(age > 18) {
   drinkUp();
@@ -83,10 +76,22 @@ if(age > 18) {
 }
 ```
 
-*Using the ternary operator* <br>
-(http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
+##### [ternary operator](http://www.sitepoint.com/shorthand-javascript-techniques/#1iftrueelseshorthand)
 ```js
 (age >= 21 ? drinkUp : goHome)();
 // OR
 age >= 21 ? drinkUp() : goHome();
+```
+
+
+<br>
+#### Defining function context using various methods
+##### [call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+```js
+
+```
+
+##### [apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+```js
+
 ```
