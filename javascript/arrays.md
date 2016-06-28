@@ -321,7 +321,7 @@ numbers.every(function(element){
 ##### [every() using arrow functions - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 ```js
 var numbers = [12, 54, 18, 130, 44];
-numbers.every(element => element >= 10); 
+numbers.every(element => element > 10); 
 // Returns: true
 ```
 
