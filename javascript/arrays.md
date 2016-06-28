@@ -118,6 +118,15 @@ arr.indexOf("George") >= 0;
 // Returns: true
 ```
 
+##### [some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+```js
+var arr = ["Jim", "George", "Bob"];
+arr.some(function(name){
+  return name === "George";
+}); 
+// Returns: true
+```
+
 <br>
 #### Filter a set of elements out of an array and into its own array
 ##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) - [video](https://www.youtube.com/watch?v=BMUiFMZr7vk)
@@ -134,7 +143,7 @@ var adults = people.filter(function(people){
 // Returns: [{ name: "George", age: 32 }, { name: "Lindsay", age: 24 }]
 ```
 
-##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 ```js
 var people = [
   { name: "George", age: 32 },
@@ -201,7 +210,7 @@ var personAges = people.map(function(person){
 // Returns: [32, 24, 15]
 ```
 
-##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 ```js
 var people = [
   { name: "George", age: 32 },
@@ -233,5 +242,102 @@ people.forEach(function (person) {
 // Returns: ["George is of age", "Lindsay is of age", "Mike is under-age"]
 ```
 
+<br>
+#### Return the first element in an array that matches a condition
+##### [find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+```js
+var inventory = [
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
+];
 
+inventory.find(function(fruit){
+  return fruit.name === 'cherries';
+});
+// Returns: { name: 'cherries', quantity: 5 }
+```
+
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+```js
+var inventory = [
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
+];
+
+for (var i = 0; i < inventory.length; i++) {
+  if (inventory[i].name === 'cherries') {
+    var cherries = inventory[i];
+    break;
+  }
+}
+// Returns: { name: 'cherries', quantity: 5 }
+```
+
+<br>
+#### Test if any element in an array matches a condition
+##### [some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+```js
+var numbers = [12, 5, 8, 1, 4];
+numbers.some(function(element){
+  return element > 10;
+}); 
+// Returns: true
+```
+
+##### [some() using arrow functions - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+```js
+var numbers = [12, 5, 8, 1, 4];
+numbers.some(element => element > 10);
+// Returns: true
+```
+
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+```js
+var numbers = [12, 5, 8, 1, 4];
+var numbersCheck = false;
+
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 10) {
+    numbersCheck = true;
+    break;
+  }
+}
+// Returns: true
+```
+
+<br>
+#### Test if all elements in an array match a condition
+##### [every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+```js
+var numbers = [12, 54, 18, 130, 44];
+numbers.every(function(element){
+  return element > 10;
+}); 
+// Returns: true
+```
+
+##### [every() using arrow functions - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+```js
+var numbers = [12, 54, 18, 130, 44];
+numbers.every(element => element >= 10); 
+// Returns: true
+```
+
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+```js
+var numbers = [12, 55, 18, 130, 44];
+var numbersCheck;
+
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 10) {
+    numbersCheck = true;
+  } else {
+    numbersCheck = false;
+    break;
+  }
+}
+// Returns: true
+```
 
