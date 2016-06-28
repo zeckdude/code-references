@@ -29,7 +29,7 @@ for(var index = 0; index < arr.length; index++) {
 ```
 
 <br>
-#### Return the first index of a specified value in an Array
+#### Return the index of the first element that matches a specified value (or condition) in an Array
 ##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 ```js
 var arr = [3, 7, 2, 7];
@@ -38,6 +38,21 @@ arr.indexOf(7);
 
 arr.indexOf("George"); 
 // Returns:  -1
+```
+
+##### [findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+```js
+var arr = [3, 7, 2, 7];
+
+arr.findIndex(function(element){
+  return element === 7;
+}); 
+// Returns: 1
+
+arr.findIndex(function(element){
+  return element === "George";
+}); 
+// Returns: -1
 ```
 
 <br>
@@ -341,3 +356,35 @@ for (var i = 0; i < numbers.length; i++) {
 // Returns: true
 ```
 
+<br>
+#### Return the sum of all values in an array
+##### [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+```js
+var numbers = [1, 10, 20, 50, 100];
+numbers.reduce(function(sum, number){
+  return sum + number;
+});
+// Returns: 181
+```
+
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+```js
+var numbers = [1, 10, 20, 50, 100];
+var sum = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+// Returns: 181
+```
+
+##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+```js
+var numbers = [1, 10, 20, 50, 100];
+var sum = 0;
+
+numbers.forEach(function (number) {
+  sum += number;
+});
+// Returns: 181
+```
