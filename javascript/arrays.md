@@ -9,6 +9,38 @@ arr.length;
 ```
 
 <br>
+#### Detect an array 
+*(http://www.shamasis.net/2011/08/infinite-ways-to-detect-array-in-javascript/)*
+
+##### [isArray()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
+```js
+var arr = [1,2,3];
+Array.isArray(arr);
+// Returns: true
+```
+
+##### [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+```js
+var arr = [1,2,3];
+arr.constructor === Array;
+// Returns: true
+```
+
+##### [instanceof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+```js
+var arr = [1,2,3];
+arr instanceof Array;
+// Returns: true
+```
+
+##### [toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
+```js
+var arr = [1,2,3];
+Object.prototype.toString.call(arr) == "[object Array]";
+// Returns: true
+```
+
+<br>
 #### Loop through an array
 ##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 ```js
