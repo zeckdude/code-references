@@ -150,6 +150,8 @@ In order to avoid clashing with other variables in the global scope that are def
 There are a few native function parameters which are useful:
 
 1. `arguments` - A collection of all passed arguments to the function
+  * Since this is an *array-like* object, it is accessible using bracket notation, e.g. `arguments[2]`, and has an `arguments.length` property, but lacks other methods accessible to actual arrays. 
+  * To convert it to an array, use: `Array.from(arguments)` or `Array.prototype.call(arguments)`
 2. `this` - The reference to the object upon which the function is invoked, a.k.a. the *function context*
 
 <br>
