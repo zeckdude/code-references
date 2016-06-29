@@ -85,8 +85,6 @@ arr.push(42, "Harley Quinn");
 // Contains: [2, "George Rose", true, 42, "Harley Quinn"]
 ```
 
-
-
 <br>
 #### Remove the first element of an array
 ##### [shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
@@ -118,6 +116,21 @@ arr.pop();
 ```
 
 <br>
+#### Extract a specified number of elements from the end of an array
+##### [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+```js
+var arr = ["Jim", "George", "Bob"];
+arr.slice(-2);
+// Returns (the elements that were extracted): ["George", "Bob"]
+// Contains (Original array remains untouched): ["Jim", "George", "Bob"]
+
+var arr = ["Jim", "David", "Jeff", "Mike"];
+arr.slice(1,-1);
+// Returns (the elements that were extracted): ["David", "Jeff"]
+// Contains (Original array remains untouched): ["Jim", "David", "Jeff", "Mike"]
+```
+
+<br>
 #### Determine whether a value is in an array
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 ```js
@@ -140,6 +153,21 @@ arr.some(function(name){
   return name === "George";
 }); 
 // Returns: true
+```
+
+<br>
+#### Extract a part of an array into its own array
+##### [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+```js
+var arr = [2, "George Rose", true, 55];
+arr.slice(1,3);
+// Returns (the elements that were extracted): ["George Rose", true]
+// Contains (Original array remains untouched): [2, "George Rose", true, 55]
+
+var arr = [2, "George Rose", true, 55];
+arr.slice(-3);
+// Returns (the elements that were extracted): ["George Rose", true, 55]
+// Contains (Original array remains untouched): [2, "George Rose", true, 55]
 ```
 
 <br>
