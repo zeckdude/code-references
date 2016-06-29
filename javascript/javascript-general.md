@@ -150,4 +150,22 @@ utility.getContext.bind(otherObject, "ccc", "ddd")();
 
 // The `otherFunction` function object
 utility.getContext.bind(otherFunction, "eee", "fff")();
+
+// When a click event is performed, the context is the element that was clicked by default
+document.getElementById("clickBtn").addEventListener("click", function(){
+    console.log(this);
+    // Returns the #clickBtn element
+});
+
+// When a click event is performed, the context is the element that was clicked by default
+document.getElementById("clickBtn").addEventListener("click", function(){
+    console.log(this);
+    // Returns: #clickBtn element
+});
+
+// When the click event is bound to a different specified context, that context becomes the value for `this` within the click event's function callback
+document.getElementById("clickBtn").addEventListener("click", function(){
+    console.log(this);
+    // Returns: window object
+}.bind(window));
 ```
