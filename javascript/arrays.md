@@ -358,7 +358,7 @@ for (var i = 0; i < numbers.length; i++) {
 
 <br>
 #### Return the sum of all values in an array
-##### [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+##### [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) - [video](https://www.youtube.com/watch?v=Wl98eZpkp-c)
 ```js
 var numbers = [1, 10, 20, 50, 100];
 numbers.reduce(function(sum, number){
