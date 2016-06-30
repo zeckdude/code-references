@@ -133,7 +133,7 @@ console.groupEnd();
 ##### [console.clear()](https://developer.mozilla.org/en-US/docs/Web/API/Console/clear) 
 ```js
 console.clear();
-// Alternatively, the keyboard shortcut Cmd-K will clear the console also
+// Alternatively, the alias clear() or the keyboard shortcut Cmd-K will clear the console also
 ```
 
 <br>
@@ -144,6 +144,47 @@ console.count("page load");
 // Logs to the console:
 ```
 ![console.count() example](img/console/console_count.png)
+
+<br>
+#### Copy a string representaton of the specified object
+##### [copy()](https://developer.chrome.com/devtools/docs/commandline-api#copyobject) 
+```js
+copy($0);
+```
+
+<br>
+#### Open the elements tab and select the element/function specified
+##### [inspect()](https://developer.chrome.com/devtools/docs/commandline-api#inspectobjectfunction) 
+```js
+inspect($0); // Displays the selected element in the elements tab
+inspect(runCar); // Opens the Sources panel when the function is called
+```
+
+<br>
+#### Set a breakpoint to break when the specified function is called
+##### [debug()](https://developer.chrome.com/devtools/docs/commandline-api#debugfunction) 
+```js
+debug(runCar);
+```
+
+<br>
+#### Logs a message when the specified function is called and which arguments are passed into it
+##### [monitor()](https://developer.chrome.com/devtools/docs/commandline-api#monitorfunction) 
+```js
+function accelerateCar(speed, distance) { 
+  // Do something here 
+}
+monitor(accelerateCar);
+accelerateCar(160, 200);
+// Displays to the console: function accelerateCar called with arguments: 160, 200
+```
+
+<br>
+#### Set a breakpoint at a specified position in the code process
+##### [debugger](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints?hl=en#create-manual-breakpoints) 
+```js
+debugger; // Add to the code where the breakpoint should occur
+```
 
 
 
