@@ -1,5 +1,5 @@
 ## Console
-[Chrome Console Documentation](https://developer.chrome.com/devtools/docs/console-api)
+[Chrome Console Documentation](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en)
 
 <br>
 #### Return any of the last five selected DOM elements in the Elements tab
