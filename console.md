@@ -16,4 +16,4 @@ var str = new String("hello");
 console.dir(str);
 // Logs to the console:
 ```
-![console.dir() example](img/console_dir.png)
+![console.dir() example](img/console/console_dir.png)
