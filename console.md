@@ -168,7 +168,7 @@ debug(runCar);
 ```
 
 <br>
-#### Logs a message when the specified function is called and which arguments are passed into it
+#### Log a default message when the specified function is called and which arguments are passed into it
 ##### [monitor()](https://developer.chrome.com/devtools/docs/commandline-api#monitorfunction) 
 ```js
 function accelerateCar(speed, distance) { 
