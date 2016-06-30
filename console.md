@@ -13,6 +13,15 @@ $4 // Fifth to last element selected
 ```
 
 <br>
+#### Return the value of the last evaluated expression
+##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#_)
+```js
+1 + 1;
+// Returns 2
+$_ // Currently contains: 2
+```
+
+<br>
 #### Return the first matched element on the page
 ##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#selector)
 ```js
@@ -184,6 +193,14 @@ accelerateCar(160, 200);
 ##### [debugger](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints?hl=en#create-manual-breakpoints) 
 ```js
 debugger; // Add to the code where the breakpoint should occur
+```
+
+<br>
+#### Live Edit anything on a page
+##### [contentEditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable) 
+```js
+document.body.contentEditable = true;
+// After this is set, anything on the page can be edited until the page is reloaded
 ```
 
 
