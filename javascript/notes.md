@@ -11,6 +11,7 @@ for (var n = 0; n < maxCount; n++) {
 var elapsed = new Date().getTime() - start;
 console.log("Measured Time:", elapsed + " milliseconds");
 ```
+
 <br>
 Using [`performance.now()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now) (more accurate count):
 ```js
@@ -22,6 +23,18 @@ for (var n = 0; n < maxCount; n++) {
 var elapsed = (performance.now() - start).toFixed(4);
 console.log("Measured Time:", elapsed + " milliseconds");
 ```
+
+<br>
+Using [`console.time()`](https://blog.mariusschulz.com/2013/11/22/measuring-execution-times-in-javascript-with-consoletime):
+```js
+var maxCount = 100000;
+console.time("Measured Time");
+for (var n = 0; n < maxCount; n++) {
+  /* perform operation to be measured */
+}
+console.timeEnd("Measured Time");
+```
+
 <br>
 #### Testing
 ##### Good tests exhibit three important charisteristics:
