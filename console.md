@@ -33,6 +33,7 @@ $('p') // Equivalent to document.querySelector('p') or document.getElementsByTag
 ##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#selector_1)
 ```js
 $$('p') // Equivalent to document.querySelectorAll('p') or document.getElementsByTagName('p')
+$$('p')[2] // Selects the third paragraph tag on the page
 ```
 
 <br>
@@ -58,7 +59,7 @@ console.log('%cBlue! %cRed!', 'color: blue;', 'color: red;');
 ##### [console.dir()](https://developer.mozilla.org/en-US/docs/Web/API/Console/dir) 
 ```js
 var str = new String("hello");
-console.dir(str);
+console.dir(str); // dir() is an alias that works as well
 // Logs to the console:
 ```
 ![console.dir() example](img/console/console_dir.png)
@@ -94,7 +95,7 @@ var people = [
   { name: "Jane Doe", age: 66, weight: 110 },
   { name: "Emily Jones", age: 14, weight: 105 }
 ];
-console.table(people, ["name", "weight"]); // If restricting to only one specific column, a string with the property name works
+console.table(people, ["name", "weight"]); // If restricting to only one specific column, a string with the property name instead of the array works
 // Logs to the console:
 ```
 ![console.table() example](img/console/console_table3.png)
@@ -218,6 +219,13 @@ urls.forEach(function(url){
 ##### [getEventListeners()](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en#geteventlistenersobject) 
 ```js
 getEventListeners($0); // Show all the event listeners available to the last selected element in the elements tab
+```
+
+<br>
+#### Log a default message when the specified events are performed on an element
+##### [monitorEvents()](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en#monitoreventsobject-events) 
+```js
+monitorEvents(window, ["resize", "click"]); // If restricting to only one specific event, a string with the event name instead of the array works
 ```
 
 
