@@ -1,5 +1,32 @@
 ## Console
+[Chrome Console Documentation](https://developer.chrome.com/devtools/docs/console-api)
 
+<br>
+#### Return any of the last five selected DOM elements in the Elements tab
+##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#0-4)
+```js
+$0 // Last element selected
+$1 // Second to last element selected
+$2 // Third to last element selected
+$3 // Fourth to last element selected
+$4 // Fifth to last element selected
+```
+
+<br>
+#### Return the first matched element on the page
+##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#selector)
+```js
+$('p') // Equivalent to document.querySelector('p') or document.getElementsByTagName('p')[0]
+```
+
+<br>
+#### Return an array of all matched elements on the page
+##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#selector_1)
+```js
+$$('p') // Equivalent to document.querySelectorAll('p') or document.getElementsByTagName('p')
+```
+
+<br>
 #### Log the value of a variable to the console
 ##### [console.log()](https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
 ```js
@@ -7,6 +34,15 @@ var num = 2;
 console.log("The value of num is", num);
 // Logs to the console: The value of num is 2
 ```
+
+<br>
+#### Style a log message
+##### [console.log()](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) 
+```js
+console.log('%cBlue! %cRed!', 'color: blue;', 'color: red;');
+// Logs to the console:
+```
+![Style log message example](img/console/console_log_styling.png)
 
 <br>
 #### Log the properties of an object to the console
@@ -108,6 +144,7 @@ console.count("page load");
 // Logs to the console:
 ```
 ![console.count() example](img/console/console_count.png)
+
 
 
 
