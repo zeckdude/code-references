@@ -203,6 +203,23 @@ document.body.contentEditable = true;
 // After this is set, anything on the page can be edited until the page is reloaded
 ```
 
+<br>
+#### Extract information from a page
+```js
+var urls = $$('a'); 
+urls.forEach(function(url){
+  console.log(url.href);
+});
+// Consoles out all the link locations on the page
+```
+
+<br>
+#### Show all events tied to a specified element
+##### [getEventListeners()](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en#geteventlistenersobject) 
+```js
+getEventListeners($0); // Show all the event listeners available to the last selected element in the elements tab
+```
+
 
 
 
