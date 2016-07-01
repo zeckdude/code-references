@@ -448,3 +448,15 @@ numbers.forEach(function (number) {
 });
 // Returns: 181
 ```
+
+<br>
+#### Combine two arrays 
+##### [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+```js
+var arr1 = [1, 2];
+var arr2 = [3, 4];
+
+var arr3 = [...arr1, ...arr2]; // Equivalent to: [arr1[0], arr1[1], arr2[0], arr2[1]];
+// Returns: [1, 2, 3, 4]
+```
+
