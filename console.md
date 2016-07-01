@@ -136,7 +136,7 @@ console.groupEnd();
 console.groupEnd();
 // Logs to the console:
 ```
-![console.group() example](img/console/console_group2.png)
+![console.group() example](img/console/console_group3.png)
 
 <br>
 #### Clear the console
