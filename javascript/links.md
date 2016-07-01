@@ -24,6 +24,9 @@
 |---------------|-----------------------------------------------------------------|
 | British Code  | https://www.youtube.com/channel/UCRmiRmPZ7N5Gaz900LDwrfA/videos |
 | Kyle Robinson Young | https://www.youtube.com/user/kylerobinsonyoung/videos |
+| LearnCode.Academy | https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw |
+| Level Up Tuts | https://www.youtube.com/user/LevelUpTuts/ |
+
 
 
 <br>
