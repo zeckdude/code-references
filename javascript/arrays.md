@@ -451,12 +451,35 @@ numbers.forEach(function (number) {
 
 <br>
 #### Combine two arrays 
+*Think about memory usage before deciding which approach to use - https://davidwalsh.name/combining-js-arrays*
+
+##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+```js
+var arr1 = [1, 2];
+var arr2 = [3, 4];
+
+// Using this method does not overwrite `arr1` (More memory used)
+var arr3 = arr1.concat(arr2); // Equivalent to: [arr1[0], arr1[1], arr2[0], arr2[1]];
+// Returns: [1, 2, 3, 4]
+```
+
 ##### [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 ```js
 var arr1 = [1, 2];
 var arr2 = [3, 4];
 
+// Using this method does not overwrite `arr1` (More memory used)
 var arr3 = [...arr1, ...arr2]; // Equivalent to: [arr1[0], arr1[1], arr2[0], arr2[1]];
+// Returns: [1, 2, 3, 4]
+```
+
+##### [Array.prototype.push.apply()](https://davidwalsh.name/merge-arrays-javascript)
+```js
+var arr1 = [1, 2];
+var arr2 = [3, 4];
+
+// Using this method overwrites `arr1` (Less memory used)
+Array.prototype.push.apply(arr1, arr2); // Equivalent to: [arr1[0], arr1[1], arr2[0], arr2[1]];
 // Returns: [1, 2, 3, 4]
 ```
 
