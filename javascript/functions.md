@@ -61,5 +61,23 @@ doSomething(25, "blue", true, 62);
 // [true, 62]
 ```
 
+<br>
+#### Pass array elements as arguments of a function call
+##### [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+```js
+function doSomething(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+var arr = [25, "blue", true];
+doSomething(...arr); // Equivalent to: doSomething(arr[0], arr[1], arr[2]);
+// Returns:
+// 25
+// blue
+// true
+```
+
 
 
