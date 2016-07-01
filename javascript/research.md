@@ -4,3 +4,4 @@
 | Name          | Link                                                            |
 |---------------|-----------------------------------------------------------------|
 | Template Literals  | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals |
+| ES6 features | |
