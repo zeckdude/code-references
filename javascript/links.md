@@ -14,6 +14,7 @@
 | Ten JS Exercises | http://www.ling.gu.se/~lager/teaching/dialogue_systems%20II/labs/javascript.html <br>Solutions: http://rmion.com/javascript-functional-programming-free-beginner-exercises/ |
 | NodeSchool | http://nodeschool.io/ |
 | Codefights | https://codefights.com/home |
+| Reddit - Daily Programmer | https://www.reddit.com/r/dailyprogrammer |
 
 
 <br>
