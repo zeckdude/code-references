@@ -10,4 +10,3 @@ Bower is a package manager for web assets. It's incredibly useful for downloadin
 2. Navigate to the project folder in Finder
 3. For example, install jQuery: `bower install jquery`
 4. Get the file location of each bower install: `bower list --paths`
-5. 
