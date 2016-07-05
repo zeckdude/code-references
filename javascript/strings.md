@@ -178,7 +178,7 @@ str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastNam
   return firstName + " Jebediah " + lastName;
 });
 // Returns: "Jeff Jebediah Jackson"
-```
+```s
 
 <br>
 #### Convert a number to a string 
@@ -207,4 +207,17 @@ var num = 5;
 num + "";
 // Returns: "5"
 ```
+
+<br>
+#### Convert a string to an array
+##### [split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+```js
+var str = "Jim, George, Bob";
+str.split(", ");
+// Returns: ["Jim", "George", "Bob"]
+```
+
+<br>
+#### Reverse a string
+
 
