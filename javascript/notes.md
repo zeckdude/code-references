@@ -225,34 +225,30 @@ There are several different ways to invoke a function. Depending on which way th
     
 4. Via `apply()` or `call()`
   * The context is whatever object we supply to the `apply()` or `call()` methods as the first argument.
-
-```js
-// Named function created on the window object (top-level)
-function firstFunction() { return this; }
-
-// Since the function is that the top-level, it is a method of the window object, so therefore the function context is the window object
-console.log(firstFunction() === window); // true
-
-
-// Object method 
-var firstObject = {
-  secondFunction: function() { return this; }
-};
-
-// Since the method belongs to the firstObject object, the function context is firstObject
-console.log(firstObject.secondFunction() === firstObject); // true
-
-
-// Method on a constructor
-function Constructor() {
-  this.thirdFunction = function() { return this; };
-}
-var instance = new Constructor();
-
-// Since the method is created using a constructor, function context is the object instance that was created
-console.log(instance.thirdFunction() === instance); // true
-
-
-// Defining the context using apply() or call()
-// Example here
-```
+  * When using `apply()`, the second argument is an array with values to pass to the invoked function.
+  * When using `call()`, all arguments after the first one are values to pass to the invoked function.
+  
+    ```js
+    // Simple function to add all scores together
+    function updateScore() {
+      for (var i = 0; i < arguments.length; i++) {
+        this.score += arguments[i];
+      }
+      return this.score;
+    }
+    
+    // Simple object that will serve as the context for the `apply()` and `call()` function invokations
+    var game = {
+      name: "Soccer",
+      score: 0
+    }
+    
+    // Using `apply()`
+    updateScore.apply(game, [1, 2, 3, 4]);
+    
+    // Using `call()`
+    updateScore.call(game, 1, 2, 3, 4);
+    
+    console.log(game.score); // Returns: 10
+    ```
+    
