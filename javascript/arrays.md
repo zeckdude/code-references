@@ -163,6 +163,24 @@ arr.slice(1,-1);
 ```
 
 <br>
+#### Convert an array to a string separated by a specified character(s)
+##### [join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+```js
+var arr = ["Jim", "George", "Bob"];
+arr.join(", ");
+// Returns: "Jim, George, Bob"
+```
+
+<br>
+#### Reverse the order of the elements in an array
+##### [reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+```js
+var arr = ["Jim", "George", "Bob"];
+arr.reverse();
+// Returns: ["Bob", "George", "Jim"]
+```
+
+<br>
 #### Determine whether a value is in an array
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 ```js
