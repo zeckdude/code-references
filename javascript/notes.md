@@ -150,7 +150,7 @@ Some things to keep in mind when declaring variables and functions within a func
   
 <br>
 
-In order to avoid clashing with other variables in the global scope that are defined elsewhere, wrap all code in an anonymous self-executing function. This will keep all variables declared within it in the function's scope as opposed to the global scope.
+In order to avoid clashing with other variables in the global scope that are defined elsewhere, wrap all code in an anonymous self-executing function, a.k.a. an immediate invoked function. This will keep all variables declared within it in the function's scope as opposed to the global scope.
 
 ```js
 (function() {
