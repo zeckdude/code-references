@@ -252,3 +252,27 @@ There are several different ways to invoke a function. Depending on which way th
     console.log(game.score); // Returns: 10
     ```
     
+<br>
+##### Binding Functions
+When you bind a function, you are copying a reference to a method and setting a new context. NOTE: `bind()` returns a function, and not the result of the method having been run. 
+
+```js
+function doubleScore() {
+  this.score *= 2;
+}
+
+function Game() {
+  this.score = 1;
+  this.double = doubleScore.bind(this); // A copy to the method referenced by `doubleScore()`, but specifying the instance of the constructor as the context
+  this.printScore = function() {
+    console.log(this.score);
+  }
+}
+
+var game = new Game();
+game.score = 3;
+game.printScore(); // Consoles out: 3
+game.double();
+game.printScore(); // Consoles out: 6
+
+```
