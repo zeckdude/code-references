@@ -219,5 +219,25 @@ str.split(", ");
 
 <br>
 #### Reverse a string
+##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+```js
+var str = "Hello there";
+var reverse = "";
+for (var i = str.length - 1; i >= 0; i--) {
+  reverse += str[i];
+}
+// Returns: "ereht olleH"
+```
+
+##### [split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+##### [reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+##### [join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+```js
+var str = "Hello there";
+str.split('').reverse().join('');
+// Returns: "ereht olleH"
+```
+
+
 
 
