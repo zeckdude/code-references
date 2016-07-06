@@ -1,10 +1,44 @@
 ## DOM
 
-#### Select an element by ID
+#### Get an element by ID
 ##### [getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 ```js
 document.getElementById("button-container");
 // Returns: Reference to a matching Element object
+```
+
+##### [querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+```js
+document.querySelector("#button-container");
+// Returns: Reference to a matching Element object
+```
+
+<br>
+#### Get all elements with a specified tag name
+##### [getElementsByTagName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)
+```js
+document.getElementsByTagName("p");
+// Returns: Reference to all matching elements in an array-like object
+```
+
+##### [querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+```js
+document.querySelectorAll("p");
+// Returns: Reference to all matching elements in an array-like object
+```
+
+<br>
+#### Get all elements with a specified class name
+##### [getElementsByClassName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
+```js
+document.getElementsByClassName("active");
+// Returns: Reference to all matching elements in an array-like object
+```
+
+##### [querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+```js
+document.querySelectorAll(".active");
+// Returns: Reference to all matching elements in an array-like object
 ```
 
 <br>
