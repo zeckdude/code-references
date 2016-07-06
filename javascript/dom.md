@@ -13,6 +13,32 @@ document.querySelector("#button-container");
 // Returns: Reference to a matching Element object
 ```
 
+#### Get the first matching element within a specified element
+##### [Element.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
+```js
+document.querySelector("#firstDiv").querySelector("#thirdPar");
+// Returns: Reference to a matching Element object
+```
+
+##### [querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+```js
+document.querySelector("#firstDiv #thirdPar");
+// Returns: Reference to a matching Element object
+```
+
+#### Get all matching elements within a specified element
+##### [Element.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)
+```js
+document.querySelector("#firstDiv").querySelectorAll("p");
+// Returns: Reference to a matching Element object
+```
+
+##### [querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+```js
+document.querySelectorAll("#firstDiv p");
+// Returns: Reference to a matching Element object
+```
+
 <br>
 #### Get all elements with a specified tag name
 ##### [getElementsByTagName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)
@@ -78,7 +104,7 @@ document.querySelector("#description").nextElementSibling;
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
 document.querySelector("#description").innerHTML;
-// Returns: Reference string of the element's value
+// Returns: String of the element's value
 ```
 
 <br>
@@ -86,8 +112,36 @@ document.querySelector("#description").innerHTML;
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
 document.querySelector("#description").innerHTML = "New Value here";
-// Returns: Reference string of the element's value
+// Returns: String of the element's value
 ```
+
+<br>
+#### Get the tag type of an element
+##### [Element.tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName)
+```js
+document.querySelector("#description").tagName;
+// Returns: String of the tag type, e.g. "DIV"
+```
+
+<br>
+#### Create an element in preparation of adding it to the DOM
+##### [createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+##### [createTextNode()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
+##### [Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+```js
+var newElement = document.createElement("p"); // Create a reference to a new element object
+var newText = document.createTextNode("Hi there and greetings!"); // Create a new text node
+newElement.appendChild(newText); // Append the new text node to the new element object
+```
+
+<br>
+#### Append a newly created element to the DOM
+##### [Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+```js
+document.querySelector("#firstDiv").appendChild(newElement);
+```
+
+
 
 
 
