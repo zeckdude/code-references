@@ -23,10 +23,38 @@ if (confirm("Would you like to proceed?")) {
 ```js
 // Get full URL
 window.location.href
-// Returns: http://www.example.com?something=whoknows
+// Returns: "http://www.example.com?something=whoknows"
+
+// Get query string
+window.location.search
+// Returns: "?something=whoknows"
+
+// Get basename with Protocol 
+window.location.origin
+// Returns: "http://www.example.com"
 
 // Get Hostname
 window.location.hostname
-// Returns: http://www.example.com?something=whoknows
+// Returns: "www.example.com"
+
+// Get Protocol
+window.location.protocol
+// Returns: "http:"
+```
+
+<br>
+#### Navigate to URL
+##### [location](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
+```js
+window.location = "http://www.somewhere.com";
+// Navigates to new URL
+```
+
+<br>
+#### Reload the current page
+##### [location.reload()](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
+```js
+location.reload(true);
+// Reloads the current page
 ```
 
