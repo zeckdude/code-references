@@ -1,5 +1,12 @@
 ## Arrays
 
+#### Quick Reference Notes
+
+| Property      | Purpose | Notes                        |
+|---------------|---------------------------------------------------------------------------------------------------|
+| forEach() | Loop through elements in an array | *None* |
+| map() | Loop through elements in array while performing a function on each value | Returns all altered array values as a new array |
+
 #### Return the number of elements in an array
 ##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
 ```js
