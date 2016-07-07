@@ -4,9 +4,10 @@
 
 | Property | Purpose | Notes |
 |---------------|----------------------------------------|----------------------------------------------------------|
-| forEach() | Iterate over an array | *None* |
-| map() | Iterate over an array while performing a function on each value | Returns ALL altered array values as a new array |
-| reduce() | Iterate over an array while combining each result to return a single value | Useful for operations like adding together all values in an array |
+| [forEach()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#foreach) | Iterate over an array | *None* |
+| [map()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#map---video) | Iterate over an array while performing a function on each value | Returns ALL altered array values as a new array |
+| [reduce()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#reduce---video) | Iterate over an array while combining each result to return a single value | Useful for operations like adding together all values in an array |
+| [filter()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#filter---video) | Iterate over an array while checking if each value passes a specified condition | Returns ONLY the values that meet the condition as a new array |
 
 
 #### Return the number of elements in an array
