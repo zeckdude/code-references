@@ -11,13 +11,22 @@
 ### Common Scenarios
 
 #### Short-hand Ways to check for a condition
-##### [IF statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+##### [if statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
 if(varA & varB) {
   return true;
 } else {
   return false;
 }
+```
+
+##### [return statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+```js
+if(varA & varB) {
+  return true;
+}
+
+return false;
 ```
 
 ##### [not-not operator](http://www.sitepoint.com/javascript-double-negation-trick-trouble/)
