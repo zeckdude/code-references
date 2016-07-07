@@ -51,7 +51,7 @@ Object.prototype.toString.call(arr) == "[object Array]";
 ```
 
 <br>
-#### Loop through an array
+#### Loop through values of an array
 ##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 ```js
 var arr = [2, "George Rose", true];
