@@ -2,10 +2,12 @@
 
 #### Quick Reference Notes
 
-| Property      | Purpose | Notes                        |
-|---------------|---------------------------------------------------------------------------------------------------|
-| forEach() | Loop through elements in an array | *None* |
-| map() | Loop through elements in array while performing a function on each value | Returns all altered array values as a new array |
+| Property | Purpose | Notes |
+|---------------|----------------------------------------|----------------------------------------------------------|
+| forEach() | Iterate over an array | *None* |
+| map() | Iterate over an array while performing a function on each value | Returns ALL altered array values as a new array |
+| reduce() | Iterate over an array while combining each result to return a single value | Useful for operations like adding together all values in an array |
+
 
 #### Return the number of elements in an array
 ##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
