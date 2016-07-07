@@ -1,5 +1,35 @@
 ## Functions
 
+<br>
+#### Set default arguments for a function
+##### [if statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+```js
+function hello(name) {
+  if(name === undefined) { name = "dude"; }
+  return "What's up " + name;
+}
+
+hello("Jim");
+// Returns: "What's up Jim"
+
+hello();
+// Returns: "What's up dude"
+```
+
+##### [OR operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR)
+```js
+function hello(name) {
+  return "What's up " + (name || "dude");
+}
+
+hello("Jim");
+// Returns: "What's up Jim"
+
+hello();
+// Returns: "What's up dude"
+```
+
+<br>
 #### Access unknown arguments added to a function call
 ##### [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 ##### [Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
