@@ -238,6 +238,15 @@ str.split('').reverse().join('');
 // Returns: "ereht olleH"
 ```
 
+<br>
+#### Remove whitespace off the specified string
+##### [trim()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
+```js
+var str = "  Hi there!  ";
+str.trim();
+// Returns: "Hi there!"
+```
+
 
 
 
