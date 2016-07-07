@@ -181,6 +181,36 @@ arr.reverse();
 ```
 
 <br>
+#### Sort the elements of an array alphabetically
+##### [sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+```js
+var arr = ["Jim", "George", "Bob"];
+
+// Ascending Order
+arr.sort();
+// Returns: ["Bob", "George", "Jim"]
+
+// Descending Order
+arr.sort().reverse();
+// Returns: ["Jim", "George", "Bob"]
+```
+
+<br>
+#### Sort the elements of an array numerically
+##### [sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+```js
+var arr = [1, 64, 22, 138];
+
+// Ascending Order
+arr.sort(function(a, b){return a-b});
+// Returns: [1, 22, 64, 138]
+
+// Descending Order
+arr.sort(function(a, b){return b-a});
+// Returns: [138, 64, 22, 1]
+```
+
+<br>
 #### Determine whether a value is in an array
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 ```js
