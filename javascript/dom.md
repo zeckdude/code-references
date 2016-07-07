@@ -13,6 +13,7 @@ document.querySelector("#button-container");
 // Returns: Reference to a matching Element object
 ```
 
+<br>
 #### Get the first matching element within a specified element
 ##### [Element.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 ```js
@@ -26,6 +27,7 @@ document.querySelector("#firstDiv #thirdPar");
 // Returns: Reference to a matching Element object
 ```
 
+<br>
 #### Get all matching elements within a specified element
 ##### [Element.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)
 ```js
