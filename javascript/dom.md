@@ -169,6 +169,53 @@ document.querySelector("#description").className = "rounded";
 ```
 
 <br>
+#### Add a new element class value (Adds to all other already existing classes)
+##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+```js
+document.querySelector("#description").className += " rounded";
+// Add the specified class
+```
+
+##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+```js
+document.querySelector("#description").classList.add('rounded');
+// Add the specified class
+```
+
+<br>
+#### Remove a element class value
+##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+```js
+document.querySelector("#description").classList.remove('rounded');
+// Remove the specified class
+```
+
+##### [String.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+```js
+var element = document.querySelector("#secondPar");
+var replaceClass = "selected";
+element.className = element.className.replace(new RegExp('( |^)' + replaceClass + '( |$)', 'g'), ' ').trim();
+// Remove the specified class
+```
+
+<br>
+#### Toggle an element class value
+##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+```js
+document.querySelector("#description").classList.toggle('rounded');
+// Show/hide the specified class
+```
+
+<br>
+#### Check if an element has a specified class
+##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+##### [String.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
+```js
+document.querySelector("#description").className.indexOf("selected") > -1;
+// Returns: true
+```
+
+<br>
 #### Get element attribute value
 ##### [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
 ```js
