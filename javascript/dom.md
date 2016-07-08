@@ -70,14 +70,6 @@ document.querySelectorAll(".active");
 ```
 
 <br>
-#### Get parent element of selected element
-##### [Node.parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode)
-```js
-document.querySelector("#description").parentNode;
-// Returns: Reference to the parent element
-```
-
-<br>
 #### Get previous sibling of selected element
 ##### [Node.prevSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevSibling)
 ##### [Node.prevElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevElementSibling)
@@ -102,6 +94,38 @@ document.querySelector("#description").nextElementSibling;
 ```
 
 <br>
+#### Get parent element of selected element
+##### [Node.parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode)
+```js
+document.querySelector("#description").parentNode;
+// Returns: Reference to the parent element
+```
+
+<br>
+#### Get all children elements of selected element
+##### [Node.children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
+```js
+document.querySelector("#description").children;
+// Returns: Reference to all children elements
+```
+
+<br>
+#### Get first child element of selected element
+##### [Node.firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild)
+```js
+document.querySelector("#description").firstElementChild;
+// Returns: Reference to first child element
+```
+
+<br>
+#### Get last child element of selected element
+##### [Node.lastElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild)
+```js
+document.querySelector("#description").lastElementChild;
+// Returns: Reference to last child element
+```
+
+<br>
 #### Get element value
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
@@ -115,6 +139,48 @@ document.querySelector("#description").innerHTML;
 ```js
 document.querySelector("#description").innerHTML = "New Value here";
 // Returns: String of the element's value
+```
+
+<br>
+#### Get element class value
+##### [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
+```js
+document.querySelector("#description").getAttribute("class");
+// Returns: String of the element's `class` value
+```
+
+##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+```js
+document.querySelector("#description").className;
+// Returns: String of the element's `class` value
+```
+
+<br>
+#### Set element class value (Overrides attribute value)
+##### [Element.setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+```js
+document.querySelector("#description").setAttribute("class", "rounded");
+```
+
+##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+```js
+document.querySelector("#description").className = "rounded";
+// Returns: String of the element's `class` value
+```
+
+<br>
+#### Get element attribute value
+##### [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
+```js
+document.querySelector("#description").getAttribute("href");
+// Returns: String of the element's `href` value
+```
+
+<br>
+#### Set element attribute value (Overrides attribute value)
+##### [Element.setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+```js
+document.querySelector("#description").setAttribute("href", "http://www.google.com");
 ```
 
 <br>
