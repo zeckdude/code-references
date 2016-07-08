@@ -170,6 +170,8 @@ document.querySelector("#description").className = "rounded";
 
 <br>
 #### Add a new element class value (Adds to all other already existing classes)
+*Comprehensive Function: http://stackoverflow.com/a/18492076/83916*
+
 ##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 ```js
 document.querySelector("#description").className += " rounded";
@@ -184,12 +186,15 @@ document.querySelector("#description").classList.add('rounded');
 
 <br>
 #### Remove a element class value
+*Comprehensive Function: http://stackoverflow.com/a/18492076/83916*
+
 ##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 ```js
 document.querySelector("#description").classList.remove('rounded');
 // Remove the specified class
 ```
 
+##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 ##### [String.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 ```js
 var element = document.querySelector("#secondPar");
@@ -208,10 +213,26 @@ document.querySelector("#description").classList.toggle('rounded');
 
 <br>
 #### Check if an element has a specified class
+*Comprehensive Function: http://stackoverflow.com/a/18492076/83916*
+
 ##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 ##### [String.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
 ```js
 document.querySelector("#description").className.indexOf("selected") > -1;
+// Returns: true
+```
+
+##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+##### [String.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/test)
+```js
+var replaceClass = "selected";
+(new RegExp('( |^)' + replaceClass + '( |$)', 'g')).test(document.querySelector("#secondPar").className);
+// Returns: true
+```
+
+##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+```js
+document.querySelector("#description").classList.contains('rounded');
 // Returns: true
 ```
 
