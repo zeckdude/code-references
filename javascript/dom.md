@@ -208,7 +208,7 @@ element.className = element.className.replace(new RegExp('( |^)' + replaceClass 
 ##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 ```js
 document.querySelector("#description").classList.toggle('rounded');
-// Show/hide the specified class
+// Add/remove the specified class
 ```
 
 <br>
