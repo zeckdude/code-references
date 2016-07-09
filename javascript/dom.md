@@ -13,9 +13,10 @@ document.querySelector("#button-container");
 // Returns: Reference to a matching Element object
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get the first matching element within a specified element
 ##### [Element.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 ```js
@@ -29,9 +30,10 @@ document.querySelector("#firstDiv #thirdPar");
 // Returns: Reference to a matching Element object
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get all matching elements within a specified element
 ##### [Element.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)
 ```js
@@ -45,9 +47,10 @@ document.querySelectorAll("#firstDiv p");
 // Returns: Reference to a matching Element object
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get all elements with a specified tag name
 ##### [getElementsByTagName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)
 ```js
@@ -61,9 +64,10 @@ document.querySelectorAll("p");
 // Returns: Reference to all matching elements in an array-like object
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get all elements with a specified class name
 ##### [getElementsByClassName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
 ```js
@@ -77,9 +81,10 @@ document.querySelectorAll(".active");
 // Returns: Reference to all matching elements in an array-like object
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get previous sibling of selected element
 ##### [Node.prevSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevSibling)
 ##### [Node.prevElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevElementSibling)
@@ -91,9 +96,10 @@ document.querySelector("#description").prevElementSibling;
 // Returns: Reference to the previous sibling (Must be an element)
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get next sibling of selected element
 ##### [Node.nextSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling)
 ##### [Node.nextElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/nextElementSibling)
@@ -105,9 +111,10 @@ document.querySelector("#description").nextElementSibling;
 // Returns: Reference to the next sibling (Must be an element)
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get parent element of selected element
 ##### [Node.parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode)
 ```js
@@ -115,9 +122,10 @@ document.querySelector("#description").parentNode;
 // Returns: Reference to the parent element
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get all children elements of selected element
 ##### [Node.children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
 ```js
@@ -125,9 +133,10 @@ document.querySelector("#description").children;
 // Returns: Reference to all children elements
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get first child element of selected element
 ##### [Node.firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild)
 ```js
@@ -135,9 +144,10 @@ document.querySelector("#description").firstElementChild;
 // Returns: Reference to first child element
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get last child element of selected element
 ##### [Node.lastElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild)
 ```js
@@ -145,9 +155,10 @@ document.querySelector("#description").lastElementChild;
 // Returns: Reference to last child element
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get element value
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
@@ -155,9 +166,10 @@ document.querySelector("#description").innerHTML;
 // Returns: String of the element's value
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Set element value
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
@@ -165,9 +177,10 @@ document.querySelector("#description").innerHTML = "New Value here";
 // Returns: String of the element's value
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get element class value
 ##### [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
 ```js
@@ -181,9 +194,10 @@ document.querySelector("#description").className;
 // Returns: String of the element's `class` value
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Set element class value (Overrides attribute value)
 ##### [Element.setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 ```js
@@ -196,9 +210,10 @@ document.querySelector("#description").className = "rounded";
 // Returns: String of the element's `class` value
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Add a new element class value (Adds to all other already existing classes)
 *Comprehensive Function: http://stackoverflow.com/a/18492076/83916*
 
@@ -214,9 +229,10 @@ document.querySelector("#description").classList.add('rounded');
 // Add the specified class
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Remove a element class value
 *Comprehensive Function: http://stackoverflow.com/a/18492076/83916*
 
@@ -235,9 +251,10 @@ element.className = element.className.replace(new RegExp('( |^)' + replaceClass 
 // Remove the specified class
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Toggle an element class value
 ##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 ```js
@@ -245,9 +262,10 @@ document.querySelector("#description").classList.toggle('rounded');
 // Add/remove the specified class
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Check if an element has a specified class
 *Comprehensive Function: http://stackoverflow.com/a/18492076/83916*
 
@@ -272,9 +290,10 @@ document.querySelector("#description").classList.contains('rounded');
 // Returns: true
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get element attribute value
 ##### [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
 ```js
@@ -282,18 +301,20 @@ document.querySelector("#description").getAttribute("href");
 // Returns: String of the element's `href` value
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Set element attribute value (Overrides attribute value)
 ##### [Element.setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 ```js
 document.querySelector("#description").setAttribute("href", "http://www.google.com");
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Get the tag type of an element
 ##### [Element.tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName)
 ```js
@@ -301,9 +322,10 @@ document.querySelector("#description").tagName;
 // Returns: String of the tag type, e.g. "DIV"
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Create an element in preparation of adding it to the DOM
 ##### [createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 ##### [createTextNode()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
