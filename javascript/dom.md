@@ -87,12 +87,12 @@ ___
 
 #### Get previous sibling of selected element
 ##### [Node.prevSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevSibling)
-##### [Node.prevElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevElementSibling)
+##### [Node.previousElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling)
 ```js
 document.querySelector("#description").prevSibling;
 // Returns: Reference to the previous sibling, regardless of what it is
 
-document.querySelector("#description").prevElementSibling;
+document.querySelector("#description").previousElementSibling;
 // Returns: Reference to the previous sibling (Must be an element)
 ```
 
@@ -102,7 +102,7 @@ ___
 
 #### Get next sibling of selected element
 ##### [Node.nextSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling)
-##### [Node.nextElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/nextElementSibling)
+##### [Node.nextElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling)
 ```js
 document.querySelector("#description").nextSibling;
 // Returns: Reference to the next sibling, regardless of what it is
@@ -133,6 +133,12 @@ document.querySelector("#description").children;
 // Returns: Reference to all children elements
 ```
 
+##### [Node.children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
+```js
+document.querySelector("#description").children;
+// Returns: Reference to all children elements
+```
+
 <br>
 ___
 <br>
@@ -153,6 +159,17 @@ ___
 ```js
 document.querySelector("#description").lastElementChild;
 // Returns: Reference to last child element
+```
+
+<br>
+___
+<br>
+
+#### Get element tags with value
+##### [Element.outerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML)
+```js
+document.querySelector("#description").outerHTML;
+// Returns: String of the element's tags with value, e.g. "<p id="description">Hello there</p>"
 ```
 
 <br>
@@ -341,9 +358,9 @@ ___
 <br>
 
 #### Prepend a newly created element to the DOM
-##### [Node.prependChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/prependChild)
+##### [Node.insertBefore()](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore)
 ```js
-document.querySelector("#firstDiv").appendChild(newElement);
+document.querySelector("#firstDiv").insertBefore(newElement, document.querySelector("#firstDiv").firstChild);
 ```
 
 ##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
@@ -366,6 +383,11 @@ document.querySelector("#firstDiv").appendChild(newElement);
 document.querySelector("#firstDiv").insertAdjacentHTML('beforeend', newElement.outerHTML);
 ```
 
+##### [Node.insertBefore()](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore)
+```js
+document.querySelector("#firstDiv").insertBefore(newElement, null);
+```
+
 <br>
 ___
 <br>
@@ -384,6 +406,31 @@ ___
 ##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 ```js
 document.querySelector("#firstPar").insertAdjacentHTML('afterend', newElement.outerHTML);
+```
+
+<br>
+___
+<br>
+
+#### Remove an element from the DOM
+##### [Node.removeChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
+```js
+document.querySelector("#firstPar").parentNode.removeChild(document.querySelector("#firstPar"));
+```
+
+<br>
+___
+<br>
+
+#### Replace an element in the DOM
+##### [Element.outerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML)
+```js
+document.querySelector("#firstPar").outerHTML = newElement.outerHTML
+```
+
+##### [Node.replaceChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild)
+```js
+document.querySelector("#firstPar").parentNode.replaceChild(newElement, document.querySelector("#firstPar"));
 ```
 
 <br>
