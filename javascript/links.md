@@ -47,6 +47,7 @@
 |---------------|-----------------------------------------------------------------|
 | W3schools  | http://www.w3schools.com/js/default.asp |
 | MDN | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference |
+| You Might Not Need jQuery | http://youmightnotneedjquery.com/ |
 
 <br>
 
