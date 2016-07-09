@@ -314,43 +314,60 @@ var newText = document.createTextNode("Hi there and greetings!"); // Create a ne
 newElement.appendChild(newText); // Append the new text node to the new element object
 ```
 
+<br>
+___
+<br>
 
+#### Prepend a newly created element to the DOM
+##### [Node.prependChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/prependChild)
+```js
+document.querySelector("#firstDiv").appendChild(newElement);
+```
+
+##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+```js
+document.querySelector("#firstDiv").insertAdjacentHTML('afterbegin', newElement.outerHTML);
+```
 
 <br>
+___
+<br>
+
 #### Append a newly created element to the DOM
 ##### [Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 ```js
 document.querySelector("#firstDiv").appendChild(newElement);
 ```
 
-
-
 ##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 ```js
-document.querySelector("#firstPar").insertAdjacentHTML('beforebegin', newElement.outerHTML);
+document.querySelector("#firstDiv").insertAdjacentHTML('beforeend', newElement.outerHTML);
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Add a newly created element to the DOM directly before the specified element
 ##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 ```js
 document.querySelector("#firstPar").insertAdjacentHTML('beforebegin', newElement.outerHTML);
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Add a newly created element to the DOM directly after the specified element
 ##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 ```js
 document.querySelector("#firstPar").insertAdjacentHTML('afterend', newElement.outerHTML);
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Hide an element
 ##### [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
 ```js
@@ -358,9 +375,10 @@ document.querySelector("#firstPar").style.display = "none";
 // Hides the element
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Show an element
 ##### [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
 ```js
@@ -368,9 +386,10 @@ document.querySelector("#firstPar").style.display = "";
 // Shows the element
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Set styles on an element
 ##### [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
 ```js
@@ -385,9 +404,10 @@ document.querySelector("#firstPar").style.border = "1px solid black";
 document.querySelector("#firstPar").style.color = "red";
 ```
 
-
-
 <br>
+___
+<br>
+
 #### Create an anchor tag string with the specified string as its name attribute
 ##### [anchor()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) 
 ```js
@@ -397,6 +417,9 @@ str.anchor('table-contents');
 ```
 
 <br>
+___
+<br>
+
 #### Create an anchor tag string with the specified string as its href attribute
 ##### [link()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) 
 ```js
