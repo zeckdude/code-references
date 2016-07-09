@@ -13,6 +13,8 @@ document.querySelector("#button-container");
 // Returns: Reference to a matching Element object
 ```
 
+
+
 <br>
 #### Get the first matching element within a specified element
 ##### [Element.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
@@ -26,6 +28,8 @@ document.querySelector("#firstDiv").querySelector("#thirdPar");
 document.querySelector("#firstDiv #thirdPar");
 // Returns: Reference to a matching Element object
 ```
+
+
 
 <br>
 #### Get all matching elements within a specified element
@@ -41,6 +45,8 @@ document.querySelectorAll("#firstDiv p");
 // Returns: Reference to a matching Element object
 ```
 
+
+
 <br>
 #### Get all elements with a specified tag name
 ##### [getElementsByTagName()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)
@@ -54,6 +60,8 @@ document.getElementsByTagName("p");
 document.querySelectorAll("p");
 // Returns: Reference to all matching elements in an array-like object
 ```
+
+
 
 <br>
 #### Get all elements with a specified class name
@@ -69,6 +77,8 @@ document.querySelectorAll(".active");
 // Returns: Reference to all matching elements in an array-like object
 ```
 
+
+
 <br>
 #### Get previous sibling of selected element
 ##### [Node.prevSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevSibling)
@@ -80,6 +90,8 @@ document.querySelector("#description").prevSibling;
 document.querySelector("#description").prevElementSibling;
 // Returns: Reference to the previous sibling (Must be an element)
 ```
+
+
 
 <br>
 #### Get next sibling of selected element
@@ -93,6 +105,8 @@ document.querySelector("#description").nextElementSibling;
 // Returns: Reference to the next sibling (Must be an element)
 ```
 
+
+
 <br>
 #### Get parent element of selected element
 ##### [Node.parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode)
@@ -100,6 +114,8 @@ document.querySelector("#description").nextElementSibling;
 document.querySelector("#description").parentNode;
 // Returns: Reference to the parent element
 ```
+
+
 
 <br>
 #### Get all children elements of selected element
@@ -109,6 +125,8 @@ document.querySelector("#description").children;
 // Returns: Reference to all children elements
 ```
 
+
+
 <br>
 #### Get first child element of selected element
 ##### [Node.firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild)
@@ -116,6 +134,8 @@ document.querySelector("#description").children;
 document.querySelector("#description").firstElementChild;
 // Returns: Reference to first child element
 ```
+
+
 
 <br>
 #### Get last child element of selected element
@@ -125,6 +145,8 @@ document.querySelector("#description").lastElementChild;
 // Returns: Reference to last child element
 ```
 
+
+
 <br>
 #### Get element value
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
@@ -133,6 +155,8 @@ document.querySelector("#description").innerHTML;
 // Returns: String of the element's value
 ```
 
+
+
 <br>
 #### Set element value
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
@@ -140,6 +164,8 @@ document.querySelector("#description").innerHTML;
 document.querySelector("#description").innerHTML = "New Value here";
 // Returns: String of the element's value
 ```
+
+
 
 <br>
 #### Get element class value
@@ -155,6 +181,8 @@ document.querySelector("#description").className;
 // Returns: String of the element's `class` value
 ```
 
+
+
 <br>
 #### Set element class value (Overrides attribute value)
 ##### [Element.setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
@@ -167,6 +195,8 @@ document.querySelector("#description").setAttribute("class", "rounded");
 document.querySelector("#description").className = "rounded";
 // Returns: String of the element's `class` value
 ```
+
+
 
 <br>
 #### Add a new element class value (Adds to all other already existing classes)
@@ -183,6 +213,8 @@ document.querySelector("#description").className += " rounded";
 document.querySelector("#description").classList.add('rounded');
 // Add the specified class
 ```
+
+
 
 <br>
 #### Remove a element class value
@@ -203,6 +235,8 @@ element.className = element.className.replace(new RegExp('( |^)' + replaceClass 
 // Remove the specified class
 ```
 
+
+
 <br>
 #### Toggle an element class value
 ##### [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
@@ -210,6 +244,8 @@ element.className = element.className.replace(new RegExp('( |^)' + replaceClass 
 document.querySelector("#description").classList.toggle('rounded');
 // Add/remove the specified class
 ```
+
+
 
 <br>
 #### Check if an element has a specified class
@@ -236,6 +272,8 @@ document.querySelector("#description").classList.contains('rounded');
 // Returns: true
 ```
 
+
+
 <br>
 #### Get element attribute value
 ##### [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
@@ -244,12 +282,16 @@ document.querySelector("#description").getAttribute("href");
 // Returns: String of the element's `href` value
 ```
 
+
+
 <br>
 #### Set element attribute value (Overrides attribute value)
 ##### [Element.setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 ```js
 document.querySelector("#description").setAttribute("href", "http://www.google.com");
 ```
+
+
 
 <br>
 #### Get the tag type of an element
@@ -258,6 +300,8 @@ document.querySelector("#description").setAttribute("href", "http://www.google.c
 document.querySelector("#description").tagName;
 // Returns: String of the tag type, e.g. "DIV"
 ```
+
+
 
 <br>
 #### Create an element in preparation of adding it to the DOM
@@ -270,6 +314,8 @@ var newText = document.createTextNode("Hi there and greetings!"); // Create a ne
 newElement.appendChild(newText); // Append the new text node to the new element object
 ```
 
+
+
 <br>
 #### Append a newly created element to the DOM
 ##### [Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
@@ -279,9 +325,65 @@ document.querySelector("#firstDiv").appendChild(newElement);
 
 
 
+##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+```js
+document.querySelector("#firstPar").insertAdjacentHTML('beforebegin', newElement.outerHTML);
+```
 
 
 
+<br>
+#### Add a newly created element to the DOM directly before the specified element
+##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+```js
+document.querySelector("#firstPar").insertAdjacentHTML('beforebegin', newElement.outerHTML);
+```
+
+
+
+<br>
+#### Add a newly created element to the DOM directly after the specified element
+##### [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+```js
+document.querySelector("#firstPar").insertAdjacentHTML('afterend', newElement.outerHTML);
+```
+
+
+
+<br>
+#### Hide an element
+##### [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+```js
+document.querySelector("#firstPar").style.display = "none";
+// Hides the element
+```
+
+
+
+<br>
+#### Show an element
+##### [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+```js
+document.querySelector("#firstPar").style.display = "";
+// Shows the element
+```
+
+
+
+<br>
+#### Set styles on an element
+##### [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+```js
+// Set multiple elements at the same time (Will overwrite all other set styles)
+document.querySelector("#firstPar").style.cssText = "color: blue; font-size: 24px;";
+
+// Set multiple elements at the same time (Will overwrite all other set styles)
+document.querySelector("#firstPar").setAttribute("style", "color: blue; font-size: 24px;");
+
+// Set a single CSS rule (Will not overwrite OTHER set styles)
+document.querySelector("#firstPar").style.border = "1px solid black";
+document.querySelector("#firstPar").style.color = "red";
+```
 
 
 
