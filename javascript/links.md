@@ -1,6 +1,6 @@
 ## Links
 
-#### Practice Assignments
+#### Practice Exercises
 | Name          | Link                                                                                        |
 |---------------|---------------------------------------------------------------------------------------------------|
 | W3Resource Exercises | http://www.w3resource.com/javascript-exercises/  |
@@ -15,6 +15,35 @@
 | NodeSchool | http://nodeschool.io/ |
 | Codefights | https://codefights.com/home |
 | Reddit - Daily Programmer | https://www.reddit.com/r/dailyprogrammer |
+| Dash - Projects | https://dash.generalassemb.ly/projects |
+| Web Training Centre | http://www.webtrainingcentre.com/programming-exercises/ |
+| Martyr2’s Mega Project List | http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/ |
+| Codecademy Web Projects | https://www.codecademy.com/en/tracks/projects |
+
+
+<br>
+
+#### Practice Project Ideas
+| Idea          | Notes                                                                                        |
+|---------------|---------------------------------------------------------------------------------------------------|
+| Make a to-do app | https://www.quora.com/What-are-some-good-JavaScript-projects-to-practice/answer/Maisnam-Raju?srid=zJUU | Tic-Tac-Game | *None* |
+| Various Project Ideas | https://www.quora.com/What-should-be-my-first-JavaScript-mini-project/answer/Bharath-Mb-2?srid=zJUU |
+| Create Google Chrome Extension | https://www.sitepoint.com/create-chrome-extension-10-minutes-flat/ <br> https://www.quora.com/What-are-some-great-programming-projects-for-beginners/answer/Will-Sentance?srid=zJUU |
+
+
+
+
+<br>
+
+#### Practice JS through gamification
+| Name          | Link                                                                                        |
+|---------------|---------------------------------------------------------------------------------------------------|
+| Code Combat | https://codecombat.com/ |
+| JS Dares | http://www.jsdares.com/ |
+| Code in Game | https://www.codingame.com |
+| Screeps | https://screeps.com/ |
+| Fight Code Game | http://fightcodegame.com/ |
+| Empire of Code | https://empireofcode.com/ |
 
 
 <br>
@@ -48,6 +77,8 @@
 | W3schools  | http://www.w3schools.com/js/default.asp |
 | MDN | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference |
 | You Might Not Need jQuery | http://youmightnotneedjquery.com/ |
+| JavaScript Garden | http://bonsaiden.github.io/JavaScript-Garden/ |
+
 
 <br>
 
