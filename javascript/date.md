@@ -1,7 +1,7 @@
 ## Date
 
 #### Alternatives to using the `Date` object
-*The `date` object can be a bit difficult to use, so there are some libraries that make things a lot easier*
+*The `Date` object can be a bit difficult to use, so there are some libraries that make things a lot easier*
 
 | Library | Notes |
 |---------------|----------------------------------------|----------------------------------------------------------|
