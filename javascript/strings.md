@@ -215,6 +215,10 @@ num + "";
 var str = "Jim, George, Bob";
 str.split(", ");
 // Returns: ["Jim", "George", "Bob"]
+
+var str = "Hello World    from JavaScript!";
+str.split(/\s+/);
+// Returns: ["Hello", "World", "from", "JavaScript!"]
 ```
 
 <br>
