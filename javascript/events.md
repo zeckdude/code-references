@@ -25,6 +25,7 @@ ___
 
 #### Remove single event listener
 ##### [removeEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+*In order to remove an event listener after adding it, you cannot use an anonymous function when you add the listener initially*
 ```js
 button.removeEventListener("click", callback);
 ```
@@ -67,6 +68,19 @@ ___
 addEventListener("keypress", function(event){
   console.log("You pressed the " + event.key + " character");
   // Returns (e.g. when the user presses the "Space" key): "You pressed the Space character"
+});
+```
+
+<br>
+___
+<br>
+
+#### Stop the default behavior of an event
+##### [preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+```js
+document.querySelectorAll("a.button").addEventListener("click", function(event){
+  event.preventDefault();
+  // Prevents the link redirect to occur
 });
 ```
 
