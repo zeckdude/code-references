@@ -33,3 +33,40 @@ button.removeEventListener("click", callback);
 ___
 <br>
 
+#### Get the event type performed
+##### [type](https://developer.mozilla.org/en-US/docs/Web/API/Event/type)
+```js
+button.addEventListener("click", function(event){
+  console.log(event.type);
+  // Consoles out: "click"
+});
+```
+
+<br>
+___
+<br>
+
+#### Get the element that the event was performed on
+##### [target](https://developer.mozilla.org/en-US/docs/Web/API/Event/target)
+```js
+button.addEventListener("click", function(event){
+  console.log(event.target);
+  // Returns a reference to the node of the element which the event was performed on
+});
+```
+
+<br>
+___
+<br>
+
+#### Get the keyboard key that was pressed
+##### [keypress event type](https://developer.mozilla.org/en-US/docs/Web/Events/keypress)
+##### [key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)
+##### [String.fromCharCode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
+```js
+addEventListener("keypress", function(event){
+  console.log("You pressed the " + event.key + " character");
+  // Returns (e.g. when the user presses the "Space" key): "You pressed the Space character"
+});
+```
+
