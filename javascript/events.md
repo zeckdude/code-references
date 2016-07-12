@@ -105,3 +105,15 @@ button.addEventListener("click", function(event){
 }, true);
 ```
 
+<br>
+___
+<br>
+
+#### Stop an event from propogating
+##### [stopPropogation()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/stopPropogation)
+```js
+button.addEventListener("click", function(event){
+  event.stopPropogation();
+}, false);
+```
+
