@@ -57,6 +57,27 @@ function hello(name) {
 ___
 <br>
 
+#### Documenting an unknown number of parameters
+##### [tag - @param](http://usejsdoc.org/tags-param.html#multiple-types-and-repeatable-parameters)
+```js
+/**
+ * Return the sum of all numbers passed to the function
+ *
+ * @param {...number} num - A positive or negative number.
+ */
+function sum(num) {
+    var i = 0, n = arguments.length, t = 0;
+    for (; i < n; i++) {
+        t += arguments[i];
+    }
+    return t;
+}
+```
+
+<br>
+___
+<br>
+
 #### Returning a value from a function
 ##### [tag - @returns](http://usejsdoc.org/tags-returns.html)
 ```js
