@@ -78,9 +78,30 @@ ___
 #### Stop the default behavior of an event
 ##### [preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
 ```js
-document.querySelectorAll("a.button").addEventListener("click", function(event){
+button.addEventListener("click", function(event){
   event.preventDefault();
   // Prevents the link redirect to occur
 });
+```
+
+<br>
+___
+<br>
+
+#### Force the event listener to propogate in either direction
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+The third argument passed to the `addEventListener()` method specifies if the event should:
+ * Propogate upwards (Bubbling): When the event fires on the element clicked on first, then propogates up the document tree, firing an event on each parent element until it reaches the root node. Defined by the boolean `false`. This is the default setting, so it is not necessary to include this argument usually.
+ * Propogate downwards (Capturing): When the event fires on the root element first, then propogates down the document tree, firing an event on each child element until it reaches the target element that was clicked on. Defined by the boolean `true`.
+```js
+// Propogate upwards (Bubbling)
+button.addEventListener("click", function(event){
+  // Perform operations here
+}, false);
+
+// Propogate downwards (Capturing)
+button.addEventListener("click", function(event){
+  // Perform operations here
+}, true);
 ```
 
