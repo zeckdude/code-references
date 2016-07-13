@@ -3,7 +3,17 @@
 **Test Regular Expression Patterns:** https://regex101.com<br>
 **Learn and find documentation:** http://regexone.com<br>
 **Detailed Documentation:** https://msdn.microsoft.com/en-us/library/az24scfc%28v=vs.110%29.aspx<br>
-**Using Regex in JavaScript:** http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869
+
+<br>
+
+#### Resources for using regex in JS
+| Name | Link |
+|---------------|------------------------------|
+| Nettuts - Using Regex in JavaScript | http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869 |
+| Sitepoint - Regular Expressions in JavaScript | https://www.sitepoint.com/expressions-javascript/ |
+| Javscript.info - Regular expressions in JavaScript | http://javascript.info/tutorial/regular-expressions-javascript |
+
+<br>
 
 **Flags**<br>
 
