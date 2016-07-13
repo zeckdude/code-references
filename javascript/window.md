@@ -54,7 +54,7 @@ window.location = "http://www.somewhere.com";
 #### Reload the current page
 ##### [location.reload()](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
 ```js
-location.reload(true);
+window.location.reload(true);
 // Reloads the current page
 ```
 
