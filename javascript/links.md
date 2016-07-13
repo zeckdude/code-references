@@ -76,8 +76,18 @@
 |---------------|-----------------------------------------------------------------|
 | W3schools  | http://www.w3schools.com/js/default.asp |
 | MDN | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference |
-| You Might Not Need jQuery | http://youmightnotneedjquery.com/ |
 | JavaScript Garden | http://bonsaiden.github.io/JavaScript-Garden/ |
+
+<br>
+
+#### JS Helpful Resources
+| Name | Link | Notes |
+|---------------|-------------------------------------|----------------------------|
+| You Might Not Need jQuery | http://youmightnotneedjquery.com/ | Native JS equivalents to jQuery methods |
+| You Don't Need jQuery | https://github.com/oneuijs/You-Dont-Need-jQuery | Native JS equivalents to jQuery methods |
+| You Don't Know JS | https://github.com/getify/You-Dont-Know-JS | Amazing book series on learning JS (free) |
+| Eloquent JavaScript | http://eloquentjavascript.net/ | Extremely popular JS book (free) |
+
 
 
 <br>
