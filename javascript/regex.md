@@ -1,5 +1,16 @@
 ## Regular Expressions
 
+#### Resources for using regex in JS
+| Name | Link |
+|---------------|------------------------------|
+| Nettuts - Using Regex in JavaScript | http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869 |
+| Sitepoint - Regular Expressions in JavaScript | https://www.sitepoint.com/expressions-javascript/ |
+| Javscript.info - Regular expressions in JavaScript | http://javascript.info/tutorial/regular-expressions-javascript |
+
+<br>
+___
+<br>
+
 #### Create a regular expression using literal notation
 ##### [RegExp literal notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 ```js
