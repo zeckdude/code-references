@@ -276,3 +276,8 @@ game.double();
 game.printScore(); // Consoles out: 6
 
 ```
+
+<br>
+##### Closure
+Closure is a newly created function that also contains its variable context. In other words, it is when a function returns an inner function, which still retains a reference to variables that are defined within its outer function that it relies on.
+*Helpful Explanation: https://www.kirupa.com/html5/closures_in_javascript.htm*
