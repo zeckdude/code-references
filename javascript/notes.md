@@ -281,8 +281,14 @@ game.printScore(); // Consoles out: 6
 ##### Closure
 ###### [Detailed Explanation](https://www.kirupa.com/html5/closures_in_javascript.htm)
 Closure is a newly created function (which was returned from another function) that also contains its variable context. In other words, it is when a function returns an inner function, which still retains a reference to variables that are defined within its outer function that it relies on.<br>
+
+<br>
+
 ![Closure - Gray Area] (https://github.com/zeckdude/code-references/blob/master/img/javascript/gray_area_kirupa.png)<br>
-*Closures are the area wher functions and variable scope intersect (Source: Kirupa.com)*<br>
+*Closure is the area where functions and variable scope intersect (Source: Kirupa.com)*<br>
+
+<br>
+
 ![Closure explained in an image] (https://github.com/zeckdude/code-references/blob/master/img/javascript/definition_closure_kirupa.png)<br>
 *Good representation of closure (Source: Kirupa.com)*
 
