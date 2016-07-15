@@ -77,6 +77,7 @@
 | W3schools  | http://www.w3schools.com/js/default.asp |
 | MDN | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference |
 | JavaScript Garden | http://bonsaiden.github.io/JavaScript-Garden/ |
+| JavaScript Reference Cheat Sheet | http://codepen.io/davidicus/pen/trhme |
 
 <br>
 
