@@ -85,6 +85,20 @@ document.querySelectorAll(".active");
 ___
 <br>
 
+#### DOM Traversal Methods illustrated
+
+![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/kirupa_traversing_1.png)<br>
+*(Source: kirupa.com)* 
+
+<br>
+
+![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/kirupa_traversing_2.png)<br>
+*(Source: kirupa.com)* 
+
+<br>
+___
+<br>
+
 #### Get previous sibling of selected element
 ##### [Node.prevSibling](https://developer.mozilla.org/en-US/docs/Web/API/Node/prevSibling)
 ##### [Node.previousElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling)
@@ -133,19 +147,17 @@ document.querySelector("#description").children;
 // Returns: Reference to all children elements
 ```
 
-##### [Node.children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
-```js
-document.querySelector("#description").children;
-// Returns: Reference to all children elements
-```
-
 <br>
 ___
 <br>
 
 #### Get first child element of selected element
+##### [Node.firstChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild)
 ##### [Node.firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild)
 ```js
+document.querySelector("#description").firstChild;
+// Returns: Reference to the first child, regardless of what it is
+
 document.querySelector("#description").firstElementChild;
 // Returns: Reference to first child element
 ```
@@ -155,8 +167,12 @@ ___
 <br>
 
 #### Get last child element of selected element
+##### [Node.lastChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild)
 ##### [Node.lastElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild)
 ```js
+document.querySelector("#description").lastChild;
+// Returns: Reference to the last child, regardless of what it is
+
 document.querySelector("#description").lastElementChild;
 // Returns: Reference to last child element
 ```
