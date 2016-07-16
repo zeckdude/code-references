@@ -88,12 +88,12 @@ ___
 #### DOM Traversal Methods illustrated
 
 ![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/traversing_1_kirupa.png)<br>
-*(Source: kirupa.com)* 
+*(Source: https://www.kirupa.com/html5/traversing_the_dom.htm)* 
 
 <br>
 
 ![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/traversing_2_kirupa.png)<br>
-*(Source: kirupa.com)* 
+*(Source: https://www.kirupa.com/html5/traversing_the_dom.htm)* 
 
 <br>
 ___
@@ -175,6 +175,23 @@ document.querySelector("#description").lastChild;
 
 document.querySelector("#description").lastElementChild;
 // Returns: Reference to last child element
+```
+
+<br>
+___
+<br>
+
+#### Determine if child node exists
+##### [Node.firstChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild)
+##### [Node.children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
+```js
+if (document.querySelector("#firstDiv").firstChild) {
+  // Perform operation
+}
+
+if (document.querySelector("#firstDiv").children.length) {
+  // Perform operation
+}
 ```
 
 <br>
