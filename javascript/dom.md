@@ -177,6 +177,12 @@ ___
 <br>
 
 #### Get element value
+##### [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
+```js
+document.querySelector("#description").textContent;
+// Returns: String of the element's value
+```
+
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
 document.querySelector("#description").innerHTML;
@@ -188,10 +194,14 @@ ___
 <br>
 
 #### Set element value
+##### [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
+```js
+document.querySelector("#description").textContent = "New Value here";
+```
+
 ##### [Element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 ```js
 document.querySelector("#description").innerHTML = "New Value here";
-// Returns: String of the element's value
 ```
 
 <br>
