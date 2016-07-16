@@ -87,12 +87,12 @@ ___
 
 #### DOM Traversal Methods illustrated
 
-![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/kirupa_traversing_1.png)<br>
+![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/traversing_1_kirupa.png)<br>
 *(Source: kirupa.com)* 
 
 <br>
 
-![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/kirupa_traversing_2.png)<br>
+![Kirupa - Traversing methods] (https://github.com/zeckdude/code-references/blob/master/img/javascript/traversing_2_kirupa.png)<br>
 *(Source: kirupa.com)* 
 
 <br>
