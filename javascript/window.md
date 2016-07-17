@@ -25,7 +25,16 @@ ___
 <br>
 
 #### Get various UI sizes
-##### [confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
+##### [Screen.availWidth](https://developer.mozilla.org/en-US/docs/Web/API/Screen/availWidth)
+##### [Screen.availHeight](https://developer.mozilla.org/en-US/docs/Web/API/Screen/availHeight)
+##### [Screen.width](https://developer.mozilla.org/en-US/docs/Web/API/Screen/width)
+##### [Screen.height](https://developer.mozilla.org/en-US/docs/Web/API/Screen/height)
+##### [outerWidth](https://developer.mozilla.org/en-US/docs/Web/API/Window/outerWidth)
+##### [outerHeight](https://developer.mozilla.org/en-US/docs/Web/API/Window/outerHeight)
+##### [innerWidth](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth)
+##### [innerHeight](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight)
+##### [Element.clientWidth](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth)
+##### [Element.clientHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight)
 ```js
 UiSizes = {
   // Available height and width on the screen
