@@ -441,6 +441,12 @@ ___
 document.querySelector("#firstPar").insertAdjacentHTML('beforebegin', newElement.outerHTML);
 ```
 
+##### [Node.insertBefore()](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore)
+```js
+var referenceNode = document.querySelector("#secondPar"); // Node you want to put the new element before
+referenceNode.parentNode.insertBefore(newElement, referenceNode);
+```
+
 <br>
 ___
 <br>
@@ -451,6 +457,22 @@ ___
 document.querySelector("#firstPar").insertAdjacentHTML('afterend', newElement.outerHTML);
 ```
 
+##### [Node.insertBefore()](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore)
+```js
+var referenceNode = document.querySelector("#secondPar"); // Node you want to put the new element after
+referenceNode.parentNode.insertBefore(newElement, referenceNode.nextSibling);
+```
+
+<br>
+___
+<br>
+
+#### Copy a newly created Node element
+*It is not possible to use the same newly created node to add to the DOM in multiple places. To insert the same node in multiple places, you must copy it first*
+##### [Node.cloneNode()](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
+```js
+var anotherNewElement = newElement.cloneNode(true).;
+```
 <br>
 ___
 <br>
