@@ -24,6 +24,70 @@ if (confirm("Would you like to proceed?")) {
 ___
 <br>
 
+#### Get various UI sizes
+##### [confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
+```js
+UiSizes = {
+  // Available height and width on the screen
+  screen_without_taskbar: { 
+    width: window.screen.availWidth,
+    height: window.screen.availHeight
+  },
+  
+  // Full height and width on the screen
+  screen_with_taskbar: {
+    width: window.screen.width,
+    height: window.screen.height
+  },
+  
+  // Full height and width on the browser window
+  browser_window: {
+    width: window.outerWidth,
+    height: window.outerHeight
+  },
+  
+  // Available height and width on the browser window (a.k.a the viewport), not including the scollbar
+  viewport_without_scrollbars: {
+    width: document.documentElement.clientWidth,
+    height: document.documentElement.clientHeight
+  },
+  
+  // Available height and width on the browser window (a.k.a the viewport), including the scollbar
+  viewport_with_scrollbars: {
+    width: window.innerWidth,
+    height: window.innerHeight 
+  },
+};
+
+// Returns:
+// {
+//   screen_without_taskbar: {
+//     "width": 1280,
+//     "height": 709
+//   },
+//   screen_with_taskbar: {
+//     "width": 1280,
+//     "height": 800
+//   },
+//   browser_window: {
+//     "width": 1179,
+//     "height": 697
+//   },
+//   viewport_without_scrollbars: {
+//     "width": 1169,
+//     "height": 602
+//   },
+//   viewport_with_scrollbars: {
+//     "width": 1179,
+//     "height": 602
+//   }
+// }
+```
+
+<br>
+___
+<br>
+
 #### Get location details
 ##### [location](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
 ```js
