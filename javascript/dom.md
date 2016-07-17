@@ -468,7 +468,7 @@ ___
 <br>
 
 #### Copy a newly created Node element
-*It is not possible to use the same newly created node to add to the DOM in multiple places. To insert the same node in multiple places, you must copy it first*
+*It is not possible to use the same newly created node to add to the DOM in multiple places. To insert the same node in multiple places, it must be copied first.*
 ##### [Node.cloneNode()](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
 ```js
 var anotherNewElement = newElement.cloneNode(true).;
