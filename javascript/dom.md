@@ -331,6 +331,9 @@ ___
 
 ##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 ##### [String.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
+| Code | Purpose | Parameters |
+|------|---------|------------|
+| `str.indexOf(searchValue[, fromIndex])` | Returns the index of the first occurrence of `searchValue`. If not found, `-1` is returned. | `searchValue` - The string to search for<br>`fromIndex` - The index at which to start the searching forwards in the string |
 ```js
 document.querySelector("#description").className.indexOf("selected") > -1;
 // Returns: true
@@ -470,6 +473,9 @@ ___
 #### Copy a newly created Node element
 *It is not possible to use the same newly created node to add to the DOM in multiple places. To insert the same node in multiple places, it must be copied first.*
 ##### [Node.cloneNode()](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
+| Code | Purpose | Parameters |
+| ------------- |--------------| -----|
+| `node.cloneNode(deep)` | Returns a duplicate of the node on which this method was called | `deep` - `true` if the children of the node should also be cloned, or `false` to clone only the specified node. |
 ```js
 var anotherNewElement = newElement.cloneNode(true).;
 ```
