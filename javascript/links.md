@@ -78,6 +78,7 @@
 | MDN | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference |
 | JavaScript Garden | http://bonsaiden.github.io/JavaScript-Garden/ |
 | JavaScript Reference Cheat Sheet | http://codepen.io/davidicus/pen/trhme |
+| JavaScript in Depth | http://xahlee.info/js/js.html |
 
 <br>
 
