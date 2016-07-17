@@ -63,7 +63,6 @@ ___
 #### Get the keyboard key that was pressed
 ##### [keypress event type](https://developer.mozilla.org/en-US/docs/Web/Events/keypress)
 ##### [key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)
-##### [String.fromCharCode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
 ```js
 addEventListener("keypress", function(event){
   console.log("You pressed the " + event.key + " character");
@@ -89,7 +88,7 @@ ___
 <br>
 
 #### Force the event listener to propogate in either direction
-##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) - [video](https://www.kirupa.com/html5/event_capturing_bubbling_javascript.htm)
 The third argument passed to the `addEventListener()` method specifies if the event should:
  * Propogate upwards (Bubbling): When the event fires on the element clicked on first, then propogates up the document tree, firing an event on each parent element until it reaches the root node. Defined by the boolean `false`. This is the default setting, so it is not necessary to include this argument usually.
  * Propogate downwards (Capturing): When the event fires on the root element first, then propogates down the document tree, firing an event on each child element until it reaches the target element that was clicked on. Defined by the boolean `true`.
