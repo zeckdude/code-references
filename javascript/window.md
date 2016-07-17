@@ -66,29 +66,39 @@ UiSizes = {
     width: window.innerWidth,
     height: window.innerHeight 
   },
+  
+  // Full height and width of the body element
+  document_body: {
+    width: document.body.clientWidth,
+    height: document.body.clientHeight
+  }
 };
 
 // Returns:
 // {
 //   screen_without_taskbar: {
-//     "width": 1280,
-//     "height": 709
+//     width: 1280,
+//     height: 709
 //   },
 //   screen_with_taskbar: {
-//     "width": 1280,
-//     "height": 800
+//     width: 1280,
+//     height: 800
 //   },
 //   browser_window: {
-//     "width": 1179,
-//     "height": 697
+//     width: 1179,
+//     height: 697
 //   },
 //   viewport_without_scrollbars: {
-//     "width": 1169,
-//     "height": 602
+//     width: 1169,
+//     height: 602
 //   },
 //   viewport_with_scrollbars: {
-//     "width": 1179,
-//     "height": 602
+//     width: 1179,
+//     height: 602
+//   },
+//   document_body: {
+//     width: 1169,
+//     height: 4622
 //   }
 // }
 ```
