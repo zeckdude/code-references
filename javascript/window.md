@@ -36,7 +36,7 @@ ___
 ##### [Element.clientWidth](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth)
 ##### [Element.clientHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight)
 ```js
-UiSizes = {
+uiSizes = {
   // Available height and width on the screen
   screen_without_taskbar: { 
     width: window.screen.availWidth,
