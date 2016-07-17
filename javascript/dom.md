@@ -340,7 +340,7 @@ document.querySelector("#description").className.indexOf("selected") > -1;
 ```
 
 ##### [Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
-##### [String.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/test)
+##### [String.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 ```js
 var replaceClass = "selected";
 (new RegExp('( |^)' + replaceClass + '( |$)', 'g')).test(document.querySelector("#secondPar").className);
@@ -405,6 +405,9 @@ ___
 
 #### Prepend a newly created element to the DOM
 ##### [Node.insertBefore()](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore)
+| Code | Purpose | Parameters |
+|------|---------|------------|
+| `parentNode.insertBefore(newNode, referenceNode);` | Inserts the specified node before the reference node as a child of the current node | `parentNode` - The parent of the newly inserted node <br> `newNode` - The node to be inserted <br> `referenceNode` - The node before which `newNode` is inserted. If `null`, `newNode` is inserted at the end of the list of child nodes |
 ```js
 document.querySelector("#firstDiv").insertBefore(newElement, document.querySelector("#firstDiv").firstChild);
 ```
