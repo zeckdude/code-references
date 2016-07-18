@@ -1,8 +1,28 @@
 ## Events
 
+#### Listen for page readiness
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+```js
+// When the markup and DOM has been fully parsed
+document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+
+function theDomHasLoaded(e) {
+    // Perform operation
+}
+
+// When the page has fully loaded, including images, stylesheets, scripts, and other external resources
+window.addEventListener("load", pageFullyLoaded, false);
+
+function pageFullyLoaded(e) {
+    // Perform operation
+}
+```
+
 #### Add single event listener
 *Listen for the specified event on the specified element and then run the specified function*
-##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) using these possible [event types](https://developer.mozilla.org/en-US/docs/Web/Events)
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) using these possible [event types](https://developer.mozilla.org/en-US/docs/Web/Events)<br>
+[mouse events](https://www.kirupa.com/html5/mouse_events_in_javascript.htm)
+[keyboard events](https://www.kirupa.com/html5/keyboard_events_in_javascript.htm)
 ```js
 button.addEventListener("click", callback);
 ```
@@ -88,6 +108,8 @@ ___
 <br>
 
 #### Force the event listener to propogate in either direction
+![Event Propogation] (https://github.com/zeckdude/code-references/blob/master/img/javascript/event_propogation_kirupa.png)<br>
+*(Source: Kirupa.com)*<br>
 ##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) - [video](https://www.kirupa.com/html5/event_capturing_bubbling_javascript.htm)
 The third argument passed to the `addEventListener()` method specifies if the event should:
  * Propogate upwards (Bubbling): When the event fires on the element clicked on first, then propogates up the document tree, firing an event on each parent element until it reaches the root node. Defined by the boolean `false`. This is the default setting, so it is not necessary to include this argument usually.
