@@ -186,3 +186,51 @@ button.addEventListener("click", function(event){
 }, false);
 ```
 
+<br>
+___
+<br>
+
+#### Creating a custom event
+*Not supported for any version of Internet Explorer. Needs [polyfill](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill).*
+
+##### [CustomEvent()](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent)
+##### [EventTarget.dispatchEvent()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent)
+```js
+// Listen for the custom event
+document.body.addEventListener("myEventName", doSomething, false);
+
+// Access inherited properties (such as e.type) as well as custom-defined properties (such as e.detail)
+function doSomething(e) {
+  console.log("Event is called: " + e.type);
+  console.log("Event detail is: " + e.detail);
+}
+
+// Create a CustomEvent instance, supplying the event name as well as any custom properties to pass to it
+var myEvent = new CustomEvent("myEventName", 
+{
+  detail: {
+    first: "George",
+    last: "Jackson"
+  }
+});
+
+// Fire the event on the specified element
+document.body.dispatchEvent(myEvent);
+```
+
+<br>
+___
+<br>
+
+#### Trigger an event
+##### [article - MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
+```js
+// Specify the event to trigger
+var clickEvent = new MouseEvent('click', {
+'bubbles': true
+});
+
+// Fire the event on the specified element
+document.querySelector("#secondPar").dispatchEvent(clickEvent);
+```
+
