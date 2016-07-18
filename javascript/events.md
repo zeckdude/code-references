@@ -20,9 +20,9 @@ function pageFullyLoaded(e) {
 
 #### Add single event listener
 *Listen for the specified event on the specified element and then run the specified function*
-##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) using these possible [event types](https://developer.mozilla.org/en-US/docs/Web/Events)<br>
-[mouse events](https://www.kirupa.com/html5/mouse_events_in_javascript.htm)
-[keyboard events](https://www.kirupa.com/html5/keyboard_events_in_javascript.htm)
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) using these possible [event types](https://developer.mozilla.org/en-US/docs/Web/Events)
+##### [mouse events](https://www.kirupa.com/html5/mouse_events_in_javascript.htm)
+##### [keyboard events](https://www.kirupa.com/html5/keyboard_events_in_javascript.htm)
 ```js
 button.addEventListener("click", callback);
 ```
@@ -31,12 +31,60 @@ button.addEventListener("click", callback);
 ___
 <br>
 
-#### Add multiple event listeners
+#### Add multiple event listeners to one event for one element
 ##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 ```js
 ['click', 'mouseover'].forEach(function(event){
   button.addEventListener(event,callback,false);
 });
+```
+
+<br>
+___
+<br>
+
+#### Add event listener to one event for multiple elements
+The process of applying the event listener on the parent element is known as *Event Delegation*. It is useful to keep memory usage down, is more efficient, reduces code bloat, and allows dynamically created elements to use previously defined event listeners.
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+##### [article - kirupa.com](https://www.kirupa.com/html5/handling_events_for_many_elements.htm)
+##### [article - davidwalsh.name](https://davidwalsh.name/event-delegate) 
+```js
+var parent = document.querySelector("#buttonsDiv");
+parent.addEventListener("click", onClickBtn, false);
+
+// e.target: Returns the element that started the event, which in this case is the button that was clicked
+// e.currentTarget: Returns the element which the event was attached to, which in this case is the #buttonsDiv element which is in the ancestor tree above the clicked element
+```
+
+**Approach #1**
+```js
+// Targets any element below the parent element
+function onClickBtn(e) {
+  if (e.target !== e.currentTarget) {
+    // Perform operation
+  }
+  e.stopPropagation();
+}
+```
+
+**Approach #2**
+```js
+// Targets any element that has the specified classname in the ancestor tree
+function onClickBtn(e) {
+  if (e.target && e.target.classList.contains("active")) {
+	// Perform operation
+  }
+}
+```
+
+**Approach #3**
+```js
+// Targets any element that has the specified tag and classname in the ancestor tree
+function onClickBtn(e) {
+  if (e.target && e.target.matches("a.active")) {
+	// Perform operation
+  }
+}
 ```
 
 <br>
