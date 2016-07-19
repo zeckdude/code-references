@@ -1,5 +1,48 @@
 ## Objects
 
+#### Notes
+When an object is created, it automatically inherits pre-defined properties and methods that exist on the `Object` object from which it extends. Every object has a `__proto__` property, which is a pointer to the object from which it extended. When drilling down into it, it is possible to see the properties and methods that are available via inheritance. The object that is being referenced by the `__proto__` property is known as a **prototype object**. Inherited properties and methods are passed to their children via the **prototype chain**.
+
+##### Create an instance of an object using [Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+```js
+var person = {
+  getName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Create an instance of the person object
+var jeff = Object.create(person);
+
+// Assign values to the newly created object
+jeff.firstName = "Jeff";
+jeff.lastName = "Jordan";
+
+// Another way to instantiate the new object using Object.create()
+var jeff = Object.create(person, {
+  firstName: { value: "Jeff" },
+  lastName: { value: "Jordan" }
+});
+```
+
+##### Create an instance of an object using a constructor function and the [new keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+```js
+function Person() = {
+  getName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Create an instance of the person object
+var jeff = new Person();
+
+// Assign values to the newly created object
+jeff.firstName = "Jeff";
+jeff.lastName = "Jordan";
+```
+
+
+
 #### Copy an object
 ##### [Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 ```js
