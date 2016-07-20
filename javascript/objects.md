@@ -39,7 +39,7 @@ var jeff = Object.create(person, {
 ___
 <br>
 
-##### Create an instance of an object using a constructor function and the [new keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+#### Create an instance of an object using a constructor function and the [new keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 *The object that gets created gets all properties and methods from the constructor function at the time of its creation, but if any properties or methods are added to the constructor function at a later time, the new object does not inherit those. It will only inherit properties and methods that are added to the constructor's prototype object.*
 ```js
 // Constructor function. The properties and methods defined within it are added to the instance when it gets created.
@@ -76,6 +76,11 @@ ___
 
 #### Check if an object is an instance of a specified object
 ```js
+function Person() {
+  // Add initialization properties and methods
+};
+var jeff = new Person();
+
 jeff instanceof Person
 // Returns: true
 ```
@@ -86,6 +91,11 @@ ___
 
 #### Determine the instance's constructor function's name
 ```js
+function Person() {
+  // Add initialization properties and methods
+};
+var jeff = new Person();
+
 jeff.constructor.name
 // Returns: "Person"
 ```
@@ -96,9 +106,18 @@ ___
 
 #### Determine if a property belongs to the instance or is inherited
 ```js
+function Person() {
+  // Add initialization properties and methods
+};
+var jeff = new Person();
+Person.prototype.greet = function(){
+  return "Hello!";
+};
+jeff.firstName = "Jeffrey";
+
 jeff.hasOwnProperty("firstName"); // Property was defined on the instance
 // Returns: true
-jeff.hasOwnProperty("introduceMyself"); // Property was defined on the prototype object for the constructor
+jeff.hasOwnProperty("greet"); // Property was defined on the prototype object for the constructor
 // Returns: false
 ```
 
@@ -108,8 +127,15 @@ ___
 
 #### Overwrite prototype properties for a specified instance
 ```js
+function Person() {
+  // Add initialization properties and methods
+};
+Person.prototype.profession = "Web Developer";
+var jeff = new Person();
+
 jeff.profession; // Displays the `profession` property as defined on the constructor's prototype object
 // Returns: "Web Developer"
+
 jeff.profession = "Software Development Engineer"; // Changes the `profession` property on the specified instance 
 jeff.profession;
 // Returns: "Software Development Engineer"
