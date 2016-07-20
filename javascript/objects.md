@@ -142,7 +142,7 @@ jeff.profession;
 ```
 
 <br>
-__
+___
 <br>
 
 #### Copy an object
@@ -164,6 +164,9 @@ console.log(thirdObject); // Returns { num: 1000 }
 ```
 
 <br>
+___
+<br>
+
 #### Determine if an object contains a specified property
 ##### [in operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
 ```js
@@ -180,6 +183,9 @@ obj.str !== undefined;
 ```
 
 <br>
+___
+<br>
+
 #### Determine if an object contains a specified property (not inherited)
 ##### [hasOwnProperty()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 ```js
@@ -189,6 +195,9 @@ obj.hasOwnProperty("str");
 ```
 
 <br>
+___
+<br>
+
 #### Loop through properties of an object
 ##### [for in loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 ```js
@@ -210,6 +219,9 @@ for (var prop in obj) {
 ```
 
 <br>
+___
+<br>
+
 #### Remove a property from an object
 ##### [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 ```js
