@@ -63,6 +63,47 @@ jeff.lastName = "Jordan";
 ___
 <br>
 
+#### Setting public and private properties and methods on a constructor
+*Properties and methods within a constructor can be made private by using variable scope and declaring them without the `this` keyword. If they need to be accessed, a setter or getter function will be necessary.*
+```js
+function Person() {
+  var _profession = "Web Developer";
+
+  // Getter method that returns a private property
+  this.getProfession = function() {
+    return _profession;
+  }
+  
+  // Setter method that changes a private property and returns the newly set property. This allows for validation to occur before setting the new value.
+  this.setProfession = function(profession) {
+    if (typeof profession === "string"){
+      return _profession = profession;
+    } else {
+      throw new Error("Profession must be a string");
+    }
+  }
+};
+
+// Create an instance of the person object
+var jeff = new Person();
+
+// Get the profession of the person
+jeff.getProfession();
+// Returns: "Web Developer"
+
+// Set the profession of the person
+jeff.setProfession("Software Development Engineer");
+// Returns: "Software Development Engineer"
+
+// Get the profession of the person
+jeff.getProfession();
+// Returns: "Software Development Engineer"
+```
+
+<br>
+___
+<br>
+
 #### Add a property or method to the constructor's prototype object
 *Any properties and methods that are added to the prototype object are automatically inherited by any instances based on the constructor.*
 ```js
