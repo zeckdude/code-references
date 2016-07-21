@@ -79,6 +79,7 @@
 | JavaScript Garden | http://bonsaiden.github.io/JavaScript-Garden/ |
 | JavaScript Reference Cheat Sheet | http://codepen.io/davidicus/pen/trhme |
 | JavaScript in Depth | http://xahlee.info/js/js.html |
+| ES6 features | http://es6-features.org/ |
 
 <br>
 
