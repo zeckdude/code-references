@@ -19,6 +19,7 @@
 | Web Training Centre | http://www.webtrainingcentre.com/programming-exercises/ |
 | Martyr2’s Mega Project List | http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/ |
 | Codecademy Web Projects | https://www.codecademy.com/en/tracks/projects |
+| Functional JS Workshop | https://github.com/timoxley/functional-javascript-workshop |
 
 
 <br>
