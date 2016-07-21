@@ -107,8 +107,7 @@ Commit files to the repo
 |------------------|-------|------------|
 | `git commit -m "Provide an informative commit message here"`  | Commits all staged files  | None       |
 | `git commit -a -m "Provide an informative commit message here"`  | Stages all tracked files and commits them  | None       |
-| `git commit --amend -m "New commit message"`  | Add all staged files to the previous commit and override 
-the previous commit message with a new one (optional)  | None       |
+| `git commit --amend -m "New commit message"`  | Add all staged files to the previous commit and override the previous commit message with a new one (optional)  | None       |
 
 <br>
 Check the line differences of files in various stages of development
