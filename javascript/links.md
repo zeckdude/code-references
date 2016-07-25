@@ -100,7 +100,6 @@
 |---------------|---------------------------------------------------------------------------------------------------|
 | That JS Dude - Interview Algorithm: Part 1 (Beginner) | http://www.thatjsdude.com/interview/js1.html |
 | That JS Dude - Interview Algorithm: Part 2 (Intermediate) | http://www.thatjsdude.com/interview/js2.html |
-| That JS Dude - Interview Algorithm: Part 2 (Intermediate) | http://www.thatjsdude.com/interview/js2.html |
 
 <br>
 
