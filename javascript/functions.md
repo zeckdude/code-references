@@ -109,5 +109,58 @@ doSomething(...arr); // Equivalent to: doSomething(arr[0], arr[1], arr[2]);
 // true
 ```
 
+<br>
+#### Cache function results by setting a property on the function
+This is accomplished by using a practice known as *memoization* where past return values are saved as properties on the function, so that whenever the function is run, it will check if the cache to see if the function has already been run using the same arguments provided.
+##### [memoization](https://www.sitepoint.com/implementing-memoization-in-javascript/)
+```js
+// Memoization when only one argument needs to be provided (Approach #1 - Using a function property)
+function squareNum(n) {
+  // Initialize the cache as an empty object if it doesn't already exist
+  squareNum.cache = squareNum.cache || {};
+  
+  // Check to see if this value has already been saved in the cache
+  if (!squareNum.cache[n]) {
+    // If not then calculate the value and save it in the cache
+    squareNum.cache[n] = n*n;
+  }
+  
+  return squareNum.cache[n];
+}
+
+// Memoization when only one argument needs to be provided (Approach #2 - Using function closure)
+var squareNum = (function() {
+  var cache = {};
+  
+  function calculate(n) {
+    var calculatedValue;
+  
+    if (n in cache) {
+      calculatedValue = cache[n]
+    } else {
+      calculatedValue = n*n;
+      cache[n] = calculatedValue;
+    }
+    
+    return calculatedValue;
+  }
+  
+  return calculate;
+})();
+
+
+// Memoization when multiple arguments are provided (Approach #1 - Using a function property)
+function addition(a,b) {
+  addition.cache = addition.cache || {};
+  addition.cache[a] = addition.cache[a] || {};
+  
+  if (!addition.cache[a][b]) {
+    addition.cache[a][b] = a+b;
+  }
+  
+  return addition.cache[a][b];
+}
+```
+
 
 
