@@ -113,6 +113,7 @@ doSomething(...arr); // Equivalent to: doSomething(arr[0], arr[1], arr[2]);
 #### Cache function results by setting a property on the function
 This is accomplished by using a practice known as *memoization* where past return values are saved as properties on the function, so that whenever the function is run, it will check if the cache to see if the function has already been run using the same arguments provided.
 ##### [memoization](https://www.sitepoint.com/implementing-memoization-in-javascript/)
+##### [article - Memoizing with Javascript and closure](https://webcloud.info/blog/2014/05/07/memoizing-with-javascript-and-closure-experiment/)
 ```js
 // Memoization when only one argument needs to be provided (Approach #1 - Using a function property)
 function squareNum(n) {
