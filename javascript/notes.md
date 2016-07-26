@@ -292,3 +292,56 @@ Closure is a newly created function (which was returned from another function) t
 ![Closure explained in an image] (https://github.com/zeckdude/code-references/blob/master/img/javascript/definition_closure_kirupa.png)<br>
 *Good representation of closure (Source: Kirupa.com)*
 
+<br>
+
+Example #1:<br>
+```js
+// Function to convert a temperature to another
+function convertTemp(fromTempName, toTempName) {
+  // Common numbers needed to perform conversion calculations 
+  // Notice they are outside of the function being returned, yet they are still accessible by the inner function that gets returned when called from outside of this function, due to closure
+  var a = 1.8;
+  var b = 32;
+  
+  // Return the inner function
+  return function(fromTemp){
+    if (fromTempName === 'celsius' && toTempName === 'fahrenheit') {
+      return fromTemp * a + b;
+    }
+    
+    if (fromTempName === 'fahrenheit' && toTempName === 'celsius') {
+      return (fromTemp - b) / a;
+    }
+  }
+}
+
+celsiusToFahrenheit = convertTemp('celsius', 'fahrenheit');
+fahrenheitToCelsius = convertTemp('fahrenheit', 'celsius');
+
+celsiusToFahrenheit(30); // Returns 86;
+fahrenheitToCelsius(86); // Returns 30;
+```
+
+<br>
+
+Example #2:<br>
+```js
+// Function to iterate a count every time the inner function is called from outside of this function
+function counter(start){
+  i = start;
+  return function() {
+   // Due to closure, each time the variable `count` (which has a reference to this inner function) is called, it is able to access the value of i from the last time the function was called and then iterate it.
+   return i++;
+  }
+}
+
+// Start a counter at 1
+var count = counter(1);
+
+count();
+// Returns: 1
+
+count();
+// Returns: 2
+```
+
