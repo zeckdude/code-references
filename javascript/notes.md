@@ -318,8 +318,11 @@ function convertTemp(fromTempName, toTempName) {
 celsiusToFahrenheit = convertTemp('celsius', 'fahrenheit');
 fahrenheitToCelsius = convertTemp('fahrenheit', 'celsius');
 
-celsiusToFahrenheit(30); // Returns 86;
-fahrenheitToCelsius(86); // Returns 30;
+celsiusToFahrenheit(30); 
+// Returns 86;
+
+fahrenheitToCelsius(86); 
+// Returns 30;
 ```
 
 <br>
