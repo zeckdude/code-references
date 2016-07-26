@@ -150,11 +150,20 @@ Some things to keep in mind when declaring variables and functions within a func
   
 <br>
 
-In order to avoid clashing with other variables in the global scope that are defined elsewhere, wrap all code in an anonymous self-executing function, a.k.a. an [immediately invoked function expression (IIFE)](https://www.kirupa.com/html5/immediately_invoked_function_expressions_iife.htm). This will keep all variables declared within it in the function's scope as opposed to the global scope.
+In order to avoid clashing with other variables in the global scope that are defined elsewhere, wrap all code in an anonymous self-executing function, a.k.a. an [immediately invoked function expression (IIFE)](https://www.kirupa.com/html5/immediately_invoked_function_expressions_iife.htm). This will keep all variables declared within it in the function's scope as opposed to the global scope. <br><br>
+
+Use [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) (`"use strict;"`) to make the code more secure by throwing errors when the following conditions exist:
+1. Using a variable, without declaring it (which would normally create a global variable)
+2. Deleting a variable
+3. Using duplicate parameter names
+4. Writing to a read-only property
+5. Deleting an undeletable property
+6. Using the string "arguments" as a variable name
 
 ```js
 (function() {
-	// Put code here
+  "use strict";
+  // Put code here
 })();
 ```
 
