@@ -36,3 +36,15 @@ var input = form["search"];
 ___
 <br>
 
+#### Reset all form fields back to their initial values specified in the HTML
+##### [reset()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset)
+```js
+var form = document.forms["search"];
+form.reset();
+// Resets all form fields for the specified form
+```
+
+<br>
+___
+<br>
+
