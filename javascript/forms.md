@@ -28,7 +28,14 @@ var input = form.querySelector("[name=searchBox]");
 ##### [Document.forms](https://developer.mozilla.org/en-US/docs/Web/API/Document/forms)
 ```js
 var form = document.forms["search"];
-var input = form["search"];
+var input = form["searchBox"];
+// Returns: Reference to a matching Element object
+```
+
+##### [form.elements](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements)
+```js
+var form = document.forms["search"];
+var input = form.elements["searchBox"];
 // Returns: Reference to a matching Element object
 ```
 
@@ -42,6 +49,48 @@ ___
 var form = document.forms["search"];
 form.reset();
 // Resets all form fields for the specified form
+```
+
+<br>
+___
+<br>
+
+#### Set the action attribute on a form
+##### [form.action](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/action)
+```js
+var form = document.forms["search"];
+form.action = "/alt/search";
+// Sets the action attribute for the specified form
+```
+
+<br>
+___
+<br>
+
+#### Perform an action when a form field is focused on
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+```js
+var form = document.forms["search"];
+var input = form["searchBox"];
+input.addEventListener('focus', function() {
+  // Perform action
+}, false);
+// Perform an action when the form field becomes active
+```
+
+<br>
+___
+<br>
+
+#### Perform an action when a form field is blurred
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+```js
+var form = document.forms["search"];
+var input = form["searchBox"];
+input.addEventListener('blur', function() {
+  // Perform action
+}, false);
+// Perform an action when the form field stops being active
 ```
 
 <br>
