@@ -97,3 +97,58 @@ input.addEventListener('blur', function() {
 ___
 <br>
 
+#### Perform an action when a form field value has been changed and is no longer in focus
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+```js
+var form = document.forms["search"];
+var input = form["searchBox"];
+input.addEventListener('change', function() {
+  // Perform action
+}, false);
+// Perform an action when the form field's value has been changed and the field is no longer in focus
+```
+
+<br>
+___
+<br>
+
+#### Perform an action when a form is submitted
+##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+```js
+var form = document.forms["search"];
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Perform action
+}, false);
+// Perform an action when the form is submitted
+```
+
+<br>
+___
+<br>
+
+#### Get the value of an input field
+##### [input.value](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement)
+```js
+var form = document.forms["search"];
+var input = form["searchBox"];
+input.value;
+// Returns: The value of the input field
+```
+
+<br>
+___
+<br>
+
+#### Set the value of an input field
+##### [input.value](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement)
+```js
+var form = document.forms["search"];
+var input = form["searchBox"];
+input.value = "A new value";
+// Sets: The value of the input field
+```
+
+<br>
+___
+<br>
