@@ -21,6 +21,7 @@
 | Codecademy Web Projects | https://www.codecademy.com/en/tracks/projects |
 | Functional JS Workshop | https://github.com/timoxley/functional-javascript-workshop |
 | Terminal - Javascripting | https://github.com/sethvincent/javascripting |
+| Exercism.io | http://exercism.io/ |
 
 
 <br>
