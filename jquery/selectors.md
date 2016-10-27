@@ -11,40 +11,40 @@
 | [._class_](sel_class.asp) | `$(".intro")` | All elements with class="intro" |
 | [._class,_._class_](sel_multiple_classes.asp) | `$(".intro,.demo")` | All elements with the class "intro" or "demo" |
 | [_element_](sel_element.asp) | `$("p")` | All `<p>` elements |
-| [_el1_,_el2_,_el3_](sel_multiple_sel.asp) | `$("h1,div,p")` | All <h1>, <div> and <p> elements |
-| [:first](sel_first.asp) | `$("p:first")` | The first <p> element |
-| [:last](sel_last.asp) | `$("p:last")` | The last <p> element |
-| [:even](sel_even.asp) | `$("tr:even")` | All even <tr> elements |
-| [:odd](sel_odd.asp) | `$("tr:odd")` | All odd <tr> elements |
-| [:first-child](sel_firstchild.asp) | `$("p:first-child")` | All <p> elements that are the first child of their parent |
-| [:first-of-type](sel_firstoftype.asp) | `$("p:first-of-type")` | All <p> elements that are the first <p> element of their parent |
-| [:last-child](sel_lastchild.asp) | `$("p:last-child")` | All <p> elements that are the last child of their parent |
-| [:last-of-type](sel_lastoftype.asp) | `$("p:last-of-type")` | All <p> elements that are the last <p> element of their parent |
-| [:nth-child(_n_)](sel_nthchild.asp) | `$("p:nth-child(2)")` | All <p> elements that are the 2nd child of their parent |
-| [:nth-last-child(_n_)](sel_nthlastchild.asp) | `$("p:nth-last-child(2)")` | All <p> elements that are the 2nd child of their parent, counting from the last child |
-| [:nth-of-type(_n_)](sel_nthoftype.asp) | `$("p:nth-of-type(2)")` | All <p> elements that are the 2nd <p> element of their parent |
-| [:nth-last-of-type(_n_)](sel_nthlastoftype.asp) | `$("p:nth-last-of-type(2)")` | All <p> elements that are the 2nd <p> element of their parent, counting from the last child |
-| [:only-child](sel_onlychild.asp) | `$("p:only-child")` | All <p> elements that are the only child of their parent |
-| [:only-of-type](sel_onlyoftype.asp) | `$("p:only-of-type")` | All <p> elements that are the only child, of its type, of their parent |
-| [parent > child](sel_parent_child.asp) | `$("div > p")` | All <p> elements that are a direct child of a <div> element |
-| [parent descendant](sel_parent_descendant.asp) | `$("div p")` | All <p> elements that are descendants of a <div> element |
-| [element + next](sel_previous_next.asp) | `$("div + p")` | The <p> element that are next to each <div> elements |
-| [element ~ siblings](sel_previous_siblings.asp) | `$("div ~ p")` | All <p> elements that are siblings of a <div> element |
+| [_el1_,_el2_,_el3_](sel_multiple_sel.asp) | `$("h1,div,p")` | All `<h1>`, `<div>` and `<p>` elements |
+| [:first](sel_first.asp) | `$("p:first")` | The first `<p>` element |
+| [:last](sel_last.asp) | `$("p:last")` | The last `<p>` element |
+| [:even](sel_even.asp) | `$("tr:even")` | All even `<tr>` elements |
+| [:odd](sel_odd.asp) | `$("tr:odd")` | All odd `<tr>` elements |
+| [:first-child](sel_firstchild.asp) | `$("p:first-child")` | All `<p>` elements that are the first child of their parent |
+| [:first-of-type](sel_firstoftype.asp) | `$("p:first-of-type")` | All `<p>` elements that are the first `<p>` element of their parent |
+| [:last-child](sel_lastchild.asp) | `$("p:last-child")` | All `<p>` elements that are the last child of their parent |
+| [:last-of-type](sel_lastoftype.asp) | `$("p:last-of-type")` | All `<p>` elements that are the last `<p>` element of their parent |
+| [:nth-child(_n_)](sel_nthchild.asp) | `$("p:nth-child(2)")` | All `<p>` elements that are the 2nd child of their parent |
+| [:nth-last-child(_n_)](sel_nthlastchild.asp) | `$("p:nth-last-child(2)")` | All `<p>` elements that are the 2nd child of their parent, counting from the last child |
+| [:nth-of-type(_n_)](sel_nthoftype.asp) | `$("p:nth-of-type(2)")` | All `<p>` elements that are the 2nd `<p>` element of their parent |
+| [:nth-last-of-type(_n_)](sel_nthlastoftype.asp) | `$("p:nth-last-of-type(2)")` | All `<p>` elements that are the 2nd `<p>` element of their parent, counting from the last child |
+| [:only-child](sel_onlychild.asp) | `$("p:only-child")` | All `<p>` elements that are the only child of their parent |
+| [:only-of-type](sel_onlyoftype.asp) | `$("p:only-of-type")` | All `<p>` elements that are the only child, of its type, of their parent |
+| [parent > child](sel_parent_child.asp) | `$("div > p")` | All `<p>` elements that are a direct child of a `<div>` element |
+| [parent descendant](sel_parent_descendant.asp) | `$("div p")` | All `<p>` elements that are descendants of a `<div>` element |
+| [element + next](sel_previous_next.asp) | `$("div + p")` | The `<p>` element that are next to each `<div>` elements |
+| [element ~ siblings](sel_previous_siblings.asp) | `$("div ~ p")` | All `<p>` elements that are siblings of a `<div>` element |
 | [:eq(_index_)](sel_eq.asp) | `$("ul li:eq(3)")` | The fourth element in a list (index starts at 0) |
 | [:gt(_no_)](sel_gt.asp) | `$("ul li:gt(3)")` | List elements with an index greater than 3 |
 | [:lt(_no_)](sel_lt.asp) | `$("ul li:lt(3)")` | List elements with an index less than 3 |
 | [:not(_selector_)](sel_not.asp) | `$("input:not(:empty)")` | All input elements that are not empty |
-| [:header](sel_header.asp) | `$(":header")` | All header elements <h1>, <h2> ... |
+| [:header](sel_header.asp) | `$(":header")` | All header elements `<h1>`, `<h2>` ... |
 | [:animated](sel_animated.asp) | `$(":animated")` | All animated elements |
 | [:focus](sel_focus.asp) | `$(":focus")` | The element that currently has focus |
 | [:contains(_text_)](sel_contains.asp) | `$(":contains('Hello')")` | All elements which contains the text "Hello" |
-| [:has(_selector_)](sel_has.asp) | `$("div:has(p)")` | All <div> elements that have a <p> element |
+| [:has(_selector_)](sel_has.asp) | `$("div:has(p)")` | All `<div>` elements that have a `<p>` element |
 | [:empty](sel_empty.asp) | `$(":empty")` | All elements that are empty |
 | [:parent](sel_parent.asp) | `$(":parent")` | All elements that are a parent of another element |
-| [:hidden](sel_hidden.asp) | `$("p:hidden")` | All hidden <p> elements |
+| [:hidden](sel_hidden.asp) | `$("p:hidden")` | All hidden `<p>` elements |
 | [:visible](sel_visible.asp) | `$("table:visible")` | All visible tables |
 | [:root](sel_root.asp) | `$(":root")` | The document's root element |
-| [:lang(_language_)](sel_lang.asp) | `$("p:lang(de)")` | All <p> elements with a lang attribute value starting with "de" |
+| [:lang(_language_)](sel_lang.asp) | `$("p:lang(de)")` | All `<p>` elements with a lang attribute value starting with "de" |
 | [[_attribute_]](sel_attribute.asp) | `$("[href]")` | All elements with a href attribute |
 | [[_attribute_=_value_]](sel_attribute_equal_value.asp) | `$("[href='default.htm']")` | All elements with a href attribute value equal to "default.htm" |
 | [[_attribute_!=_value_]](sel_attribute_notequal_value.asp) | `$("[href!='default.htm']")` | All elements with a href attribute value not equal to "default.htm" |
