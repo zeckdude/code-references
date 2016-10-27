@@ -67,4 +67,4 @@
 | [:disabled](http://www.w3schools.com/jquery/sel_input_disabled.asp) | `$(":disabled")` | All disabled input elements |
 | [:selected](http://www.w3schools.com/jquery/sel_input_selected.asp) | `$(":selected")` | All selected input elements |
 | [:checked](http://www.w3schools.com/jquery/sel_input_checked.asp) | `$(":checked")` | All checked input elements |
-
+*Source: http://www.w3schools.com/jquery/jquery_ref_selectors.asp*
