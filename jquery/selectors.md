@@ -49,7 +49,7 @@
 | [[_attribute_=_value_]](sel_attribute_equal_value.asp) | `$("[href='default.htm']")` | All elements with a href attribute value equal to "default.htm" |
 | [[_attribute_!=_value_]](sel_attribute_notequal_value.asp) | `$("[href!='default.htm']")` | All elements with a href attribute value not equal to "default.htm" |
 | [[_attribute_$=_value_]](sel_attribute_end_value.asp) | `$("[href$='.jpg']")` | All elements with a href attribute value ending with ".jpg" |
-| [[_attribute_|=_value_]](sel_attribute_prefix_value.asp) | `$("[title|='Tomorrow']")` | All elements with a title attribute value equal to 'Tomorrow', or starting with 'Tomorrow' followed by a hyphen |
+| [[_attribute_&#124;=_value_]](sel_attribute_prefix_value.asp) | `$("[title|='Tomorrow']")` | All elements with a title attribute value equal to 'Tomorrow', or starting with 'Tomorrow' followed by a hyphen |
 | [[_attribute_^=_value_]](sel_attribute_beginning_value.asp) | `$("[title^='Tom']")` | All elements with a title attribute value starting with "Tom" |
 | [[_attribute_~=_value_]](sel_attribute_contains_value.asp) | `$("[title~='hello']")` | All elements with a title attribute value containing the specific word "hello" |
 | [[_attribute*_=_value_]](sel_attribute_contains_string_value.asp) | `$("[title*='hello']")` | All elements with a title attribute value containing the word "hello" |
