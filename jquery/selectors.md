@@ -6,11 +6,11 @@
 
 | Selector | Example | Selects |
 |---------------|-------|--------|
-| [*](sel_all.asp) | $("*") | All elements |
+| [*](sel_all.asp) | `$("*")` | All elements |
 | [#_id_](sel_id.asp) | $("#lastname") | The element with id="lastname" |
 | [._class_](sel_class.asp) | $(".intro") | All elements with class="intro" |
 | [._class,_._class_](sel_multiple_classes.asp) | $(".intro,.demo") | All elements with the class "intro" or "demo" |
-| [_element_](sel_element.asp) | $("p") | All <p> elements |
+| [_element_](sel_element.asp) | $("p") | `All <p> elements` |
 | [_el1_,_el2_,_el3_](sel_multiple_sel.asp) | $("h1,div,p") | All <h1>, <div> and <p> elements |
 | [:first](sel_first.asp) | $("p:first") | The first <p> element |
 | [:last](sel_last.asp) | $("p:last") | The last <p> element |
