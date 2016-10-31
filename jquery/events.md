@@ -7,9 +7,11 @@ $( document ).ready(function() {
   // Handler for .ready() called.
 });
 
+// Equivalent to:
 $(function() {
   // Handler for .ready() called.
 });
+
 // Action: Runs the code within the anonymous function when the DOM has finished loading
 ```
 
