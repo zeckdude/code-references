@@ -44,10 +44,12 @@ var jeff = Object.create(person, {
 var Calendar = {
   status: false,
   
+  // Initialize method that will run automatically when the object is instantiated
   init: function() {
     this.alertStatus();
     this.onWindowLoad();
 
+    // Need to return the value of `this` since this method is run automatically when the object gets instantiated
     return this;
   },
 
@@ -56,12 +58,13 @@ var Calendar = {
   },
 
   onWindowLoad: function() {
+    // Need to bind the value of `this` as the object, since `this` inside the event handler's callback function is the event itself otherwise
     $(window).on('load', _.bind(function() {
       alert('window loaded');
       alert('Status from within onWindowLoad() is ' + this.status);
     }, this));
   }
-}.init();
+}.init(); // Run the initialize method right away when the object is instantiated
 
 var myCalendar = Object.create(Calendar);
 ```
@@ -97,6 +100,7 @@ jeff.lastName = "Jordan";
 function Calendar() {
   this.status = true;
 
+  // Initialize method that will run automatically when the object is instantiated
   this.init = function () {
     this.alertStatus();
     this.onWindowLoad();
@@ -107,13 +111,14 @@ function Calendar() {
   };
 
   this.onWindowLoad = function () {
+    // Need to bind the value of `this` as the object, since `this` inside the event handler's callback function is the event itself otherwise
     $(window).on('load', _.bind(function () {
       alert('window loaded');
       alert('Status from within onWindowLoad() is ' + this.status);
     }, this));
   };
 
-  // Run initialize
+  // Run the initialize method right away when the object is instantiated
   this.init();
 }
 
