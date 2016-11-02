@@ -13,7 +13,7 @@ ___
 <br>
 
 #### Create an instance of an object using `Object.create()` 
-##### [Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create).
+##### [Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 *The object that gets created inherits all properties and methods within its prototype chain. If properties or methods on any objects, that it inherits from, changes then those will change for this object as well.*
 ```js
 var person = {
