@@ -37,6 +37,36 @@ var jeff = Object.create(person, {
 ```
 
 <br>
+
+*In order to run an initialize method automatically whenever a new instance of the object is created, the object must call it's own initialize method and the method must return the value of `this` so the instance still has a reference to the object. Also, keep in mind that within an event handler the value of `this` is actually the event, so in order to refer to the object's properties from within an event handler's callback function, you must bind it to the instance.*
+
+```
+var Calendar = {
+  status: false,
+  
+  init: function() {
+    this.alertStatus();
+    this.onWindowLoad();
+
+    return this;
+  },
+
+  alertStatus: function() {
+    alert('Status from within alertStatus() is ' + this.status);
+  },
+
+  onWindowLoad: function() {
+    $(window).on('load', _.bind(function() {
+      alert('window loaded');
+      alert('Status from within onWindowLoad() is ' + this.status);
+    }, this));
+  }
+}.init();
+
+var myCalendar = Object.create(Calendar);
+```
+
+<br>
 ___
 <br>
 
@@ -57,6 +87,37 @@ var jeff = new Person("Mr.");
 // Assign values to the newly created object
 jeff.firstName = "Jeff";
 jeff.lastName = "Jordan";
+```
+
+<br>
+
+*In order to run an initialize method automatically whenever a new instance of the constructor is created, the constructor must call it's own initialize method. Also, keep in mind that within an event handler the value of `this` is actually the event, so in order to refer to the object's properties from within an event handler's callback function, you must bind it to the instance.*
+
+```
+function Calendar() {
+  this.status = true;
+
+  this.init = function () {
+    this.alertStatus();
+    this.onWindowLoad();
+  };
+
+  this.alertStatus = function () {
+    alert('Status from within alertStatus() is ' + this.status);
+  };
+
+  this.onWindowLoad = function () {
+    $(window).on('load', _.bind(function () {
+      alert('window loaded');
+      alert('Status from within onWindowLoad() is ' + this.status);
+    }, this));
+  };
+
+  // Run initialize
+  this.init();
+}
+
+var myCalendar = new Calendar();
 ```
 
 <br>
