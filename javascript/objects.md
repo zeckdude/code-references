@@ -346,3 +346,25 @@ delete obj.str;
 // Returns (if the removal was succesful): true
 // Contains: {num: 1, bool: true}
 ```
+
+<br>
+___
+<br>
+
+#### Merge properties of two objects
+##### [spread operator - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+```js
+var objOne = {
+  name: 'Andrew',
+  location: 'Philadelphia'
+}
+var objTwo = {
+  age: 25,
+  ...objOne
+}
+// Contains: {
+  "age": 25,
+  "location": "Philadelphia",
+  "name": "Andrew"
+}
+```
