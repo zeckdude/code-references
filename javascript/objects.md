@@ -362,6 +362,7 @@ var objTwo = {
   age: 25,
   ...objOne
 }
+objTwo;
 // Contains: {
   "age": 25,
   "location": "Philadelphia",
