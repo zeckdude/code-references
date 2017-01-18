@@ -402,6 +402,99 @@ person.on("walking", function(e) { // Listen for any time that the object trigge
 person.off("walking"); // Remove the listener for the custom event 
 ```
 
+##### Communicating between Views
+```js
+// Creating the model
+var Venue = Backbone.Model.extend();
+// Creating the collection
+var Venues = Backbone.Collection.extend({
+	model: Venue
+});
+
+// Creating the Venue View
+var VenueView = Backbone.View.extend({
+	tagName: "li",
+
+	initialize: function(options){
+		this.bus = options.bus; // Setting a property on the view as a `bus` object reference to communicate with other views
+	},
+
+	events: {
+		"click": "onClick",
+	},
+
+	onClick: function(){
+		this.bus.trigger("venueSelected", this.model); // When the venue is clicked, trigger a custom event on the `bus` property on the view and pass the model of the clicked view
+	},
+
+	render: function(){
+		this.$el.html(this.model.get("name"));
+		return this;
+	}
+});
+
+// Creating the Venues View
+var VenuesView = Backbone.View.extend({
+	tagName: "ul",
+	id: "venues",
+
+	initialize: function(options){
+		this.bus = options.bus; // Setting a property on the view as a `bus` object reference to communicate with other views
+	},
+
+	render: function(){
+		var self = this;
+
+		this.model.each(function(venue){
+			var view = new VenueView({ model: venue, bus: self.bus }); // For each model in the collection for this view, create a new view for each venue and pass in the `bus` object reference to communicate with other views
+			self.$el.append(view.render().$el);
+		});
+
+		return this;
+	}
+});
+
+// Creating the Maps View
+var MapView = Backbone.View.extend({
+	el: "#map-container",
+
+	initialize: function(options){
+		this.bus = options.bus; // Setting a property on the view as a `bus` object reference to communicate with other views
+		this.bus.on("venueSelected", this.onVenueSelected, this); // Listen for the custom event to be triggered on the `bus` property which is being referenced
+	},
+
+	onVenueSelected: function(venue){
+		this.model = venue; // Get the model from the Venue view that is being passed along with the custom event that was triggered and called this method
+		this.render(); // Render the map view
+	},
+
+	render: function(){
+		if (this.model) // If the Map View has a `model` property, then add the model name to the html
+			this.$("#venue-name").html(this.model.get("name"));
+		return this;
+	}
+})
+
+var bus = _.extend({}, Backbone.Events); // Create the `bus` object and add in all Backbone events
+
+// Creating the collection
+var venues = new Venues([
+	new Venue({ name: "30 Mill Espresso" }),
+	new Venue({ name: "Platform Espresso" }),
+	new Venue({ name: "Mr Foxx" })
+	]);
+
+// Creating the Venues View and passing in the venues collection and the `bus` reference to communicate between views
+var venuesView = new VenuesView({ model: venues, bus: bus });
+// Render the Venues View to the html
+$("#venues-container").html(venuesView.render().$el);
+
+// Creating the Map View and pass in the `bus` reference to communicate between views
+var mapView = new MapView({ bus: bus });
+// Render the map view to the html
+mapView.render();
+```
+
 ##### Using Templates - Underscore.js
 *In JS:*
 ```js
