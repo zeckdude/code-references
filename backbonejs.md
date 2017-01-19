@@ -517,6 +517,88 @@ var songView = new SongView({ el: "#container", model: song });
 songView.render();
 ```
 
+### Routes
+
+##### Setting up URL patterns that route to specific methods
+```js 
+var AlbumsView = Backbone.View.extend({
+  render: function () {
+    this.$el.html('Albums View');
+    return this;
+  }
+});
+
+var AlbumView = Backbone.View.extend({
+  render: function() {
+    // Fix this later since `this.albumId` doesnt work
+    this.$el.html('Album View with the ID of ' + this.albumId);
+    return this;
+  }
+});
+
+var PageNotFoundView = Backbone.View.extend({
+  render: function() {
+    this.$el.html('Page not Found');
+    return this;
+  }
+});
+
+var AppRouter = Backbone.Router.extend({
+  routes: { // Sets up the routes
+    // matches `/albums`
+    'albums': 'viewAlbums', // Call the viewAlbums() method when the `/albums` URL is accessed
+    // matches `/albums/2`
+    'albums/:albumId': 'viewAlbumById', // Call the viewAlbumById() method when the `/albums/` URL followed by a number is accessed. The number is then passed to the method specified.
+    'artists': 'viewArtists',
+    'genres': 'viewGenres',
+    // matches `/download/file.pdf`
+    'download/*url': 'downloadFile',
+    // matches any other non-specified route
+    '*other': 'viewPageNotFound' // Call the viewPageNotFound() method when any URL pattern not already specified above is accessed
+  },
+
+  viewAlbums: function() {
+    var view = new AlbumsView({ el: '#container'}); // Create a new Albums View and specify the element that the view should appear in
+    view.render(); // Render the view
+  },
+
+  viewAlbumById: function(albumId) {
+    var view = new AlbumView({
+      el: '#container',
+      albumId: 'sdfsdf'
+    });
+    view.render();
+  },
+
+  downloadFile: function(url) {
+    alert('File to download: ' + url);
+  },
+
+  viewPageNotFound: function() {
+    var view = new PageNotFoundView({el: '#container'});
+    view.render();
+  }
+});
+
+var router = new AppRouter();
+// Tell Backbone to start monitoring address changes
+Backbone.history.start();
+
+var NavView = Backbone.View.extend({
+  events: {
+    'click': 'onClick'
+  },
+
+  onClick: function(e) {
+    var $li = $(e.target);
+    // Navigate to url specified
+    router.navigate($li.attr('data-url'), { trigger: true });
+  }
+});
+
+var navView = new NavView({el: '#nav'});
+```
+
 *In HTML:*
 ```html
 <!DOCTYPE html>
