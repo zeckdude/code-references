@@ -6,6 +6,7 @@
 | Backbone.js Tutorials | https://cdnjs.com/libraries/backbone.js/tutorials/ |
 | Addy Osmani - Backbone Fundamentals | https://addyosmani.com/backbone-fundamentals/ |
 | 9bit Studios - Backbone.js Tutorials | http://www.9bitstudios.com/page/2/?s=backbone |
+| Udemy - Learn BackboneJS from Scratch | https://www.udemy.com/backbonejs-tutorial |
 
 
 ### Models
