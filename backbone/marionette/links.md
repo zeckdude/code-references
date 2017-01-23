@@ -1,6 +1,4 @@
-# Backbone.js
-
-### Links
+# Links
 | Title          | URL                                                            |
 |---------------|-----------------------------------------------------------------|
 | MarionetteJS.com - Resources | http://marionettejs.com/additional-resources/ |
