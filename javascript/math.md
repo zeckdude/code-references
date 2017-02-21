@@ -1,5 +1,16 @@
 ## Math
 
+#### Get the square root of a number
+##### [Math.sqrt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)
+```js
+Math.sqrt(25);
+// Returns: 5
+```
+
+<br>
+___
+<br>
+
 #### Get the absolute value of a number
 ##### [Math.abs()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
 ```js
