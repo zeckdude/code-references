@@ -7,6 +7,7 @@
 | Checkout local copies of pull requests from GitHub remotes | https://gist.github.com/gnarf/5406589                                                       |
 | Checkout branch on a fork                                  | https://help.github.com/articles/configuring-a-remote-for-a-fork/                           |
 | Commonly used commands                                  | https://github.com/git-tips/tips                           |
+| Interactive Tutorial: Learn Git Branching  | http://learngitbranching.js.org/ |
 
 
 ## Git Glossary
