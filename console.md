@@ -5,7 +5,7 @@
 #### Return any of the last five selected DOM elements in the Elements tab
 ##### [console selectors](https://developer.chrome.com/devtools/docs/commandline-api#0-4)
 ```js
-$0 // Last element selected
+$0 // Last element selected 
 $1 // Second to last element selected
 $2 // Third to last element selected
 $3 // Fourth to last element selected
