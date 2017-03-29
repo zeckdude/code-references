@@ -84,11 +84,18 @@ Pull a remote branch
 | `git fetch && git checkout <branch-name>`  | None  | None       |
 
 <br>
-Find the commit where a bug was introduced (Need a commit hash of when it works and when it isnt)
+Find the commit where a bug was introduced (Need a commit hash of when it works and when it doesnt work)
 
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
-| `git bisect start`<br>`git bisect good master // commit hash where the problem is not occurring`<br>`git bisect bad 50a2ea02 // commit hash where the problem is occurring`<br><br>`// As each commit is checked out, test for it and tell git if it is occurring or not`<br>`git bisect good`<br>`git bisect bad`<br>`git reset // Terminates git bisect operations`   | None  | None       |
+| `git bisect start`<br>`git bisect good master // commit hash where the problem is not occurring`<br>`git bisect bad 50a2ea02 // commit hash where the problem is occurring`<br><br>`// As each commit is checked out, test for it and tell git if it is occurring or not`<br>`git bisect good // problem is not occurring`<br>`git bisect bad // problem is occurring`<br>`git reset // Terminates git bisect operations`   | Detailed Instructions: http://webchick.net/node/99  | None       |
+
+<br>
+Find the commit where a bug was fixed (Need a commit hash of when it works and when it doesnt work)
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git bisect start`<br>`git bisect bad master // commit hash where the problem is not occurring`<br>`git bisect good 50a2ea02 // commit hash where the problem is occurring`<br><br>`// As each commit is checked out, test for it and tell git if it is occurring or not`<br>`git bisect good // problem is occurring`<br>`git bisect bad // problem is not occurring`<br>`git reset // Terminates git bisect operations`   | The idea is to reverse the process of git bisect and tell it that it is `good` when it doesn't work and it is `bad` when it does work.<br>Detailed Instructions: http://stackoverflow.com/a/15407206/83916  | None       |
 
 <br>
 View the latest commits in the repo
