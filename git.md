@@ -88,7 +88,7 @@ Find the commit where a bug was introduced (Need a commit hash of when it works 
 
 | Command          | Notes | Screenshot |
 |------------------|-------|------------|
-| `git bisect start`<br>`git bisect good 40120729 // commit hash where the problem is not occurring`<br>`git bisect bad // commit hash where the problem is occurring`<br><br>`// As each commit is checked out, test for it and tell git if it is occurring or not`<br>`git bisect good`<br>`git bisect bad`<br>`git reset // Terminates git bisect operations`   | None  | None       |
+| `git bisect start`<br>`git bisect good master // commit hash where the problem is not occurring`<br>`git bisect bad 50a2ea02 // commit hash where the problem is occurring`<br><br>`// As each commit is checked out, test for it and tell git if it is occurring or not`<br>`git bisect good`<br>`git bisect bad`<br>`git reset // Terminates git bisect operations`   | None  | None       |
 
 <br>
 View the latest commits in the repo
