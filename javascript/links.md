@@ -93,6 +93,7 @@
 | You Don't Need jQuery | https://github.com/oneuijs/You-Dont-Need-jQuery | Native JS equivalents to jQuery methods |
 | You Don't Know JS | https://github.com/getify/You-Dont-Know-JS | Amazing book series on learning JS (free) |
 | Eloquent JavaScript | http://eloquentjavascript.net/ | Extremely popular JS book (free) |
+| Vanilla JS utilities for writing powerful web applications without jQuery | https://plainjs.com/javascript/ |
 
 <br>
 
