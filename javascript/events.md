@@ -156,7 +156,7 @@ ___
 <br>
 
 #### Force the event listener to propogate in either direction
-![Event Propogation] (https://github.com/zeckdude/code-references/blob/master/img/javascript/event_propogation_kirupa.png)<br>
+[Event Propogation](https://github.com/zeckdude/code-references/blob/master/img/javascript/event_propogation_kirupa.png)<br>
 *(Source: Kirupa.com)*<br>
 ##### [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) - [video](https://www.kirupa.com/html5/event_capturing_bubbling_javascript.htm)
 The third argument passed to the `addEventListener()` method specifies if the event should:
