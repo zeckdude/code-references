@@ -24,6 +24,7 @@ let age: number = 34;
 let anything: any = 'hello';
 anything = 55;
 anything = false;
+anything = {name: 'Chris', age: 34}
 ```
 
 #### Array
