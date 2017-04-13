@@ -14,6 +14,8 @@ function sayHello(): void {
 }
 ```
 
+<br>
+
 #### Specify the argument type
 ##### [Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
 ```js
@@ -22,4 +24,21 @@ function multiply(value1: number, value2: number) {
 }
 // console.log(multiply('seven', 3)); // results in an error as the function expects only numbers as its argument types
 console.log(multiply(7, 3));
+```
+
+<br>
+
+#### Specify the exact type of makeup of a function that can be stored in a variable
+##### [Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
+```js
+function multiply(value1: number, value2: number) {
+  return value1 * value2;
+}
+function sayHello(): void {
+  alert('Chris');
+}
+
+let storedFunction: (val1: number, val2: number) => number;
+// storedFunction = sayHello; // results in an error as the variable expects its value to be a function with two number arguments and a return type of a number
+storedFunction = multiply;
 ```
