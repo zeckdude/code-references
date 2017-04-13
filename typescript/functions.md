@@ -39,6 +39,6 @@ function sayHello(): void {
 }
 
 let storedFunction: (val1: number, val2: number) => number;
-// storedFunction = sayHello; // results in an error as the variable expects its value to be a function with two number arguments and a return type of a number
+// storedFunction = sayHello; // results in an error as the variable expects its value to be a function with two number arguments and a return type of a number. Note: the argument names (val1 and val2 in the example) don't matter.
 storedFunction = multiply;
 ```
