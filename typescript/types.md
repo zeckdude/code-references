@@ -61,5 +61,15 @@ let color: Color = Color.Blue;
 // contains: 101 (numerical representation of the value in the enum - It is 100 since it continues the numerical assignment based on the last number, if it doesn't have its own assignment)
 ```
 
+#### Union Types
+##### [Advanced Types - Union Type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types)
+*How to allow for multiple types to be accepted*
+```js
+let number: string | number = '76';
+number = 76;
+
+let mixedValues: (number | string)[] = ['76', 76];
+```
+
 
 
