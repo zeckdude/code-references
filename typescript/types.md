@@ -6,17 +6,23 @@
 let name: string = 'Chris';
 ```
 
+<br>
+
 #### Boolean
 ##### [Basic Types - Boolean](https://www.typescriptlang.org/docs/handbook/basic-types.html#boolean)
 ```js
 let cool: boolean = true;
 ```
 
+<br>
+
 #### Number
 ##### [Basic Types - Number](https://www.typescriptlang.org/docs/handbook/basic-types.html#number)
 ```js
 let age: number = 34;
 ```
+
+<br>
 
 #### Any
 ##### [Basic Types - Any](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)
@@ -27,6 +33,8 @@ anything = false;
 anything = {name: 'Chris', age: 34}
 ```
 
+<br>
+
 #### Array
 ##### [Basic Types - Array](https://www.typescriptlang.org/docs/handbook/basic-types.html#array)
 ```js
@@ -34,12 +42,16 @@ let favNums: number[] = [9, 83, 72];
 let favBeatles: string[] = ['John', 'George', 'Ringo'];
 ```
 
+<br>
+
 #### Tuple
 ##### [Basic Types - Tuple](https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple)
 *A tuple is an array type which specifies which exact types are in the array and in which order*
 ```js
 let address: [number, string] = [2500, 'Broadway Ave'];
 ```
+
+<br>
 
 #### Enum
 ##### [Basic Types - Enum](https://www.typescriptlang.org/docs/handbook/basic-types.html#enum)
@@ -60,6 +72,8 @@ let color: Color = Color.Green;
 let color: Color = Color.Blue;
 // contains: 101 (numerical representation of the value in the enum - It is 100 since it continues the numerical assignment based on the last number, if it doesn't have its own assignment)
 ```
+
+<br>
 
 #### Union Types
 ##### [Advanced Types - Union Type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types)
