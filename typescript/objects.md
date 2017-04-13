@@ -15,5 +15,5 @@ let currencyOperations: {data: number[], output: (outputValues: boolean) => numb
     return this.data;
   }
 }
-console.log(currencyOperations.output(true)); // Outputs the contents of the data property (in this case an array of numbers)
+console.log(currencyOperations.output(true)); // Outputs the contents of the "data" property (in this case an array of numbers)
 ```
