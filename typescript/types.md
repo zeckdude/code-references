@@ -102,7 +102,10 @@ function error(message: string): never {
 #### Null
 ##### [Basic Types - Null and Undefined](https://www.typescriptlang.org/docs/handbook/basic-types.html#null-and-undefined)
 ```js
-// If the `strictNullChecks` property in tsconfig.json is set to `true`, then you must specify if null is a valid type if you plan on defining a variable as null later on. Without the `strictNullChecks` property in tsconfig.json set to `true`, you can assign null to any variable at any time. In the examples below, we are assuming that the `strictNullChecks` property in tsconfig.json is set to `true`.
+// If the `strictNullChecks` property in tsconfig.json is set to `true`, then you must specify if null is a valid type 
+// if you plan on defining a variable as null later on. Without the `strictNullChecks` property in tsconfig.json set to 
+// `true`, you can assign null to any variable at any time. In the examples below, we are assuming that the 
+// `strictNullChecks` property in tsconfig.json is set to `true`.
 let canBeNull: number | null = 12;
 canBeNull = null;
 ```
