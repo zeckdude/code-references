@@ -28,6 +28,16 @@ console.log(multiply(7, 3));
 
 <br>
 
+#### Specify both the argument and return type
+##### [Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
+```js
+function multiply(value1: number, value2: number): number {
+  return value1 * value2;
+}
+```
+
+<br>
+
 #### Specify the exact type of makeup of a function that can be stored in a variable
 ##### [Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
 ```js
