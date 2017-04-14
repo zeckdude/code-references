@@ -19,6 +19,7 @@ arr.length;
 ```
 
 <br>
+
 #### Detect an array 
 *(http://www.shamasis.net/2011/08/infinite-ways-to-detect-array-in-javascript/)*
 
@@ -51,6 +52,7 @@ Object.prototype.toString.call(arr) == "[object Array]";
 ```
 
 <br>
+
 #### Loop through values of an array
 ##### [foreach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 ```js
@@ -71,6 +73,7 @@ for(var index = 0; index < arr.length; index++) {
 ```
 
 <br>
+
 #### Return the index of the first element that matches a specified value (or condition) in an Array
 ##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 ```js
@@ -98,6 +101,7 @@ arr.findIndex(function(element){
 ```
 
 <br>
+
 #### Add one or more elements to the beginning of an array
 ##### [unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 ```js
@@ -108,6 +112,7 @@ arr.unshift(42, "Harley Quinn");
 ```
 
 <br>
+
 #### Add one or more elements at a specified position of an array
 ##### [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 ```js
@@ -118,6 +123,7 @@ arr.splice(2, 0, "Taylor", "Harley");
 ```
 
 <br>
+
 #### Add one or more elements to the end of an array
 ##### [push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 ```js
@@ -128,6 +134,7 @@ arr.push(42, "Harley Quinn");
 ```
 
 <br>
+
 #### Remove the first element of an array
 ##### [shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 ```js
@@ -138,6 +145,7 @@ arr.shift();
 ```
 
 <br>
+
 #### Remove one or more elements at a specified position of an array
 ##### [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 ```js
@@ -148,6 +156,7 @@ arr.splice(1, 2);
 ```
 
 <br>
+
 #### Remove the last element of an array
 ##### [pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 ```js
@@ -158,6 +167,7 @@ arr.pop();
 ```
 
 <br>
+
 #### Extract a specified number of elements from the end of an array
 ##### [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 ```js
@@ -173,6 +183,7 @@ arr.slice(1,-1);
 ```
 
 <br>
+
 #### Convert an array to a string separated by a specified character(s)
 ##### [join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 ```js
@@ -182,6 +193,7 @@ arr.join(", ");
 ```
 
 <br>
+
 #### Reverse the order of the elements in an array
 ##### [reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 ```js
@@ -191,6 +203,7 @@ arr.reverse();
 ```
 
 <br>
+
 #### Sort the elements of an array alphabetically
 ##### [sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 ```js
@@ -206,6 +219,7 @@ arr.sort().reverse();
 ```
 
 <br>
+
 #### Sort the elements of an array numerically
 ##### [sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 ```js
@@ -221,6 +235,7 @@ arr.sort(function(a, b){return b-a});
 ```
 
 <br>
+
 #### Determine whether a value is in an array
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 ```js
@@ -246,6 +261,7 @@ arr.some(function(name){
 ```
 
 <br>
+
 #### Extract a part of an array into its own array
 ##### [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 ```js
@@ -261,6 +277,7 @@ arr.slice(-3);
 ```
 
 <br>
+
 #### Filter a set of elements out of an array and into its own array
 ##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) - [video](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 ```js
@@ -311,6 +328,7 @@ people.forEach(function (person) {
 ```
 
 <br>
+
 #### Transform array elements and save them into a new array
 ##### [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - [video](https://www.youtube.com/watch?v=bCqtb-Z5YGQ)
 ```js
@@ -376,6 +394,7 @@ people.forEach(function (person) {
 ```
 
 <br>
+
 #### Return the first element in an array that matches a condition
 ##### [find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 ```js
@@ -409,6 +428,7 @@ for (var i = 0; i < inventory.length; i++) {
 ```
 
 <br>
+
 #### Test if any element in an array matches a condition
 ##### [some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 ```js
@@ -441,6 +461,7 @@ for (var i = 0; i < numbers.length; i++) {
 ```
 
 <br>
+
 #### Test if all elements in an array match a condition
 ##### [every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 ```js
@@ -475,6 +496,7 @@ for (var i = 0; i < numbers.length; i++) {
 ```
 
 <br>
+
 #### Return the sum of all values in an array
 ##### [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) - [video](https://www.youtube.com/watch?v=Wl98eZpkp-c)
 ```js
@@ -508,6 +530,7 @@ numbers.forEach(function (number) {
 ```
 
 <br>
+
 #### Combine two arrays 
 *Think about memory usage before deciding which approach to use - https://davidwalsh.name/combining-js-arrays*
 
