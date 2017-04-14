@@ -9,6 +9,7 @@ tsc --init // creates tsconfig.json file
 
 #### Properties in configuration file
 ##### [Project Configuration - tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+##### [Project Configuration - Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 ```js
 {
   "compilerOptions": {
