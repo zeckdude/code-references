@@ -27,7 +27,7 @@ console.log(wife, brother, father, mother);
 
 <br>
 
-#### Example of using descructuring on function arguments
+#### Example of using descructuring on function arguments (when an object is provided)
 ```js
 // Assign the specified properties to variables with the same name. Also shows a parameter that has a default value.
 function makeSound({ species = 'animal', sound }) {
