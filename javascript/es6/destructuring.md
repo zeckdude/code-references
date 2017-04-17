@@ -1,4 +1,4 @@
-## ES6
+## Destructuring
 
 #### Destructuring an Array
 ##### [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
