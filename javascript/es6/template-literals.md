@@ -9,5 +9,5 @@ let greeting = `Hello ${name},
                 how are you?`;
 console.log(greeting);
 // Outputs: Hello Chris,
-// how are you?
+//          how are you?
 ```
