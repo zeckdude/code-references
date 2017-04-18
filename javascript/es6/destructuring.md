@@ -8,6 +8,7 @@
 let relatives = ['Gloria', 'Andy', 'Anton'];
 let [wife, brother, father, mother = 'Mine'] = relatives;
 console.log(wife, brother, father, mother);
+// Outputs: Gloria Andy Anton Mine
 ```
 
 <br>
@@ -16,13 +17,22 @@ console.log(wife, brother, father, mother);
 ##### [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 *Convenient way of assigning object properties to variables*
 ```js
+let relatives = {
+  wife: 'Gloria',
+  brother: 'Andy',
+  father: 'Anton',
+  mother: 'Mine'
+};
+    
 // Destructuring an object using specific properties in the object that are assigned to the provided variable names.
 let { wife: wifey, brother: bro, father: pops } = relatives;
 console.log(wifey, bro, pops);
+// Outputs: Gloria Andy Anton
 
 // Destructuring an object using specific properties in the object that use their property names as their variable names
 let {wife, brother, father, mother} = relatives;
 console.log(wife, brother, father, mother);
+// Outputs: Gloria Andy Anton Mine
 ```
 
 <br>
@@ -38,4 +48,6 @@ makeSound({
   weight: 23,
   sound: 'woof'
 });
+
+// Outputs: The animal says woof!
 ```
