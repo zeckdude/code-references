@@ -1,6 +1,6 @@
 ## Rest Parameters
 
-#### Rest Parameters
+#### Combine separate function arguments into an array within the function in which they're provided
 ##### [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 ```js
 // When the `...` syntax is used as an parameter in a function definition, then it is a rest parameter and means that
