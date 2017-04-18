@@ -1,4 +1,4 @@
-## Functions
+## Arrow Functions
 
 #### Traditional function
 ```js
