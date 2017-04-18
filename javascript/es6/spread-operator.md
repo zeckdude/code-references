@@ -8,6 +8,7 @@ function addNumbers(a, b, c) {
 }
 let numbers = [1, 10, 99];
 addNumbers(...numbers);
+// Returns: 110
 ```
 
 <br> 
@@ -18,6 +19,7 @@ addNumbers(...numbers);
 let numbers = [1, 10, 99];
 let moreNumbers = [...numbers, -30, 44];
 console.log(moreNumbers);
+// Outputs: [1, 10, 99, -30, 44]
 ```
 
 <br> 
@@ -29,6 +31,7 @@ let numbers = [1, 10, 99];
 let anotherNumberList = [68, 3, 72, 9];
 let evenMoreNumbers = [...numbers, ...anotherNumberList]; // Same as numbers.concat(anotherNumberList)
 console.log(evenMoreNumbers);
+// Outputs: [1, 10, 99, 68, 3, 72, 9]
 ```
 
 <br> 
@@ -38,4 +41,5 @@ console.log(evenMoreNumbers);
 ```js
 let numbers = [1, 2, 3];
 let numbers2 = [...numbers]; // Same as numbers.slice() which copies an array instead of referencing the previous array
+// Contains: [1, 2, 3] // Separate new array
 ```
