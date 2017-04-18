@@ -11,4 +11,5 @@ function createArray(...args) {
 }
 
 console.log(createArray(2, 5, 6));
+// Outputs: [2, 5, 6]
 ```
