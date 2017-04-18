@@ -1,4 +1,4 @@
-## Rest Operator
+## Spread Operator
 
 #### Pass elements of an array as arguments to a function
 ##### [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
