@@ -8,10 +8,18 @@ function returnMyName(): string {
   return 'Chris';
 }
 
+// Using a non-named anonymous function (with ES6 arrow function syntax)
+let returnMyName: () => string = () => 'Chris';
+
 function sayHello(): void {
   // return 'Wassup'; // results in an error as the function expects to return nothing
   alert('Chris');
 }
+
+// Using a non-named anonymous function (with ES6 arrow function syntax)
+let sayHello: () => void = () => {
+    alert('Chris')
+};
 ```
 
 <br>
@@ -22,6 +30,7 @@ function sayHello(): void {
 function multiply(value1: number, value2: number) {
   return value1 * value2;
 }
+
 // console.log(multiply('seven', 3)); // results in an error as the function expects only numbers as its argument types
 console.log(multiply(7, 3));
 ```
@@ -34,6 +43,9 @@ console.log(multiply(7, 3));
 function multiply(value1: number, value2: number): number {
   return value1 * value2;
 }
+
+// Using a non-named anonymous function (with ES6 arrow function syntax)
+let multiply: (value1: number, value2: number) => number = (value1: number, value2: number) => value1 * value2;
 ```
 
 <br>
