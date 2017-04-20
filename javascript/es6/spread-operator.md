@@ -7,7 +7,7 @@ function addNumbers(a, b, c) {
   return a + b + c;
 }
 let numbers = [1, 10, 99];
-addNumbers(...numbers); // Same as announceNumbers.apply(null, numbers)
+addNumbers(...numbers); // Same as addNumbers.apply(null, numbers)
 // Returns: 110
 ```
 
