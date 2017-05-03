@@ -20,7 +20,7 @@ let obj = { name, age };
 <br>
 
 #### Shorthand technique of declaring a method on an object
-##### [Method definitions]https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+##### [Method definitions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 ```js
 // Traditional technique 
 let obj = { 
