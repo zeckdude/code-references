@@ -14,7 +14,9 @@
 **Naming:** Variables can only contain numbers, letters, and underscores, although they must begin with a letter or underscore. They are case sensitive.
 
 **Types:** Variables can store the data types string, number, float, boolean, array, and null.
+
 <br /><br />
+
 #### Modifying Variables
 Set the value of the variable to its current value plus 5
 ```php
@@ -31,6 +33,7 @@ Decrement the variable value by 1
 $number--;
 ```
 <br /><br />
+
 #### Casting Variables
 The process of casting is forcing a variable to be another datatype.
 ```php
@@ -50,12 +53,14 @@ $number_string_array = (array) $number_string; // array(1) { [0] => string(1) "3
 ```
 
 <br>
+
 #### Useful internal constants
 | Constant Name | Purpose   | Demo |
 |----------------|--------|-------|
 | [`PHP_EOL`](http://phppot.com/php/php-line-breaks/) | Outputs end of line character that is compatible with any system | `echo "End of Line" . PHP_EOL; // Displays: "End of Line" followed by a new-line character` |
 
 <br><br>
+
 ## Arrays
 #### Creating Arrays
 ##### Declaring an array (two ways)
@@ -92,6 +97,7 @@ $car_parts["wheels"][3] // returns "lugnut"
 ```
 
 <br><br>
+
 ## Conditional Logic
 #### If statement - http://www.phptherightway.com/pages/The-Basics.html#if-statements
 ```php
@@ -111,7 +117,9 @@ elseif ($num_pizzas === 3)
 else
   echo "What does it matter? I'm unhealthy anyways.";
 ```
+
 <br>
+
 #### Switch statement - http://www.phptherightway.com/pages/The-Basics.html#switch-statements
 Switch statements can only check for equality, so if a more advanced condition needs to be evaluated, then an if statement is preferred.
 ```php
@@ -128,6 +136,7 @@ switch ($num_pizzas) {
 ```
 
 <br>
+
 #### Ternary Operator - http://www.phptherightway.com/pages/The-Basics.html#ternary-operators
 Ternary operators can be used to reduce code but can get confusing if too complex. Use sparingly.
 ```php
@@ -197,6 +206,7 @@ speech(function(){
 ```
 
 <br>
+
 #### Useful internal functions
 | Function Name | Action   | Demo |
 |----------------|--------|-------|
@@ -225,6 +235,7 @@ A while loop is often used to loop through the results set returned from a datab
 ```
 
 <br>
+
 #### Do While loop
 A do while loop will will _always_ execute the code block at least once, before it checks the condition to determine if it should execute any longer.
 ```php
@@ -238,6 +249,7 @@ do {
 ```
 
 <br>
+
 #### For loop
 A for loop loops through a block of code a specified number of times. You specify the initial counter variable, the condition, and the incrementer all within the arguments.
 <br><br>The first section, the counter, is executed **before** the loop is executed.
@@ -250,6 +262,7 @@ for ($i = 0; $i <= 24; $i++) {
 ```
 
 <br>
+
 #### Foreach loop
 A foreach loop is used to loop through the items in an array. The number of iterations of the loop are, therefore, determined by the number of items in the array.
 ```php
@@ -317,6 +330,7 @@ Include a file's contents on the current page. If it can't be found, it will thr
 ```
 
 <br>
+
 ## Classes
 A class is a collection of variables (called properties) and functions (called methods) that have a common organizational purpose. They are contained within an *object*, which can be accessed by creating an *instance* of (or instantiating) the class.
 
@@ -393,6 +407,7 @@ $book->summary();
 ```
 
 <br><br>
+
 ## Glossary
 | Term        | Definition           |
 | ------------- |-------------|
@@ -401,6 +416,7 @@ $book->summary();
 | Casting | The process of transforming a variable from one data type to another      |
 
 <br><br>
+
 ## Links
 #### Test Environments
 http://sandbox.onlinephpfunctions.com/

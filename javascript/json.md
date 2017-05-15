@@ -20,6 +20,7 @@ JSON.stringify(obj, null, 2);
 ```
 
 <br>
+
 #### Convert a JSON object to JS format
 ##### [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 ```js

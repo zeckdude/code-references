@@ -40,6 +40,7 @@ return (varA & varB) ? true : false;
 ```
 
 <br>
+
 #### Different Ways to check if a variable has a truthy value(not undefined, null, 0, NaN, "" or false) and return a value based on the result
 ##### [IF statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
@@ -75,6 +76,7 @@ var message = detailedMessage || genericMessage;
 ```
 
 <br>
+
 #### Different Ways call different functions based on a condition
 ##### [IF statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
@@ -94,6 +96,7 @@ age >= 21 ? drinkUp() : goHome();
 
 
 <br>
+
 #### Define function context using various methods
 ##### Common code for examples
 ```js

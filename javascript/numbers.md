@@ -9,6 +9,7 @@ window.parseInt(str); // The argument must be a string that begins with numeric 
 ```
 
 <br>
+
 #### Convert a string containing non-numeric characters to a float number 
 ##### [parseFloat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
 ```js
@@ -18,6 +19,7 @@ window.parseFloat(str); // The argument must be a string that begins with numeri
 ```
 
 <br>
+
 #### Convert a string to a number
 ##### [Number()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Convert_numeric_strings_to_numbers)
 ```js
