@@ -3,13 +3,15 @@
 #### Alternatives to using the `Date` object
 *The `Date` object can be a bit difficult to use, so there are some libraries that make things a lot easier*
 
-| Library | Notes |
-|---------------|----------------------------------------|----------------------------------------------------------|
-| [Moment.js](http://momentjs.com/) | Preferred library |
-| [Datejs](http://www.datejs.com/) | *None* |
+| Library  | Notes  |
+|---------------|--------|
+| [Moment.js](http://momentjs.com/) | Preferred library  |
+| [Datejs](http://www.datejs.com/) | *None*   |
 
 <br>
+
 ___
+
 <br>
 
 #### Create a new instance of the Date object
