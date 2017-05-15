@@ -1,6 +1,7 @@
 ## Functions
 
 <br>
+
 #### Set default arguments for a function
 ##### [if statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 ```js
@@ -30,6 +31,7 @@ hello();
 ```
 
 <br>
+
 #### Access unknown arguments added to a function call
 ##### [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 ##### [Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
@@ -74,6 +76,7 @@ doSomething(25, "blue", true, 62);
 ```
 
 <br>
+
 #### Access a part of all arguments passed to a function
 ##### [rest parameter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 ```js
@@ -92,6 +95,7 @@ doSomething(25, "blue", true, 62);
 ```
 
 <br>
+
 #### Pass array elements as arguments of a function call
 ##### [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 ```js
@@ -110,6 +114,7 @@ doSomething(...arr); // Equivalent to: doSomething(arr[0], arr[1], arr[2]);
 ```
 
 <br>
+
 #### Cache function results by setting a property on the function
 This is accomplished by using a practice known as *memoization* where past return values are saved as properties on the function, so that whenever the function is run, it will check if the cache to see if the function has already been run using the same arguments provided.
 ##### [memoization](https://www.sitepoint.com/implementing-memoization-in-javascript/)
