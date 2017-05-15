@@ -4,13 +4,13 @@ SQL Injection is a strategy that hackers use to take control of the database thr
 
 Hackers will write a closing quote followed by their own SQL command into either a form field or at the end of a URL which has a URL parameter, for example. Then they have full control over the database.
 
-![SQL Injection URL](img/security/sql-injection-url-1.png)
-![SQL Injection URL](img/security/sql-injection-url-2.png)
-![SQL Injection URL](img/security/sql-injection-url-3.png)
+![SQL Injection URL](https://github.com/zeckdude/code-references/blob/master/img/security/sql-injection-url-1.png)
+![SQL Injection URL](https://github.com/zeckdude/code-references/blob/master/img/security/sql-injection-url-2.png)
+![SQL Injection URL](https://github.com/zeckdude/code-references/blob/master/img/security/sql-injection-url-3.png)
 
 <br>
 
-![SQL Injection Summary](img/security/sql-injection-summary.png)
+![SQL Injection Summary](https://github.com/zeckdude/code-references/blob/master/img/security/sql-injection-summary.png)
 
 Ways to defend against a SQL Injection:
   * Disable error messages on production environment
