@@ -33,5 +33,5 @@ Using either of the XSS attack strategies, if the site developers aren't properl
 * Encode user-entered input before displaying it on screen
 * Set cookies to HTTP Only so JavaScript doesn't have access to them
 
-![XSS downsides](img/security/xss-defense-summary-1.png)
-![XSS downsides](img/security/xss-defense-summary-2.png)
+![XSS defense summary 1](img/security/xss-defense-summary-1.png)
+![XSS defense summary 2](img/security/xss-defense-summary-2.png)
