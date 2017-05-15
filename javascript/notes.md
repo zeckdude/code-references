@@ -13,6 +13,7 @@ console.log("Measured Time:", elapsed + " milliseconds");
 ```
 
 <br>
+
 Using [`performance.now()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now) (more accurate count):
 ```js
 var maxCount = 100000;
@@ -25,6 +26,7 @@ console.log("Measured Time:", elapsed + " milliseconds");
 ```
 
 <br>
+
 Using [`console.time()`](https://blog.mariusschulz.com/2013/11/22/measuring-execution-times-in-javascript-with-consoletime):
 ```js
 var maxCount = 100000;
@@ -36,6 +38,7 @@ console.timeEnd("Measured Time");
 ```
 
 <br>
+
 #### Testing
 ##### Good tests exhibit three important charisteristics:
 
@@ -44,10 +47,12 @@ console.timeEnd("Measured Time");
 3. *Independence* - Avoid making the results from one test dependant upon another.
 
 <br>
+
 ##### The assertion
 The most important part of a unit-testing framework is its assertion method, usually named `assert()`, which takes a value - an expression whose premise is *asserted* (checked if it is `true`) - and a description that describes the purpose of the assertion. If the value evaluates to `true`, the assertion passes; otherwise it's considered a failure. The associated message is usually logged with an appropriate pass/fail indicator.
 
 <br>
+
 ##### Example `assert()` function - Results displayed in browser
 **JS:**
 ```js
@@ -83,6 +88,7 @@ window.onload = function(){
 ```
 
 <br>
+
 ##### Example `assert()` functions - Results displayed in console
 
 ```js
@@ -99,6 +105,7 @@ function assert(value, description) {
 ```
 
 <br>
+
 #### Functions
 ##### Functions as first-class objects
 The capabilities listed below are common to all objects in JavaScript and functions are no exception. Any object that shares these is known as a *first-class object*.
@@ -110,6 +117,7 @@ The capabilities listed below are common to all objects in JavaScript and functi
 5. Can possess properties that can be dynamically created and assigned.
 
 <br>
+
 ##### Declaring Functions
 Some things to keep in mind when declaring functions:
 
@@ -141,6 +149,7 @@ console.log(thirdFunction.name); // "fourthFunction"
 ```
 
 <br>
+
 ##### Scope within a function
 Some things to keep in mind when declaring variables and functions within a function:
 
@@ -168,6 +177,7 @@ Use [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ```
 
 <br>
+
 ##### Native function parameters
 There are a few native function parameters which are useful:
 
@@ -177,6 +187,7 @@ There are a few native function parameters which are useful:
 2. `this` - The reference to the object upon which the function is invoked, a.k.a. the *function context*
 
 <br>
+
 ##### Creating a constructor
 A constructor function makes it much easier to create multiple objects that conform to the same pattern. Follow these guidelines when creating a constructor function:
 
@@ -194,6 +205,7 @@ var passat = new Car();
 ```
 
 <br>
+
 ##### Invoking Functions
 There are several different ways to invoke a function. Depending on which way the function is invoked, the *function context* is determined.
 
@@ -262,6 +274,7 @@ There are several different ways to invoke a function. Depending on which way th
     ```
     
 <br>
+
 ##### Binding Functions
 When you bind a function, you are copying a reference to a method and setting a new context. NOTE: `bind()` returns a function, and not the result of the method having been run. 
 
@@ -287,6 +300,7 @@ game.printScore(); // Consoles out: 6
 ```
 
 <br>
+
 ##### Closure
 ###### [Detailed Explanation](https://www.kirupa.com/html5/closures_in_javascript.htm)
 Closure is a newly created function (which was returned from another function) that also contains its variable context. In other words, it is when a function returns an inner function, which still retains a reference to variables that are defined within its outer function that it relies on.<br>
