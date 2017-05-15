@@ -7,6 +7,7 @@
 | Security Compass - XSS Attacks | http://www.securitycompass.com/training/free/course-demos/modules/XSS/player.html |
 | OWASP - ESAPI Library | https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API#tab=Downloads |
 
+<br>
 
 ### SQL Injection
 
