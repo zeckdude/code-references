@@ -9,7 +9,7 @@ XSS attacks are strategies that hackers use to insert their own javascript code 
     * Commonly use case: When added to a link (as a query string) that is sent for others to click on. The link will be to your site so people will usually trust it. Once people click on it, it will take them to your site and will use the entered information to re-display on the page while executing the malicious code.
       * Requires the search terms to use a GET variable to access the information to re-display
       * Hackers will usually encode the html so it is not obvious as being malicious.
-      ![Encoded malicious code](img/security/xss-reflected-encoded.png)
+      ![Encoded malicious code](https://github.com/zeckdude/code-references/blob/master/img/security/xss-reflected-encoded.png)
 * Stored XSS
   * When malicious code (html with javascript) is saved into the DB through the use of form fields, which is later used to display to other users
     * Example case: A form field where the value is saved to the DB. The entered text value is later re-displayed to other users when they view a page which contains the user-entered information.
