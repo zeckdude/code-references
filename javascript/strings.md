@@ -9,6 +9,7 @@ str.length;
 ```
 
 <br>
+
 #### Get the specified character from a string
 ##### [charAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)
 ```js
@@ -24,6 +25,7 @@ str[4];
 // Returns: "o"
 ```
 <br>
+
 #### Combine the text of two or more strings and return a new string
 ##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
 ```js
@@ -40,6 +42,7 @@ str + "Kevin" + " have a nice day.";
 ```
 
 <br>
+
 #### Determine whether a string ends with the characters of another string
 ##### [endsWith() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith)
 ```js
@@ -56,6 +59,7 @@ var str = "To be, or not to be, that is the question.";
 ```
 
 <br>
+
 #### Determine whether one string may be found within another string
 ##### [includes() - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 ```js
@@ -79,6 +83,7 @@ str.indexOf("not to be") >= 0;
 ```
 
 <br>
+
 #### Return the index of the first occurrence of the specified substring within another string
 ##### [indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexof)
 ```js
@@ -107,6 +112,7 @@ str.search('Whale');
 ```
 
 <br>
+
 #### Return the index of the last occurrence of the specified substring within another string
 ##### [lastIndexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastindexof)
 ```js
@@ -116,6 +122,7 @@ str.lastIndexOf('l');
 ```
 
 <br>
+
 #### Return a substring of another string
 ##### [substring()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
 ```js
@@ -139,6 +146,7 @@ str.substr(10, 4);
 ```
 
 <br>
+
 #### Convert a string to uppercase
 ##### [toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
 ```js
@@ -148,6 +156,7 @@ str.toUpperCase();
 ```
 
 <br>
+
 #### Convert a string to lowercase
 ##### [toLowerCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
 ```js
@@ -157,6 +166,7 @@ str.toLowerCase();
 ```
 
 <br>
+
 #### Replace a part of a string with another string 
 ##### [replace() - Basic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 ```js
@@ -178,9 +188,10 @@ str.replace(/(\w+) (\w+) (\w+)/g, function(match, firstName, middleName, lastNam
   return firstName + " Jebediah " + lastName;
 });
 // Returns: "Jeff Jebediah Jackson"
-```s
+```
 
 <br>
+
 #### Convert a number to a string 
 ##### [String()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion)
 ```js
@@ -209,6 +220,7 @@ num + "";
 ```
 
 <br>
+
 #### Convert a string to an array
 ##### [split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 ```js
@@ -222,6 +234,7 @@ str.split(/\s+/);
 ```
 
 <br>
+
 #### Reverse a string
 ##### [for()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 ```js
@@ -243,6 +256,7 @@ str.split('').reverse().join('');
 ```
 
 <br>
+
 #### Remove whitespace off the specified string
 ##### [trim()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
 ```js
