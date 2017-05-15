@@ -17,7 +17,7 @@ XSS attacks are strategies that hackers use to insert their own javascript code 
     * Common use case: A form field on a social medium, such as a message board or forum entry, or blog post comment.
 
 A XSS attack can be very powerful and includes many actions a hacker can take once their malicious code is running on your site user's browser
-![XSS downsides](img/security/xss-downsides.png)
+![XSS downsides](https://github.com/zeckdude/code-references/blob/master/img/security/xss-downsides.png)
 
 Using either of the XSS attack strategies, if the site developers aren't properly re-encoding user-entered values before re-displaying them on the screen, then any malicious code that is entered will be run when the information is displayed. Follow these steps to defend against it:
 
@@ -25,5 +25,5 @@ Using either of the XSS attack strategies, if the site developers aren't properl
 * Encode user-entered input before displaying it on screen
 * Set cookies to HTTP Only so JavaScript doesn't have access to them
 
-![XSS defense summary 1](img/security/xss-defense-summary-1.png)
-![XSS defense summary 2](img/security/xss-defense-summary-2.png)
+![XSS defense summary 1](https://github.com/zeckdude/code-references/blob/master/img/security/xss-defense-summary-1.png)
+![XSS defense summary 2](https://github.com/zeckdude/code-references/blob/master/img/security/xss-defense-summary-2.png)
