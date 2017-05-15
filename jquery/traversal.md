@@ -3,7 +3,7 @@
 #### Get all children of the selector
 ##### [children()](https://api.jquery.com/children/)
 ```js
-$('ul.classes').children('li.math);
+$('ul.classes').children('li.math');
 // Returns: A jQuery object that contains references to elements that match the condition
 ```
 
@@ -14,7 +14,7 @@ ___
 #### Get all descendants of the selector
 ##### [find()](https://api.jquery.com/find/)
 ```js
-$('ul.classes').find('li);
+$('ul.classes').find('li');
 // Returns: A jQuery object that contains references to elements that match the condition
 ```
 
