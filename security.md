@@ -13,7 +13,7 @@
 
 SQL Injection is a strategy that hackers use to take control of the database through form fields, links, URL parameters, or any other means that query the database.
 
-Hackers will write a closing quote followed by their own SQL command into either a form field, at the end of a URL which has a URL parameter, for example. Then they have full control over the database.
+Hackers will write a closing quote followed by their own SQL command into either a form field or at the end of a URL which has a URL parameter, for example. Then they have full control over the database.
 
 ![SQL Injection URL](img/security/sql-injection-url-1.png)
 ![SQL Injection URL](img/security/sql-injection-url-2.png)
