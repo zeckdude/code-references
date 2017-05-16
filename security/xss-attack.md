@@ -1,4 +1,4 @@
-### XSS (Cross-site Scripting) Attack
+## XSS (Cross-site Scripting) Attack
 
 XSS attacks are strategies that hackers use to insert their own javascript code onto the users machine via two ways:
 
