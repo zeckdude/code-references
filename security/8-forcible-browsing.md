@@ -10,5 +10,8 @@ Conditions that need to be met in order for this exploit to work:
   * Restricted pages are not employing user permissions to determine if a user should have access to a given page
   
 Ways to defend against this exploit:
-  * 
+  * Use page level authorization to determine if a user has access to that page
+    * For example, a basic logged in user could have a session variable that identifies them as a basic user. Page level authorization could check for the presence of such a session variable and if it exists, allow them to see the page.
+    * Page level authorization is good as a first step, but if more detailed actions can be taken that need to check for further conditions past just the user type, then page level authorization on its own is not adequate enough.
+  * Use programmed authorization (logic in code) to check if a given user meets the necessary criteria to perform a specified action. This would usually involve a query to the database to verify roles and permissions or other information.
     
