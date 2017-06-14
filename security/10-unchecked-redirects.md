@@ -7,5 +7,9 @@ Conditions that need to be met in order for this exploit to work:
   * The parameter is not being validated before redirecting the user to another location
   
 Ways to defend against this exploit:
-  * 
+  * Don't use a redirect URL GET parameter within a URL if possible. Use logic in the code instead to send the user to a specified location.
+  * If using a redirect URL GET parameter is absolutely necessary, follow these steps:
+    * Make sure the current user has the proper permission to be redirected
+    * Compare the redirect URL GET parameter string value against a white list of approved sites and only redirect if it matches.
+    * ![Unchecked Redirects white list](https://github.com/zeckdude/code-references/blob/master/img/security/unchecked-redirects-1.png)
     
