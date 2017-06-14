@@ -14,5 +14,5 @@ Ways to defend against this exploit:
   * If using a redirect URL GET parameter is absolutely necessary, follow these steps:
     * Make sure the current user has the proper permission to be redirected
     * Compare the redirect URL GET parameter string value against a white list of approved sites and only redirect if it matches.
-    * ![Unchecked Redirects white list](https://github.com/zeckdude/code-references/blob/master/img/security/unchecked-redirects-2.png)
+![Unchecked Redirects white list](https://github.com/zeckdude/code-references/blob/master/img/security/unchecked-redirects-2.png)
     
