@@ -279,6 +279,14 @@ console.log(secondObject); // Returns { num: 99 }
 console.log(thirdObject); // Returns { num: 1000 }
 ```
 
+##### [spread operator - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+```js
+// Make a copy of the specified object including all its properties
+var firstObject = { num: 1 }
+var secondObject = {...firstObject};
+firstObject === secondObject; // Returns false
+```
+
 <br>
 ___
 <br>
@@ -362,6 +370,21 @@ var objTwo = {
   age: 25,
   ...objOne
 }
+objTwo;
+// Contains: {
+  "age": 25,
+  "location": "Philadelphia",
+  "name": "Andrew"
+}
+```
+
+##### [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+```js
+var objOne = {
+  name: 'Andrew',
+  location: 'Philadelphia'
+}
+var objTwo = Object.assign({}, objOne, { age: 25 });
 objTwo;
 // Contains: {
   "age": 25,
