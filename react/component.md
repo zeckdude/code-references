@@ -70,3 +70,14 @@ class Username extends React.Component {
 ```
 
 <br>
+
+#### Render the top level component to the screen
+##### [ReactDOM.render()](https://facebook.github.io/react/docs/react-dom.html#render)
+```js
+import ReactDOM from 'react-dom';
+ReactDOM.render(<Root/>, document.querySelector('#main'));
+
+// Using destructuring
+import { render } from 'react-dom';
+render(<Root/>, document.querySelector('#main'));
+```
