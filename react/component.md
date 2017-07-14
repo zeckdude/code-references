@@ -1,5 +1,19 @@
 ## Components
 
+#### Different types of components
+##### Functional stateless component
+* Used for presenting static data
+* Can't handle fetching data
+* Easy to write
+
+##### Class component
+* Used for dynamic sources of data
+* Handles any data that might change (fetching data, user events, etc)
+* Knows when it gets rendered (useful for fetching data)
+* More code to write
+
+<br>
+
 #### Writing a Component
 ##### [Using a functional stateless component](https://javascriptplayground.com/blog/2017/03/functional-stateless-components-react/)
 ```js
@@ -56,3 +70,14 @@ class Username extends React.Component {
 ```
 
 <br>
+
+#### Render the top level component to the screen
+##### [ReactDOM.render()](https://facebook.github.io/react/docs/react-dom.html#render)
+```js
+import ReactDOM from 'react-dom';
+ReactDOM.render(<Root/>, document.querySelector('#main'));
+
+// Using destructuring
+import { render } from 'react-dom';
+render(<Root/>, document.querySelector('#main'));
+```
