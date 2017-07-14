@@ -1,0 +1,58 @@
+## Components
+
+#### Writing a Component
+##### [Using a functional stateless component](https://javascriptplayground.com/blog/2017/03/functional-stateless-components-react/)
+```js
+// ES5
+const Username = function(props) {
+  return (
+    <p>The logged in user is: {props.username}</p>
+  )
+}
+
+// ES6 varieties
+  // Using fat-arrow syntax
+  const Username = (props) => {
+    return (
+      <p>The logged in user is: {props.username}</p>
+    )
+  }
+
+  // Using fat-arrow syntax w/ destructuring
+  const Username = ({ username }) => {
+    return (
+      <p>The logged in user is: {username}</p>
+    )
+  }
+
+  // Using fat-arrow syntax w/ destructuring on one line
+  const Username = ({ username }) => <p>The logged in user is: {username}</p>
+```
+
+<br>
+
+##### [Using React.createClass()](https://javascriptplayground.com/blog/2017/03/functional-stateless-components-react/)
+```js
+const Username = React.createClass({
+  render() {
+    return (
+      <p>The logged in user is: {this.props.username}</p> // The render() method within a react component via a class has the correct context for `this`
+    )
+  }
+})
+```
+
+<br>
+
+##### [Using an ES6 class](https://javascriptplayground.com/blog/2017/03/functional-stateless-components-react/)
+```js
+class Username extends React.Component {
+  render() {
+    return (
+      <p>The logged in user is: {this.props.username}</p> // The render() method within a react component via a class has the correct context for `this`
+    )
+  }
+}
+```
+
+<br>
