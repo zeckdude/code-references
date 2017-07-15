@@ -1,12 +1,12 @@
 ## Components
 
 #### Different types of components
-##### Functional stateless component
+##### [Functional stateless component](https://medium.com/@npverni/how-to-declare-react-components-in-2017-2a90d9f7984c)
 * Used for presenting static data
 * Can't handle fetching data
 * Easy to write
 
-##### Class component
+##### [Class component](https://medium.com/@npverni/how-to-declare-react-components-in-2017-2a90d9f7984c)
 * Used for dynamic sources of data
 * Handles any data that might change (fetching data, user events, etc)
 * Knows when it gets rendered (useful for fetching data)
