@@ -96,7 +96,7 @@ const AlbumList = () => {
 }
 
 const App = () => (
-  <View style={{ flex: 1 }}> // Add `flex: 1` on the outermost parent element to eliminate strange rendering issues
+  <View style={{ flex: 1 }}> // Add `flex: 1` on all parent components to eliminate strange rendering issues
     <AlbumList />
   </View>
 );
