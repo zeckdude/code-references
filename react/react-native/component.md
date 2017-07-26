@@ -11,6 +11,8 @@ import { AppRegistry } from 'react-dom';
 AppRegistry.registerComponent('app-name', () => App);
 ```
 
+<br>
+
 #### Common React Native Components
 ##### [View](https://facebook.github.io/react-native/docs/view.html)
 ```js
@@ -103,5 +105,22 @@ const App = () => (
 
 AppRegistry.registerComponent('myApp', () => App);
 
+```
+
+<br >
+
+##### [Linking](https://facebook.github.io/react-native/docs/linking.html)
+*Create a link that opens the browser and takes the user to the specified URL*
+Sandbox Example: https://snack.expo.io/SyatG7UIW
+```js
+import { Text, Linking } from 'react-native';
+
+const myComponent = () => {
+  return (
+    <Text onPress={() => Linking.openURL('http://www.google.com')}>
+        Go to Google
+    </Text>
+  );
+}
 ```
 
