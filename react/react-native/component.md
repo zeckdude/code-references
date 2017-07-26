@@ -111,7 +111,7 @@ AppRegistry.registerComponent('myApp', () => App);
 
 ##### [Linking](https://facebook.github.io/react-native/docs/linking.html)
 *Create a link that opens the browser and takes the user to the specified URL*
-Sandbox Example: https://snack.expo.io/SyatG7UIW
+<br>Sandbox Example: https://snack.expo.io/SyatG7UIW
 ```js
 import { Text, Linking } from 'react-native';
 
