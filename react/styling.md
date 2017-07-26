@@ -4,13 +4,11 @@ Styling is a bit different in React.js than in traditional web development. It i
 
 #### Style a component using a JS object (most common way)
 ```js
-import { View, Text } from 'react-native';
-
 const MyComponent = (props) => {
   return (
-    <View>
-      <Text style={styles.textStyle}>{props.name}</Text>
-    </View>
+    <div>
+      <p style={styles.textStyle}>{props.name}</p>
+    </div>
   );
 };
 
