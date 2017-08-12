@@ -87,6 +87,8 @@ render(<Root/>, document.querySelector('#main'));
 #### Render multiple child components within a component
 ##### [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 ```js
+import AlbumDetail from './AlbumDetail';
+
 class AlbumList extends Component {
   state = {
     albums: [
@@ -105,6 +107,44 @@ class AlbumList extends Component {
 
   renderAlbums() {
     return this.state.albums.map(album =>
+      <AlbumDetail key={album.title} album={album} />
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderAlbums()}
+      </div>
+    );
+  }
+}
+```
+
+<br>
+
+##### [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/foreach)
+```js
+import AlbumDetail from './AlbumDetail';
+
+class AlbumList extends Component {
+  state = {
+    albums: [
+    {
+      title: 'Another Way',
+      album: 'Rock on',
+      band: 'Grapebombs'
+    },
+    {
+      title: 'Red Gelatin',
+      album: 'More and more',
+      band: 'Running on Water'
+    }
+    ]
+  };
+
+  renderAlbums() {
+    return this.state.albums.forEach(album =>
       <AlbumDetail key={album.title} album={album} />
     );
   }
