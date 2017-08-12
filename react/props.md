@@ -34,14 +34,14 @@ const AlbumDetail = (props) => {
 
 // As a class component
 class AlbumDetail extends React.Component {
- render(
-   return (
-    <div>
-      <h1>{this.props.title}</h1>
-      <h2>{this.props.name}</h2>
-    </div>
+  render(
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <h2>{this.props.name}</h2>
+      </div>
+    )
   )
- )
 }
 ```
 
