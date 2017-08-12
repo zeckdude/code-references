@@ -3,6 +3,7 @@
 #### Steps to make Redux work in React
 
 For the steps below, refer to these code samples:
+
     ```js
     import { render } from 'react-dom';
     import { Provider } from 'react-redux';
