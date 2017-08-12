@@ -48,6 +48,7 @@ render(<App/>, document.querySelector('#main'));
     
 1. When app boots up, create a new redux store (a collection of state properties)
    * Relevant code example:
+   
        ```js
        createStore(reducers)
        ```
