@@ -4,7 +4,7 @@
 
 For the steps below, refer to these code samples:
 
-    ```js
+    
     import { render } from 'react-dom';
     import { Provider } from 'react-redux';
     import { createStore } from 'redux';
@@ -22,7 +22,7 @@ For the steps below, refer to these code samples:
     };
 
     render(<App/>, document.querySelector('#main'));
-    ```
+    
     
 1. When app boots up, create a new redux store (a collection of state properties)
 
