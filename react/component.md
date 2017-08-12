@@ -81,3 +81,40 @@ ReactDOM.render(<Root/>, document.querySelector('#main'));
 import { render } from 'react-dom';
 render(<Root/>, document.querySelector('#main'));
 ```
+
+<br>
+
+#### Render multiple child components within a component
+##### [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+```js
+class AlbumList extends Component {
+  state = {
+    albums: [
+    {
+      title: 'Another Way',
+      album: 'Rock on',
+      band: 'Grapebombs'
+    },
+    {
+      title: 'Red Gelatin',
+      album: 'More and more',
+      band: 'Running on Water'
+    }
+    ]
+  };
+
+  renderAlbums() {
+    return this.state.albums.map(album =>
+      <AlbumDetail key={album.title} album={album} />
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderAlbums()}
+      </div>
+    );
+  }
+}
+```
