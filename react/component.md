@@ -97,7 +97,7 @@ this.state.albums.map(album =>
 
 ##### [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/foreach)
 ```js
-this.state.albums.forEach(album =>
-  <AlbumDetail key={album.title} album={album} />
+this.state.albums.forEach((album, index) =>
+  <AlbumDetail key={"album-" + index} album={album} />
 );
 ```
