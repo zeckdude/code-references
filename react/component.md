@@ -85,7 +85,7 @@ render(<Root/>, document.querySelector('#main'));
 <br>
 
 #### Render multiple child components within a component
-**It is very important to assign a unique `key` prop to each dynamic child component so React has a reference to it (https://www.tutorialspoint.com/reactjs/reactjs_keys.htm)**
+*It is very important to assign a unique `key` prop to each dynamic child component so React has a reference to it (https://www.tutorialspoint.com/reactjs/reactjs_keys.htm)*
 ##### [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 ```js
 this.state.albums.map(album =>
