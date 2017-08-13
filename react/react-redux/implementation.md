@@ -48,15 +48,29 @@ render(<App/>, document.querySelector('#main'));
 
 <br>    
     
-1. When app boots up, create a new redux store (a collection of state properties).
-   The store looks at the reducers that are defined and creates initial state properties based on the reducers specified
-   * Relevant code example:
+1. When app boots up, create a new redux store (a collection of state properties).<br>
+   The store looks at the reducers that are defined and creates initial state properties based on the reducers specified.
+   * Relevant code:
    
        ```js
        createStore(reducers)
        ```
 
-2. The store is passed to the <Provider> component as a prop (the Provider component aids in communication between React and Redux).
-  The provider needs to be the outermost component element in the app so it can pass the various state properties to descendant components.
+<br>
+
+2. The store is passed to the `<Provider>` component as a prop (the provider component aids in communication between React and Redux).<br>
+  The provider component needs to be the outermost component element in the app so it can pass the various state properties to descendant components.
+   * Relevant code:
+   
+       ```js
+       <Provider store={createStore(reducers)}>
+       ```
 
 <br>
+
+3. The App is rendered to the screen including any descendant components within it.
+   * Relevant code:
+   
+       ```js
+       <Provider store={createStore(reducers)}>
+       ```
