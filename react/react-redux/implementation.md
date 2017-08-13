@@ -45,13 +45,18 @@ const App = () => {
 
 render(<App/>, document.querySelector('#main'));
 ```
+
+<br>    
     
-1. When app boots up, create a new redux store (a collection of state properties)
+1. When app boots up, create a new redux store (a collection of state properties).
+   The store looks at the reducers that are defined and creates initial state properties based on the reducers specified
    * Relevant code example:
    
        ```js
        createStore(reducers)
        ```
 
-2. 
+2. The store is passed to the <Provider> component as a prop (the Provider component aids in communication between React and Redux).
+  The provider needs to be the outermost component element in the app so it can pass the various state properties to descendant components.
+
 <br>
