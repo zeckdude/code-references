@@ -26,24 +26,50 @@ export default combineReducers({
 
 ```js
 /***   index.js - Initiate the app, wrap it in a <Provider> while passing it a reference to a new store while defining the reducers to create initial state   ***/
-
+import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
+import LibraryList from './components/LibraryList';
 
 const App = () => {
   // Create a global store that is using the specified reducers to get the state
   return (
     <Provider store={createStore(reducers)}>
       <div>
-        <WelcomeMessage />
+        <LibraryList />
       </div>
     </Provider>
   );
 };
 
 render(<App/>, document.querySelector('#main'));
+```
+
+<br>
+
+```js
+/***   LibraryList.js - Component that needs access to the store. It uses the connect() method to request specified state from the store and passes it in as props to the component.    ***/
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+class LibraryList extends Component {
+  render() {
+    console.log(this.props.libraries);
+  }
+}
+
+// Create a connection between the redux store and the component
+  // Take the global state and map specific state as props to pass to the component
+  const mapStateToProps = state => {
+    return { libraries: state.libraries };
+  };
+
+  // The connect() helper method makes the properties in the returned
+  // object (from the mapStateToProps function) available in the render method as props
+  export default connect(mapStateToProps)(LibraryList);
 ```
 
 <br>    
@@ -74,3 +100,24 @@ render(<App/>, document.querySelector('#main'));
        ```js
        render(<App/>, document.querySelector('#main'));
        ```
+       
+<br>
+
+4. Any components that need access to the store uses the connect() method to pass the specified state property to the component.
+     The connect() method has access to the store within the <Provider> component and can request specific state properties to pass to another component as props.
+   * Relevant code:
+   
+       ```js
+       class LibraryList extends Component {
+          render() {
+            console.log(this.props);
+          }
+        }
+
+        const mapStateToProps = state => {
+          return { libraries: state.libraries };
+        };
+
+        export default connect(mapStateToProps)(LibraryList);
+       ```
+
