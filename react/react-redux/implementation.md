@@ -58,7 +58,7 @@ render(<App/>, document.querySelector('#main'));
 
 <br>
 
-2. The store is passed to the `<Provider>` component as a prop (the provider component aids in communication between React and Redux).<br>
+2. Pass the store to the `<Provider>` component as a prop (the provider component aids in communication between React and Redux).<br>
   The provider component needs to be the outermost component element in the app so it can pass the various state properties to descendant components.
    * Relevant code:
    
@@ -68,9 +68,9 @@ render(<App/>, document.querySelector('#main'));
 
 <br>
 
-3. The App is rendered to the screen including any descendant components within it.
+3. Render the app to the screen including any descendant components within it.
    * Relevant code:
    
        ```js
-       <Provider store={createStore(reducers)}>
+       render(<App/>, document.querySelector('#main'));
        ```
