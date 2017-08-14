@@ -13,7 +13,8 @@
               this.state = {
                 color: props.initialColor
               };
-            }```
+            }
+        ```
 2. [`componentWillMount()`](https://facebook.github.io/react/docs/react-component.html#componentwillmount)
     * Last step directly before the component is added to the DOM
     * Since the component has not been rendered to the screen, no operations involving the DOM can be performed here
