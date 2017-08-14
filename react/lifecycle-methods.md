@@ -1,4 +1,4 @@
-##  Lifecycle methods
+##  [Lifecycle methods](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
 
 #### When an instance of a component is being created and inserted into the DOM
 ##### [Mounting](https://facebook.github.io/react/docs/react-component.html#mounting)
@@ -33,7 +33,20 @@
 
 #### When an instance of a component has had its state or props changed, thereby triggering a re-render
 ##### [Updating](https://facebook.github.io/react/docs/react-component.html#updating)
+##### [Updating and componentWillReceiveProps()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/update/component_will_receive_props.html)
 1. [`componentWillReceiveProps()`](https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops)
+    * Run when a component instance's props have possibly changed
+    * This is only run when props are updated and not on initial component intialization
+    * This step can be used be used to update state based on the prop changes
+    * React has a difficult time determining if props have been changed and may therefore be run when props have not actually changed. Because of that, it is important to compare the before and after props value.
+      * Example:
+          ```js
+          componentWillReceiveProps(nextProps) {
+            if (this.props.percent !== nextProps.percent) {
+              this.setState({ loaded: true });
+            }
+          }
+          ```
 2. [`shouldComponentUpdate()`](https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate)
 3. [`componentWillUpdate()`](https://facebook.github.io/react/docs/react-component.html#componentwillupdate)
 4. [`render()`]()
