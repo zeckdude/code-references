@@ -1,6 +1,8 @@
-##  [Lifecycle methods](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
+##  [Lifecycle methods](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/lifecycle_methods_overview.html)
 
-#### When an instance of a component is being created and inserted into the DOM
+![Lifecycle Methods Diagram](https://pasteboard.co/GFD1P74.png)
+
+#### Birth/Mounting phase: When an instance of a component is being created and inserted into the DOM
 ##### [Mounting](https://facebook.github.io/react/docs/react-component.html#mounting)
 1. [`constructor()`](https://facebook.github.io/react/docs/react-component.html#constructor)
     * Called before the component is added to the DOM.
@@ -15,23 +17,27 @@
               };
             }
         ```
+    * **More Info: [Initialization & Construction](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/birth/initialization_and_construction.html)**
 2. [`componentWillMount()`](https://facebook.github.io/react/docs/react-component.html#componentwillmount)
     * Last step directly before the component is added to the DOM.
     * Since the component has not been rendered to the screen, no operations involving the DOM can be performed here.
+    * **More Info: [Pre-mounting with componentWillMount()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/birth/premounting_with_componentwillmount.html)**
 3. [`render()`](https://facebook.github.io/react/docs/react-component.html#render)
     * Adds the component to the DOM.
     * This step is required.
     * Define JSX here.
     * Do not modify component state here.
     * If nothing should be rendered, then return `null` or `false`.
+    * **More Info: [Component render()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/birth/component_render.html)**
 4. [`componentDidMount()`](https://facebook.github.io/react/docs/react-component.html#componentdidmount)
     * Run directly after a component is added to the DOM.
     * AJAX requests should be performed here since it is guaranteed that there's a component to update.
     * Any other operations that require the component to be added to the DOM should be performed here.
+    * **More Info: [Post-mount with componentDidMount()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/birth/post_mount_with_component_did_mount.html)**
     
 <br>
 
-#### When an instance of a component has had its state or props changed, thereby triggering a re-render
+#### Growth/Update phase: When an instance of a component has had its state or props changed, thereby triggering a re-render
 ##### [Updating](https://facebook.github.io/react/docs/react-component.html#updating)
 1. [`componentWillReceiveProps()`](https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops)
     * Run when a component instance's props have possibly changed.
@@ -81,3 +87,21 @@
         }
          ```
     * **More Info: [Post-Render with componentDidUpdate()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/update/postrender_with_componentdidupdate.html)**
+    
+<br>
+
+#### Death/Unmount phase: When an instance of a component is destroyed
+##### [Unmounting](https://facebook.github.io/react/docs/react-component.html#unmounting)
+1. [`componentWillUnmount()`](https://facebook.github.io/react/docs/react-component.html#componentwillunmount)
+    * Run directly before a component is removed from the DOM and destroyed.
+    * Any cleanup operations should be performed here, such as:
+      * Cancel network requests
+      * Clean up any DOM elements that were created in `componentDidMount()`
+      * Remove event listeners associated with the component
+        * Example:
+            ```js
+            componentWillUnmount() {
+              window.removeEventListener('resize', this.resizeListener);
+            }
+            ```
+    * **More Info: [Using componentWillUnmount()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/death_unmounting_indepth.html)**
