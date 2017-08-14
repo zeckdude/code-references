@@ -33,7 +33,6 @@
 
 #### When an instance of a component has had its state or props changed, thereby triggering a re-render
 ##### [Updating](https://facebook.github.io/react/docs/react-component.html#updating)
-##### [Updating and componentWillReceiveProps()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/update/component_will_receive_props.html)
 1. [`componentWillReceiveProps()`](https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops)
     * Run when a component instance's props have possibly changed
     * This is only run when props are updated and not on initial component intialization
@@ -47,7 +46,16 @@
             }
           }
           ```
+    * **More Info: [Updating and componentWillReceiveProps()](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/update/component_will_receive_props.html)**
 2. [`shouldComponentUpdate()`](https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate)
+    * Run before a component instance is re-rendered
+    * Return `false` from this method to stop React from re-rendering the component. This may be useful when a prop or state has been changed that you deem not to be important enough for a re-render. The default behavior of a component is to re-render on every prop or state change.
+      * Example:
+          ```js
+          shouldComponentUpdate(nextProps, nextState) {
+            return this.props.engagement !== nextProps.engagement || this.state.input !== nextState.input;
+          }
+          ```
 3. [`componentWillUpdate()`](https://facebook.github.io/react/docs/react-component.html#componentwillupdate)
 4. [`render()`]()
     * Refer to `render()` definition above
