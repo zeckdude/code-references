@@ -1,6 +1,6 @@
 ##  [Lifecycle methods](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/lifecycle_methods_overview.html)
 
-![Lifecycle Methods Diagram](https://pasteboard.co/GFD1P74.png)
+![Lifecycle Methods Diagram](https://cdn.pbrd.co/images/GFD1P74.png)
 
 #### Birth/Mounting phase: When an instance of a component is being created and inserted into the DOM
 ##### [Mounting](https://facebook.github.io/react/docs/react-component.html#mounting)
