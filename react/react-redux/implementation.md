@@ -13,14 +13,29 @@ export default () => libraryData;
 ```
 
 ```js
-/***   reducers/index.js - Define the reducers that will be exported   ***/
+/***   reducers/SelectionReducer.js - ????   ***/
+
+export default (state = null, action) => {
+  switch (action.type) {
+    case 'select_library':
+      return action.payload;
+    default:
+      return state;
+  }
+};
+```
+
+```js
+/***   reducers/index.js - Combine the reducers and define them as properties that will be exported   ***/
 
 import { combineReducers } from 'redux';
 import LibraryReducer from './LibraryReducer';
+import SelectionReducer from './SelectionReducer';
 
 // Exporting reducers to use in the app
 export default combineReducers({
-  libraries: LibraryReducer
+  libraries: LibraryReducer, // Get all libraries by accessing the LibraryReducer
+  selectedLibraryId: SelectionReducer // Get the currently selected library ID by accessing the SelectionReducer
 });
 ```
 
@@ -72,15 +87,40 @@ class LibraryList extends Component {
   export default connect(mapStateToProps)(LibraryList);
 ```
 
-<br>    
+<br>   
+
+1. Create the necessary reducers as separate files
+    * Relevant code:
+   
+       ```js
+       // LibraryReducer.js
+       import libraryData from './LibraryList.json';
+       export default () => libraryData;
+       
+       // SelectionReducer.js
+       export default (state = null, action) => {
+          switch (action.type) {
+            case 'select_library':
+              return action.payload;
+            default:
+              return state;
+          }
+        };
+       ```
+       
+<br>
     
-1. When app boots up, create a new redux store (a collection of state properties).<br>
+2. When app boots up, create a new redux store (a collection of state properties).<br>
    The store looks at the reducers that are defined and creates initial state properties based on the reducers specified.
    * Relevant code:
    
        ```js
        createStore(reducers)
        ```
+       
+<br>
+
+
 
 <br>
 
