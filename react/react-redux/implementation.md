@@ -109,6 +109,16 @@ class LibraryList extends Component {
        ```
        
 <br>
+
+2. Combine the reducers and define them as properties that will be exported
+   * Relevant code:
+   
+       ```js
+       export default combineReducers({
+          libraries: LibraryReducer,
+          selectedLibraryId: SelectionReducer
+        });
+       ```
     
 2. When app boots up, create a new redux store (a collection of state properties).<br>
    The store looks at the reducers that are defined and creates initial state properties based on the reducers specified.
@@ -117,10 +127,6 @@ class LibraryList extends Component {
        ```js
        createStore(reducers)
        ```
-       
-<br>
-
-
 
 <br>
 
