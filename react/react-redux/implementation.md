@@ -87,6 +87,20 @@ class LibraryList extends Component {
   export default connect(mapStateToProps)(LibraryList);
 ```
 
+```js
+/***   actions/index.js - Create the necessary action creators in one file. The action creator is a function with the purpose of creating an action. An action is a JS object that identifies a `type` property, which tells Redux which reducer to use as well as any other information that needs to be passed to the reducer.   ***/
+
+export const selectLibrary = (libraryId) => {
+  // Redux action
+  // Actions are used to tell a reducer to update in a specific way
+  // The type property is required
+  return {
+    type: 'select_library',
+    payload: libraryId
+  };
+};
+```
+
 <br>   
 
 1. Create the necessary reducers as separate files
@@ -165,5 +179,17 @@ class LibraryList extends Component {
         };
 
         export default connect(mapStateToProps)(LibraryList);
+       ```
+       
+5. Create the necessary action creators in one file.
+   * Relevant code:
+   
+       ```js
+       export const selectLibrary = (libraryId) => {
+          return {
+            type: 'select_library',
+            payload: libraryId
+          };
+        };
        ```
 
