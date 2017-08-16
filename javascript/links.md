@@ -3,25 +3,27 @@
 #### Practice Exercises
 | Name          | Link                                                                                        |
 |---------------|---------------------------------------------------------------------------------------------------|
-| W3Resource Exercises | http://www.w3resource.com/javascript-exercises/  |
+| W3Resource Exercises | http://www.w3resource.com/javascript-exercises  |
 | Coderbyte Challenges | https://github.com/zeckdude/coderbyte   |
 | Karan Projects |   https://github.com/karan/Projects  |
-| CodeWars              |   https://www.codewars.com/ |
+| CodeWars              |   https://www.codewars.com |
 | Programmr Challenges  | http://www.programmr.com/zone/js  |
-| Microsoft Functional JS Exercises | http://reactivex.io/learnrx/ |
+| Microsoft Functional JS Exercises | http://reactivex.io/learnrx |
 | Project Euler | https://projecteuler.net/archives |
-| CodeQuizzes | http://www.codequizzes.com/ |
-| Ten JS Exercises | http://www.ling.gu.se/~lager/teaching/dialogue_systems%20II/labs/javascript.html <br>Solutions: http://rmion.com/javascript-functional-programming-free-beginner-exercises/ |
-| NodeSchool | http://nodeschool.io/ |
+| CodeQuizzes | http://www.codequizzes.com |
+| Ten JS Exercises | http://www.ling.gu.se/~lager/teaching/dialogue_systems%20II/labs/javascript.html <br>Solutions: http://rmion.com/javascript-functional-programming-free-beginner-exercises |
+| NodeSchool | http://nodeschool.io |
 | Codefights | https://codefights.com/home |
 | Reddit - Daily Programmer | https://www.reddit.com/r/dailyprogrammer |
 | Dash - Projects | https://dash.generalassemb.ly/projects |
-| Web Training Centre | http://www.webtrainingcentre.com/programming-exercises/ |
-| Martyr2’s Mega Project List | http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/ |
-| Codecademy Web Projects | https://www.codecademy.com/en/tracks/projects |
+| Web Training Centre | http://www.webtrainingcentre.com/programming-exercises |
 | Functional JS Workshop | https://github.com/timoxley/functional-javascript-workshop |
 | Terminal - Javascripting | https://github.com/sethvincent/javascripting |
-| Exercism.io | http://exercism.io/ |
+| Exercism.io | http://exercism.io |
+| Pramp.com | https://pramp.com |
+| learn.co | https://learn.co |
+| checkio.org | https://js.checkio.org |
+| A Smarter Way to Learn JavaScript | http://www.asmarterwaytolearn.com |
 
 
 <br>
@@ -32,6 +34,8 @@
 | Make a to-do app | https://www.quora.com/What-are-some-good-JavaScript-projects-to-practice/answer/Maisnam-Raju?srid=zJUU | Tic-Tac-Game | *None* |
 | Various Project Ideas | https://www.quora.com/What-should-be-my-first-JavaScript-mini-project/answer/Bharath-Mb-2?srid=zJUU |
 | Create Google Chrome Extension | https://www.sitepoint.com/create-chrome-extension-10-minutes-flat/ <br> https://www.quora.com/What-are-some-great-programming-projects-for-beginners/answer/Will-Sentance?srid=zJUU |
+| Martyr2’s Mega Project List | http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list |
+| Codecademy Web Projects | https://www.codecademy.com/en/tracks/projects |
 
 
 
