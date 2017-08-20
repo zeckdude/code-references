@@ -1,5 +1,15 @@
 ## Implementation
 
+#### Guiding Principles of Redux
+1. All state is stored in one location called the store (a.k.a. single source of truth).
+2. State can only be changed by emitting an action which tells the store how to change the state.
+3. All actions are processed by a reducer function, which returns a new value to changed the state in the store. They are considered "pure" functions because they do nothing but return a value based on their parameters. These are the rules to follow:
+    * It should not make outside network or database calls.
+    * Its return value depends solely on the values of its parameters
+    * Its arguments should not be changed.
+    * Using the same arguments, it should always return the same value
+4. 
+
 #### Steps to make Redux work in React
 
 For the steps below, refer to these code samples:
