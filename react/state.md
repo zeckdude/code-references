@@ -3,7 +3,7 @@
 #### Rules of State
 * Definition of state: A plain javascript object used to record dynamic data that can be changed
 * When we need to update what a component shows, call `this.setState()`
-* Only change state with `setState()`, never assign anything to `this.state()` directly (unless setting the initial state values)
+* Only change state with `setState()`, never assign anything to `this.state` directly (unless setting the initial state values)
 
 <br>
 
