@@ -10,7 +10,7 @@
 | `<Link>` | Provides an element that acts like a traditional link, but doesn't reload the page. Rather it will update the browser location, which in turn will cause `<BrowserRouter>` to check the new location against its defined routes. It requires a `to` property which is the location that the link should take the user to. | https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf#54c4 |
 
 #### A simple `<BrowserRouter>` Implementation
-```
+```js
 import { Switch, Route } from 'react-router-dom'
 
 <Switch>
@@ -20,8 +20,11 @@ import { Switch, Route } from 'react-router-dom'
 </Switch>
 ```
 
+<br>
+
+
 #### Specifying the `component` or `render` properties on the `<Route>` component
-```
+```js
 import { Switch, Route } from 'react-router-dom'
 
 <Switch>
@@ -35,4 +38,6 @@ import { Switch, Route } from 'react-router-dom'
   )}/>
 </Switch>
 ```
+
+<br>
 
