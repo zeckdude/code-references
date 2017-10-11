@@ -106,7 +106,8 @@ const Player = (props) => {
       <h1>props.match Properties</h1>
       <p>The player number: {props.match.params.number}</p>
       <p>The matched part of the pathname: {props.match.url}</p>
-      <p>The matched path is exact?: {props.match.isExact}</p>
+      <p>The route path that was entered: {props.match.path}</p>
+      <p>The matched path is exact?: {props.match.isExact.toString()}</p>
     </div>
   )
 };
