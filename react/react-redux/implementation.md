@@ -13,38 +13,44 @@
 
 For the steps below, refer to these code samples:
 ```js
-/***   reducers/LibraryReducer.js - Get a JSON object and export it   ***/
+/***   reducers/PostsReducer.js - Update the state in the store with the payload that is provided   ***/
+import { mapKeys } from 'lodash';
+import { FETCH_POSTS, FETCH_POST, CREATE_POST, DELETE_POST } from '../actions';
 
-import libraryData from './LibraryList.json';
-
-// Return the data from the JSON file. In a real app, this would be a JSON response from an API call.
-export default () => libraryData;
-```
-
-```js
-/***   reducers/SelectionReducer.js - ????   ***/
-
-export default (state = null, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
-    case 'select_library':
-      return action.payload;
-    default:
-      return state;
+    case FETCH_POST:
+      // Copy the current state and set a new property with a dynamic key value and the payload as the value
+      return { ...state, [action.payload.data.id]: action.payload.data };
+    case FETCH_POSTS:
+      // Create a new state object that uses an AJAX request response and grabs the 'id' property from each object in the response to use as its key
+      return mapKeys(action.payload.data, 'id');
+    case CREATE_POST:
+      // Copy the current state and set a new property with a dynamic key value and the payload as the value 
+      return { ...state, [action.payload.id]: action.payload };
+    case DELETE_POST:
+      // Copy the current state and delete the property with the specified key
+      var newState = { ...state };
+      delete newState[action.payload.id];
+      return newState;
   }
+
+  return state;
 };
+
 ```
 
 ```js
 /***   reducers/index.js - Combine the reducers and define them as properties that will be exported   ***/
 
 import { combineReducers } from 'redux';
-import LibraryReducer from './LibraryReducer';
+import PostsReducer from './PostsReducer';
 import SelectionReducer from './SelectionReducer';
 
 // Exporting reducers to use in the app
 export default combineReducers({
-  libraries: LibraryReducer, // Get all libraries by accessing the LibraryReducer
-  selectedLibraryId: SelectionReducer // Get the currently selected library ID by accessing the SelectionReducer
+  posts: PostsReducer, // All reducers related to posts
+  selectedPostId: SelectionReducer // Get the currently selected post ID by accessing the SelectionReducer
 });
 ```
 
@@ -55,14 +61,14 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
-import LibraryList from './components/LibraryList';
+import PostsIndex from './components/PostsIndex';
 
 const App = () => {
   // Create a global store that is using the specified reducers to get the state
   return (
     <Provider store={createStore(reducers)}>
       <div>
-        <LibraryList />
+        <PostsIndex />
       </div>
     </Provider>
   );
@@ -71,29 +77,60 @@ const App = () => {
 render(<App/>, document.querySelector('#main'));
 ```
 
-<br>
-
 ```js
-/***   LibraryList.js - Component that needs access to the store. It uses the connect() method to request specified state from the store and passes it in as props to the component.    ***/
+/***   PostsIndex.js - Component that needs access to the store. It uses the connect() method to request specified state from the store and passes it in as props to the component, as well as to dispatch an action which will eventually set new state and re-render the component.   ***/
 
+import { map as _map } from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchPosts } from '../actions';
 
-class LibraryList extends Component {
+class PostsIndex extends Component {
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
+
+  renderPosts() {
+    return _map(this.props.posts, post => {
+      return (
+        <li key={post.id} className="list-group-item">
+          <Link to={`/posts/${post.id}`}>
+            {post.title}
+          </Link>
+        </li>
+      );
+    });
+  }
+
   render() {
-    console.log(this.props.libraries);
+    return (
+      <div>
+        <div className="text-xs-right">
+          <Link className="btn btn-primary" to="/posts/new">
+            Add a Post
+          </Link>
+        </div>
+        <h3>Posts</h3>
+        <ul className="list-group">
+          {this.renderPosts()}
+        </ul>
+      </div>
+    );
   }
 }
 
 // Create a connection between the redux store and the component
   // Take the global state and map specific state as props to pass to the component
   const mapStateToProps = state => {
-    return { libraries: state.libraries };
+    return { 
+      posts: state.posts 
+    };
   };
 
   // The connect() helper method makes the properties in the returned
   // object (from the mapStateToProps function) available in the render method as props
-  export default connect(mapStateToProps)(LibraryList);
+  export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
 ```
 
 ```js
@@ -108,11 +145,78 @@ export const selectLibrary = (libraryId) => {
     payload: libraryId
   };
 };
+
+import axios from 'axios';
+
+export const FETCH_POSTS = 'FETCH_POSTS';
+
+const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+const API_KEY = '?key=12345';
+
+export const fetchPosts = () => {
+  // Make AJAX request
+  const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
+
+  // By default, a Redux action will send immediately, but if the redux-promise middleware is added, it will wait for the AJAX request response and will then get the data out of the response to send to the reducer
+  
+  // Redux action
+  // Actions are used to tell a reducer to update in a specific way
+  // The type property is required
+  return {
+    type: FETCH_POSTS,
+    payload: request
+  };
+  
+   /*  // An alternate way to handle an AJAX request is to use the redux-thunk middlware. By returning a function, the redux-thunk middleware will wait for the AJAX response and will then provide a dispatch method in its argument to use in the then() block to dispatch the action to the reducer
+     return dispatch => {
+       return request.then(
+         // Success callback
+         ({ data }) => {
+           callback();
+
+           // Dispatching the action to the reducer
+           dispatch({
+             type: 'FETCH_POSTS',
+             payload: data
+           });
+         },
+         // Error callback
+         error => {
+           alert('The request could not be made due to a system error');
+         }
+       );
+     };
+     */
+};
 ```
 
-<br>   
+<br>
 
-1. Create the necessary reducers as separate files
+#### General Setup that needs to be in place before any flow can work 
+
+<br>  
+
+1. When app boots up, create a new redux store (a collection of state properties).<br>
+   The store looks at the reducers that are defined and creates initial state properties based on the reducers specified.
+   * Relevant code:
+   
+       ```js
+       createStore(reducers)
+       ```
+
+<br>
+
+2. Pass the store to the `<Provider>` component as a prop (the provider component aids in communication between React and Redux).<br>
+  The provider component needs to be the outermost component element in the app so it can pass the various state properties to descendant components.
+   * Relevant code:
+   
+       ```js
+       <Provider store={createStore(reducers)}>
+       ```
+
+<br>
+
+3. Create the necessary reducers as separate files
     * Relevant code:
    
        ```js
@@ -143,25 +247,6 @@ export const selectLibrary = (libraryId) => {
         });
        ```
     
-2. When app boots up, create a new redux store (a collection of state properties).<br>
-   The store looks at the reducers that are defined and creates initial state properties based on the reducers specified.
-   * Relevant code:
-   
-       ```js
-       createStore(reducers)
-       ```
-
-<br>
-
-2. Pass the store to the `<Provider>` component as a prop (the provider component aids in communication between React and Redux).<br>
-  The provider component needs to be the outermost component element in the app so it can pass the various state properties to descendant components.
-   * Relevant code:
-   
-       ```js
-       <Provider store={createStore(reducers)}>
-       ```
-
-<br>
 
 3. Render the app to the screen including any descendant components within it.
    * Relevant code:
@@ -172,8 +257,36 @@ export const selectLibrary = (libraryId) => {
        
 <br>
 
-4. Any components that need access to the store uses the connect() method to pass the specified state property to the component.
-     The connect() method has access to the store within the <Provider> component and can request specific state properties to pass to another component as props.
+
+
+
+
+
+
+
+       
+5. Create the necessary action creators in one file.
+   * Relevant code:
+   
+       ```js
+       export const selectLibrary = (libraryId) => {
+          return {
+            type: 'select_library',
+            payload: libraryId
+          };
+        };
+       ```
+       
+       
+ <br>
+
+#### Flow #1: An action in a component updates the state in the store 
+
+<br>
+
+
+1. Any components that need access to the store uses the connect() method to pass the specified state property to the component.
+     The connect() method has access to the store within the `<Provider>` component and can request specific state properties to pass to another component as props.
    * Relevant code:
    
        ```js
@@ -189,16 +302,3 @@ export const selectLibrary = (libraryId) => {
 
         export default connect(mapStateToProps)(LibraryList);
        ```
-       
-5. Create the necessary action creators in one file.
-   * Relevant code:
-   
-       ```js
-       export const selectLibrary = (libraryId) => {
-          return {
-            type: 'select_library',
-            payload: libraryId
-          };
-        };
-       ```
-
