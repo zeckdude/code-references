@@ -292,12 +292,14 @@ export const fetchPosts = () => {
    * Relevant code:
    
        ```js
-       // Grab the posts property from the store and provide it to the component as a prop
-       const mapStateToProps = state => {
-         return { posts: state.posts };
-       };
+       import { fetchPosts } from '../actions';
 
-       export default connect(mapStateToProps)(LibraryList);
+       // The connect() method connects a component to the redux store. It creates a new component using the component specified and adds extra functionality related to redux with it.
+       // There are two ways that an action can be emitted from within the component.
+       
+       // #1 - Using an object containing the action creator
+       // The action creator must be imported into the file and defined as the second argument to connect()
+       export default connect(null, { fetchPosts: fetchPosts })(LibraryList);
        ```
  
  
