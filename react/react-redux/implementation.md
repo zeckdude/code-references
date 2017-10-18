@@ -300,6 +300,12 @@ export const fetchPosts = () => {
        // #1 - Using an object containing the action creator
        // The action creator must be imported into the file and defined as the second argument to connect()
        export default connect(null, { fetchPosts: fetchPosts })(LibraryList);
+       
+       // #2 - Using a function that returns a function to dispatch the action
+       const mapDispatchToProps = dispatch => {
+         return bindActionCreators({ fetchPosts: fetchPosts }, dispatch);
+       };
+       export default connect(mapStateToProps, mapDispatchToProps)(PostsIndex);
        ```
  
  
