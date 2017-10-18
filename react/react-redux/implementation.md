@@ -302,10 +302,10 @@ export const fetchPosts = () => {
        export default connect(null, { fetchPosts: fetchPosts })(LibraryList);
        
        // #2 - Using a function that returns a function to dispatch the action
-       const mapDispatchToProps = dispatch => {
+       /* const mapDispatchToProps = dispatch => {
          return bindActionCreators({ fetchPosts: fetchPosts }, dispatch);
        };
-       export default connect(null, mapDispatchToProps)(PostsIndex);
+       export default connect(null, mapDispatchToProps)(PostsIndex); */
        ```
  
  
