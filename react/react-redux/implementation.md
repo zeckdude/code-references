@@ -266,7 +266,7 @@ export const fetchPosts = () => {
 <br>
 
 1. Any components that need access to the store uses the connect() method to pass the specified state property to the component.
-     The connect() method has access to the store within the `<Provider>` component and can request specific state properties to pass to another component as props.
+     The connect() method has access to the store within the `<Provider>` component and can request specific state properties to pass to another component as props. Pass a function as the first argument to the connect() method which returns an object containing properties that are wanted on the props and are pulling their data from the store.
    * Relevant code:
    
        ```js
@@ -288,7 +288,7 @@ export const fetchPosts = () => {
  
  <br>
 
-1. Any components that needs to update the store uses the connect() method to dispatch an action to the reducers.
+1. Any components that needs to update the store uses the connect() method to dispatch an action to the reducers. Pass an object or function, as the second argument to the connect() method, which specify which action to emit.
    * Relevant code:
    
        ```js
@@ -305,7 +305,7 @@ export const fetchPosts = () => {
        const mapDispatchToProps = dispatch => {
          return bindActionCreators({ fetchPosts: fetchPosts }, dispatch);
        };
-       export default connect(mapStateToProps, mapDispatchToProps)(PostsIndex);
+       export default connect(null, mapDispatchToProps)(PostsIndex);
        ```
  
  
