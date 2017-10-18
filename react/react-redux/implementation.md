@@ -280,8 +280,11 @@ export const fetchPosts = () => {
        const mapStateToProps = state => {
          return { posts: state.posts };
        };
-
+       
        export default connect(mapStateToProps)(LibraryList);
+       
+       // The short-hand way to write the mapStateToProps function
+       // export default connect(({ posts }) => ({ posts }))(PostsIndex);
        ```
        
  #### Flow #2: An action in a component updates the state in the store 
