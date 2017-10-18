@@ -40,6 +40,19 @@ a === b // true
 When you create a completely unrelated copy of an existing variable. Any change to either of the variables will not affect the other.<br> 
 
 ```js 
+// Deep copy a variable
+var name = 'jim';
+
+// Different ways to deep copy a variable
+var moniker = JSON.parse(JSON.stringify(name));
+var moniker = name.slice();
+
+
+
+autoCompanies === carBrands // false
+```
+
+```js 
 // Deep copy an array
 var carBrands = ['Toyota', 'VW', 'BMW'];
 
