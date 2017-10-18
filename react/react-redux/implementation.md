@@ -9,7 +9,6 @@
     * Its arguments should not be changed.
     * Using the same arguments, it should always return the same value
     
-![](https://raw.githubusercontent.com/zeckdude/code-references/master/img/react/react-redux/5.png)
 
 #### Steps to make Redux work in React
 
@@ -93,46 +92,22 @@ class PostsIndex extends Component {
     this.props.fetchPosts();
   }
 
-  renderPosts() {
-    return _map(this.props.posts, post => {
-      return (
-        <li key={post.id} className="list-group-item">
-          <Link to={`/posts/${post.id}`}>
-            {post.title}
-          </Link>
-        </li>
-      );
-    });
-  }
-
   render() {
-    return (
-      <div>
-        <div className="text-xs-right">
-          <Link className="btn btn-primary" to="/posts/new">
-            Add a Post
-          </Link>
-        </div>
-        <h3>Posts</h3>
-        <ul className="list-group">
-          {this.renderPosts()}
-        </ul>
-      </div>
-    );
+    console.log(this.props.posts);
   }
 }
 
 // Create a connection between the redux store and the component
-  // Take the global state and map specific state as props to pass to the component
-  const mapStateToProps = state => {
-    return { 
-      posts: state.posts 
-    };
-  };
+// Take the global state and map specific state as props to pass to the component
+const mapStateToProps = state => {
+ return { 
+   posts: state.posts 
+ };
+};
 
-  // The connect() helper method makes the properties in the returned
-  // object (from the mapStateToProps function) available in the render method as props
-  export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
+// The connect() helper method makes the properties in the returned
+// object (from the mapStateToProps function) available in the render method as props
+export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
 ```
 
 ```js
@@ -281,26 +256,48 @@ export const fetchPosts = () => {
        
        
  <br>
-
-#### Flow #1: An action in a component updates the state in the store 
-
+ 
+![](https://raw.githubusercontent.com/zeckdude/code-references/master/img/react/react-redux/5.png)
+ 
 <br>
 
+#### Flow #1: An component needs access to specific state in the store 
+
+<br>
 
 1. Any components that need access to the store uses the connect() method to pass the specified state property to the component.
      The connect() method has access to the store within the `<Provider>` component and can request specific state properties to pass to another component as props.
    * Relevant code:
    
        ```js
-       class LibraryList extends Component {
+       class PostsIndex extends Component {
           render() {
-            console.log(this.props);
+            console.log(this.props.posts);
           }
-        }
+       }
+        
+       // Grab the posts property from the store and provide it to the component as a prop
+       const mapStateToProps = state => {
+         return { posts: state.posts };
+       };
 
-        const mapStateToProps = state => {
-          return { libraries: state.libraries };
-        };
-
-        export default connect(mapStateToProps)(LibraryList);
+       export default connect(mapStateToProps)(LibraryList);
        ```
+       
+ #### Flow #2: An action in a component updates the state in the store 
+ 
+ <br>
+
+1. Any components that needs to update the store uses the connect() method to dispatch an action to the reducers.
+   * Relevant code:
+   
+       ```js
+       // Grab the posts property from the store and provide it to the component as a prop
+       const mapStateToProps = state => {
+         return { posts: state.posts };
+       };
+
+       export default connect(mapStateToProps)(LibraryList);
+       ```
+ 
+ 
