@@ -261,7 +261,7 @@ export const fetchPosts = () => {
  
 <br>
 
-#### Flow #1: An component needs access to specific state in the store 
+#### Flow #1: A component needs access to specific state in the store 
 
 <br>
 
