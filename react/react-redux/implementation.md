@@ -309,5 +309,40 @@ export const fetchPosts = () => {
        export default connect(null, mapDispatchToProps)(PostsIndex); 
        */
        ```
+ <br>
+ 
+ 2. The specified action creator function is called and returns an action (object with a `type` and `payload` property) to all the reducers.
+   * Relevant code:
+   
+```js
+export const fetchPosts = () => {
+  const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
+  
+  return {
+    type: FETCH_POSTS,
+    payload: request
+  };
+};
+```
+
+ <br>
+ 
+ 3. All of the reducers will listen for any actions and if the specified type is caught, it will non-destructively update the state. This will cause all of the components which are using the updated state to re-render.
+   * Relevant code:
+   
+```js
+import { mapKeys } from 'lodash';
+import { FETCH_POSTS, FETCH_POST, CREATE_POST, DELETE_POST } from '../actions';
+
+export default (state = {}, action) => {
+  switch (action.type) {
+    case FETCH_POSTS:
+      // Create a new state object that uses an AJAX request response and grabs the 'id' property from each object in the response to use as its key
+      return mapKeys(action.payload.data, 'id');
+  }
+
+  return state;
+};
+```
  
  
