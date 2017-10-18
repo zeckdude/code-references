@@ -8,6 +8,8 @@
     * Its return value depends solely on the values of its parameters
     * Its arguments should not be changed.
     * Using the same arguments, it should always return the same value
+    
+![](https://raw.githubusercontent.com/zeckdude/code-references/master/img/react/react-redux/5.png)
 
 #### Steps to make Redux work in React
 
