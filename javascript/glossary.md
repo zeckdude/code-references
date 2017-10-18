@@ -36,11 +36,31 @@ a === b // true
 <br>
 
 #### Deep copy
-When create a completely unrelated copy of an existing variable. Any change to either of the variables will not affect the other.<br> 
+##### [Understanding Deep and Shallow Copy in Javascript](https://we-are.bookmyshow.com/understanding-deep-and-shallow-copy-in-javascript-13438bad941c)
+When you create a completely unrelated copy of an existing variable. Any change to either of the variables will not affect the other.<br> 
+
 ```js 
-var a = 1; 
-var b = a; 
-a === b // true
+// Deep copy an array
+var carBrands = ['Toyota', 'VW', 'BMW'];
+
+// Different ways to deep copy an array
+var autoCompanies = carBrands.slice();
+var autoCompanies = [ ...carBrands ];
+var autoCompanies = _.cloneDeep(carBrands); // lodash
+
+autoCompanies === carBrands // false
+```
+
+```js 
+// Deep copy an object
+var car = { color: 'green', height: 10, isTruck: false };
+
+// Different ways to deep copy an object
+var whip = Object.assign({}, car);
+var whip = { ...car };
+var whip = _.cloneDeep(car) // lodash
+
+whip === car // false
 ```
 
 <br> 
