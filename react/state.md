@@ -49,6 +49,7 @@ var MyComponent = React.createClass({
 
 #### Set state values after initialization
 ##### [setState()](https://facebook.github.io/react/docs/react-component.html#setstate)
+##### [Using a function in `setState` instead of an object](https://medium.com/@shopsifter/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
 ```js
 this.setState({ orders: orders });
 
