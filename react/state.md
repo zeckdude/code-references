@@ -4,6 +4,7 @@
 * Definition of state: A plain javascript object used to record dynamic data that can be changed
 * When we need to update what a component shows, call `this.setState()`
 * Only change state with `setState()`, never assign anything to `this.state` directly (unless setting the initial state values)
+* If you need to use `setState()` to update a flag based on its previous value, pass `setState()` a function that returns an object and references `prevState` instead of `this.state`, since `this.state` isn't reliable as it may be updated asynchronously (see below)
 
 <br>
 
@@ -53,4 +54,14 @@ this.setState({ orders: orders });
 
 // Using destructuring
 this.setState({ orders });
+
+// If you need to use `setState()` to update a flag based on its previous value, pass `setState()` a function that returns an object and references `prevState` instead of `this.state`, since `this.state` isn't reliable as it may be updated asynchronously
+// Instead of
+// this.setState({ animationIsActive: !this.state.correctData });
+// Use this
+this.setState((prevState, props) => {
+  return {
+    animationIsActive: !prevState.correctData
+  };
+});
 ```
