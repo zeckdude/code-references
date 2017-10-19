@@ -15,6 +15,8 @@ Axios is a Promise based HTTP client for the browser and node.js. It lets you ma
 Performing a `GET` request
 
 ```js
+import axios from 'axios';
+
 // Make a request for a user with a given ID
 axios.get('/user?ID=12345')
   .then(function (response) {
@@ -43,7 +45,30 @@ axios.get('/user', {
 Performing a `POST` request
 
 ```js
+import axios from 'axios';
+
 axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+```
+
+<br>
+
+<br>
+
+Performing a `PUT` request
+
+```js
+import axios from 'axios';
+
+axios.put('/user/12345', {
     firstName: 'Fred',
     lastName: 'Flintstone'
   })
@@ -60,6 +85,8 @@ axios.post('/user', {
 Performing a `DELETE` request
 
 ```js
+import axios from 'axios';
+
 axios.delete('/user/12345')
   .then(function (response) {
     console.log(response);
