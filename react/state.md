@@ -57,11 +57,11 @@ this.setState({ orders });
 
 // If you need to use `setState()` to update a flag based on its previous value, pass `setState()` a function that returns an object and references `prevState` instead of `this.state`, since `this.state` isn't reliable as it may be updated asynchronously
 // Instead of
-// this.setState({ animationIsActive: !this.state.correctData });
+// this.setState({ animationIsActive: !this.state.animationIsActive });
 // Use this
 this.setState((prevState, props) => {
   return {
-    animationIsActive: !prevState.correctData
+    animationIsActive: !prevState.animationIsActive
   };
 });
 ```
