@@ -182,6 +182,7 @@ class Username extends React.Component {
 ```
 
 <br>
+
 ##### [Use react-autobind package](https://www.npmjs.com/package/react-autobind)
 *Requires installing & importing package, but makes code much cleaner*
 ```js
