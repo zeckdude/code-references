@@ -101,3 +101,107 @@ this.state.albums.forEach((album, index) =>
   <AlbumDetail key={"album-" + index} album={album} />
 );
 ```
+
+<br>
+
+#### How to bind `this` to be used in methods of a class-based component
+##### [Bind in Render](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56#b389)
+*Convenient and easy to read, but is worse for performance because a new function is called every time the component re-renders*
+```js
+class Username extends React.Component {
+  handleClick() {
+    console.log(this.props); // `this` is now the component itself
+  }
+
+  render() {
+    return (
+      <SomeComponent onClick={this.handleClick.bind(this)} />
+    )
+  }
+}
+```
+
+<br>
+
+##### [Use Arrow Function in Render](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56#dbb4)
+*Convenient and easy to read, but is worse for performance because a new function is called every time the component re-renders*
+```js
+class Username extends React.Component {
+  handleClick() {
+    console.log(this.props); // `this` is now the component itself
+  }
+
+  render() {
+    return (
+      <SomeComponent onClick={e => handleClick(e)} />
+    )
+  }
+}
+```
+
+<br>
+
+##### [Bind in Constructor](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56#e3d6)
+*Requires the binding to be added to the constructor which is a bit tedious, but is better for performance because a new function isn't called every time the component re-renders*
+```js
+class Username extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    console.log(this.props); // `this` is now the component itself
+  }
+
+  render() {
+    return (
+      <SomeComponent onClick={() => this.handleClick()} />
+    )
+  }
+}
+```
+
+<br>
+
+##### [Use Arrow Function in Class Property - stage-2 feature](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56#f45f)
+*Best for code maintainability, readability and performance, but it is a stage-2 feature so it will require certain settings to be enabled in Babel.*
+```js
+class Username extends React.Component {
+  handleClick = () => {
+    // call this function from render 
+    // and this.whatever in here works fine.
+  };
+
+  render() {
+    return (
+      <SomeComponent onClick={handleClick()} />
+    )
+  }
+}
+```
+
+<br>
+##### [Use react-autobind package](https://www.npmjs.com/package/react-autobind)
+*Requires installing & importing package, but makes code much cleaner*
+```js
+import autoBind from 'react-autobind';
+
+class Username extends React.Component {
+  constructor(props) {
+    super(props);
+    // autoBind(this); // Automatically binds all methods of the class
+    autoBind(this, 'handleClick', 'anotherMethod'); // Automatically binds specified methods of the class
+  }
+
+  handleClick() {
+    console.log(this.props); // `this` is now the component itself
+  }
+
+  render() {
+    return (
+      <SomeComponent onClick={() => this.handleClick()} />
+    )
+  }
+}
+```
