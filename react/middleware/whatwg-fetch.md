@@ -147,18 +147,19 @@ fetch(`https://jsonplaceholder.typicode.com/posts/5`, {
 Performing multiple concurrent requests
 
 ```js
-function getUserAccount() {
-  return axios.get('/user/12345');
-}
+const grabContent = url =>
+  fetch(url).then(res => res.json()).then(json => {
+    console.log(json);
+  });
 
-function getUserPermissions() {
-  return axios.get('/user/12345/permissions');
-}
+const urls = [
+  'https://jsonplaceholder.typicode.com/posts',
+  'https://jsonplaceholder.typicode.com/posts/5'
+];
 
-axios.all([getUserAccount(), getUserPermissions()])
-  .then(axios.spread(function (acct, perms) {
-    // Both requests are now complete
-  }));
+Promise.all(urls.map(grabContent)).then(() => {
+  console.log(`All fetches have been made`);
+});
 ```
 
 <br>
