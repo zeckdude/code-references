@@ -38,8 +38,6 @@ fetch(`https://jsonplaceholder.typicode.com/posts/5`)
       throw Error(`There was a ${response.status} error`);
     }
 
-    debugger;
-
     return response.json();
   })
   .then(function(json) {
@@ -120,13 +118,7 @@ Performing a `DELETE` request
 import 'whatwg-fetch';
 
 fetch(`https://jsonplaceholder.typicode.com/posts/5`, {
-  method: 'delete',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    title: 'My New Title'
-  })
+  method: 'delete'
 })
   .then(function(response) {
     // The same concept applies as in the GET example so refer to that for more details
