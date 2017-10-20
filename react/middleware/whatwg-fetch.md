@@ -139,6 +139,8 @@ fetch(`https://jsonplaceholder.typicode.com/posts/5`, {
 Performing multiple concurrent requests
 
 ```js
+import 'whatwg-fetch';
+
 const grabContent = url =>
   fetch(url).then(res => res.json()).then(json => {
     console.log(json);
