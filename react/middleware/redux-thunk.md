@@ -1,124 +1,74 @@
-## zl-fetch
+## redux-thunk
 
-Using the fetch API, zlFetch is a library that abstracts away the handleResponse function so you can skip ahead to and handle both your data and errors without worrying about the response.
+Redux Thunk middleware allows you to write action creators that return a function instead of an action. The function can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters. It is useful for asynchronous requests made in the action, so it can delay sending the action until the response comes back.
 
 #### Helpful Links
 | Name | Link |
 |---------------|----------------------------|
-| CSS-Tricks: Using Fetch | https://css-tricks.com/using-fetch/ |
+| Github: Redux Thunk | https://github.com/gaearon/redux-thunk |
+| RallyCoding (Stephen Grider): Basics of Redux Thunk | https://www.youtube.com/watch?v=1QI-UE3-0PU |
 
 ### Example
 
-Performing a `GET` request
+Enable Redux Thunk
 
 ```js
-import 'whatwg-fetch';
-import zlFetch from 'zl-fetch';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/index';
 
-// Make a request for a user with a given ID
-zlFetch('https://jsonplaceholder.typicode.com/posts/5')
-  .then(json => {
-    // Parsed JSON response data
-    console.log(json);
-  })
-  .catch(error => {
-    // Catches 404 and 500 errors among others
-    throw Error(`There was a ${error.statusCode} error`);
-  });
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+);
 ```
 
 <br>
 
-Performing a `POST` request
+Perform an asynchronous request within an action
 
 ```js
-import 'whatwg-fetch';
-import zlFetch from 'zl-fetch';
+import axios from 'axios';
 
-zlFetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'post',
-  body: {
-    title: 'A new title'
-  }
-})
-  .then(json => {
-    // Parsed JSON response data
-    console.log(json);
-  })
-  .catch(error => {
-    // Catches 404 and 500 errors among others
-    throw Error(`There was a ${error.statusCode} error`);
-  });
+export const createPost = (values, callback) => {
+  const request = axios.get('https://jsonplaceholder.typicode.com/posts');
+
+  return dispatch =>
+    request.then(
+
+      // Success callback
+      ({ data }) => {
+        // Dispatching the action to the reducer
+        dispatch({
+          type: 'CREATE_POST',
+          payload: data
+        });
+      },
+
+      // Error callback
+      error => {
+        alert('The form could not send due to a system error');
+      }
+    );
+};
 ```
 
 <br>
 
-Performing a `PUT` request
+Check a condition before dispatching an action
 
 ```js
-import 'whatwg-fetch';
-import zlFetch from 'zl-fetch';
+export const incrementIfOdd => () {
+  return (dispatch, getState) => {
+    const { counter } = getState();
 
-zlFetch('https://jsonplaceholder.typicode.com/posts/5', {
-  method: 'put',
-  body: {
-    title: 'An updated title'
-  }
-})
-  .then(json => {
-    // Parsed JSON response data
-    console.log(json);
-  })
-  .catch(error => {
-    // Catches 404 and 500 errors among others
-    throw Error(`There was a ${error.statusCode} error`);
-  });
+    if (counter % 2 === 0) {
+      return;
+    }
+
+    dispatch({
+      type: 'INCREMENT_COUNTER'
+    });
+  };
+}
 ```
-
-<br>
-
-Performing a `DELETE` request
-
-```js
-import 'whatwg-fetch';
-import zlFetch from 'zl-fetch';
-
-zlFetch('https://jsonplaceholder.typicode.com/posts/5', {
-  method: 'delete'
-})
-  .then(json => {
-    // Parsed JSON response data
-    console.log(json);
-  })
-  .catch(error => {
-    // Catches 404 and 500 errors among others
-    throw Error(`There was a ${error.statusCode} error`);
-  });
-```
-
-<br>
-
-Performing multiple concurrent requests
-
-```js
-import 'whatwg-fetch';
-import zlFetch from 'zl-fetch';
-
-const grabContent = url =>
-  zlFetch(url)
-    .then(json => console.log(json))
-    .catch(error => console.log(error));
-
-const urls = [
-  'https://jsonplaceholder.typicode.com/posts',
-  'https://jsonplaceholder.typicode.com/posts/5'
-];
-
-Promise.all(urls.map(grabContent)).then(() => {
-  console.log(`Urls ${urls} were grabbed`);
-});
-```
-
-<br>
-
-
