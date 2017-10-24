@@ -8,6 +8,12 @@
 | [map()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#map---video) | Iterate over an array while performing a function on each value | Returns ALL altered array values as a new array |
 | [reduce()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#reduce---video) | Iterate over an array while combining each result to return a single value | Useful for operations like adding together all values in an array |
 | [filter()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#filter---video) | Iterate over an array while checking if each value passes a specified condition | Returns ONLY the values that meet the condition as a new array |
+| [every()](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#every) | Test if all elements in an array match a condition |
+| [find() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#find) | Return the first element in an array that matches a condition |
+| [findIndex() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#findindex) | Return the index of the first element that matches a specified value (or condition) in an Array |
+| [some() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#some-1) | Determine if any element in an array matches a condition |
+| [includes() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#includes---es6) |Determine whether a value is in an array |
+
 
 
 #### Return the number of elements in an array
