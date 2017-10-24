@@ -11,6 +11,7 @@ Redux Thunk middleware allows you to write action creators that return a functio
 | Scotch: Build A Media Library with React, Redux, and Redux-saga | https://scotch.io/tutorials/build-a-media-library-with-react-redux-and-redux-saga-part-1 |
 | CodePen: Implementing AJAX with redux-saga | https://codepen.io/mentrie/pen/JKZEVa |
 <br>
+
 ### Live Demo
 https://stackblitz.com/edit/react-redux-saga-demo
 <br><br>
