@@ -15,7 +15,7 @@ Redux Thunk middleware allows you to write action creators that return a functio
 https://stackblitz.com/edit/react-redux-saga-demo
 <br>
 
-![](https://raw.githubusercontent.com/zeckdude/code-references/master/img/react/redux-saga/a.png)
+![](https://raw.githubusercontent.com/zeckdude/code-references/master/img/react/redux-saga/a.jpg)
 
 ### Example
 
