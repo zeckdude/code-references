@@ -15,7 +15,7 @@
 | [includes() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#includes---es6) |Determine whether a value is in an array | *None* |
 
 
-
+<br>
 #### Return the number of elements in an array
 ##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
 ```js
