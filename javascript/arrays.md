@@ -13,9 +13,8 @@
 | [findIndex() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#findindex) | Return the index of the first element that matches a specified value (or condition) in an Array | *None* |
 | [some() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#some-1) | Determine if any element in an array matches a condition | *None* |
 | [includes() - ES6](https://github.com/zeckdude/code-references/blob/master/javascript/arrays.md#includes---es6) |Determine whether a value is in an array | *None* |
-
-
 <br>
+
 #### Return the number of elements in an array
 ##### [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
 ```js
