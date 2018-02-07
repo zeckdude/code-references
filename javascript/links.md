@@ -24,6 +24,11 @@
 | learn.co | https://learn.co |
 | checkio.org | https://js.checkio.org |
 | A Smarter Way to Learn JavaScript | http://www.asmarterwaytolearn.com |
+| Codela | https://www.codela.io |
+| LeetCode | https://leetcode.com |
+| Interview Cake | https://www.interviewcake.com |
+| Test-driven JS assessment | https://github.com/zeckdude/js-assessment |
+
 
 
 <br>
@@ -122,4 +127,11 @@
 | Sitepoint - Intro to Functional Programming | https://www.sitepoint.com/series/introduction-functional-javascript/ |
 | funfunfunction - Functional Programming in JavaScript | https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84 |
 
-
+#### Advanced Computer Science subjects in JavaScript
+| Name          | Link                                                                                        |
+|---------------|---------------------------------------------------------------------------------------------------|
+| Educative: Master the JavaScript Interview | https://www.educative.io/collection/5679346740101120/5703274724327424  |
+| Educative: Coderust 2.0: Faster Coding Interview Preparation using Interactive Visualizations | https://www.educative.io/collection/5642554087309312/5679846214598656 |
+| Educative: Data Structures in Javascript with Visualizations & Hands-on Exercises | https://www.educative.io/collection/10370001/160001 |
+| FreeCodeCamp: 10 Common Data Structures Explained with Videos + Exercises | https://medium.freecodecamp.org/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b |
+| Beau Carnes: Algorithms in Motion (promo code: 39carnes) | https://www.manning.com/livevideo/algorithms-in-motion |
