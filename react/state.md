@@ -74,31 +74,31 @@ this.setState((prevState, props) => {
 ##### [setState()](https://facebook.github.io/react/docs/react-component.html#setstate)
 ##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 ##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-##### [Using a function in `setState` instead of an object](https://medium.com/@shopsifter/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
+##### Supplying an object to `setState()`
 ```js
-// Supplying an object to setState()
-  // Concat
-  this.setState({
-    people: this.state.people.concat('Bob');
-  });
+// Concat
+this.setState({
+  people: this.state.people.concat('Bob');
+});
 
-  // Spread syntax
-  this.setState({
-    people: [...this.state.people, 'Bob']
-  });
+// Spread syntax
+this.setState({
+  people: [...this.state.people, 'Bob']
+});
+```
+##### [Supplying a function to `setState()`](https://medium.com/@shopsifter/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
+```js
+// Concat
+this.setState((prevState) => {
+  return {
+    people: prevState.people.concat('Bob')
+  };
+});
 
-// Supplying a function to setState()
-  // Concat
-  this.setState((prevState) => {
-    return {
-      people: prevState.people.concat('Bob')
-    };
-  });
-  
-  // Spread syntax
-  this.setState((prevState) => {
-    return {
-      people: [...prevState.people, 'Bob']
-    };
-  });
+// Spread syntax
+this.setState((prevState) => {
+  return {
+    people: [...prevState.people, 'Bob']
+  };
+});
 ```
