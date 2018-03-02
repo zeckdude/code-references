@@ -5,6 +5,7 @@
 * When we need to update what a component shows, call `this.setState()`
 * Only change state with `setState()`, never assign anything to `this.state` directly (unless setting the initial state values)
 * If you need to use `setState()` to update a flag based on its previous value, pass `setState()` a function that returns an object and references `prevState` instead of `this.state`, since `this.state` isn't reliable as it may be updated asynchronously (see below)
+* Don't mutate the state when updating it
 
 <br>
 
@@ -65,4 +66,37 @@ this.setState((prevState, props) => {
     animationIsActive: !prevState.animationIsActive
   };
 });
+```
+
+#### Update an array in state
+##### [setState()](https://facebook.github.io/react/docs/react-component.html#setstate)
+##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+##### [Using a function in `setState` instead of an object](https://medium.com/@shopsifter/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
+```js
+// Supplying an object to setState()
+  // Concat
+  this.setState({
+    people: this.state.people.concat('Bob');
+  });
+
+  // Spread syntax
+  this.setState({
+    people: [...this.state.people, 'Bob']
+  });
+
+// Supplying a function to setState()
+  // Concat
+  this.setState((prevState) => {
+    return {
+      people: prevState.people.concat('Bob')
+    };
+  });
+  
+  // Spread syntax
+  this.setState((prevState) => {
+    return {
+      people: [...prevState.people, 'Bob']
+    };
+  });
 ```
