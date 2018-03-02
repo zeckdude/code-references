@@ -68,6 +68,8 @@ this.setState((prevState, props) => {
 });
 ```
 
+<br>
+
 #### Update an array in state
 ##### [setState()](https://facebook.github.io/react/docs/react-component.html#setstate)
 ##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
