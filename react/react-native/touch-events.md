@@ -3,6 +3,8 @@ Unlike React on a browser, not every component has a touch event in React Native
 
 **Note:** Any of the Touchable components only support only child component. If you wish to have multiple components handle the same touch event, wrap them in a single `<View>` component as the child of the Touchable component.
 
+<br>
+
 #### Add a touch event with no visual feedback
 If you need to handle a tap gesture but you don't want any feedback to be displayed, use `<TouchableWithoutFeedback>`
 ##### [TouchableWithoutFeedback](https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html)
