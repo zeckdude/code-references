@@ -102,3 +102,14 @@ this.setState((prevState) => {
   };
 });
 ```
+
+<br>
+
+##### [immutability-helper: update()](https://github.com/kolodny/immutability-helper)
+```js
+this.setState((prevState) => {
+  return {
+    people: update(prevState.people, {$push: ['Bob']})
+  };
+});
+```
