@@ -131,6 +131,18 @@ this.setState((prevState) => {
 
 <br>
 
+##### [concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+```js
+const index = 2;
+this.setState((prevState) => {
+  return {
+    people: [...prevState.people.slice(0, index), ...prevState.people.slice(index + 1)]
+  };
+});
+```
+
+<br>
+
 ##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 ```js
 const index = 2;
@@ -149,6 +161,19 @@ const index = 2;
 this.setState((prevState) => {
   return {
     people: update(prevState.people, {$splice: [[index, 1]]})
+  };
+});
+```
+
+<br>
+
+#### Remove all items with a specified value from an array in state
+##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+```js
+const name = 'Jimmy';
+this.setState(prevState => {
+  return {
+    people: prevState.people.filter(person => person !== name)
   };
 });
 ```
