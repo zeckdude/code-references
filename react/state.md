@@ -113,3 +113,42 @@ this.setState((prevState) => {
   };
 });
 ```
+
+<br>
+
+
+#### Remove an item at a specific index from an array in state
+##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+##### [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+```js
+const index = 2;
+this.setState((prevState) => {
+  return {
+    people: [...prevState.people.slice(0,index), ...prevState.people.slice(index+1)]
+  };
+});
+```
+
+<br>
+
+##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+```js
+const index = 2;
+this.setState((prevState) => {
+  return {
+    people: prevState.people.filter((person, personIndex) => personIndex !== index)
+  };
+});
+```
+
+<br>
+
+##### [immutability-helper: update()](https://github.com/kolodny/immutability-helper)
+```js
+const index = 2;
+this.setState((prevState) => {
+  return {
+    people: update(prevState.people, {$splice: [[index, 1]]})
+  };
+});
+```
