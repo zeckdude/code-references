@@ -177,3 +177,39 @@ this.setState(prevState => {
   };
 });
 ```
+
+<br>
+
+#### Update a property of an object in state
+##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+```js
+this.setState(prevState => {
+  return {
+    person: { ...prevState.person, age: 25 }
+  };
+});
+```
+
+<br>
+
+##### [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+```js
+this.setState(prevState => {
+  return {
+    person: Object.assign({}, prevState.person, { age: 25 })
+  };
+});
+```
+
+<br>
+
+##### [immutability-helper: update()](https://github.com/kolodny/immutability-helper)
+```js
+this.setState((prevState) => {
+  return {
+    person: update(prevState.person, {
+      age: { $set: 25 }
+    })
+  };
+});
+```
