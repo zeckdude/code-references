@@ -180,6 +180,23 @@ this.setState(prevState => {
 
 <br>
 
+#### Update all items with a specified value from an array in state
+##### [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+```js
+this.setState(prevState => {
+  return {
+    people: prevState.people.map(name => {
+      if (name === 'Jimmy') {
+        return 'Bob';
+      }
+      return name;
+    })
+  };
+});
+```
+
+<br>
+
 #### Update a property of an object in state
 ##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 ```js
