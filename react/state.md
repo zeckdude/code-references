@@ -12,7 +12,7 @@
 #### Quick Reference Notes
 
 | Purpose | Notes |
-|---------------|----------------------------------------|----------------------------------------------------------|
+|---------------|----------------------------------------------------------|
 | [Set initial state values](https://github.com/zeckdude/code-references/blob/master/react/state.md#set-initial-state-values) | *None* |
 <br>
 
