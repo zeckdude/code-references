@@ -14,6 +14,12 @@
 | Purpose | Notes |
 |---------------|----------------------------------------------------------|
 | [Set initial state values](https://github.com/zeckdude/code-references/blob/master/react/state.md#set-initial-state-values) | *None* |
+| [Set state values after initialization](https://github.com/zeckdude/code-references/blob/master/react/state.md#set-state-values-after-initialization) | *None* |
+| [Add an item to an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#add-an-item-to-an-array-in-state) | *None* |
+| [Remove an item at a specific index from an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#remove-an-item-at-a-specific-index-from-an-array-in-state) | *None* |
+| [Remove all items with a specified value from an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#remove-all-items-with-a-specified-value-from-an-array-in-state) | *None* |
+| [Update all items with a specified value from an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#update-all-items-with-a-specified-value-from-an-array-in-state) | *None* |
+| [Update a property of an object in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#update-a-property-of-an-object-in-state) | *None* |
 <br>
 
 
