@@ -9,6 +9,15 @@
 
 <br>
 
+#### Quick Reference Notes
+
+| Purpose | Notes |
+|---------------|----------------------------------------|----------------------------------------------------------|
+| [Set initial state values](https://github.com/zeckdude/code-references/blob/master/react/state.md#set-initial-state-values) | *None* |
+<br>
+
+
+
 #### Set initial state values
 ##### [Set a property of the component in the constructor method - ES6](https://stackoverflow.com/a/30668609/83916)
 ```js
