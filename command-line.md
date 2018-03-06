@@ -23,7 +23,7 @@ lsof -i :{pid}
 
 <br>
 
-##### [Get detailed information on a process](https://unix.stackexchange.com/a/106848/216496)
+##### [Get detailed information on a specified process](https://unix.stackexchange.com/a/106848/216496)
 ```js
 ps aux | grep {pid}
 ```
