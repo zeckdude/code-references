@@ -290,11 +290,9 @@ const chrisAttributes = {
   weight: 165,
   isFromCalifornia: true
 };
-this.setState((prevState) => {
+this.setState(prevState => {
   return {
-    person: update(prevState, {
-      person: { $merge: chrisAttributes }
-    })
+    person: update(prevState.person, {$merge: chrisAttributes});
   };
 });
 ```
