@@ -86,6 +86,7 @@ const fullWidthImageStyles = {
 
 ##### [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html)
 *Enable scroll functionality on a View. Used instead of a View component. Only use this for a view that is known to be a limited area. For adding a scrollable view to a list that may grow, use <FlatList>.*
+  
 ```js
 import { AppRegistry, View, ScrollView } from 'react-native';
 
@@ -108,8 +109,10 @@ AppRegistry.registerComponent('myApp', () => App);
 
 <br>
 
-##### [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html)
-*Enable scroll functionality on a View. Used instead of a View component.*
+
+##### [FlatList](https://facebook.github.io/react-native/docs/flatlist.html)
+*Provides a scrollbar to a list of data. It uses lazy loading to only show data for the viewing area and loads in more when scrolled making it much more performant than <ScrollView>.*
+  
 ```js
 import { AppRegistry, View, ScrollView } from 'react-native';
 
@@ -131,7 +134,7 @@ AppRegistry.registerComponent('myApp', () => App);
 
 ```
 
-<br >
+<br>
 
 ##### [Linking](https://facebook.github.io/react-native/docs/linking.html)
 *Create a link that opens the browser and takes the user to the specified URL*
