@@ -19,7 +19,9 @@
 | [Remove an item at a specific index from an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#remove-an-item-at-a-specific-index-from-an-array-in-state) | *None* |
 | [Remove all items with a specified value from an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#remove-all-items-with-a-specified-value-from-an-array-in-state) | *None* |
 | [Update all items with a specified value from an array in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#update-all-items-with-a-specified-value-from-an-array-in-state) | *None* |
+| Merge an array in state with another array | *None* |
 | [Update a property of an object in state](https://github.com/zeckdude/code-references/blob/master/react/state.md#update-a-property-of-an-object-in-state) | *None* |
+| Merge the properties of an object to an object in state | *None* |
 <br>
 
 
@@ -212,7 +214,7 @@ this.setState(prevState => {
 
 <br>
 
-#### Update a property of an object in state
+#### Update or add a property of/to an object in state
 ##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 ```js
 this.setState(prevState => {
@@ -242,6 +244,40 @@ this.setState((prevState) => {
     person: update(prevState.person, {
       age: { $set: 25 }
     })
+  };
+});
+```
+
+<br>
+
+#### Merge the properties of an object to an object in state
+##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+```js
+const chrisAttributes = {
+  weight: 165,
+  isFromCalifornia: true
+};
+this.setState(prevState => {
+  return {
+    person: { 
+      ...prevState.person, 
+      ...chrisAttributes
+    }
+  };
+});
+```
+
+<br>
+
+##### [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+```js
+const chrisAttributes = {
+  weight: 165,
+  isFromCalifornia: true
+};
+this.setState(prevState => {
+  return {
+    person: Object.assign({}, prevState.person, chrisAttributes)
   };
 });
 ```
