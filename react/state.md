@@ -153,7 +153,7 @@ this.setState((prevState) => {
 const index = 2;
 this.setState((prevState) => {
   return {
-    people: [...prevState.people.slice(0, index), ...prevState.people.slice(index + 1)]
+    people:[].concat(prevState.people.slice(0, index), prevState.people.slice(index + 1))
   };
 });
 ```
