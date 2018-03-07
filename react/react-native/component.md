@@ -85,10 +85,9 @@ const fullWidthImageStyles = {
 <br >
 
 ##### [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html)
-*Enable scroll functionality on a View. Used instead of a View component. Only use this for a view that is known to be a limited area. For adding a scrollable view to a list that may grow, use <FlatList>.*
-  
+*Enable scroll functionality on a View. Used instead of a View component. Only use this for a view that is known to be a limited area. For adding a scrollable view to a list that may grow, use [`<FlatList>`](https://github.com/zeckdude/code-references/blob/master/react/react-native/component.md#flatlist).*
 ```js
-import { AppRegistry, View, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 const AlbumList = () => {
   return (
@@ -97,41 +96,28 @@ const AlbumList = () => {
     </ScrollView>
   );
 }
-
-const App = () => (
-  <View style={{ flex: 1 }}> // Add `flex: 1` on all parent components to eliminate strange rendering issues
-    <AlbumList />
-  </View>
-);
-
-AppRegistry.registerComponent('myApp', () => App);
 ```
 
 <br>
 
 
 ##### [FlatList](https://facebook.github.io/react-native/docs/flatlist.html)
-*Provides a scrollbar to a list of data. It uses lazy loading to only show data for the viewing area and loads in more when scrolled making it much more performant than <ScrollView>.*
-  
+*Provides a scrollbar to a list of data. It uses lazy loading to only show data for the viewing area and loads in more when scrolled making it much more performant than [`<ScrollView>`](https://github.com/zeckdude/code-references/blob/master/react/react-native/component.md#scrollview).*
 ```js
-import { AppRegistry, View, ScrollView } from 'react-native';
+import { FlatList, View } from 'react-native';
 
 const AlbumList = () => {
   return (
-    <ScrollView>
-      ...
-    </ScrollView>
+    <FlatList 
+      data={albums}
+      renderItem={(info) => (
+        <View>
+          {info.item.value}
+        </View>
+      )}
+    />
   );
 }
-
-const App = () => (
-  <View style={{ flex: 1 }}> // Add `flex: 1` on all parent components to eliminate strange rendering issues
-    <AlbumList />
-  </View>
-);
-
-AppRegistry.registerComponent('myApp', () => App);
-
 ```
 
 <br>
