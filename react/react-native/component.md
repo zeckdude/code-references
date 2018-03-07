@@ -85,6 +85,30 @@ const fullWidthImageStyles = {
 <br >
 
 ##### [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html)
+*Enable scroll functionality on a View. Used instead of a View component. Only use this for a view that is known to be a limited area. For adding a scrollable view to a list that may grow, use <FlatList>.*
+```js
+import { AppRegistry, View, ScrollView } from 'react-native';
+
+const AlbumList = () => {
+  return (
+    <ScrollView>
+      ...
+    </ScrollView>
+  );
+}
+
+const App = () => (
+  <View style={{ flex: 1 }}> // Add `flex: 1` on all parent components to eliminate strange rendering issues
+    <AlbumList />
+  </View>
+);
+
+AppRegistry.registerComponent('myApp', () => App);
+```
+
+<br>
+
+##### [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html)
 *Enable scroll functionality on a View. Used instead of a View component.*
 ```js
 import { AppRegistry, View, ScrollView } from 'react-native';
