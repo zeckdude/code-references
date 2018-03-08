@@ -53,6 +53,7 @@ const styles = {
 ##### [Image](https://facebook.github.io/react-native/docs/image.html)
 ```js
 import { View, Image } from 'react-native';
+import placeImage from './src/assets/barbados.jpg';
 
 
 const MyComponent = (props) => {
@@ -60,15 +61,17 @@ const MyComponent = (props) => {
     <View>
     
       // Image with a fixed height/width
+      // Use a filepath to get the image
       <Image 
         style={{ height: 50, width: 50 }} // It is absolutely necessary to provide a width/height in order for the image to appear
         source={{ uri: props.image_filename }}
       />
       
       // Image with 100% width
+      // Use an imported image from a relative location 
       <Image 
         style={fullWidthImageStyles}
-        source={{ uri: props.image_filename }}
+        source={placeImage}
       />
     </View>  
   );
