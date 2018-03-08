@@ -127,7 +127,6 @@ const AlbumList = () => {
 
 ##### [Linking](https://facebook.github.io/react-native/docs/linking.html)
 *Create a link that opens the browser and takes the user to the specified URL*
-<br>Sandbox Example: https://snack.expo.io/SyatG7UIW
 ```js
 import { Text, Linking } from 'react-native';
 
@@ -139,4 +138,5 @@ const myComponent = () => {
   );
 }
 ```
+##### [*See example of code*](https://snack.expo.io/BJScM4JKM)
 
