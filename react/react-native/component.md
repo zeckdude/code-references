@@ -84,6 +84,7 @@ const fullWidthImageStyles = {
   flex: 1
 };
 ```
+##### [*See example of code*](https://snack.expo.io/SkOWpL1Ff)
 
 <br >
 
@@ -139,4 +140,3 @@ const myComponent = () => {
 }
 ```
 ##### [*See example of code*](https://snack.expo.io/BJScM4JKM)
-
