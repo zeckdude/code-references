@@ -101,6 +101,7 @@ const AlbumList = () => {
   );
 }
 ```
+##### [*See example of code*](https://snack.expo.io/Sk8-7vyYG)
 
 <br>
 
@@ -123,6 +124,7 @@ const AlbumList = () => {
   );
 }
 ```
+##### [*See example of code*](https://snack.expo.io/S132Ts1tz)
 
 <br>
 
