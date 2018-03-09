@@ -124,7 +124,8 @@ const AlbumList = () => {
   );
 }
 ```
-##### [*See example of code*](https://snack.expo.io/S132Ts1tz)
+##### [*See example of code - Grid View*](https://snack.expo.io/S132Ts1tz)
+##### [*See example of code - List of Text Items*](https://snack.expo.io/Hk2wG21FG)
 
 <br>
 
