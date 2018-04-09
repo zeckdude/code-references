@@ -205,3 +205,71 @@
   grid-area: f;
 }
 ```
+
+<br>
+
+#### Fill the grid with the most available grid items of a certain width (and fallback to a fraction otherwise)
+##### [repeat](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
+##### [minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
+```html
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+```
+
+```css
+.container {
+  display: grid;
+  
+  /* 
+    The grid will fit as many available grid items as is possible in each column 
+    The grid items will be 100px minimum width and 1 fraction unit at their maximum width
+      The grid items will all be 100px when possible. If the grid width is at a point where they don't fit all perfectly at 100px width each, then they all change to use 1 fraction unit and become responsive.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
+```
+
+
+<br>
+
+#### Define rules for rows that don't have specific definitons (implicit rows)
+##### [grid-auto-rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)
+```html
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+```
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  
+  /* Create as many rows as necessary at 75px height */
+  grid-auto-rows: 75px;
+}
+```
