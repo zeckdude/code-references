@@ -176,6 +176,7 @@
   grid-template: 40px auto 40px / repeat(12, 1fr);
   
   /* 
+    Set a custom identifier to signify how much space a grid item occupies (Use a '.' to signify an empty area)
     Header: 1 row & 12 columns across
     Menu: 1 row (flexible because it is set to auto) & 1 column
     Content: 1 row (flexible because it is set to auto) & 11 columns
