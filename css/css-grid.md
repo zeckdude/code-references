@@ -155,3 +155,52 @@
   grid-column: 1 / -1;
 }
 ```
+
+<br>
+
+#### Define a template area to specify the grid layout
+##### [grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
+```html
+<div class="container">
+  <div class="header">HEADER</div>
+  <div class="menu">MENU</div>
+  <div class="content">CONTENT</div>
+  <div class="footer">FOOTER</div>
+</div>
+```
+
+```css
+.container {
+  height: 100%;
+  display: grid;
+  grid-template: 40px auto 40px / repeat(12, 1fr);
+  
+  /* 
+    Header: 1 row & 12 columns across
+    Menu: 1 row (flexible because it is set to auto) & 1 column
+    Content: 1 row (flexible because it is set to auto) & 11 columns
+    Footer: 1 row & 12 columns across
+  */
+  grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+/* Each grid item element needs to be linked to the custom letter that is defined in the grid-template-areas property on the grid element */
+.header {
+  grid-area: h;
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}
+```
