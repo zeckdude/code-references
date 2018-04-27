@@ -37,6 +37,14 @@ ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
 # To test that the LAMP stack was successfully installed, simply enter the hosting server IP address into a browser. It should show you the default Apache page.
 ```
 
+<br> 
+
+To test that the LAMP stack was successfully installed, simply enter the hosting server IP address into a browser. It should show you the default Apache page.
 <p align="center"><img src="https://image.ibb.co/ch07Gx/Screen_Shot_2018_04_27_at_7_49_05_AM.png" width="500"></p>
+
+<br>
+
+To test that PhpMyAdmin was successfully installed, simply go to `<ip address>/phpmyadmin`. It should show you the PhpMyadmin login page.
+<p align="center"><img src="https://image.ibb.co/fms9UH/Screen_Shot_2018_04_27_at_8_11_55_AM.png" width="500"></p>
 
 <br>
