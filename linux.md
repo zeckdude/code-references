@@ -33,8 +33,6 @@ ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
 
 # Restart Apache server
 /etc/init.d/apache2 reload
-
-# To test that the LAMP stack was successfully installed, simply enter the hosting server IP address into a browser. It should show you the default Apache page.
 ```
 
 <br> 
