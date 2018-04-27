@@ -33,6 +33,8 @@ ssh-keygen
 ```shell
 # Copy public SSH Key to remote server. After typing in the password, the contents of your ~/.ssh/id_rsa.pub key will be appended to the end of the user account's ~/.ssh/authorized_keys file on the remote server
 ssh-copy-id <username>@<remote_host>
+# If a SSH key filename that is not the default (~/.ssh/id_rsa) is being used, you need to specify the location of the SSH key to copy to the server
+ssh-copy-id -i ~/.ssh/<ssh key filename> <username>@<remote_host>
 
 # Login to the account on the server without a password
 ssh <username>@<remote_host>
