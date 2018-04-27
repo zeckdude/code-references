@@ -28,7 +28,9 @@ This is a shortened approach using a package that includes Apache, MySQL, and PH
 apt-get install lamp-server^
 
 # Restart Apache server
-/etc/init.d/apache2 reload
+/etc/init.d/apache2 restart
+# Alternative syntax
+systemctl restart apache2
 ```
 
 <br>
@@ -41,11 +43,16 @@ apt-get install apache2
 # Install MySQL
 apt-get install mysql-server
 
+# Setup settings to require strong passwords for MySQL users (optional)
+mysql_secure_installation
+
 # Install PHP
 apt-get install php5 libapache2-mod-php5
 
 # Restart Apache server
-sudo /etc/init.d/apache2 restart
+/etc/init.d/apache2 restart
+# Alternative syntax
+systemctl restart apache2
 ```
 
 <br> 
