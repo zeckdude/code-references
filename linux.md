@@ -21,7 +21,7 @@ apt-get upgrade
 
 #### Install LAMP Server 
 
-#### Install an all-in-one package
+##### Install an all-in-one package
 This is a shortened approach using a package that includes Apache, MySQL, and PHP
 ```shell
 # Install lamp-server package
