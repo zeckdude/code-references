@@ -7,7 +7,7 @@
 
 <br>
 
-##### Maintenance Commands
+#### Maintenance Commands
 ```shell
 # Ensure all security updates are on system
 # Get a list of all available updates
@@ -19,7 +19,7 @@ apt-get upgrade
 
 <br>
 
-##### Install LAMP Server
+#### Install LAMP Server
 This is a shortened approach using a package that includes Apache, MySQL, and PHP
 ```shell
 # Install lamp-server package
