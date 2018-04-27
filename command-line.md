@@ -38,3 +38,25 @@ kill {pid}
 <br>
 
 
+##### Get current directory
+```js
+pwd
+```
+
+<br>
+
+##### Show all files in current directory
+```js
+ls
+```
+
+<br>
+
+##### Change directory
+```js
+cd <directory name>
+```
+
+<br>
+
+
