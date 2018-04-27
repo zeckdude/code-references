@@ -59,4 +59,11 @@ cd <directory name>
 
 <br>
 
+##### Clear the screen
+```js
+clear
+```
+
+<br>
+
 
