@@ -19,6 +19,20 @@ apt-get upgrade
 
 <br>
 
+#### [Generate SSH Key and copy to remote server](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
+```shell
+# Generate SSH Key. Choose the name and location of the file. Pick a passphrase if desired.
+ssh-keygen
+
+# Copy public SSH Key to remote server. After typing in the password, the contents of your ~/.ssh/id_rsa.pub key will be appended to the end of the user account's ~/.ssh/authorized_keys file on the remote server
+ssh-copy-id <username>@<remote_host>
+
+# Login to the account on the server without a password
+ssh <username>@<remote_host>
+```
+
+<br>
+
 #### Install LAMP Server 
 
 ##### Install an all-in-one package
