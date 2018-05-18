@@ -22,9 +22,12 @@ letterH = name[1]
 #### Get a part of a string
 ```python
 name = 'Zack Willy Morris'
+
 # Start from the back
 firstName = name[:-13] # Contains Zack
+
 middleName = name[5:10] # Contains: Willy
+
 # Define the starting letter and go through the end of the string
 lastName = name[11:] # Contains: Morris
 ```
