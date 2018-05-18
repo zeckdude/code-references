@@ -2,7 +2,7 @@
 
 ### Variables
 #### Define a variable 
-```js
+```python
 age = 25
 name = 'Chris'
 ```
