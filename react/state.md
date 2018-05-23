@@ -250,7 +250,7 @@ this.setState((prevState) => {
 
 <br>
 
-#### Merge the properties of an object to an object in state
+#### Merge the properties of an object to an object in state (shallow merge)
 ##### [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 ```js
 const chrisAttributes = {
