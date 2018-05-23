@@ -2,8 +2,10 @@
 
 
 #### Start a node app from the command line in debug mode
-```js
+```
 node inspect <filename>.js
+// Using nodemon so that you can make changes in the code and it will re-run the app in inspect mode
+nodemon inspect <filename>.js
 ```
 
 <br>
@@ -24,7 +26,7 @@ n
 
 <br>
 
-#### Continue to the end of the script
+#### Continue to the end of the script (or the next debugger statement)
 ```js
 c
 ```
