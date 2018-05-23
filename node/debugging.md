@@ -30,3 +30,22 @@ c
 ```
 
 <br>
+
+#### Set a debugger statement within the code for the debug mode to stop on
+```js
+const person = {
+  name: 'Chris'
+};
+
+debugger;
+person.name = 'Jeff';
+```
+
+<br>
+
+#### Get into REPL (read-evaluate-print-loop) mode to see values in code
+```js
+repl
+```
+
+<br>
