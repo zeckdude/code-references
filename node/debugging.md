@@ -21,6 +21,7 @@ ctrl-c
 
 // Exit out of debug mode
 ctrl-c
+ctrl-c
 ```
 
 <br>
