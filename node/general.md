@@ -15,3 +15,32 @@ const command = process.argv[2];
 ```
 
 <br>
+
+#### Get the contents of a file on the server
+##### [fs.readFileSync](https://nodejs.org/docs/latest/api/fs.html#fs_fs_readfilesync_path_options)
+```js
+// Get the contents of JSON file
+const notesString = fs.readFileSync('notes.json');
+
+// Convert JSON string to JS object
+const notes = JSON.parse(notesString);
+```
+
+<br>
+
+#### Create/Overwrite a file on the server
+##### [fs.writeFileSync](https://nodejs.org/docs/latest/api/fs.html#fs_fs_writefilesync_file_data_options)
+```js
+const note = {
+  title: 'Some title',
+  body: 'Some body'
+};
+
+// Convert JS object to JSON string
+const noteString = JSON.stringify(note);
+
+// Write the JSON string to JSON file
+fs.writeFileSync('notes.json', noteString);
+```
+
+<br>
