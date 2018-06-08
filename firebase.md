@@ -4,6 +4,7 @@
 | Name | Location | Notes|
 | --- | --- | --- |
 | Firebase - Ultimate Beginner's Guide | https://www.youtube.com/watch?v=9kRgVxULbag&feature=youtu.be | *None* |
+| Learning Cloud Functions for Firebase (video series) | https://firebase.google.com/docs/functions/video-series/ | *None* |
 
 <br>
 
