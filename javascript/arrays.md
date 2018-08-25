@@ -1,6 +1,7 @@
 ## Arrays
 
 #### Quick Reference Notes
+[Detailed description of each functional array method](https://gist.github.com/ljharb/58faf1cfcb4e6808f74aae4ef7944cff)
 
 | Property | Purpose | Notes |
 |---------------|----------------------------------------|----------------------------------------------------------|
