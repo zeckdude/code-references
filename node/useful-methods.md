@@ -14,11 +14,13 @@ const path = require('path');
 const pathObj = path.parse('/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app/app.js');
 console.log(pathObj);
 // Returns:
+/*
 { 
-root: '/',
-dir: '/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app',
-base: 'app.js',
-ext: '.js',
-name: 'app' 
+  root: '/',
+  dir: '/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app',
+  base: 'app.js',
+  ext: '.js',
+  name: 'app' 
 }
+*/
 ```
