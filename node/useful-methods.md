@@ -4,7 +4,21 @@
 
 | Method | Purpose
 |---------------|----------------------------------------|
+| [__filename]() | Get the absolute filepath of the current file |
 | [path.parse()]() | Parse a filepath to get various sections as convenient properties |
+<br>
+
+#### Get the absolute filepath of the current file
+##### [__filename](https://nodejs.org/api/modules.html#modules_filename)
+```js
+console.log(__filename);
+
+/*
+Returns:
+/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app'
+*/
+```
+
 <br>
 
 #### Parse a filepath
