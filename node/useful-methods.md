@@ -3,7 +3,7 @@
 #### Useful Node Methods
 
 | Method | Purpose
-|---------------|----------------------------------------|----------------------------------------------------------|
+|---------------|----------------------------------------|
 | [path.parse()]() | Parse a filepath to get various sections as convenient properties |
 <br>
 
@@ -14,11 +14,11 @@ const path = require('path');
 const pathObj = path.parse('/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app/app.js');
 console.log(pathObj);
 // Returns:
-// { 
-//   root: '/',
-//   dir: '/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app',
-//   base: 'app.js',
-//   ext: '.js',
-//   name: 'app' 
-// }
+{ 
+root: '/',
+dir: '/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app',
+base: 'app.js',
+ext: '.js',
+name: 'app' 
+}
 ```
