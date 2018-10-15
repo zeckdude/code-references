@@ -13,8 +13,9 @@
 const path = require('path');
 const pathObj = path.parse('/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app/app.js');
 console.log(pathObj);
-// Returns:
+
 /*
+Returns:
 { 
   root: '/',
   dir: '/Users/chris.seckler/Documents/sites/learning/node-mosh/second-app',
