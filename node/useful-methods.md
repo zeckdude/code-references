@@ -4,10 +4,10 @@
 
 | Method | Purpose
 |---------------|----------------------------------------|
-| [__filename]() | Get the absolute filepath of the current file |
-| [path.parse()]() | Parse a filepath to get various sections as convenient properties |
-| [fs.readdir()]() | List out the contents of a directory |
-| [emitter.emit]() & [emitter.on]() | Emit and listen for an event |
+| [__filename](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#get-the-absolute-filepath-of-the-current-file) | Get the absolute filepath of the current file |
+| [path.parse()](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#get-the-absolute-filepath-of-the-current-file) | Parse a filepath to get various sections as convenient properties |
+| [fs.readdir()](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#list-out-the-contents-of-a-directory) | List out the contents of a directory |
+| [emitter.emit & emitter.on](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#list-out-the-contents-of-a-directory) | Emit and listen for an event |
 <br>
 
 #### Get the absolute filepath of the current file
