@@ -6,6 +6,8 @@
 |---------------|----------------------------------------|
 | [__filename]() | Get the absolute filepath of the current file |
 | [path.parse()]() | Parse a filepath to get various sections as convenient properties |
+| [fs.readdir()]() | List out the contents of a directory |
+| [emitter.emit]() & [emitter.on]() | Emit and listen for an event |
 <br>
 
 #### Get the absolute filepath of the current file
@@ -38,4 +40,35 @@ Returns:
   name: 'app' 
 }
 */
+```
+
+<br>
+
+#### List out the contents of a directory
+##### [fs.readdir()](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback)
+```js
+const fs = require('fs');
+const files = fs.readdir('./', (error, files) => {
+  if (error) { console.log('Error', error); }
+  else { console.log('Result', files); }
+})
+```
+
+<br>
+
+#### Emit and listen for an event
+##### [emitter.emit()](https://nodejs.org/api/events.html#events_emitter_emit_eventname_args)
+##### [emitter.on()](https://nodejs.org/api/events.html#events_emitter_on_eventname_listener)
+```js
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+// Create a listener
+emitter.on('messageLogged', (eventArguments) => console.log('Listener called with arguments', eventArguments));
+
+// Emit an event
+emitter.emit('messageLogged', {
+  id: 1,
+  url: 'http://www.google.com'
+});
 ```
