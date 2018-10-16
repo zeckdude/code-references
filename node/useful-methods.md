@@ -8,6 +8,7 @@
 | [path.parse()](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#get-the-absolute-filepath-of-the-current-file) | Parse a filepath to get various sections as convenient properties |
 | [fs.readdir()](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#list-out-the-contents-of-a-directory) | List out the contents of a directory |
 | [emitter.emit & emitter.on](https://github.com/zeckdude/code-references/blob/master/node/useful-methods.md#list-out-the-contents-of-a-directory) | Emit and listen for an event |
+| [Create a basic http server]() | Create a basic http server |
 <br>
 
 #### Get the absolute filepath of the current file
@@ -71,4 +72,28 @@ emitter.emit('messageLogged', {
   id: 1,
   url: 'http://www.google.com'
 });
+```
+
+<br>
+
+#### Create a basic http server
+##### [http.createServer()](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener)
+##### [response.write()](https://nodejs.org/api/http.html#http_response_write_chunk_encoding_callback)
+##### [response.end()](https://nodejs.org/api/http.html#http_response_end_data_encoding_callback)
+```js
+const http = require('http');
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.write('Hello World');
+    res.end();
+  }
+
+  if (req.url === '/api/courses') {
+    res.write(JSON.stringify([1, 2, 3]));
+    res.end();
+  }
+});
+
+server.listen(3000);
+console.log('Listening on port 3000...');
 ```
