@@ -98,6 +98,13 @@ Find the commit where a bug was fixed (Need a commit hash of when it works and w
 | `git bisect start` - Start git bisect operations<br>`git bisect bad master` - Commit hash where the problem is not occurring<br>`git bisect good 50a2ea02` - Commit hash where the problem is occurring<br><br>As each commit is checked out, test for it and tell git if it is occurring or not<br>`git bisect good` - Problem is occurring<br>`git bisect bad` - Problem is not occurring<br>`git bisect reset` - Terminates git bisect operations   | The idea is to reverse the process of git bisect and tell it that it is `good` when it doesn't work and it is `bad` when it does work.<br><br>Detailed Instructions: http://stackoverflow.com/a/15407206/83916  | None       |
 
 <br>
+Change commit history (Remove a commit, rename a commit message)
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git rebase -i master` - Start rebasing in interactive mode<br>Type `s` to go into edit mode<br>Put `pick (p)` (keep commit), `squash (s)` (add commit to the commit above it), or `drop (d)` (remove the commit), to the commit you want to affect<br>`ESC` and `:wq` - Get out of edit mode and save the rebase<br>`git push --force-with-lease` - Force push the current commit history to the remote branch (The `--force-with-lease` flag will alert you if there are new commits on the remote branch which you don't have so you can decide to override those or not)<br><br>Detailed Instructions: https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had  | None       | None |
+
+<br>
 View the latest commits in the repo
 
 | Command          | Notes | Screenshot |
