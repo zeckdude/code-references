@@ -1,6 +1,6 @@
 ## Dev Questions
-### Post Trello Link
-<!--- If there is no trello card, create one and post the link -->
+### Post Pivotal ticket link
+<!--- If there is no pivotal ticket, create one and post the link -->
 
 _INSERT_LINK_
 
