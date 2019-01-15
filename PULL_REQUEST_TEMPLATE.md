@@ -4,25 +4,47 @@
 
 _INSERT_LINK_
 
-### Has the code been tested?
-<!--- Put an `x` in the box that applies -->
 
-- [ ] Yes
-- [ ] No
+### Is the code ready to be merged?
 
+_YES_OR_NO_
+
+
+### How did you test this code?
 <!--- Please note how the code was tested, and why you're confident that that testing was sufficient. One or two sentences should be enough. -->
-How was it tested: _PLEASE_ELABORATE_
 
-### If a product review is needed, was it approved?
-<!--- Put an `x` in the box that applies -->
+_INSERT_ANSWER_
 
-- [ ] Yes
-- [ ] No
-- [ ] Not needed
+
+### Which part of the system does this code affect?
+
+_INSERT_ANSWER_
+
+
+### Does this pull request have any configuration changes?
+
+_YES_OR_NO_
+
+
+### Does this pull request have any system-level changes such as additions to infrastructure?
+
+_YES_OR_NO_
+
+
+### Will this code affect how any other systems work?
+
+_YES_OR_NO_
+
+
+### How do you intend to confirm this change is working once it's deployed?
+
+_INSERT_ANSWER_
+
 
 ## Notes to Code Reviewers
 
 _None_
+
 
 ## Notes to QA
 
