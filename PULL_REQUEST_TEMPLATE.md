@@ -1,28 +1,3 @@
-**Why are you making this change? If there's a pivotal card, link to it in the pull request. If there isn't a pivotal card, create one and then link to it.**
-
-
-
-**Has the code been tested? Please note in the pull request how the code was tested, and why you're confident that that testing was sufficient. One or two sentences should be enough.**
-
-
-**Would you merge and deploy this code right now?**
-
-
-**Which part of the system does this code affect?**
-
-
-**Does this pull request have any configuration changes?**
-
-
-**Does this pull request have any system-level changes such as additions to infrastructure?**
-
-
-**Will this code affect how any other systems work?**
-
-
-**How do you intend to confirm this change is working once it's deployed?**
-
-
 ## Dev Questions
 ### Post Pivotal ticket link
 <!--- If there is no pivotal ticket, create one and post the link -->
@@ -86,4 +61,3 @@ _None_
 ## Notes to QA
 
 _None_
-
