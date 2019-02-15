@@ -126,6 +126,7 @@ View the latest commits in the repo
 | `git log`  | None  | None       |
 | `git log --stat`  | The _--stat_ parameter specifies that each commit should display the names of the files that were changed  | None       |
 | `git log -p`  | The _-p_ parameter specifies that each commit should display the full diff  | None       |
+| `git log --oneline`  | The _--oneline_ parameter specifies that each commit should display on a single line in an abbreviated fashion  | None       |
 
 <br>
 Add files to the staging area
@@ -164,6 +165,17 @@ Unstage files
 | `git reset --soft HEAD^`  | Undo last commit and move files back to staging  | None       |
 | `git reset --hard HEAD^`  | Undo last commit and remove all changes  | None       |
 | `git reset --hard HEAD^^`  | Undo last two commits and remove all changes  | None       |
+
+<br>
+Copy specific commits to another branch 
+https://www.previousnext.com.au/blog/intro-cherry-picking-git
+
+| Command          | Notes | Screenshot |
+|------------------|-------|------------|
+| `git cherry-pick <commit hash>`  | Copy a single commit to the current branch  | None       |
+| `git cherry-pick <commit hash> <commit hash> <commit hash>`  | Copy several commits to the current branch  | None       |
+| `git cherry-pick --continue`  | If the cherry picking gets halted because of conflicts, resolve them and then continue copying commit(s) to current branch  | None       |
+| `git cherry-pick --abort`  | Cancel copying commit(s) to current branch  | None       |
 
 <br>
 Associate an alias with a remote repo URL
