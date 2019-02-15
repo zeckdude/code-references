@@ -167,7 +167,7 @@ Unstage files
 | `git reset --hard HEAD^^`  | Undo last two commits and remove all changes  | None       |
 
 <br>
-Copy specific commits to another branch 
+Copy specific commits to another branch <br />
 https://www.previousnext.com.au/blog/intro-cherry-picking-git
 
 | Command          | Notes | Screenshot |
