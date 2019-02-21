@@ -93,9 +93,9 @@ Store uncommitted local changes
 | `git stash push -m "Description of what the changes are"`  | Store changes with description  | None       |
 | `git stash list`  | List out all stored changes (max: 20)  | None       |
 | `git stash apply`  | Restore changes from the top of the list without removing them from the list of stored changes   | None       |
-| `git stash apply@{n}`  | Restore changes from a specific position in the list without removing them from the list of stored changes   | None       |
+| `git stash apply stash@{n}`  | Restore changes from a specific position in the list without removing them from the list of stored changes   | None       |
 | `git stash pop`  | Restore changes from the top of the list while removing them from the list of stored changes   | None       |
-| `git stash pop@{n}`  | Restore changes from a specific position in the list while removing them from the list of stored changes   | None       |
+| `git stash pop stash@{n}`  | Restore changes from a specific position in the list while removing them from the list of stored changes   | None       |
 
 <br>
 Find the commit where a bug was introduced (Need a commit hash of when it works and when it doesnt work)
