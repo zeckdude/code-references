@@ -10,7 +10,7 @@
 
 #### Helpful Resources
 | Name | Link |
-|--------|-------|-------|
+|--------|-------|
 | Spies with Sinon and Chai | https://jaketrent.com/post/spies-sinon-chai/ |
 | Sinon Spies vs. Stubs vs. Mocks | https://jaketrent.com/post/sinon-spies-vs-stubs/ |
 <br>
