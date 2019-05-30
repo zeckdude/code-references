@@ -51,7 +51,7 @@ users.forEach(userName => console.log(`Hi, my name is ${userName}`));
 // Hi, my name is greg
 ```
 
-** You can also store all named exports in an object when importing **
+**You can also store all named exports in an object when importing**
 ```js
 import * as UserHelper from './helper/user';
 
