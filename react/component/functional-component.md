@@ -2,7 +2,7 @@
 
 #### Different types of functional components
 
-##### [Functional dumb component](#functional-dumb-component)
+##### [Functional dumb component](#using-a-functional-dumb-component)
 
 - Used for presenting static data
 - Can't handle fetching data
@@ -11,7 +11,7 @@
 - Easy to re-use
 - Easy to test against
 
-##### [Functional stateful component](#functional-stateful-component)
+##### [Functional stateful component](#using-a-functional-stateful-component)
 
 - Used for dynamic sources of data
 - Handles any data that might change (fetching data, user events, etc)
