@@ -156,7 +156,7 @@ function sayHello() {
 ```
 Notes:
 - Gets hoisted to the top of the file where it is initialized and declared, which means you can call it from anywhere in the file
-- When used as the value of an object property or event listener, having the function name makes debugging easier
+- When used as the value of an object property or event listener, having the function name makes debugging easier because the function name will appear in the callstack (instead of showing as anonymous)
   ```js
   const person = {
     greet: function greet() {
@@ -176,6 +176,44 @@ const sayHello = function() {
 ```
 Notes:
 - Gets hoisted to the top of the file but as undefined. Therefore it can't be used until after it is declared.
+
+<br>
+
+
+#### Rest Parameters
+```js
+const getSum = (...numbers) => {
+  return numbers.reduce((sum, number) => sum += number, 0);
+}
+```
+Notes:
+- Turns all arguments (that haven't already been destructured) into an array of values
+- Useful when the number of arguments is unknown
+
+<br>
+
+
+#### Spread Operators
+```js
+// To create a new array using values from another array
+const numbers1 = [1, 2, 3];
+const numbers2 = [...numbers1, 4, 5, 6];
+
+// To call a function that requires separate arguments using the array values
+const numbers = [1, 2, 3]
+getSum(...numbers);
+
+// To create an object using key/value pairs from another object
+const sedan = {
+  doors: 4,
+}
+const passat = {
+  ...sedan,
+  manufacturer: 'Volkswagen',
+}
+```
+Notes:
+- Turns an array of values into separate values
 
 <br>
 
