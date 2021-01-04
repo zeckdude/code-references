@@ -74,6 +74,79 @@ Notes:
 
 <br>
 
+#### Loops
+```js
+// Iterate n times
+for (let i = 0; i < 3; i++) {
+  // Do something 3 times
+}
+
+for (let i = 0; i < array.length; i++) {
+ // Do something for every item in the array
+}
+
+// Iterate over the items in an array
+for (const arrayItem of array) {
+ // Do something for every item in the array
+}
+
+array.forEach(arrayItem => {
+  // Do something for every item in the array
+});
+
+// Iterate over keys in object
+for (const key in object) {
+ // Access property values with `object[key]`
+}
+
+Object.keys(object).forEach(key => {
+  // Do something with the key
+});
+
+Object.values(object).forEach(value => {
+  // Do something with the value
+});
+
+Object.entries(object).forEach(([key, value]) => {
+  // Do something with the key & value
+});
+```
+
+<br>
+
+#### Memory Heap
+Where data is stored in system memory that it needs to access
+
+<br>
+
+#### Call Stack
+A list of functions that have been called and need to be executed. Once they are executed, they are automatically removed from the call stack.
+
+<br>
+
+#### Memory Heap
+Where data is stored in system memory that it needs to access
+
+<br>
+
+#### Primitive values
+Values that are stored in memory and the variable holds the value itself. Therefore if a variable with a primitive value is assigned to another variable, the new variable makes a copy of the primitive value and stores it new.
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol
+
+<br>
+
+#### Reference values
+Values that are stored in memory and the variable references the location in memory. Therefore if a variable with a reference value is assigned to another variable, the new variable references the same place in memory and any changes to either of the variables is reflected in both.
+- Object
+- Array
+- Function
+
+<br>
 
 #### Function declaration
 ```js
