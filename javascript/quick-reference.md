@@ -217,5 +217,16 @@ Notes:
 
 <br>
 
+#### Create a function where the context and arguments are preset
+```js
+const greetPerson = (firstName, lastName, greeting) => console.log(`${greeting} ${firstName} ${lastName}`);
+const greetMikeJones = greetPerson.bind(this, 'Mike', 'Jones');
+console.log(greetMikeJones('Congratulations'));
+```
+Notes:
+- Setting the context is optional
+- Any arguments supplied will be added as arguments in the order supplied
+- Any arguments used when calling the bound function will be added at the end
 
+<br>
 
