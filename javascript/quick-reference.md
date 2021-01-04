@@ -155,9 +155,15 @@ function sayHello() {
 }
 ```
 Notes:
-- Gets hoisted to the top of the file and can be called from anywhere
+- Gets hoisted to the top of the file where it is initialized and declared, which means you can call it from anywhere in the file
 - When used as the value of an object property or event listener, having the function name makes debugging easier
-
+  ```js
+  const person = {
+    greet: function greet() {
+      // Greet someone
+    }
+  };
+  ```
 <br>
 
 
@@ -169,7 +175,7 @@ const sayHello = function() {
 }
 ```
 Notes:
-- 
+- Gets hoisted to the top of the file but as undefined. Therefore it can't be used until after it is declared.
 
 <br>
 
