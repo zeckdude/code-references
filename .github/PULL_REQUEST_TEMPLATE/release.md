@@ -1,0 +1,1 @@
+## Release template inside folder
