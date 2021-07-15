@@ -2,7 +2,7 @@
 
 ### Required files
 #### manifest.json 
-This file serves as a settings file for the extension<br />
+This file serves as a settings file for the extension<br /><br />
 Common properties:<br />
 - _manifest_version_: Version number for the manifest file. Each version has different requirements of what an extension must follow and it determines the other properties in this file.
 - _name_: The name of the extension
