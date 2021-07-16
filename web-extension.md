@@ -30,3 +30,20 @@ Common properties:<br />
 }
 ```
 
+<br>
+
+#### content script 
+This/these file(s) are run after the page loads and have access to the content on the page<br /><br />
+
+The content script is defined in the `content_scripts` property in `manifest.json`.
+
+```js
+let paragraphs = document.getElementsByTagName('p');
+
+const getRandomColor = () => Math.floor(Math.random()*16777215).toString(16);
+
+for (paragraph of paragraphs) {
+  element.style['background-color'] = getRandomColor();
+}
+```
+
